@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+html, body { max-width:100%;}
+html.no_scroll { overflow:hidden; padding:0 17px 0 0;}
+body { min-width:1280px; margin:0 auto;}
+.dimmed {
+    width:100%; height:100%; position:fixed; z-index:80; background-color:#000; display:none; top:0;
+    @include opacity(0);
+}
+
+//스킵 네이게이션
+#skipNavigation a {
+    position:absolute; top:-100px; left:0; z-index:100; width:100%;border-bottom:1px solid #dbdbdb; background:#f8f7f3; line-height:50px;
+    &:focus {top:0; text-align:center;}
+}
+
+/*헤더*/
+#header {
+    .header_wrap {
+        max-width:1590px; margin:0 auto; padding:0 50px; position:relative;
+    }
+    .header_top {
+        height:76px; position:relative;
+        @extend %clearfix;
+        h1 {
+            text-align:center; padding:32px 0 0;
+            a {
+                width:161px; height:24px; display:inline-block; background-image:url(../../images/layout/logo.gif); text-indent:-9999px;
+                @include backgroundSolt;
+            }
+        }
+        .header_news {
+            width:300px; height:20px; position:absolute; left:0; font-size:13px; top:34px; overflow:hidden;
+            li {
+                width:100%; position:absolute;
+                @include translate(0, 20px);
+                &:first-child {@include translate(0, 0);}
+            }
+            a {
+                max-width:100%; display:inline-block; color:$gray1;
+                @include text-overflow;
+                @include transition(color, .3s);
+                &:hover {color:$red;}
+            }
+        }
+        .header_util {
+            position:absolute; top:38px; right:0; font-size:13px;
+            ol {@extend %clearfix;}
+            li {float:left;}
+            a {color:$gray1;}
+        }
+    }
+    .header_bottom {}
+}
+
+
+
+
+
+
+
+
+
+

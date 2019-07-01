@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+@import "./_common/base";
+@import "./layout";
+@import "./main";
+@import "./channel";
+@import "./company";
+@import "./event";
+@import "./invest";
+@import "./login";
+@import "./member";
+@import "./mycuckoo";
+@import "./order";
+@import "./search";
+@import "./terms";
+
+
+/*
+  z-index 가이드
+  container : auto
+  header :200
+  header dimmed :100
+*/
+
+//기본 스타일
+input[type=text],
+textarea,
+select {
+    outline:none;
+    @include transition(border-color,.2s);
+    &:focus { border-color:$red !important;}
+}
+
+::selection { background: $red; color: $white; text-shadow: none; }
+
+::-moz-selection { background: $red; color: $white; text-shadow: none; }
+
+img { vertical-align:top; image-rendering: -webkit-optimize-contrast;}
+
+.popup_dimmed {
+    width:100%; height:100%; position:fixed; z-index:300; background-color:$black; display:none; top:0;
+    @include opacity(0);
+}
+caption { width:1px; height:1px; overflow:hidden; margin:-1px;}
+
+//히든 텍스트
+.hidden-txt,
+legend {overflow:hidden; display:inline-block; text-indent:-9999px; width:0; height:0; line-height:1px; position:absolute;}
+
+#container {padding:140px 0 0; height:3000px; background-color:$gray3;}
+#wrap {position:relative;}
+
+
+//팝업 기본
+#modalPopup {
+    width:100%; height:100%; position:fixed; background-color:rgba(0,0,0,0.4); z-index:150; overflow-y:scroll; top:0; left:0; display:none;
+    @include opacity(0);
+    .popup_container {
+        width:1024px; margin:100px auto; background-color:$white; position:relative;
+        .popup_close {
+            width:58px; height:58px; position:absolute; top:0; right:-68px; text-indent:-9999px; overflow:hidden;
+            background:url(../../images/icon/popup_close.png) 50% 50% no-repeat;
+            @include borderSet(1px, solid, $white);
+            @include transition;
+            @include backgroundSolt;
+            &:hover {border-color:$red; background-color:$red;}
+        }
+    }
+    .popup_wrap {padding:55px 60px 0; display:none;}
+}
+
+//게시판 paging
+#listPage {
+    position:relative; margin:70px 0 0; text-align:center;
+    .page_btn {
+        display:inline-block;
+        button, a {
+            width:36px; height:36px; float:left; line-height:34px; display:inline-block; margin:0 3px; background-color:$white;
+            border-width:1px; border-style:solid; border-color:$gray4; color:$gray2; font-weight:$light;
+            @include transition;
+            @include backgroundSolt;
+            @include boxSizing;
+            &.prev_end_btn,
+            &.prev_btn,
+            &.next_btn,
+            &.next_end_btn {text-indent:-9999px; overflow:hidden;}
+            &.prev_end_btn { background-image:url(../../images/icon/page_prev_all.gif);}
+            &.prev_btn {
+                background-image:url(../../images/icon/page_prev.gif); margin:0 17px 0 5px;
+            }
+            &.next_btn {
+                background-image:url(../../images/icon/page_prev.gif); margin:0 5px 0 17px;
+                @include rotate(180);
+            }
+            &.next_end_btn {
+                background-image:url(../../images/icon/page_prev_all.gif);
+                @include rotate(180);
+            }
+            &:hover,
+            &:focus {border-color:$red;}
+            &.active {color:$white; background-color:$red; border-color:$red;}
+        }
+    }
+}
+
+//스크롤섹션 애니메이션
+.js-scr-box {
+    @include scrAnimateSet(0, 50px);
+}
+
+
