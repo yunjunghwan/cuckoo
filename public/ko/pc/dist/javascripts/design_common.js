@@ -23,6 +23,7 @@ $window.load(function () {
     //locationJS();
     object();
     comparisonLayer();
+    uiTab();
 });
 function layout() {
     var $header = $("#header");
@@ -176,7 +177,6 @@ function comparisonLayer(){
 
     //gnb open/close
     $comparsionBtn.on("click", function () {
-        //$(this).parent().toggleClass("open");
         if(!$(this).parent().hasClass('open')){
             $(this).parent().addClass('open');
             $comparsionBody.css('height',_comparsionHeight);
@@ -200,22 +200,22 @@ function layerPopOpen(obj){// 레이어팝업 열기, obj : 해당팝업 id
 	//dimOn();
     if($('#'+obj).length >= 1){
 		$('#'+obj).addClass('open');
-    
+
         thisPop.css("top", ((winH - thisPop.outerHeight()) / 2) + $(window).scrollTop());
         thisPop.css("left", ((winW - thisPop.outerWidth()) / 2) + $(window).scrollLeft());
     }
 }
 
 function layerPopClose(obj){// 레이어팝업 닫기, obj : 해당팝업 id
-    dimOff();
+
     $('#'+obj).removeClass('open');
 }
-function dimOn(){
-	$('body').append('<div class="wrap_dim"></div>');
-    $('html').addClass('dim');
-}
+function uiTab(){
 
-function dimOff(){
-    $('html').removeClass('dim');
-	$('body').find('.wrap-dim').remove();
+    $(document).on('click', '.tab .tab_btn a', function(e){
+        e.preventDefault();
+
+        $(this).parent().siblings().removeClass('on');
+        $(this).parent().addClass('on');
+    });
 }
