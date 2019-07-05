@@ -1,9 +1,9 @@
 @charset "UTF-8";
-@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 300; src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format("opentype"); }
+/* @font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 300; src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format("opentype"); }
 
 @font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 500; src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format("opentype"); }
 
-@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 700; src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format("opentype"); }
+@font-face { font-family: 'Noto Sans KR'; font-style: normal; font-weight: 700; src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format("opentype"); } */
 
 /* latin */
 @font-face { font-family: 'Gotham'; font-style: normal; font-weight: 300; src: url(../../fonts/gotham-book.woff2) format("woff2"), url(../../fonts/gotham-book.woff) format("woff"), url(../../fonts/gotham-book.eot) format("eot"), url(../../fonts/gotham-book.ttf) format("truetype"); }
@@ -361,9 +361,9 @@ input[type=text], textarea, select { outline: none; -webkit-transition: border-c
 
 input[type=text]:focus, textarea:focus, select:focus { border-color: #7a101b !important; }
 
-::selection { background: #7a101b; color: #fff; text-shadow: none; }
+/* ::selection { background: #7a101b; color: #fff; text-shadow: none; }
 
-::-moz-selection { background: #7a101b; color: #fff; text-shadow: none; }
+::-moz-selection { background: #7a101b; color: #fff; text-shadow: none; } */
 
 img { vertical-align: top; image-rendering: -webkit-optimize-contrast; }
 
@@ -373,7 +373,7 @@ caption { width: 1px; height: 1px; overflow: hidden; margin: -1px; }
 
 .hidden-txt, legend { overflow: hidden; display: inline-block; text-indent: -9999px; width: 0; height: 0; line-height: 1px; position: absolute; }
 
-#container { padding: 140px 0 0; height: 3000px; background-color: #8a8b87; }
+#container { padding: 140px 0 0; }
 
 #wrap { position: relative; }
 
