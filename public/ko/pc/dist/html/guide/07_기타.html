@@ -382,57 +382,48 @@
                 </ul>
             </div>
             <div class="top_tit">
-                <h2 class="tit_02">버튼</h2>
+                <h2 class="tit_02">기타</h2>
             </div>
         </div>
         <div class="content">
-            <h2 class="guide_tit">작은버튼</h2>
-            <button type="button" class="btn_s">버튼명</button>
-            <button type="button" class="btn_s common">버튼명</button>
-            <button type="button" class="btn_s action">버튼명</button>
-            <h2 class="guide_tit">작은버튼(라운드)</h2>
-            <button type="button" class="btn_s radius">버튼명</button>
-            <button type="button" class="btn_s radius common">버튼명</button>
-            <button type="button" class="btn_s radius action">버튼명</button>
-
-            <h2 class="guide_tit">중간버튼</h2>
-            <button type="button" class="btn_m">버튼명</button>
-            <button type="button" class="btn_m common">버튼명</button>
-            <button type="button" class="btn_m action">버튼명</button>
-            <h2 class="guide_tit">중간버튼(라운드)</h2>
-            <button type="button" class="btn_m radius">버튼명</button>
-            <button type="button" class="btn_m radius common">버튼명</button>
-            <button type="button" class="btn_m radius action">버튼명</button>
-
-            <h2 class="guide_tit">큰버튼</h2>
-            <button type="button" class="btn_l">버튼명</button>
-            <button type="button" class="btn_l common">버튼명</button>
-            <button type="button" class="btn_l action">버튼명</button>
-            <h2 class="guide_tit">큰버튼(라운드)</h2>
-            <button type="button" class="btn_l radius">버튼명</button>
-            <button type="button" class="btn_l radius common">버튼명</button>
-            <button type="button" class="btn_l radius action">버튼명</button>
-
-            <h2 class="guide_tit">테이블내 버튼</h2>
-            <button type="button" class="btn_s">버튼명</button>
-            <button type="button" class="btn_s common">버튼명</button>
-            <button type="button" class="btn_s action">버튼명</button>
-            <button type="button" class="btn_m">버튼명</button>
-            <button type="button" class="btn_m common">버튼명</button>
-            <button type="button" class="btn_m action">버튼명</button>
-
-            <h2 class="guide_tit">리스트더보기</h2>
-            <a href="#" class="btn list_more">더보기 <span><strong>1</strong>/3</span></a>
-
-            <h2 class="guide_tit">아이콘 + 텍스트</h2>
-            <button type="button" class="btn_guide radius common"><i class="ico guide"></i><span>제품설명서</span></button>
-
-            <h2 class="guide_tit">수량 카운트</h2>
-            <div class="count_wrap">
-                <button type="button" class="ico minus" disabled=""><span class="blind">수량감소</span></button><!-- [D]비활성화시 disabled속성추가 -->
-                <span class="num">1</span>
-                <button type="button" class="ico plus"><span class="blind">수량증가</span></button><!-- [D]비활성화시 disabled속성추가 -->
+            <h2 class="guide_tit">페이징</h2>
+            <div class="pagination">
+				<a href="#" class="paging first disabled"><span class="blind">첫페이지</span></a>
+				<a href="#" class="paging prev disabled"><span class="blind">이전</span></a>
+				<a href="#" class="on">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#">6</a>
+				<a href="#" class="paging next"><span class="blind">다음</span></a>
+				<a href="#" class="paging last"><span class="blind">마지막페이지</span></a>
+			</div>
+            <h2 class="guide_tit">텍스트플래그</h2>
+            <span class="flag_wrap">
+                <span class="flag new">NEW</span>
+                <span class="flag best">BEST</span>
+            </span>
+            <h2 class="guide_tit">별점</h2>
+            <div class="ui_star">
+                <div class="inner on2"><!-- [D] 별1개:on1, 별2개:on2, 별3개:on3, 별4개:on4, 별5개:on5 --></div>
             </div>
+            <h2 class="guide_tit">별점(직접입력가능)</h2>
+            <div class="star">
+                <ul>
+                    <li><a href="#"><span class="blind">별점수</span></a></li>
+                    <li><a href="#"><span class="blind">별점수</span></a></li>
+                    <li><a href="#"><span class="blind">별점수</span></a></li>
+                    <li><a href="#"><span class="blind">별점수</span></a></li>
+                    <li><a href="#"><span class="blind">별점수</span></a></li>
+                </ul>
+            </div>
+            <h2 class="guide_tit">레이어팝업(컨펌, 알럿)</h2>
+            <button type="button" class="btn_l radius" onclick="layerPopOpen('cartConfirm')">장바구니</button>
+            <p class="point01" style="margin-top:15px">레이어는 푸터다음있어야함</p>
+            <h2 class="guide_tit">레이어팝업(일반)</h2>
+            <button type="button" class="btn_l radius" onclick="layerPopOpen('reviewText')">버튼</button>
+            <p class="point01" style="margin-top:15px">레이어는 푸터다음있어야함</p>
         </div>
     </div>
     <!--//container-->
@@ -525,6 +516,38 @@
         </div>
     </footer>
     <!-- //footer -->
+    <div id="cartConfirm" class="wrap_layer_pop type_confirm">
+        <div class="layer_pop w400">
+            <div class="container_pop">
+                <p class="txt1">해당 제품이 장바구니에 담겼습니다.<br>바로 확인하시겠습니까?</p>
+                <div class="btn-wrap btn-col2">
+                    <button type="button" class="btn_l radius">취소</button>
+                    <button type="button" class="btn_l radius common">확인</button>
+                </div>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('cartConfirm')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+    <div id="reviewText" class="wrap_layer_pop">
+        <div class="layer_pop w560" style="top: 9590px; left: 549px;">
+            <div class="container_pop">
+                <div class="top_area user_prd">
+                    <div class="img"><img src="../../images/item/temp_prd_120x120.png" alt=""></div>
+                    <p class="category">IH 전기압력밥솥</p>
+                    <p class="prd_name">CRP-FHTR0610FS</p>
+                    <div class="user_info">
+                        <div class="ui_star"><div class="inner on5"><!-- [D] 별1개:on1, 별2개:on2, 별3개:on3, 별4개:on4, 별5개:on5 --></div></div>
+                        <span class="name">유*은</span>
+                        <span class="date">2019-09-11</span>
+                    </div>
+                </div>
+                <div class="text_view">
+                    역시 밥솥하면 쿠쿠인 이유가 있네요. 가격대가 조금 있어서 진짜 고민 많이 하고 구매했는데 고민 왜 했나 싶을 정도로 너무너무 마음에 들어요.  요즘 밥솥은 그냥 밥만 하는게 아니라 정말 다양한 요리가 가능 하네요.  주말에 수육 해먹었는데 진짜 존맛입니다.  밥솥으로 이렇게 훌륭한 수육을 해먹을 수 있다니 상상도 못했 는데 대박이에요~ 다음엔 다른요리도 도전해봐야겠어요. 역시 밥솥하면 쿠쿠인 이유가 있네요. 가격대가 조금 있어서 진짜 고민 많이 하고 구매했는데 고민 왜 했나 싶을 정도로 너무너무 마음에 들어요.  요즘 밥솥은 그냥 밥만 하는게 아니라 정말 다양한 요리가 가능 하네요.  주말에 수육 해먹었는데 진짜 존맛입니다.  밥솥으로 이렇게 훌륭한 수육을 해먹을 수 있다니 상상도 못했는데 대박이에요~ 다음엔 다른요리도 도전해봐야겠어요. 주말에 수육 해먹었는데 진짜 존맛입니다.  밥솥으로 이렇게 훌륭한 수육을 해먹을 수 있다니 상상도 못했는데 대박이에요~ 다음엔 다른요리도 도전해봐야겠어요. 주말에 수육 해먹었는데 진짜 존맛입니다.  밥솥으로 이렇게 훌륭한 수육을 해먹을 수 있다니 상상도 못했는데 대박이에요~ 다음엔 다른요리도 도전해봐야겠어요.
+                </div>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('reviewText')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
 </body>

@@ -266,6 +266,13 @@ function layout() {
         TweenMax.to($familySite, .2, {height: 44});
         $familySite.removeClass("on");
     });
+    $('.datepicker_input').datepicker({
+        dateFormat: 'yy-mm-dd',
+        showMonthAfterYear:true ,
+        monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+        monthNames: ['01','02','03','04','05','06','07','08','09','10','11','12'], //달력의 월 부분 Tooltip 텍스트 //달력의 월 부분 텍스트
+        dayNamesMin: ['일','월','화','수','목','금','토'], //달력의 요일 부분 텍스트
+    });
 }
 
 function object(){

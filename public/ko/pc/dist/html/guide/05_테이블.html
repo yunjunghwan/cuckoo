@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="../../stylesheets/css/common.css">
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
+  <script src="../../javascripts/jquery-ui.min.js"></script>
 </head>
 
 <body>
@@ -381,41 +382,51 @@
                 </ul>
             </div>
             <div class="top_tit">
-                <h2 class="tit_02">기타</h2>
+                <h2 class="tit_02">테이블</h2>
             </div>
         </div>
         <div class="content">
-            <h2 class="guide_tit">페이징</h2>
-            <div class="pagination">
-				<a href="#" class="paging first disabled"><span class="blind">첫페이지</span></a>
-				<a href="#" class="paging prev disabled"><span class="blind">이전</span></a>
-				<a href="#" class="on">1</a>
-				<a href="#">2</a>
-				<a href="#">3</a>
-				<a href="#">4</a>
-				<a href="#">5</a>
-				<a href="#">6</a>
-				<a href="#" class="paging next"><span class="blind">다음</span></a>
-				<a href="#" class="paging last"><span class="blind">마지막페이지</span></a>
-			</div>
-            <h2 class="guide_tit">텍스트플래그</h2>
-            <span class="flag_wrap">
-                <span class="flag new">NEW</span>
-                <span class="flag best">BEST</span>
-            </span>
-            <h2 class="guide_tit">별점</h2>
-            <div class="ui_star">
-                <div class="inner on2"><!-- [D] 별1개:on1, 별2개:on2, 별3개:on3, 별4개:on4, 별5개:on5 --></div>
+            <h2 class="guide_tit">보더테이블</h2>
+            <div class="tbl_wrap">
+                <div class="tbl type_border">
+                    <table>
+                        <caption>상세 정보</caption>
+                        <colgroup>
+                            <col style="width:200px">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">제품명</th>
+                                <td>IH전기압력밥솥</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">용량</th>
+                                <td>6인용</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">크기</th>
+                                <td>37.4cm(길이) 27cm(폭) 25.3cm(높이)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">안전인증 대상</th>
+                                <td>KS 인증 번호: KS 제 3752 호</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">제조국</th>
+                            <td>대한민국</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">구성품</th>
+                            <td>주걱, 계량컵,사용설명서,청소용 핀</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">에너지효율</th>
+                            <td>220V 60Hz 1090W , 3등급</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <h2 class="guide_tit">별점(직접입력가능)</h2>
-            <div class="star">
-                <ul>
-                    <li><a href="#"><span class="blind">별점수</span></a></li>
-                    <li><a href="#"><span class="blind">별점수</span></a></li>
-                    <li><a href="#"><span class="blind">별점수</span></a></li>
-                    <li><a href="#"><span class="blind">별점수</span></a></li>
-                    <li><a href="#"><span class="blind">별점수</span></a></li>
-                </ul>
             </div>
         </div>
     </div>
