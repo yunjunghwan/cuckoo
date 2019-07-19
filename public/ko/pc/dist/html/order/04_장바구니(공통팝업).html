@@ -382,107 +382,11 @@
                 </ul>
             </div>
             <div class="top_tit">
-                <h2 class="tit_02">폼요소</h2>
+                <h2 class="tit_02">장바구니 공통팝업</h2>
             </div>
         </div>
         <div class="content">
-            <h2 class="guide_tit">보더타입 폼</h2>
-            <div class="form_wrap line_type">
-                <table>
-                    <caption>캡션명입력</caption>
-                    <colgroup>
-                        <col style="width:95px;">
-                        <col style="width:auto">
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th scope="row"><label for="input01_01">항목</label></th>
-                            <td>
-                                <input type="text" id="input01_01">
-                            </td>
-                        </tr>
-                        <tr class="error"><!-- [D] 인풋값에러시 error클래스추가  -->
-                            <th scope="row"><label for="input01_02">항목</label></th>
-                            <td>
-                                <input type="text" id="input01_02">
-                                <p class="error_txt">에러메시지</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div><!-- //form_wrap -->
-            <br><br><br>
-            <h2 class="guide_tit">박스타입 폼</h2>
-            <div class="form_wrap">
-                <table>
-                    <caption>캡션명입력</caption>
-                    <colgroup>
-                        <col style="width:150px;">
-                        <col style="width:auto">
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th scope="row"><label for="input02_01">항목</label></th>
-                            <td>
-                                <input type="text"  id="input02_01">
-                            </td>
-                        </tr>
-                        <tr class="error"><!-- [D] 인풋값에러시 error클래스추가  -->
-                            <th scope="row"><label for="input02_02">항목</label></th>
-                            <td>
-                                <input type="text" id="input02_02">
-                                <p class="error_txt">에러메시지</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div><!-- //form_wrap -->
-            <h2 class="guide_tit">체크박스, 라디오</h2>
-            <span>
-                <input type="checkbox" class="check_s" id="check01_01">
-                <label for="check01_01">체크박스</label>
-            </span><br><br>
-            <span>
-                <input type="checkbox" class="check_m" id="check01_02">
-                <label for="check01_02">체크박스</label>
-            </span><br><br>
-            <span class="input_right">
-                <input type="checkbox" id="check01_03" class="check_l">
-                <label for="check01_03">비교하기</label>
-            </span><br><br>
-            <span>
-                <input type="radio" class="radio_s" name="radio01" id="radio01_01">
-                <label for="radio01_01">라디오1</label>
-            </span>
-            <span>
-                <input type="radio" class="radio_s" name="radio01" id="radio01_02">
-                <label for="radio01_02">라디오2</label>
-            </span>
-            <h2 class="guide_tit">텍스트박스</h2>
-            <textarea style="width:100%; height:200px" placeholder="내용을 입력해주세요."></textarea>
-            <h2 class="guide_tit">디자인셀렉트</h2>
-            <div class="select_box">
-                <a href="#" class="tit">옵션선택</a>
-                <ul class="hidden">
-                    <li class="on"><a href="#">옵션1</a></li>
-                    <li><a href="#">옵션2</a></li>
-                    <li><a href="#">옵션3</a></li>
-                </ul>
-            </div>
-            <h2 class="guide_tit">데이트피커</h2>
-            <div class="datepicker">
-                <input type="text" class="datepicker_input" readonly placeholder="날짜를 선택해주세요.">
-            </div>
-            <h2 class="guide_tit">데이트피커(다중)</h2>
-            <div class="datepicker_wrap">
-                <div class="datepicker">
-                    <input type="text" class="datepicker_input" readonly>
-                </div> -
-                <div class="datepicker">
-                    <input type="text" class="datepicker_input" readonly>
-                </div>
-            </div>
-
+            <button type="button" onclick="layerPopOpen('phoneConfirm')" class="btn_m">회원최소구매시 휴대폰 본인인증</button>
         </div>
     </div>
     <!--//container-->
@@ -575,6 +479,51 @@
         </div>
     </footer>
     <!-- //footer -->
+    <!-- 휴대폰 본인인증 -->
+    <div id="phoneConfirm" class="wrap_layer_pop">
+        <div class="layer_pop w500">
+            <div class="container_pop">
+                <div class="header_pop">
+                    <h2 class="tit_03">휴대폰 본인인증</h2>
+                </div>
+                <div class="txt1">최초 거래 시 회원정보 보호를 위해 보안 인증을 하고 있습니다.<br>제품 구매 시 본인 인증 완료 된 1개의 아이디만 사용 가능합니다. <br>(SNS계정 동일)</div>
+                <div class="txt1">본인인증 정보는 회원정보에 업데이트 됩니다.</div>
+                <div class="tbl_wrap">
+                    <div class="tbl type_data">
+                        <table>
+                            <caption>휴대폰 본인인증안내</caption>
+                            <colgroup>
+                                <col style="width:33.3%">
+                                <col style="width:33.3%">
+                                <col style="width:auto">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">목적</th>
+                                    <th scope="col">항목</th>
+                                    <th scope="col">보유및 이용기간</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>이용자 본인확인</td>
+                                    <td>이름, 휴대폰번호, CI</td>
+                                    <td>탈퇴시까지</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p class="txt_center mt30">만 14세미만 아동의 경우 회원가입 및 구매가 제한됩니다.</p>
+                <div class="btn-wrap">
+                    <button type="button" class="btn_l radius">이전 페이지 이동</button>
+                    <button type="button" class="btn_l radius common">휴대폰 본인인증</button>
+                </div>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('phoneConfirm')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+    <!-- //휴대폰 본인인증 -->
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
 </body>
