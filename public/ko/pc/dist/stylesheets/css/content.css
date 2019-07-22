@@ -296,7 +296,7 @@
 
 /* 주문 결제 */
 .order_area{float:left; width:860px}
-.order_area .total_count{margin-bottom:25px; font-size:20px; color:#272524; font-weight:500}
+.content > .total_count{margin-bottom:25px; font-size:20px; color:#272524; font-weight:500}
 .tbl_order{border-top:3px solid #312f2d}
 .tbl_order thead{background-color:#f5f5f5}
 .tbl_order thead th{padding:19px 0; text-align:center; font-size:13px; color:#312f2d}
@@ -311,8 +311,9 @@
 .tbl_order .prd_info .option{margin-top:7px; font-size:13px;}
 .tbl_order .btn-wrap button{width:80px}
 .tbl_order .btn-wrap > * + *{margin-top:5px}
+.tbl_order .temp_area{padding:20px; font-weight:500; font-size:17px}
 .aside_box_wrap{position:relative; float:right; width:280px}
-.aside_box{position:absolute; top:45px; width:280px; background-color:#fff}
+.aside_box{position:absolute; top:0; width:280px; background-color:#fff}
 .aside_box.fixed{position:fixed;}
 .aside_box .counter_box{width:100%; padding:35px 27px 43px 27px; border:3px solid #312f2d; box-sizing:border-box;}
 .aside_box .counter_box .top_area{padding-bottom:30px; border-bottom:2px dotted #e2e2e2}
@@ -340,3 +341,6 @@
 .aside_box .info_box .tit{margin-bottom:25px; font-size:17px; color:#272524; font-weight:500}
 .aside_box .info_box .star_list li{font-size:13px; color:#272524}
 .aside_box .info_box .star_list li + li{margin-top:10px}
+/* 비회원구매 팝업 */
+#nonmemberBuy .desc{margin-top:40px; font-size:13px;}
+#nonmemberBuy .desc .bold{margin-left:15px; text-decoration:underline; font-size:15px}
