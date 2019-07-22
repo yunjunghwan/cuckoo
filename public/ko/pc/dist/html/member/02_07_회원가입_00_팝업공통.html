@@ -19,9 +19,10 @@
   <meta name="robots" content="ALL">
   <link rel="stylesheet" href="../../stylesheets/css/common.css">
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
-    <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
+  <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
+
 </head>
 
 <body>
@@ -374,21 +375,15 @@
   <!-- //header-->
 
   <!--container-->
-    <div id="container">
-        <div class="top_content">
-            <div class="location">
-                <ul>
-                    <li><a href="#">홈</a></li>
-                    <li>마이쿠쿠</li>
-                </ul>
-            </div>
-            <div class="top_tit">
-                <h2 class="tit_02">서브타이틀</h2>
-            </div>
-        </div>
-        <div class="content">
-
-        </div>
+    <div id="container" class="mypage_container">
+		<ul style="text-align:center;">
+			<li style="margin:10px;"><button type="button" class="btn_l radius" onclick="layerPopOpen('pop01')">개인회원 가입하기 선택시</button></li>
+			<li style="margin:10px;"><button type="button" class="btn_l radius" onclick="layerPopOpen('pop02')">사업자회원 가입하기 선택시</button></li>
+			<li style="margin:10px;"><button type="button" class="btn_l radius" onclick="layerPopOpen('pop03')">이미 회원 가입이 되어있는 경우</button></li>
+			<li style="margin:10px;"><button type="button" class="btn_l radius" onclick="layerPopOpen('pop04')">개인 회원 미가입 시</button></li>
+			<li style="margin:10px;"><button type="button" class="btn_l radius" onclick="layerPopOpen('pop05')">사업자 회원 미가입 시</button></li>
+			<li style="margin:10px;"><button type="button" class="btn_l radius" onclick="layerPopOpen('pop06')">약관 공통</button></li>
+		</ul>
     </div>
     <!--//container-->
     <div id="gnbDimmed" class="dimmed"></div>
@@ -480,6 +475,151 @@
         </div>
     </footer>
     <!-- //footer -->
+	<!-- 레이어팝업 -->
+	<div id="pop01" class="wrap_layer_pop">
+        <div class="layer_pop w500" style="top: 9590px; left: 549px;">
+            <div class="container_pop">
+				<div class="form_popup">
+					<div class="tit">개인 회원 가입여부 확인</div>
+					<div class="dsec mt30">가입 시 정보를 정확히 입력해주세요.</div>
+					<div class="form mt20">
+						<div class="form_wrap line_type">
+							<table>
+								<caption>캡션명입력</caption>
+								<colgroup>
+									<col style="width:95px;">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
+										<th scope="row"><label for="input01_01">이름</label></th>
+										<td>
+											<input type="text" id="input01_01" placeholder="이름을 입력해주세요.">
+										</td>
+									</tr>
+									<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
+										<th scope="row"><label for="input01_02">휴대폰 번호</label></th>
+										<td>
+											<input type="text" id="input01_02" placeholder="휴대폰 번호를 입력해주세요.">
+										</td>
+									</tr>
+									<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
+										<th scope="row"><label for="input01_03">이메일 주소</label></th>
+										<td>
+											<input type="text" id="input01_03" placeholder="정확한 이메일 주소를 입력해주세요.">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="btn mt50 tac">
+						<button type="button" class="btn_l radius common">가입여부 확인</button>
+					</div>
+				</div>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('pop01')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+	<div id="pop02" class="wrap_layer_pop">
+        <div class="layer_pop w500" style="top: 9590px; left: 549px;">
+            <div class="container_pop">
+                <div class="form_popup">
+					<div class="tit">사업자 회원 가입여부 확인</div>
+					<div class="dsec mt30">가입 시 정보를 정확히 입력해주세요.</div>
+					<div class="form mt20">
+						<div class="form_wrap line_type">
+							<table>
+								<caption>캡션명입력</caption>
+								<colgroup>
+									<col style="width:95px;">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
+										<th scope="row"><label for="input01_01">사업자번호</label></th>
+										<td>
+											<input type="text" id="input01_01" placeholder="번호 10자리를 입력해주세요.">
+										</td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="btn mt50 tac">
+						<button type="button" class="btn_l radius common">가입여부 확인</button>
+					</div>
+				</div>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('pop02')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+	<div id="pop03" class="wrap_layer_pop">
+        <div class="layer_pop w400" style="top: 9590px; left: 549px;">
+            <div class="container_pop">
+				<div class="alert_popup tac">
+					<div class="tit mt20">이미 쿠쿠 회원입니다.</div>
+					<div class="desc mt30">고객님은 <span>cuck**</span>로 가입이 되어 있습니다.<br>로그인을 진행 하시겠습니까?</div>
+					<div class="btn mt50 tac">
+						<button type="button" class="btn_l radius common">로그인</button>
+					</div>
+				</div>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('pop03')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+	<div id="pop04" class="wrap_layer_pop">
+        <div class="layer_pop w400" style="top: 9590px; left: 549px;">
+            <div class="container_pop">
+                <div class="alert_popup tac">
+					<div class="tit mt20">아직 회원이 아닙니다.</div>
+					<div class="desc mt30">입력하신 정보로 가입된 내역이 없습니다.<br>회원가입을 진행 하시겠습니까?</div>
+					<div class="btn mt50 tac">
+						<button type="button" class="btn_l radius common">로그인</button>
+					</div>
+				</div>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('pop04')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+	<div id="pop05" class="wrap_layer_pop">
+        <div class="layer_pop w400" style="top: 9590px; left: 549px;">
+            <div class="container_pop">
+                <div class="alert_popup tac">
+					<div class="tit mt20">아직 회원이 아닙니다.</div>
+					<div class="desc mt30">입력하신 정보로 가입된 내역이 없습니다.<br>회원가입을 진행 하시겠습니까?</div>
+					<div class="desc02 mt25">가입시 사업자등록증, 담당자 재직증명서 필요</div>
+					<div class="btn mt50 tac">
+						<button type="button" class="btn_l radius common">회원가입</button>
+					</div>
+				</div>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('pop05')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+	<div id="pop06" class="wrap_layer_pop">
+        <div class="layer_pop w700" style="top: 9590px; left: 549px;">
+            <div class="container_pop">
+				<div class="policy_popup">
+					<div class="tit">이용약관</div>
+					<div class="sub_tit mt60">제1조 (목적)</div>
+					<div class="desc">이 약관은 쿠쿠전자㈜, 쿠쿠홈시스㈜가 운영하는 인터넷 관련 서비스(이하＇서비스＇라 한다.)를 이용함에 있어 각 회사가 운영하는 사이트들(이하 ‘쿠쿠사이트’)를 하나의 ID 및 비밀번호로 동시에 가입하여 이용함에 있어 이용자의 권리. 의무 및 책임사항을 규정함을 목적으로 합니다.</div>
+
+					<div class="sub_tit mt40">제2조 (정의)</div>
+					<div class="desc">① 쿠쿠사이트란 쿠쿠전자 웹사이트, 쿠쿠전자 커뮤니티사이트 및 쿠쿠전자 쇼핑몰(쿠쿠몰), 쿠쿠홈시스 렌탈사이트를 말합니다.<br>
+					② 쿠쿠몰이란 쿠쿠전자가 재화 또는 용역을 이용자에게 제공하기 위하여 컴퓨터등 정보통신설비를 이용하여 재화 또는 용역을 거래할 수 있도록 설정한 가상의 영업장을 말하며, 아울러 사이버몰을 운영하는 사업자의 의미로도 사용합니다.<br>
+					③ 이용자란 쿠쿠 사이트에 접속하여 이 약관에 따라 쿠쿠 사이트가 제공하는 서비스를 받는 회원 및 비회원을 말합니다.<br>
+					④ 회원이라 함은 쿠쿠 사이트에 개인정보를 제공하여 회원등록을 한 자로서, 쿠쿠 사이트의 정보를 지속적으로 제공받으며, 쿠쿠 사이트가 제공하는 서비스를 계속적으로 이용할 수 있는 자를 말합니다.<br>
+					⑤ 비회원이라 함은 회원에 가입하지 않고 쿠쿠 사이트가 제공하는 서비스를 이용하는 자를 말합니다.<br>
+					⑥ 회원가입시 쿠쿠전자가 운영하는 쿠쿠전자 웹사이트, 쿠쿠전자 커뮤니티사이트 및 쿠쿠전자 </div>
+				
+				</div>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('pop06')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+	<!-- //레이어팝업 -->
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
 </body>

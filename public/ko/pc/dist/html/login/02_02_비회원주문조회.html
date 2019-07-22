@@ -19,9 +19,10 @@
   <meta name="robots" content="ALL">
   <link rel="stylesheet" href="../../stylesheets/css/common.css">
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
-    <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
+  <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
+  
 </head>
 
 <body>
@@ -374,19 +375,72 @@
   <!-- //header-->
 
   <!--container-->
-    <div id="container">
+    <div id="container" class="mypage_container">
         <div class="top_content">
             <div class="location">
                 <ul>
                     <li><a href="#">홈</a></li>
-                    <li>마이쿠쿠</li>
+                    <li>로그인</li>
                 </ul>
             </div>
             <div class="top_tit">
-                <h2 class="tit_02">서브타이틀</h2>
+                <h2 class="tit_02">로그인</h2>
             </div>
         </div>
         <div class="content">
+			<div class="member_area">
+				<div class="tab type_m tac">
+					<ul class="tab_btn">
+						<li class=""><a href="#">회원로그인</a></li>
+						<li class="on"><a href="#">비회원 주문조회</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="member_area">
+				<div class="tab_content mt40">
+		
+				<!-- 비회원 주문조회 -->
+				<div class="on">
+					<div class="form_wrap line_type">
+						<table>
+							<caption>캡션명입력</caption>
+							<colgroup>
+								<col style="width:95px;">
+								<col style="width:auto">
+							</colgroup>
+							<tbody>
+								<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
+									<th scope="row"><label for="input01_03">이름</label></th>
+									<td>
+										<input type="text" id="input01_03" placeholder="이름을 입력해주세요.">
+									</td>
+								</tr>
+								<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
+									<th scope="row"><label for="input01_04">주문번호</label></th>
+									<td>
+										<input type="text" id="input01_04" placeholder="주문번호를 입력해주세요.">
+									</td>
+
+								</tr>
+							   
+							</tbody>
+						</table>
+					</div>
+			
+					<div class="login_btn mt60">
+						<button type="button" class="btn_l radius common w100p">비회원 주문조회</button>
+					</div>
+					<div class="sns_login mt60 tac">
+						<div class="tit">아직 쿠쿠회원이 아니신가요?</div>
+						<div class="desc mt20">CUCKOO 회원가입을 하시면<br>다양한 혜택을 받으실 수 있습니다.</div>
+						<button type="button" class="btn_l radius mt40">회원가입</button>
+						
+					</div>
+				</div>
+				<!-- //비회원 주문조회 -->
+				</div>	
+
+			</div>
 
         </div>
     </div>

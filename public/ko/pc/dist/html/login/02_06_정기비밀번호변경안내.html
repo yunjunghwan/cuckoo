@@ -19,9 +19,10 @@
   <meta name="robots" content="ALL">
   <link rel="stylesheet" href="../../stylesheets/css/common.css">
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
-    <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
+  <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
+
 </head>
 
 <body>
@@ -374,20 +375,60 @@
   <!-- //header-->
 
   <!--container-->
-    <div id="container">
+    <div id="container" class="mypage_container">
         <div class="top_content">
             <div class="location">
                 <ul>
                     <li><a href="#">홈</a></li>
-                    <li>마이쿠쿠</li>
+                    <li>정기 비밀번호 변경 안내</li>
                 </ul>
             </div>
             <div class="top_tit">
-                <h2 class="tit_02">서브타이틀</h2>
+                <h2 class="tit_02">정기 비밀번호 변경 안내</h2>
             </div>
         </div>
         <div class="content">
-
+			<div class="sleep_mem change_pw tac">
+				<div class="img">정기 비밀번호 변경 안내</div>
+				<div class="desc mt60">
+					정기적인 비밀번호 변경을 통해 고객님의 소중한<br>개인정보를 보호해 주세요!
+				</div>
+				<div class="member_area">
+					<div class="form_wrap line_type mt20">
+						<table>
+							<caption>캡션명입력</caption>
+							<colgroup>
+								<col style="width:95px;">
+								<col style="width:auto">
+							</colgroup>
+							<tbody>
+								<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
+									<th scope="row"><label for="input01_01">이름</label></th>
+									<td>
+										<input type="text" id="input01_01" placeholder="이름을 입력해주세요.">
+									</td>
+								</tr>
+								<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
+									<th scope="row"><label for="input01_02">휴대폰 번호</label></th>
+									<td>
+										<input type="text" id="input01_02" placeholder="휴대폰 번호를 입력해주세요.">
+									</td>
+								</tr>
+								<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
+									<th scope="row"><label for="input01_03">이메일 주소</label></th>
+									<td>
+										<input type="text" id="input01_03" placeholder="정확한 이메일 주소를 입력해주세요.">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="member_area change_pw mt60">
+					<button type="button" class="btn_l radius common">변경하기</button>
+					<button type="button" class="btn_l radius">다음에 변경하기</button>
+				</div>
+			</div>
         </div>
     </div>
     <!--//container-->
