@@ -19,11 +19,11 @@ $window.load(function () {
 
         var position = $(window).scrollTop(), // 현재 스크롤바의 위치
     		headerHeight = $('#header').outerHeight(true),
-    		topAreaHeight = $('.temp-top-area').outerHeight(true),
     		asideBoxH  = $(".aside_box").outerHeight(true),
-    		prdBoxHeight = $('.prd-info-box').outerHeight(true),
-    		sideBannerHeight = $('#aside-wrap').outerHeight(true),
-    		bannerTop = headerHeight+topAreaHeight;
+            topContH = $(".top_content").outerHeight(true)
+
+
+
 
         if(!($('#header').hasClass('all_menu_open'))){
             if(winSc > 0){
@@ -35,20 +35,22 @@ $window.load(function () {
 
         if($(".aside_box").length > 0){
             var contTop = $('.content').offset().top;
-    		if(position+asideBoxH >= $('#footer').offset().top){
+
+            if(position > contTop){
+    			$(".aside_box").css('top','72px');
+    		}
+            if(position+asideBoxH >= $('#footer').offset().top-72){
     			var top = ($('#footer').offset().top) - (position+asideBoxH+30);
 
     			$(".aside_box").css('top',top);
 
-    		}else{
-    			$(".aside_box").css('top',0);
     		}
-
     		if((position > contTop) && (position+contTop <= $('#footer').offset().top)){
     			$(".aside_box").addClass('fixed');
     		}
-    		if(position < 334){
+    		if(position < topContH+headerHeight){
     			$(".aside_box").removeClass('fixed');
+                $(".aside_box").css('top',0);
     		}
     	}
 
@@ -408,3 +410,15 @@ function readURL(input) {
 	  reader.readAsDataURL(input.files[0]);
 	}
 }
+
+
+if (navigator.userAgent.match(/Trident\/7\./)) { //ie 픽스트 버그처리
+    $('body').on("mousewheel", function () {
+    event.preventDefault();
+
+    var wheelDelta = event.wheelDelta;
+
+    var currentScrollPosition = window.pageYOffset;
+    window.scrollTo(0, currentScrollPosition - wheelDelta);
+    });
+};

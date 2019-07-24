@@ -373,277 +373,235 @@
   <!-- //header-->
 
   <!--container-->
-    <div id="container">
+    <div id="container" class="nonmember"><!-- 비회원일경우 nonmember 클래스 추가 -->
         <div class="top_content">
             <div class="location">
                 <ul>
                     <li><a href="#">홈</a></li>
-                    <li>쿠쿠몰 주문결제</li>
+                    <li>쿠쿠몰 장바구니</li>
                 </ul>
             </div>
             <div class="top_tit">
-                <h2 class="tit_02">쿠쿠몰 주문결제</h2>
+                <h2 class="tit_02">쿠쿠몰 장바구니</h2>
             </div>
+            <div class="img banner_nomember"><img src="../../images/order/img_top_nomember.png" alt="아직 쿠쿠 회원이 아니세요? 회원가입하고 다양한 혜택을 받아보세요. 할인쿠폰, 포인트적립"></div>
         </div>
         <div class="content">
+            <div class="total_count">
+                담긴 제품:총 <span class="point01">4</span>개
+            </div>
             <div class="order_area">
-                <div class="section">
-                    <h3 class="tit_04"><span class="num">01</span>배송정보를 입력해주세요.</h3>
-
-                    <div class="form_wrap">
-                        <div class="section_select">
-                            <input type="radio" class="radio_s" name="radio01" id="radio01_01" checked>
-                            <label for="radio01_01" class="mr40"><span>기본 배송지</span></label>
-                            <input type="radio" class="radio_s" name="radio01" id="radio01_02" class="ml40">
-                            <label for="radio01_02"><span>새로입력</span></label>
-                        </div>
-                        <table>
-                            <caption>배송정보 입력</caption>
-                            <colgroup>
-                                <col style="width:150px;">
-                                <col style="width:auto">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="row"><label for="input01_01">고객명</label></th>
-                                    <td>
-                                        <input type="text" id="input01_01" placeholder="이름을 입력해주세요." class="w100p">
-                                    </td>
-                                </tr>
-                                <tr class="error"><!-- [D] 인풋값에러시 error클래스추가  -->
-                                    <th scope="row"><label for="input01_02">이메일주소</label></th>
-                                    <td>
-                                        <input type="text" id="input01_02" placeholder="정확한 이메일주소를 입력 해주세요." class="w100p">
-                                        <p class="error_txt">에러메시지</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><label for="input01_03">휴대폰번호</label></th>
-                                    <td>
-                                        <input type="text" id="input01_03" placeholder="숫자만 입력(ex.01012341234)" class="w100p">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><label for="input01_04">주소</label></th>
-                                    <td>
-                                        <input type="text" id="input01_04"><button tyle="button" class="btn_m ml10">주소찾기</button>
-                                        <input type="text" class="w100p mt10">
-                                        <input type="text" class="w100p mt10">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><label for="input01_05">배송요청사항</label></th>
-                                    <td>
-                                        <div class="select_box">
-                                            <a href="#" class="tit">배송메모를 선택해 주세요.</a>
-                                            <ul class="hidden">
-                                                <li class="on"><a href="#">선택안함</a></li>
-                                                <li><a href="#">배송전에 미리 연락 바랍니다.</a></li>
-                                                <li><a href="#">부재 시 경비실에 맡겨 주세요.</a></li>
-                                                <li><a href="#">메시지 집접 입력(50자 이내)</a></li>
-                                            </ul>
-                                        </div>
-                                        <input type="text" placeholder="배송메모를 입력해주세요." class="w100p mt10">
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div><!-- //section -->
-                <div class="section">
-                    <h3 class="tit_04"><span class="num">02</span>주문 제품을 확인해주세요.</h3>
-                    <div class="tbl_wrap">
-                        <div class="tbl tbl_order">
-                            <table>
-                                <caption>주문제품 확인</caption>
-                                <colgroup>
-                                    <col style="width:20%">
-                                    <col style="width:auto">
-                                    <col style="width:10%">
-                                    <col style="width:15%">
-                                    <col style="width:15%">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th scope="col" colspan="2">제품정보</th>
-                                        <th scope="col">수량</th>
-                                        <th scope="col">예상적립 포인트</th>
-                                        <th scope="col">결제 예정 금액</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><div class="img"><img src="../../images/order/temp_prd_140x140.png" alt=""></div></td>
-                                        <td class="txt_left prd_info">
-                                            <p class="category">IH전기압력밥솥</p>
-                                            <p class="name">CRP-KHT1020FD</p>
-                                            <p class="discount">608,000원</p>
-                                            <p class="price">577,600 <span class="point01">10%</span></p>
-                                        </td>
-                                        <td>
-                                            <span class="bold">1</span>
-                                        </td>
-                                        <td><span class="bold">1,077P</span></td>
-                                        <td><span class="bold price">577,600원</span></td>
-                                    </tr>
-                                    <!-- 사은품있을경우 -->
-                                    <tr>
-                                        <td colspan="5" class="gift_box_wrap">
-                                            <div class="gift_box">
-                                                <div class="img"><img src="../../images/order/temp_gift_317x100.png" alt=""></div>
-                                                <div class="info">
-                                                    <p class="tit">사은품정보</p>
-                                                    <ul class="bul_list">
-                                                        <li>사은품은 배송/설치 완료 후, 약 3주 뒤 별도 배송 됩니다.</li>
-                                                        <li>사은품 품절 시 행사가 조기종료 되거나 사은품이 변경 될 수 있습니다.</li>
-                                                        <li>주문 제품의 품절 시 배송이 지연될 수 있습니다.</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!-- 사은품있을경우 -->
-                                    <tr>
-
-                                        <td>
-                                            <div class="img">
-                                                <img src="../../images/order/temp_prd_140x140.png" alt="">
-                                            </div>
-                                        </td>
-                                        <td class="txt_left prd_info">
-                                            <p class="category">IH전기압력밥솥</p>
-                                            <p class="name">CRP-KHT1020FD</p>
-                                            <p class="discount"><!-- [D] 값이없어도 태그유지 --></p>
-                                            <p class="price">577,600</p>
-                                        </td>
-                                        <td>
-                                            <span class="bold">1</span>
-                                        </td>
-                                        <td><span class="bold">1,077P</span></td>
-                                        <td><span class="bold price">577,600원</span></td>
-                                    </tr>
-                                    <tr>
-
-                                        <td>
-                                            <div class="img">
-                                                <img src="../../images/order/temp_prd_140x140.png" alt="">
-                                            </div>
-                                        </td>
-                                        <td class="txt_left prd_info">
-                                            <p class="category">IH전기압력밥솥</p>
-                                            <p class="name">CRP-KHT1020FD</p>
-                                            <p class="discount"><!-- [D] 값이없어도 태그유지 --></p>
-                                            <p class="price">577,600</p>
-                                            <p class="option">옵션 : CRP-D105SX</p>
-                                        </td>
-                                        <td>
-                                            <span class="bold">1</span>
-                                        </td>
-                                        <td><span class="bold">1,077P</span></td>
-                                        <td><span class="bold price">577,600원</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div><!-- //section -->
-                <div class="section">
-                    <h3 class="tit_04"><span class="num">03</span>쿠폰과 포인트 혜택을 선택해주세요.</h3>
-                    <div class="form_wrap">
-                        <table>
-                            <caption>쿠폰, 포인트 선택</caption>
-                            <colgroup>
-                                <col style="width:150px;">
-                                <col style="width:auto">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="row"><label for="input02_01">포인트</label></th>
-                                    <td class="pb40">
-                                        <input type="text" id="input02_01" placeholder="0P" style="width:360px"><button tyle="button" class="btn_m ml10">모두사용</button><span class="ml20">보유 포인트 <span class="bold">3,000P</span></span>
-                                        <ul class="notice_list mt20">
-                                            <li>포인트 사용은 1P단위로 사용이 가능합니다.</li>
-                                            <li>보유하신 포인트가 결제금액 이상 이여도 최소 결제금액 천원을 제외하고 사용됩니다.</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><label for="input02_02">쿠폰</label></th>
-                                    <td>
-                                        <div class="select_box">
-                                            <a href="#" class="tit">사용가능 쿠폰 1장/ 보유쿠폰3장</a>
-                                            <ul class="hidden">
-                                                <li class="on"><a href="#">선택안함</a></li>
-                                                <li><a href="#">회원가입축하 10%할인쿠폰(~2020년 04월 22일까지 사용가능)</a></li>
-                                                <li><a href="#" class="disabled">적용가능한 쿠폰이 없습니다.</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div><!-- //section -->
-                <div class="section">
-                    <h3 class="tit_04"><span class="num">04</span>결제수단을 선택해주세요.</h3>
-                    <div class="inner">
-                        <div class="tab tab_pay ui_tab">
-                            <ul class="tab_btn">
-                                <li class="pay01"><a href="#"><span class="img"></span>신용카드</a></li>
-                                <li class="pay02"><a href="#"><span class="img"></span>실시간 계좌이체</a></li>
-                                <li class="pay03"><a href="#"><span class="img"></span>가상계좌</a></li>
-                                <li class="pay04"><a href="#"><span class="img"></span>에스크로</a></li>
-                                <li class="pay05"><a href="#"><span class="img"></span>휴대폰 소액결제</a></li>
-                                <li class="pay06"><a href="#"><span class="img"></span>카카오페이</a></li>
-                            </ul>
-                            <div class="tab_cont_wrap">
-                                <div class="cont">
-                                    <p class="tit_05">신용카드</p>
-                                    <ul class="bul_list">
-                                        <li>신용/체크카드는 결제금액은 <span class="bold">최소 1,000원 이상</span> 가능합니다.</li>
-                                        <li>국내외 모든 신용카드로 결제가 가능합니다.</li>
-                                    </ul>
-                                </div>
-                                <div class="cont">
-                                    <p class="tit_05">실시간 계좌이체</p>
-                                    <ul class="bul_list">
-                                        <li>실시간계좌이체는 결제금액 <span class="bold">최소 160원 이상</span> 가능합니다.</li>
-                                        <li>계좌이체는 결제금액이 회원님의 계좌에서 자동으로 이체되는 서비스 입니다.</li>
-                                    </ul>
-                                </div>
-                                <div class="cont">
-                                    <p class="tit_05">가상계좌</p>
-                                    <ul class="bul_list">
-                                        <li>무통장입금은 결제금액 <span class="bold">최소 1원 이상</span> 가능합니다.</li>
-                                        <li>은행별 가상(개인전용) 계좌가 부여 됩니다.</li>
-                                    </ul>
-                                </div>
-                                <div class="cont">
-                                    <p class="tit_05">에스크로</p>
-                                    <ul class="bul_list">
-                                        <li>무통장입금은 결제금액 <span class="bold">최소 1원 이상</span> 가능합니다.</li>
-                                        <li>결제금액이 5만원이상일 경우 결제 대금예치(에스크로)를 통해 안전하게 구매하실 수 있습니다.</li>
-                                    </ul>
-                                </div>
-                                <div class="cont">
-                                    <p class="tit_05">휴대폰 소액결제</p>
-                                    <ul class="bul_list">
-                                        <li>휴대폰소액결제는 결제금액 최소 10원 이상 가능합니다.</li>
-                                        <li>휴대폰 인증을 통해 결제하며, 결제 금액은 휴대폰 요금 청구서에 합산되어 청구됩니다. <br>결제 취소는 결제한 해당월 말일까지 가능합니다. ex) 7월 29일 결제 시, 7월 31일까지 취소 가능</li>
-                                    </ul>
-                                </div>
-                                <div class="cont">
-                                    <p class="tit_05">카카오페이</p>
-                                    <ul class="bul_list">
-                                        <li>추후추가될예정</li>
-                                    </ul>
-                                </div>
+                <div class="tbl_wrap">
+                    <div class="tbl tbl_order">
+                        <div class="temp_area">
+                            <div class="total_count">
+                                <input type="checkbox" class="check_m" id="check00_00">
+                                <label for="check00_00"><span>무이자3개월</span></label>
                             </div>
                         </div>
+                        <table>
+                            <caption>장바구니</caption>
+                            <colgroup>
+                                <col style="width:5%">
+                                <col style="width:20%">
+                                <col style="width:auto">
+                                <col style="width:13%">
+                                <col style="width:13%">
+                                <col style="width:13%">
+                                <col style="width:13%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" colspan="3">제품정보</th>
+                                    <th scope="col">수량</th>
+                                    <th scope="col">예상적립 포인트</th>
+                                    <th scope="col">결제 예정 금액</th>
+                                    <th scope="col">주문</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="txt_left">
+                                        <span>
+                                            <input type="checkbox" class="check_m" id="check01_01">
+                                            <label for="check01_01"><span class="blind">제품선택</span></label>
+                                        </span>
+                                    </td>
+                                    <td><div class="img"><img src="../../images/order/temp_prd_140x140.png" alt=""></div></td>
+                                    <td class="txt_left prd_info">
+                                        <p class="category">IH전기압력밥솥</p>
+                                        <p class="name">CRP-KHT1020FD</p>
+                                        <p class="discount">608,000원</p>
+                                        <p class="price">577,600 <span class="point01">10%</span></p>
+                                    </td>
+                                    <td>
+                                        <div class="count_wrap">
+                                            <button type="button" class="ico minus" disabled=""><span class="blind">수량감소</span></button><!-- [D]비활성화시 disabled속성추가 -->
+                                            <span class="num">1</span>
+                                            <button type="button" class="ico plus"><span class="blind">수량증가</span></button><!-- [D]비활성화시 disabled속성추가 -->
+                                        </div>
+                                    </td>
+                                    <td><span class="bold">1,077P</span></td>
+                                    <td><span class="bold price">577,600원</span></td>
+                                    <td class="btn-wrap">
+                                        <p><button type="button" class="btn_s common">바로구매</button></p>
+                                        <p><button type="button" class="btn_s">삭제</button></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                </div><!-- //section -->
+                    <div class="tbl tbl_order">
+                        <div class="temp_area">
+                            <div class="total_count">
+                                <input type="checkbox" class="check_m" id="check00_01">
+                                <label for="check00_01"><span>무이자6개월</span></label>
+                            </div>
+                        </div>
+                        <table>
+                            <caption>장바구니</caption>
+                            <colgroup>
+                                <col style="width:5%">
+                                <col style="width:20%">
+                                <col style="width:auto">
+                                <col style="width:13%">
+                                <col style="width:13%">
+                                <col style="width:13%">
+                                <col style="width:13%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" colspan="3">제품정보</th>
+                                    <th scope="col">수량</th>
+                                    <th scope="col">예상적립 포인트</th>
+                                    <th scope="col">결제 예정 금액</th>
+                                    <th scope="col">주문</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="txt_left">
+                                        <span>
+                                            <input type="checkbox" class="check_m" id="check02_01">
+                                            <label for="check02_01"><span class="blind">제품선택</span></label>
+                                        </span>
+                                    </td>
+                                    <td><div class="img"><img src="../../images/order/temp_prd_140x140.png" alt=""></div></td>
+                                    <td class="txt_left prd_info">
+                                        <p class="category">IH전기압력밥솥</p>
+                                        <p class="name">CRP-KHT1020FD</p>
+                                        <p class="discount">608,000원</p>
+                                        <p class="price">577,600 <span class="point01">10%</span></p>
+                                    </td>
+                                    <td>
+                                        <div class="count_wrap">
+                                            <button type="button" class="ico minus" disabled=""><span class="blind">수량감소</span></button><!-- [D]비활성화시 disabled속성추가 -->
+                                            <span class="num">1</span>
+                                            <button type="button" class="ico plus"><span class="blind">수량증가</span></button><!-- [D]비활성화시 disabled속성추가 -->
+                                        </div>
+                                    </td>
+                                    <td><span class="bold">1,077P</span></td>
+                                    <td><span class="bold price">577,600원</span></td>
+                                    <td class="btn-wrap">
+                                        <p><button type="button" class="btn_s common">바로구매</button></p>
+                                        <p><button type="button" class="btn_s">삭제</button></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tbl tbl_order">
+                        <div class="temp_area">
+                            <div class="total_count">
+                                <input type="checkbox" class="check_m" id="check00_02">
+                                <label for="check00_02"><span>일시불</span></label>
+                            </div>
+                        </div>
+                        <table>
+                            <caption>장바구니</caption>
+                            <colgroup>
+                                <col style="width:5%">
+                                <col style="width:20%">
+                                <col style="width:auto">
+                                <col style="width:13%">
+                                <col style="width:13%">
+                                <col style="width:13%">
+                                <col style="width:13%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" colspan="3">제품정보</th>
+                                    <th scope="col">수량</th>
+                                    <th scope="col">예상적립 포인트</th>
+                                    <th scope="col">결제 예정 금액</th>
+                                    <th scope="col">주문</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="txt_left">
+                                        <span>
+                                            <input type="checkbox" class="check_m" id="check03_01">
+                                            <label for="check03_01"><span class="blind">제품선택</span></label>
+                                        </span>
+                                    </td>
+                                    <td><div class="img"><img src="../../images/order/temp_prd_140x140.png" alt=""></div></td>
+                                    <td class="txt_left prd_info">
+                                        <p class="category">IH전기압력밥솥</p>
+                                        <p class="name">CRP-KHT1020FD</p>
+                                        <p class="discount">608,000원</p>
+                                        <p class="price">577,600 <span class="point01">10%</span></p>
+                                    </td>
+                                    <td>
+                                        <div class="count_wrap">
+                                            <button type="button" class="ico minus" disabled=""><span class="blind">수량감소</span></button><!-- [D]비활성화시 disabled속성추가 -->
+                                            <span class="num">1</span>
+                                            <button type="button" class="ico plus"><span class="blind">수량증가</span></button><!-- [D]비활성화시 disabled속성추가 -->
+                                        </div>
+                                    </td>
+                                    <td><span class="bold">1,077P</span></td>
+                                    <td><span class="bold price">577,600원</span></td>
+                                    <td class="btn-wrap">
+                                        <p><button type="button" class="btn_s common">바로구매</button></p>
+                                        <p><button type="button" class="btn_s">삭제</button></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="txt_left">
+                                        <span>
+                                            <input type="checkbox" class="check_m" id="check03_02">
+                                            <label for="check03_02"><span class="blind">제품선택</span></label>
+                                        </span>
+                                    </td>
+                                    <td><div class="img"><img src="../../images/order/temp_prd_140x140.png" alt=""><span class="soldout">일시품절</span></div></td>
+                                    <td class="txt_left prd_info">
+                                        <p class="category">IH전기압력밥솥</p>
+                                        <p class="name">CRP-KHT1020FD</p>
+                                        <p class="discount">608,000원</p>
+                                        <p class="price">577,600 <span class="point01">10%</span></p>
+                                    </td>
+                                    <td>
+                                        <div class="count_wrap">
+                                            <button type="button" class="ico minus" disabled=""><span class="blind">수량감소</span></button><!-- [D]비활성화시 disabled속성추가 -->
+                                            <span class="num">1</span>
+                                            <button type="button" class="ico plus"><span class="blind">수량증가</span></button><!-- [D]비활성화시 disabled속성추가 -->
+                                        </div>
+                                    </td>
+                                    <td><span class="bold">1,077P</span></td>
+                                    <td><span class="bold price">577,600원</span></td>
+                                    <td class="btn-wrap">
+                                        <p><button type="button" class="btn_s">삭제</button></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="btn-wrap-left">
+                        <button type="button" class="btn_s">전체 제품 삭제</button>
+                        <button type="button" class="btn_s">선택 제품 삭제</button>
+                    </div>
+                </div>
             </div><!-- //order_area -->
-
             <div class="aside_box_wrap">
                 <div class="aside_box">
                     <div class="counter_box">
@@ -660,14 +618,6 @@
                                 <span class="tit">제품 할인</span>
                                 <span class="price">-30,400원</span>
                             </div>
-                            <div class="row_discount">
-                                <span class="tit">포인트 사용</span>
-                                <span class="price">-3,000P</span>
-                            </div>
-                            <div class="row_discount">
-                                <span class="tit">쿠폰 할인</span>
-                                <span class="price">-16,000원</span>
-                            </div>
                         </div>
                         <div class="bottom_area">
                             <div class="price_tit">결제 예정 금액</div>
@@ -676,16 +626,18 @@
                                 <span class="tit"><i class="ico point"></i><span>예상 적립 포인트</span></span>
                                 <div class="txt_point">1,087P</div>
                             </div>
-                            <div class="agree_area">
-                                <input type="checkbox" class="check_m" id="agree01">
-                                <label for="agree01">구매조건 및 결제진행 동의</label>
-                                <p class="txt">주문하실 제품, 가격, 배송정보, 할인내역 등을 최종 확인하였으며, 구매 진행에 동의하시겠습니까? (전자상거래법 제 8조 2항)</p>
-                            </div>
                             <div class="btn-wrap">
-                                <button type="button" class="btn_l radius common">599,600원 결제하기</button>
-                                <button type="button" class="btn_l radius">전체 제품 주문</button>
+                                <button type="button" class="btn_l radius">선택 제품 주문</button>
+                                <button type="button" class="btn_l radius common">전체 제품 주문</button>
                             </div>
                         </div>
+                    </div>
+                    <div class="info_box">
+                        <p class="tit"><i class="ico cart"></i><span>장바구니 이용안내</span></p>
+                        <ul class="star_list">
+                            <li>가격, 옵션 등 제품정보가 변경 된 경우 주문이 불가할 수 있습니다.</li>
+                            <li>쿠쿠몰 제품 배송비는 모두 무료 입니다.</li>
+                        </ul>
                     </div>
                 </div>
             </div>

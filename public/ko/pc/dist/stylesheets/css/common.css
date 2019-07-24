@@ -402,6 +402,7 @@ img { vertical-align: top; image-rendering: -webkit-optimize-contrast; }
 .mt20{margin-top:20px !important}
 .mt30{margin-top:30px !important}
 .mt40{margin-top:40px !important}
+.mr40{margin-right:40px !important}
 .pb40{padding-bottom:40px !important}
 /* 공통 타이틀 */
 .tit_02{display:inline-block; font-size:38px; font-weight:700; vertical-align:middle}
@@ -642,6 +643,7 @@ html.dim body .wrap-dim{position:fixed; left:0; top:0; width:100%; height:100%; 
 .line_type tr{border-bottom:1px solid #d5d6d3}
 .line_type tr.on{border-bottom:1px solid #312f2d !important}
 .line_type tr.error{border-bottom:1px solid #d61a2e}
+.line_type tr:last-child th, .line_type tr:last-child td{padding-bottom:20px}
 .line_type th{padding-top:40px; padding-bottom:20px; font-weight:500}
 .line_type td{padding-top:40px; padding-bottom:20px;}
 .line_type tr:first-child th, .line_type tr:first-child td{padding-top:0}
@@ -739,3 +741,10 @@ body > .ui-datepicker{display:none}
 .no_data:before{content:''; display:inline-block; margin-bottom:55px; background:url(../../images/common/img_ico_zip.png) no-repeat}
 .no_data.shopping:before{width:70px; height:75px; background-position:-470px -280px;}
 .no_data .btn-wrap{margin-top:60px}
+
+/* 약관동의 */
+.agree_box{padding:25px; border:1px solid #c7c8c4; box-sizing:border-box; max-height:188px; overflow-y:auto}
+.agree_box .tit{font-size:13px; font-weight:500}
+.agree_box .tit + .tit, .agree_box .txt + .tit{margin-top:25px}
+.agree_box .tit + .txt{margin-top:8px}
+.agree_box .txt{font-size:13px; line-height:24px}

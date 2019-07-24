@@ -373,7 +373,7 @@
   <!-- //header-->
 
   <!--container-->
-    <div id="container">
+    <div id="container" class="nonmember"><!-- 비회원일경우 nonmember 클래스 추가 -->
         <div class="top_content">
             <div class="location">
                 <ul>
@@ -387,8 +387,22 @@
         </div>
         <div class="content">
             <div class="order_area">
+                <div class="section type_borderNone">
+                    <h3 class="tit_04"><span class="num">01</span>비회원 개인정보 수집 및 이용 동의</h3>
+                    <div class="agree_box">
+                        <p class="tit">1. 개인정보 수집 항목 : 이름, 주소, 전화번호, 휴대폰번호, Email</p>
+                        <p class="tit">2. 수집 목적 : 회원 가입 유무 확인 및 구매 내용에 대한 정확한 회신</p>
+                        <p class="tit">3. 개인정보 보유 이용 기간 : 전자상거래 등에서의 소비자보호에 관한 법률 등에서 정한 보존기간 동안 고객님의 개인 정보를 보유합니다.</p>
+                        <p class="txt">- 계약 또는 청약철회 등에 관한 기록 : 5년</p>
+                        <p class="txt">- 대금결제 및 재화 등의 공급에 관한 기록 : 5년</p>
+                        <p class="txt">- 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년</p>
+                    </div>
+                    <p class="mt20">
+                        <input type="checkbox" class="check_s" id="agree01"><label for="agree01" class="bold"><span>비회원 개인정보 수집 이용에 대한 내용을 확인하였으며 이에 동의합니다.</span></label>
+                    </p>
+                </div><!--  /section -->
                 <div class="section">
-                    <h3 class="tit_04"><span class="num">01</span>배송정보를 입력해주세요.</h3>
+                    <h3 class="tit_04"><span class="num">02</span>배송정보를 입력해주세요.</h3>
 
                     <div class="form_wrap">
                         <div class="section_select">
@@ -451,7 +465,7 @@
                     </div>
                 </div><!-- //section -->
                 <div class="section">
-                    <h3 class="tit_04"><span class="num">02</span>주문 제품을 확인해주세요.</h3>
+                    <h3 class="tit_04"><span class="num">03</span>주문 제품을 확인해주세요.</h3>
                     <div class="tbl_wrap">
                         <div class="tbl tbl_order">
                             <table>
@@ -547,43 +561,7 @@
                         </div>
                     </div>
                 </div><!-- //section -->
-                <div class="section">
-                    <h3 class="tit_04"><span class="num">03</span>쿠폰과 포인트 혜택을 선택해주세요.</h3>
-                    <div class="form_wrap">
-                        <table>
-                            <caption>쿠폰, 포인트 선택</caption>
-                            <colgroup>
-                                <col style="width:150px;">
-                                <col style="width:auto">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="row"><label for="input02_01">포인트</label></th>
-                                    <td class="pb40">
-                                        <input type="text" id="input02_01" placeholder="0P" style="width:360px"><button tyle="button" class="btn_m ml10">모두사용</button><span class="ml20">보유 포인트 <span class="bold">3,000P</span></span>
-                                        <ul class="notice_list mt20">
-                                            <li>포인트 사용은 1P단위로 사용이 가능합니다.</li>
-                                            <li>보유하신 포인트가 결제금액 이상 이여도 최소 결제금액 천원을 제외하고 사용됩니다.</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><label for="input02_02">쿠폰</label></th>
-                                    <td>
-                                        <div class="select_box">
-                                            <a href="#" class="tit">사용가능 쿠폰 1장/ 보유쿠폰3장</a>
-                                            <ul class="hidden">
-                                                <li class="on"><a href="#">선택안함</a></li>
-                                                <li><a href="#">회원가입축하 10%할인쿠폰(~2020년 04월 22일까지 사용가능)</a></li>
-                                                <li><a href="#" class="disabled">적용가능한 쿠폰이 없습니다.</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div><!-- //section -->
+
                 <div class="section">
                     <h3 class="tit_04"><span class="num">04</span>결제수단을 선택해주세요.</h3>
                     <div class="inner">
@@ -659,14 +637,6 @@
                             <div class="row_discount">
                                 <span class="tit">제품 할인</span>
                                 <span class="price">-30,400원</span>
-                            </div>
-                            <div class="row_discount">
-                                <span class="tit">포인트 사용</span>
-                                <span class="price">-3,000P</span>
-                            </div>
-                            <div class="row_discount">
-                                <span class="tit">쿠폰 할인</span>
-                                <span class="price">-16,000원</span>
                             </div>
                         </div>
                         <div class="bottom_area">
