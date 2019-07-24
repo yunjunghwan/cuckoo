@@ -328,7 +328,7 @@
 .aside_box .counter_box .top_area .row_discount .price{float:right; font-size:15px; color:#585856; text-align:right}
 .aside_box .counter_box .bottom_area{padding-top:30px}
 .aside_box .counter_box .bottom_area .price_tit{font-size:17px; font-weight:500}
-.aside_box .counter_box .bottom_area .price_box{margin-top:20px; padding:20px; text-align:right; font-size:26px; background-color:#f5f5f5; font-weight:700}
+.aside_box .counter_box .bottom_area .price_box{margin-top:20px; padding:17px 20px; text-align:right; font-size:26px; background-color:#f5f5f5; font-weight:700}
 .aside_box .counter_box .bottom_area .price_box span{vertical-align:middle}
 .aside_box .counter_box .bottom_area .price_box .won{display:inline-block; margin-top:-4px; font-size:22px}
 .aside_box .counter_box .row_point{margin-top:18px}
@@ -336,7 +336,7 @@
 .aside_box .counter_box .row_point .tit{position:relative; float:left; font-weight:500}
 .aside_box .counter_box .row_point .txt_point{float:right; font-weight:500; text-align:right}
 .aside_box .counter_box .btn-wrap{margin-top:27px}
-.aside_box .counter_box .btn-wrap button{width:100%; padding:20px 37px;}
+.aside_box .counter_box .btn-wrap button{width:100%; padding:20px 0;}
 .aside_box .counter_box .btn-wrap button + button{margin-top:10px}
 .aside_box .info_box{margin-top:30px; padding:30px 30px 40px 30px; background-color:#f5f5f5}
 .aside_box .info_box .tit{margin-bottom:25px; font-size:17px; color:#272524; font-weight:500}
@@ -347,6 +347,7 @@
 .aside_box .agree_area .txt{padding:15px 0 0 37px; font-size:13px; color:#585856; line-height:20px}
 /* 주문결제 */
 .order_area .section{border-bottom:1px solid #e0e0de}
+.order_area .section.type_borderNone{border:0}
 .order_area .section + .section{margin-top:80px}
 .order_area .section .form_wrap, .order_area .section .inner{padding:0 30px 40px 30px}
 .order_area .tit_04{margin-bottom:40px }
@@ -368,7 +369,7 @@
 .tab_pay .tab_btn li.pay03 .img{width:55px; height:43px; margin-left:-27px; background-position:-276px -438px;}
 .tab_pay .tab_btn li.pay04 .img{width:55px; height:43px; margin-left:-27px; background-position:-416px -438px;}
 .tab_pay .tab_btn li.pay05 .img{width:40px; height:47px; margin-left:-20px; background-position:-556px -436px;}
-.tab_pay .tab_btn li.pay06 .img{top:50px; width:61px; height:20px; margin-left:-29px; background-position:-694px -450px;}
+.tab_pay .tab_btn li.pay06 .img{top:50px; width:61px; height:20px; margin-left:-31px; background-position:-694px -450px;}
 .tab_pay .tab_btn li:hover{border:2px solid #322e2b;}
 .tab_pay .tab_btn li.on{border:2px solid #322e2b;}
 .tab_pay .tab_btn li.on:before{content:''; display:inline-block; position:absolute; right:0; top:0; width:20px; height:20px; background:url(../../images/common/ico_zip.png) no-repeat -200px -30px;}
@@ -379,6 +380,48 @@
 .tab_pay .tab_cont_wrap .cont .bul_list li{line-height:30px}
 .tab_pay .tab_cont_wrap .cont .bul_list li + li{margin-top:0}
 .tab_pay .tab_cont_wrap .cont .bul_list li:before{top:14px}
+/* 비회원 주문결제 */
+.top_content .banner_nomember{margin:-20px auto 60px auto}
+.nonmember .no_data{padding-top:65px}
+.nonmember .total_box{display:table}
+.nonmember .complate_page .total_box .col{display:table-cell}
+.nonmember .complate_page .total_box .col.total{width:34%}
+.nonmember .complate_page .total_box .col.minus{padding-left:0}
+.nonmember .complate_page .total_box .col + .col{margin-left:0}
 /* 비회원구매 팝업 */
 #nonmemberBuy .desc{margin-top:40px; font-size:13px;}
 #nonmemberBuy .desc .bold{margin-left:15px; text-decoration:underline; font-size:15px}
+
+/* 완료페이지 */
+.complate_page{text-align:center}
+.complate_page:before{content:''; display:inline-block; margin-bottom:55px; background:url(../../images/common/img_ico_zip.png) no-repeat;}
+.complate_page.order:before{width:70px; height:75px; background-position:-689px -280px;}
+.complate_page .txt1{font-size:30px; font-weight:500; color:#312f2d;}
+.complate_page .txt2{margin:35px 0 45px 0; font-size:20px; font-weight:500; color:#312f2d;}
+.complate_page .star_list{display:inline-block}
+.complate_page .star_list li:before{position:static; margin-right:5px; vertical-align:middle;}
+.complate_page .total_box{width:100%; margin-top:60px; padding:50px 0; border:3px solid #312f2d; box-sizing:border-box; text-align:center}
+.complate_page .total_box .col{display:inline-block; position:relative;}
+.complate_page .total_box .col + .col{margin-left:35px}
+.complate_page .total_box .col.minus{padding-left:70px}
+.complate_page .total_box .col.minus:before{content:''; display:inline-block; position:absolute; left:0; top:50%; width:30px; height:30px; margin-top:-15px; background:url(../../images/common/ico_zip.png) -310px -360px;}
+.complate_page .total_box .col.total{padding-left:75px}
+.complate_page .total_box .col.total:before{content:''; display:inline-block; position:absolute; left:0; top:50%; width:30px; height:30px; margin-top:-15px; background:url(../../images/common/ico_zip.png) -365px -360px;}
+.complate_page .total_box .col.total .txt,
+.complate_page .total_box .col.add_point .txt{font-size:25px; font-weight:700}
+.complate_page .total_box .txt{margin-top:20px; font-size:20px; font-weight:500}
+.complate_page .total_box .col.add_point{margin-left:85px}
+.complate_page .pay_info{margin-top:45px; padding-left:300px}
+.complate_page .pay_info th, .complate_page .pay_info td{padding:15px 0; font-size:17px}
+.complate_page .pay_info th{position:relative; padding-left:10px; font-weight:500}
+.complate_page .pay_info th:before{content:''; display:inline-block; position:absolute; top:22px; left:0; width:2px; height:2px; background-color:#312f2d}
+.complate_page .btn-border-wrap{margin-top:45px}
+
+@media screen and (max-height:750px) {
+    .aside_box .counter_box{padding:20px 27px}
+	.aside_box .counter_box .top_area .row + .row{margin-top:15px}
+    .aside_box .counter_box .top_area .row_discount{margin-top:10px}
+    .aside_box .counter_box .bottom_area{padding-top:20px}
+    .aside_box .counter_box .bottom_area .price_box{margin-top:15px}
+    .aside_box .agree_area{margin-top:20px}
+}
