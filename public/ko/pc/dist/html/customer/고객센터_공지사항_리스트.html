@@ -20,9 +20,9 @@
   <link rel="stylesheet" href="../../stylesheets/css/common.css">
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
   <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
+  <link rel="stylesheet" href="../../stylesheets/css/customer.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
-
 </head>
 
 <body>
@@ -375,89 +375,147 @@
   <!-- //header-->
 
   <!--container-->
-    <div id="container" class="mypage_container">
-        <div class="top_content">
+    <div id="container" class="customer">
+		<div class="top_content">
             <div class="location">
                 <ul>
                     <li><a href="#">홈</a></li>
-                    <li>아이디/비밀번호찾기</li>
+                    <li><a href="#">고객센터</a></li>
+					<li>공지사항</li>
                 </ul>
             </div>
             <div class="top_tit">
-                <h2 class="tit_02">아이디/비밀번호 찾기</h2>
+                <h2 class="tit_02">고객센터</h2>
             </div>
         </div>
         <div class="content">
-			<div class="member_area">
-				<div class="tab type_m tac">
-					<ul class="tab_btn">
-						<li class="on"><a href="#">아이디 찾기</a></li>
-						<li class=""><a href="#">비밀번호 찾기</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="member_area">
-				<div class="tab_content mt80">
-				<!-- 아이디찾기 -->
-				<div class="">
-					<div class="">
-						<span>
-							<input type="radio" class="radio_s" name="mem_type" id="radio01_01" checked="cheked">
-							<label for="radio01_01"><span>개인 회원</span></label>
-						</span>
-						<span class="ml30">
-							<input type="radio" class="radio_s" name="mem_type" id="radio01_02">
-							<label for="radio01_02"><span>사업자 회원</span></label>
-						</span>
-					</div>
-					<div class="find_id_content">
-						<!-- 일반회원 -->
-						<div class="mt20">
-							<div class="form_wrap line_type">
-								<table>
-									<caption>캡션명입력</caption>
-									<colgroup>
-										<col style="width:95px;">
-										<col style="width:auto">
-									</colgroup>
-									<tbody>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_01"><span>이름</span></label></th>
-											<td>
-												<input type="text" id="input01_01" placeholder="이름을 입력해주세요.">
-											</td>
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_02"><span>휴대폰 번호</span></label></th>
-											<td>
-												<input type="text" id="input01_02" placeholder="휴대폰 번호를 입력해주세요.">
-											</td>
-										</tr>
-										<tr class="no_last"><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_03"><span>이메일 주소</span></label></th>
-											<td>
-												<input type="text" id="input01_03" placeholder="정확한 이메일 주소를 입력해주세요.">
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<div class="login_btn mt60">
-								<button type="button" class="btn_l radius common w100p">아이디 찾기</button>
-							</div>
-							
-						</div>
-						<!-- //일반회원 -->
+			<div class="customer_sub clear">
+				<div class="fl customer_left">
 					
+					<div class="tit">고객센터 홈</div>
+					<ul>
+						<li><a href="#">스스로 제품 점검</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">카카오톡 상담</a></li>
+						<li><a href="#">렌탈 상담신청</a></li>
+						<li><a href="#">1:1 문의하기</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">출장 A/S 신청</a></li>
+						<li><a href="#">서비스센터 찾기</a></li>
+						<li><a href="#">제품등록</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">쿠쿠 매장 찾기</a></li>
+						<li><a href="#">해외서비스 안내</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">FAQ</a></li>
+						<li class="on"><a href="#">공지사항</a></li>
+					</ul>
+
+				</div>
+				<div class="fr customer_right">
+					<div class="tit">공지사항</div>
+					<div class="customer_inbox notice_inbox">
+						<div class="search_wrap">
+							<div class="search_input">
+							  <input type="text" placeholder="검색어를 입력해 주세요.">
+							  <button type="button" class="search_result"><i class="ico search"></i><span class="hidden-txt">검색</span></button>
+							</div>
+						</div>
+						<div class="board_list_01 mt20">
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">2019년 추석 연휴 배송안내</div>
+										<div class="fr date">2019-09-17</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">2019년 5월 이벤트 당첨자 발표</div>
+										<div class="fr date">2019-09-15</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">토요일 고객센터 상담시간 변경내</div>
+										<div class="fr date">2019-09-10</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">[서버점검] 홈페이지 접속제한 공지</div>
+										<div class="fr date">2019-08-28</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">제품등록 이벤트 종료 안내</div>
+										<div class="fr date">2019-08-24</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">2019년 추석 연휴 배송안내</div>
+										<div class="fr date">2019-09-17</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">2019년 5월 이벤트 당첨자 발표</div>
+										<div class="fr date">2019-09-15</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">토요일 고객센터 상담시간 변경내</div>
+										<div class="fr date">2019-09-10</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">[서버점검] 홈페이지 접속제한 공지</div>
+										<div class="fr date">2019-08-28</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">제품등록 이벤트 종료 안내</div>
+										<div class="fr date">2019-08-24</div>
+									</a>
+								</div>
+
+						</div>
+						<!-- 페이지네이션 -->
+						<div class="pagination mt40">
+							<a href="#" class="paging first disabled"><span class="blind">첫페이지</span></a>
+							<a href="#" class="paging prev disabled"><span class="blind">이전</span></a>
+							<a href="#" class="on">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+							<a href="#" class="paging next"><span class="blind">다음</span></a>
+							<a href="#" class="paging last"><span class="blind">마지막페이지</span></a>
+						</div>
+
 					</div>
 				</div>
-				<!-- //아이디찾기 -->
-				
-				</div>	
-
 			</div>
-
-        </div>
+		</div>
     </div>
     <!--//container-->
     <div id="gnbDimmed" class="dimmed"></div>
@@ -551,6 +609,7 @@
     <!-- //footer -->
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
-</body>
+
 
 </html>
+

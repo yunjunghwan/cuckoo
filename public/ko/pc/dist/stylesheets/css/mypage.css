@@ -13,6 +13,7 @@
 .mt60{margin-top:60px;}
 .mt70{margin-top:70px;}
 .mt80{margin-top:80px;}
+.ml30{margin-left:30px;}
 .ml40{margin-left:40px;}
 .mr10{margin-right:10px;}
 .w100p{width:100%;}
@@ -118,5 +119,4 @@
 .policy_popup .tit{font-size:25px; font-weight:700;}
 .policy_popup .sub_tit{font-size:15px; line-height:30px; font-weight:500;} 
 .policy_popup .desc{font-size:15px; line-height:30px; font-weight:300;} 
-
-.content .member_area .form_wrap tr th{text-align:inherit;}
+.no_last > th, .no_last > td{padding-bottom:20px!important;}
