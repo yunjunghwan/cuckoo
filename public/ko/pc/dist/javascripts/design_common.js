@@ -189,6 +189,10 @@ function layout() {
     $gnbAllDepth.mouseleave(function () {
         gnbClose();
     });
+    $gnbDimmed.mouseenter  (function () {
+        gnbClose();
+    });
+
 
     function gnbOpen(_gnbHeight) {
         $gnbAllDepthWrap.addClass("open");
