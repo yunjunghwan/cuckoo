@@ -448,6 +448,7 @@ a[class^="btn_"]:hover, button[class^="btn_"]:hover{background-color:#312f2d; co
 .action[class^="btn_"]:hover{background-color:#312f2d; border:1px solid #312f2d; color:#fff}
 .btn_s{min-width:80px; padding:12px 18px 11px 18px; border:1px solid #c7c8c4; color:#312f2d; font-size:13px}
 .btn_ss{min-width:54px; padding:7px 14px 7px 14px; border:1px solid #c7c8c4; color:#312f2d; font-size:13px}
+.btn_ss.radius{padding:7px 14px 7px 14px; border-radius:15px}
 .btn_s.radius{padding:12px 20px 11px 20px; border-radius:20px}
 .btn_m{padding:17px 30px 16px 30px; border:1px solid #c7c8c4;}
 .btn_m.radius{padding:17px 30px 16px 30px;}
@@ -496,6 +497,7 @@ a[class^="btn_"]:hover, button[class^="btn_"]:hover{background-color:#312f2d; co
 .ico.search{width:28px; height:28px; background-position:-394px -255px}
 .ico.point{width:19px; height:19px; margin-right:8px; background-position:-390px -305px;}
 .ico.cart{width:18px; height:21px; margin-right:13px; background-position:-437px -303px;}
+.ico.btnArrow{width:5px; height:9px; margin-left:10px; background-position:-474px -308px;}
 
 /* 공통 인풋 */
 input[type="text"], input[type="password"], input[type="number"], input[type="tel"]{height:50px; line-height:50px; padding:0 20px; border:1px solid #d5d6d3; box-sizing:border-box; font-weight:300; vertical-align:middle}

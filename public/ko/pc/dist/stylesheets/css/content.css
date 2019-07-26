@@ -324,6 +324,7 @@
 .aside_box .counter_box .top_area .row .price{float:right; font-size:17px; font-weight:700; text-align:right}
 .aside_box .counter_box .top_area .row_discount:after{display:block; content:''; clear:both}
 .aside_box .counter_box .top_area .row_discount{margin-top:18px}
+.nonmember .aside_box .counter_box .top_area .row_discount{margin-top:30px}
 .aside_box .counter_box .top_area .row_discount .tit{position:relative; float:left; padding-left:7px; margin-left:4px; font-size:13px; color:#585856; text-align:left}
 .aside_box .counter_box .top_area .row_discount .tit:before{content:''; position:absolute; top:5px; left:0; display:block; width:2px; height:2px; background-color:#a7a7a7}
 .aside_box .counter_box .top_area .row_discount .price{float:right; font-size:15px; color:#585856; text-align:right}
@@ -344,8 +345,17 @@
 .aside_box .info_box .star_list li{font-size:13px; color:#272524}
 .aside_box .info_box .star_list li + li{margin-top:10px}
 .aside_box .agree_area{margin-top:40px}
+.nonmember .aside_box .agree_area{margin-top:30px}
 .aside_box .agree_area label{font-weight:500}
 .aside_box .agree_area .txt{padding:15px 0 0 37px; font-size:13px; color:#585856; line-height:20px}
+@media screen and (max-height:750px) {
+    .aside_box .counter_box{padding:20px 27px}
+	.aside_box .counter_box .top_area .row + .row{margin-top:15px}
+    .aside_box .counter_box .top_area .row_discount{margin-top:10px}
+    .aside_box .counter_box .bottom_area{padding-top:20px}
+    .aside_box .counter_box .bottom_area .price_box{margin-top:15px}
+    .aside_box .agree_area{margin-top:20px}
+}
 /* 주문결제 */
 .order_area .section{border-bottom:1px solid #e0e0de}
 .order_area .section.type_borderNone{border:0}
@@ -418,11 +428,11 @@
 .complate_page .pay_info th:before{content:''; display:inline-block; position:absolute; top:22px; left:0; width:2px; height:2px; background-color:#312f2d}
 .complate_page .btn-border-wrap{margin-top:45px}
 
-@media screen and (max-height:750px) {
-    .aside_box .counter_box{padding:20px 27px}
-	.aside_box .counter_box .top_area .row + .row{margin-top:15px}
-    .aside_box .counter_box .top_area .row_discount{margin-top:10px}
-    .aside_box .counter_box .bottom_area{padding-top:20px}
-    .aside_box .counter_box .bottom_area .price_box{margin-top:15px}
-    .aside_box .agree_area{margin-top:20px}
-}
+/* 마이페이지 */
+.mypage .top_state_box{padding:54px 54px 54px 70px; background-color:#312f2d; box-sizing:border-box;}
+.mypage .top_state_box:after{display:block; content:''; clear:both}
+.mypage .top_state_box .left_area{float:left}
+.mypage .top_state_box .left_area .tit{margin-bottom:30px; font-size:30px; color:#fff}
+.mypage .top_state_box .left_area .btn_ss{color:#fff}
+.mypage .top_state_box .left_area .btn_ss:hover{border:1px solid #c7c8c4}
+.mypage .top_state_box .right_area{float:right}
