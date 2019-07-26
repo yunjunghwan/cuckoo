@@ -37,9 +37,10 @@
 .content .member_area .tac{text-align:center;}
 .content .member_area .tac .tab_btn{display:inline-block;}
 .content .member_area .form_wrap tr:first-child th, .content .member_area .form_wrap tr:first-child td{padding-top:40px;}
-.content .member_area .clear .login_find ul li{float:left; padding:0 8px 0 8px; border-right:1px solid #d5d6d3;}
-.content .member_area .clear .login_find ul li:last-child{border-right:none; padding-right:0px;}
-.content .member_area .clear .login_find ul:after{clear:both; display:block; content:'';}
+.content .member_area .clear .login_find ul li{position:relative; display:inline-block; padding:0 8px;}
+.content .member_area .clear .login_find ul li:after{content:''; width:1px; height:12px; background-color:#d5d6d3; position: absolute; right: -4px; top: 2px;}
+.content .member_area .clear .login_find ul li:last-child{padding-right:0px;}
+.content .member_area .clear .login_find ul li:last-child:after{display:none;}
 .content .member_area .clear .login_find ul li a{font-size:12px;}
 .content .member_area .clear .saveid{font-size:13px;}
 .content .member_area .clear .login_btn .btn_l.radius{width:100%;}
@@ -64,10 +65,12 @@
 .content .member_area .find_id_select:after{clear:both; display:block; content:'';}
 .content .member_area .find_pw .desc{font-size:20px; line-height:30px;}
 .content .member_area .find_pw .img{display:inline-block; width:68px; height:80px; background-image:url(../../images/common/img_ico_zip.png); background-position:0 0; text-indent:-9999px;}
+.find_id_content > .desc{font-size:20px; text-align:center; line-height:30px; margin-bottom:20px; letter-spacing:-1px;}
+
 
 /*아이디 찾기완료*/
 .content .member_area_02 .find_id_complete .tit{font-size:30px;}
-.content .member_area_02 .find_id_complete .tit > span{color:#7a101b; font-weight:700;}
+.content .member_area_02 .find_id_complete .tit > span{color:#7a101b; font-weight:700; letter-spacing:-1px;}
 .content .member_area_02 .find_id_complete{padding:80px 0 60px 0; background-color:#f8f8f8;}
 .content .member_area_02 .check_idall .tit{font-size:20px;}
 .content .member_area_02 .check_idall .img{margin-left:20px; margin-right:35px; display:inline-block; width:68px; height:80px; background-image:url(../../images/common/img_ico_zip.png); background-position:0 0; text-indent:-9999px;}
@@ -79,8 +82,12 @@
 .content .sleep_mem .desc{font-size:20px; line-height:30px;}
 
 /* 정기 비밀번호 변경안내 */
+.member_area input{letter-spacing:-1px;}
 .content .change_pw .img{width:83px; height:74px; background-position: -197px 0;}
-.content .change_pw > button{width:205px;}
+.content .change_pw > button:nth-child(2){width:200px; float:right;}
+.content .change_pw > button:first-child{width:210px; float:left;}
+.content .change_pw:after{clear:both; display:block; content:'';}
+
 
 /*쿠쿠 통합회원가입*/
 .top_tit .desc{font-size:17px; line-height:26px;}
@@ -91,13 +98,15 @@
 .content .register > .clear > div .desc_line{font-size:13px; display:inline-block; border-bottom:1px solid #312f2d; color:#312f2d;}
 .content .register > .clear > .fl > .img{width:79px; height:61px; background-image:url(../../images/common/img_ico_zip.png); background-position: -405px -15px; text-indent:-9999px; margin:60px auto;}
 .content .register > .clear > .fr > .img{width:79px; height:61px; background-image:url(../../images/common/img_ico_zip.png); background-position: -854px -125px; text-indent:-9999px; margin:60px auto;}
+.content .member_area_02 .check_idall .img.discount_img{background-position:-810px 0; width:101px; height:80px;}
+
 
 /*쿠쿠 통합회원가입 정보입력*/
 .member_area > .tit{font-size:25px; font-weighT:700;}
 .add_td > button{position:absolute; top:30px; right:0;}
 .add_td:after{content:''; background-color:#fff; width:100px; height:1px; position:absolute; bottom:-1px; right:0;}
 .content .member_area .tit > .clear > .fr > span{font-size:15px;}
-.accept_terms table tr td span label b{color:#312f2d; font-weight:500; font-size:15px;}
+.accept_terms table tr td span label b{color:#312f2d; font-weight:500; font-size:15px; vertical-align:top;}
 .accept_terms table tr th{font-size:13px; font-weight:300; text-align:right;}
 .click_arrow{margin-left:8px; width:6px; height:11px; display:inline-block; background-image:url(../../images/common/ico_zip.png); background-position: -464px -105px;}
 .tb_bottom_desc{font-size:13px; letter-spacing:-0.7px; line-height:20px;}
@@ -106,7 +115,7 @@
 .check_idall.cupon .img{width:105px; background-position:-810px 0; margin-top:10px;}
 
 /*쿠쿠 사업자회원가입 완료*/
-.bs_member_dese{margin-top:50px; padding-top:50px; border-top:1px solid #d3d4d1; font-size:17px; line-height:24px;}
+.bs_member_dese{margin-top:50px; padding-top:50px; border-top:1px solid #d3d4d1; font-size:17px; line-height:24px; margin-left:80px; margin-right:80px;}
 
 /*회원가입 공통 팝업*/
 .form_popup .tit{font-size:25px; font-weight:700;}
@@ -120,3 +129,4 @@
 .policy_popup .sub_tit{font-size:15px; line-height:30px; font-weight:500;} 
 .policy_popup .desc{font-size:15px; line-height:30px; font-weight:300;} 
 .no_last > th, .no_last > td{padding-bottom:20px!important;}
+.view_alltxt a{font-size:13px; font-weight:400; color:#312f2d;}
