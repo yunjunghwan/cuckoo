@@ -749,3 +749,18 @@ body > .ui-datepicker{display:none}
 .agree_box .tit + .tit, .agree_box .txt + .tit{margin-top:25px}
 .agree_box .tit + .txt{margin-top:8px}
 .agree_box .txt{font-size:13px; line-height:24px}
+
+/* lnb */
+.lnb{float:left; width:200px}
+.lnb a.on, .lnb a:hover{border-bottom:1px solid #312f2d; font-weight:500; color:#312f2d}
+.lnb .depth01 > li > a{font-size:15px; font-weight:500; color:#272524}
+.lnb .depth01 > li > a.on, .lnb .depth01 > li > a:hover{color:#272524}
+.lnb .depth01 > li + li{margin-top:25px}
+.lnb .depth01 .depth02_wrap{margin-top:45px}
+.lnb .depth01 .depth02_wrap > span{font-size:15px; font-weight:500; color:#272524}
+.lnb .depth01 .depth02_wrap + li{margin-top:45px}
+.lnb .depth01 > .tit a{font-size:17px; font-weight:500; color:#272524}
+.lnb .depth01{margin-bottom:44px}
+.lnb .depth02{margin-top:20px}
+.lnb .depth02 > li > a{font-size:13px; color:#585856}
+.lnb .depth02 > li + li{margin-top:18px}

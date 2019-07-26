@@ -19,6 +19,7 @@
   <meta name="robots" content="ALL">
   <link rel="stylesheet" href="../../stylesheets/css/common.css">
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
+    <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
 </head>
@@ -373,177 +374,59 @@
   <!-- //header-->
 
   <!--container-->
-    <div id="container" class="nonmember"><!-- 비회원일경우 nonmember 클래스 추가 -->
+    <div id="container" class="mypage">
         <div class="top_content">
             <div class="location">
                 <ul>
                     <li><a href="#">홈</a></li>
-                    <li>쿠쿠몰 장바구니</li>
+                    <li>마이쿠쿠</li>
                 </ul>
             </div>
             <div class="top_tit">
-                <h2 class="tit_02">쿠쿠몰 장바구니</h2>
+                <h2 class="tit_02">마이쿠쿠</h2>
             </div>
-            <div class="img banner_nomember"><img src="../../images/order/img_top_nomember.png" alt="아직 쿠쿠 회원이 아니세요? 회원가입하고 다양한 혜택을 받아보세요. 할인쿠폰, 포인트적립"></div>
-        </div>
-        <div class="content">
-            <div class="total_count">
-                <input type="checkbox" class="check_m" id="check00_00">
-                <label for="check00_00"><span>담긴 제품:총 <span class="point01">3</span>개</span></label>
-            </div>
-            <div class="order_area">
-                <div class="tbl_wrap">
-                    <div class="tbl tbl_order">
-                        <table>
-                            <caption>장바구니</caption>
-                            <colgroup>
-                                <col style="width:5%">
-                                <col style="width:20%">
-                                <col style="width:auto">
-                                <col style="width:13%">
-                                <col style="width:13%">
-                                <col style="width:13%">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th scope="col" colspan="3">제품정보</th>
-                                    <th scope="col">수량</th>
-                                    <th scope="col">결제 예정 금액</th>
-                                    <th scope="col">주문</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="txt_left">
-                                        <span>
-                                            <input type="checkbox" class="check_m" id="check01_01">
-                                            <label for="check01_01"><span class="blind">제품선택</span></label>
-                                        </span>
-                                    </td>
-                                    <td><div class="img"><img src="../../images/order/temp_prd_140x140.png" alt=""></div></td>
-                                    <td class="txt_left prd_info">
-                                        <p class="category">IH전기압력밥솥</p>
-                                        <p class="name">CRP-KHT1020FD</p>
-                                        <p class="discount">608,000원</p>
-                                        <p class="price">577,600 <span class="point01">10%</span></p>
-                                    </td>
-                                    <td>
-                                        <div class="count_wrap">
-                                            <button type="button" class="ico minus" disabled=""><span class="blind">수량감소</span></button><!-- [D]비활성화시 disabled속성추가 -->
-                                            <span class="num">1</span>
-                                            <button type="button" class="ico plus"><span class="blind">수량증가</span></button><!-- [D]비활성화시 disabled속성추가 -->
-                                        </div>
-                                    </td>
-                                    <td><span class="bold price">577,600원</span></td>
-                                    <td class="btn-wrap">
-                                        <p><button type="button" class="btn_s common">바로구매</button></p>
-                                        <p><button type="button" class="btn_s">삭제</button></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="txt_left">
-                                        <span>
-                                            <input type="checkbox" class="check_m" id="check01_02">
-                                            <label for="check01_02"><span class="blind">제품선택</span></label>
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <div class="img">
-                                            <img src="../../images/order/temp_prd_140x140.png" alt="">
-                                            <!-- [D] 일시품절일경우 노출 -->
-                                            <span class="soldout">일시품절</span>
-                                            <!-- //[D] 일시품절일경우 노출 -->
-                                        </div>
-                                    </td>
-                                    <td class="txt_left prd_info">
-                                        <p class="category">IH전기압력밥솥</p>
-                                        <p class="name">CRP-KHT1020FD</p>
-                                        <p class="discount"><!-- [D] 값이없어도 태그유지 --></p>
-                                        <p class="price">577,600</p>
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td><span class="bold price">577,600원</span></td>
-                                    <td class="btn-wrap">
-                                        <p><button type="button" class="btn_s">삭제</button></p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="txt_left">
-                                        <span>
-                                            <input type="checkbox" class="check_m" id="check01_02">
-                                            <label for="check01_02"><span class="blind">제품선택</span></label>
-                                        </span>
-                                    </td>
-                                    <td><div class="img"><img src="../../images/order/temp_prd_140x140.png" alt=""></div></td>
-                                    <td class="txt_left prd_info">
-                                        <p class="category">내솥</p>
-                                        <p class="name">CRP-KHT1020FD</p>
-                                        <p class="discount"><!-- [D] 값이없어도 태그유지 --></p>
-                                        <p class="price">577,600</p>
-                                        <p class="option">옵션 : CRP-D105SX</p>
-                                    </td>
-                                    <td>
-                                        <div class="count_wrap">
-                                            <button type="button" class="ico minus" disabled=""><span class="blind">수량감소</span></button><!-- [D]비활성화시 disabled속성추가 -->
-                                            <span class="num">1</span>
-                                            <button type="button" class="ico plus"><span class="blind">수량증가</span></button><!-- [D]비활성화시 disabled속성추가 -->
-                                        </div>
-                                    </td>
-                                    <td><span class="bold price">577,600원</span></td>
-                                    <td class="btn-wrap">
-                                        <p><button type="button" class="btn_s common">바로구매</button></p>
-                                        <p><button type="button" class="btn_s">삭제</button></p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="btn-wrap-left">
-                        <button type="button" class="btn_s">전체 제품 삭제</button>
-                        <button type="button" class="btn_s">선택 제품 삭제</button>
-                    </div>
+            <div class="top_state_box">
+                <div class="left_area">
+                    <p class="tit"><span class="bold">김쿠쿠</span>님 안녕하세요!</p>
+                    <a href="#" class="btn_s radius">회원정보수정</a>
                 </div>
-            </div><!-- //order_area -->
-            <div class="aside_box_wrap">
-                <div class="aside_box">
-                    <div class="counter_box">
-                        <div class="top_area">
-                            <div class="row">
-                                <span class="tit">총 제품 금액</span>
-                                <span class="price">650,000원</span>
-                            </div>
-                            <div class="row">
-                                <span class="tit">총 할인 금액</span>
-                                <span class="price">-30,400원</span>
-                            </div>
-                            <div class="row_discount">
-                                <span class="tit">제품 할인</span>
-                                <span class="price">-30,400원</span>
-                            </div>
-                        </div>
-                        <div class="bottom_area">
-                            <div class="price_tit">결제 예정 금액</div>
-                            <div class="price_box"><spasn>619,600</spasn><span class="won">원</span></div>
-                            
-                            <div class="btn-wrap">
-                                <button type="button" class="btn_l radius">선택 제품 주문</button>
-                                <button type="button" class="btn_l radius common">전체 제품 주문</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="info_box">
-                        <p class="tit"><i class="ico cart"></i><span>장바구니 이용안내</span></p>
-                        <ul class="star_list">
-                            <li>가격, 옵션 등 제품정보가 변경 된 경우 주문이 불가할 수 있습니다.</li>
-                            <li>쿠쿠몰 제품 배송비는 모두 무료 입니다.</li>
+            </div>
+        </div>
+        <div class="content type_lnb"><!-- [P] lnb있을시 type_lnb클래스 추가 -->
+            <div class="lnb">
+                <ul class="depth01">
+                    <li class="tit"><a href="#" class="on">마이쿠쿠</a></li><!-- 활성화시 해당 a태그에 on클래스 추가 -->
+                    <li class="depth02_wrap"><span>나의쇼핑</span><!-- [P] 하위뎁스있을시 depth02_wrap클래스 추가 -->
+                        <ul class="depth02">
+                            <li><a href="#">주문내역</a></li>
+                            <li><a href="#">취소/반품/교환 내역</a></li>
+                            <li><a href="#">제품등록내역</a></li>
                         </ul>
-                    </div>
-                </div>
-            </div>
+                    </li>
+                    <li class="depth02_wrap"><span>나의렌탈</span>
+                        <ul class="depth02">
+                            <li><a href="#">렌탈이용내역</a></li>
+                            <li><a href="#">사은품배송조회</a></li>
+                            <li><a href="#">일시불구매내역</a></li>
+                            <li><a href="#">취소/반품/교환내역</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">출장 A/S 내역</a></li>
+                    <li><a href="#">관심제품</a></li>
+                    <li><a href="#">1:1문의내역</a></li>
+                    <li class="depth02_wrap"><span>쿠폰/포인트</span>
+                        <ul class="depth02">
+                            <li><a href="#">쿠폰내역</a></li>
+                            <li><a href="#">포인트내역</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">회원정보수정</a></li>
+                </ul>
+            </div><!-- //lnb -->
+            <div class="inner_content">
 
-        </div>
+            </div><!-- //inner_content -->
+        </div><!-- //content -->
     </div>
     <!--//container-->
     <div id="gnbDimmed" class="dimmed"></div>
