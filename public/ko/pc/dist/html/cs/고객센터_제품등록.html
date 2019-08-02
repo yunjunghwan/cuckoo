@@ -20,9 +20,9 @@
   <link rel="stylesheet" href="../../stylesheets/css/common.css">
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
   <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
+  <link rel="stylesheet" href="../../stylesheets/css/customer.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
-
 </head>
 
 <body>
@@ -375,207 +375,166 @@
   <!-- //header-->
 
   <!--container-->
-    <div id="container" class="mypage_container">
-        <div class="top_content">
+    <div id="container" class="customer">
+		<div class="top_content">
             <div class="location">
                 <ul>
                     <li><a href="#">홈</a></li>
-                    <li>회원가입</li>
+                    <li><a href="#">고객센터</a></li>
+					<li>제품등록</li>
                 </ul>
             </div>
             <div class="top_tit">
-                <h2 class="tit_02">쿠쿠 사업자회원 가입</h2>
-				<div class="desc mt35">사업자 회원은 렌탈만 가능합니다.</div>
+                <h2 class="tit_02">고객센터</h2>
             </div>
         </div>
         <div class="content">
-			<div class="member_area">
-				<div class="tit">사업자 정보</div>
-				<div class="desc">
-					<div class="form_wrap line_type mt20">
+			<div class="customer_sub clear">
+				<div class="fl customer_left">
+					
+					<div class="tit">고객센터 홈</div>
+					<ul>
+						<li><a href="#">스스로 제품 점검</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">카카오톡 상담</a></li>
+						<li><a href="#">렌탈 상담신청</a></li>
+						<li><a href="#">1:1 문의하기</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">출장 A/S 신청</a></li>
+						<li><a href="#">서비스센터 찾기</a></li>
+						<li class="on"><a href="#">제품등록</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">쿠쿠 매장 찾기</a></li>
+						<li><a href="#">해외서비스 안내</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">공지사항</a></li>
+					</ul>
+
+				</div>
+				<div class="fr customer_right">
+					<div class="tit">제품등록</div>
+					<div class="customer_inbox">
+						<div class="top_desc03">
+							<div class="tit">제품을 등록하시면 혜택을 받으실 수 있습니다.</div>
+							<div class="img product_reg tac mt60 mb60">
+								<ul>
+									<li class="coupon">
+										<p class="tit">쿠쿠몰 12% 할인쿠폰 증정</p>
+										<p class="txt">(렌탈 혹은 렌탈 일시불 제품 제외)</p>
+									</li>
+									<li class="free_as">
+										<p class="tit">무상 A/S기간 6개월 연장</p>
+										<p class="txt">(연장조건에 맞는 제품에 한함)</p>
+										<p class="link">
+											<button type="button" class="btn_s radius" onclick="layerPopOpen('pop01')">무상 A/S기간 연장 안내  <span class="small_arrow"></span></button>
+										</P>
+									</li>
+								</ul>
+							</div>
+							<div class="alert_notice">
+								<ul class="notice_list">
+									<li>해외용 제품 및 면세점 제품, 렌탈제품, 부속품 및 기타제품은 제품등록에서 제외됩니다.</li>
+									<li>무상 A/S기간 6개월 연장 혜택은 회원탈퇴, 제품등록 내역 삭제, 허위 및 잘못 된 제품 정보 입력 시 취소됩니다.</li>
+								</ul>
+							</div>
+							
+						</div>
+						<div class="mt40 product_reg_form">
+							<div class="form_wrap">
 								<table>
-									<caption>캡션명입력</caption>
+									<caption>배송정보 입력</caption>
 									<colgroup>
-										<col style="width:95px;">
-										<col style="width:auto">
+										<col style="width:170px;">
 										<col style="width:auto">
 									</colgroup>
-									<tbody>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_01"><span>사업자번호</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_01" placeholder="번호 10자리를 입력해주세요.">
-											</td>
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_02"><span>회사명</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_02" placeholder="회사명을 입력해주세요.">
-											</td>
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_03"><span>대표자명</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_03" placeholder="대표자명을 입력해주세요.">
-											</td>
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_03"><span>대표전화번호</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_03" placeholder="숫자만 입력 (ex.01012341234)">
-											</td>
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_03"><span>사업자등록증</span></label></th>
+									<tbody>		
+										<tr>
+											<th scope="row"><label for="input02_01"><span class="ns_dot">모델명</span></label></th>
 											<td>
-												<input type="text" id="input01_03" placeholder="사업자등록증을 첨부해주세요.">
+												<div class="clear">
+													<div class="fl w280px mr10">
+														<input type="text" id="input02_01" class="w100p" placeholder="모델명을 검색해주세요.">
+													</div>
+													<div class="fl">
+														<button type="button" class="btn_m" onclick="layerPopOpen('pop02')">검색</button>
+													</div>
+												</div>
+												
 											</td>
-											<td class="add_td"><button type="button" class="btn_s">첨부하기</button></td>
 										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_03"><span>아이디</span></label></th>
+										<tr>
+											<th scope="row"><label for="input02_02"><span class="ns_dot">제조번호</span></label></th>
 											<td>
-												<input type="text" id="input01_03" placeholder="6~18자 이내의 영소문자, 숫자 조합">
-											</td>
-											<td class="add_td"><button type="button" class="btn_s">중복확인</button></td>
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_03"><span>비밀번호</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_03" placeholder="6~18자 이내의 영문,숫자조합(@#$%^&+-=)">
-											</td>
-										</tr>
-										<tr class="no_last"><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_03"><span>비밀번호 확인</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_03" placeholder="비밀번호를 한번 더 확인해주세요.">
+												<div class="">
+													<input type="text" id="input02_2" class="w380px" placeholder="제조번호를 입력해주세요.">
+													<ul class="notice_list">
+														<li>제조번호는 제품 밑면 스티커에 표기 되어 있습니다.</li>
+														<li>제조번호는 정확하게 입력 해주셔야 하며, 잘못 입력 시 모든 혜택이 취소 될 수 있습니다.</li>
+													</ul>
+												</div>
+												
 											</td>
 										</tr>
+										<tr>
+											<th scope="row"><label for="input02_03"><span class="ns_dot">구입시기</span></label></th>
+											<td>
+												<div class="clear">
+													<div class="fl w185px mr10">
+														<div class="select_box">
+															<a href="#" class="tit">년</a>
+															<ul class="hidden">
+																<li class="on"><a href="#">옵션1</a></li>
+																<li><a href="#">옵션2</a></li>
+																<li><a href="#">옵션3</a></li>
+															</ul>
+														</div>
+													</div>
+													<div class="fl w185px">
+														<div class="select_box">
+															<a href="#" class="tit">월</a>
+															<ul class="hidden">
+																<li class="on"><a href="#">옵션1</a></li>
+																<li><a href="#">옵션2</a></li>
+																<li><a href="#">옵션3</a></li>
+															</ul>
+														</div>
+													</div>
+												
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><label for="input02_04"><span class="ns_dot">구입처</span></label></th>
+											<td>
+												<div class="select_box w380px">
+													<a href="#" class="tit">선택</a>
+													<ul class="hidden">
+														<li class="on"><a href="#">옵션1</a></li>
+														<li><a href="#">옵션2</a></li>
+														<li><a href="#">옵션3</a></li>
+													</ul>
+												</div>
+												
+											</td>
+										</tr>
+										
 									</tbody>
 								</table>
 							</div>
-				</div>
-			</div>
-			<div class="member_area mt80">
-				<div class="tit">담당자 정보</div>
-				<div class="desc">
-					<div class="form_wrap line_type mt20">
-								<table>
-									<caption>캡션명입력</caption>
-									<colgroup>
-										<col style="width:95px;">
-										<col style="width:auto">
-										<col style="width:auto">
-									</colgroup>
-									<tbody>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_01"><span>이름</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_01" placeholder="담당자 실명을 입력해주세요.">
-											</td>
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_02"><span>이메일 주소</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_02" placeholder="담당자 이메일 주소를 입력해주세요.">
-											</td>
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_03"><span>휴대폰번호</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_03" placeholder="숫자만 입력 (ex.01012341234)">
-											</td>
-										</tr>
-										<tr class="no_last"><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_03"><span>재직증명서</span></label></th>
-											<td>
-												<input type="text" id="input01_03" placeholder="재직증명서를 첨부해주세요.">
-											</td>
-											<td class="add_td"><button type="button" class="btn_s">첨부하기</button></td>
-										</tr>
-									
-									</tbody>
-								</table>
-							</div>
-				</div>
-			</div>
-			<div class="member_area mt80">
-				<div class="tit">
-					<div class="clear">
-						<div class="fl">약관 및 마케팅 수신 동의</div>
-						<div class="fr">
-							<span>
-								<input type="checkbox" class="check_s" id="check01_01">
-								<label for="check01_01"><b><span>전체동의</span></b></label>
-							</span>		
+						</div><!-- //section -->
+
+						<div class="btn mt60 tac">
+							<button type="button" class="btn_l radius common">제품등록</button>
 						</div>
 					</div>
 				</div>
-				<div class="desc">
-					<div class="form_wrap line_type mt20 accept_terms">
-								<table>
-									<caption>캡션명입력</caption>
-									<colgroup>
-										
-										<col style="width:auto">
-										<col style="width:60px;">
-										
-									</colgroup>
-									<tbody>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<td>
-												<span>
-													<input type="checkbox" class="check_s" id="check01_02">
-													<label for="check01_02"><b><span>[필수] 약관동의</span></b></label>
-												</span>		
-											</td>
-											<td class="view_alltxt">
-												<a href="#">전문보기<span class="click_arrow"></span></a>
-											</td>
-											
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<td>
-												<span>
-													<input type="checkbox" class="check_s" id="check01_03">
-													<label for="check01_03"><b><span>[필수] 개인정보수집 및 활용, 취급위탁 약관</span></b></label>
-												</span>		
-											</td>
-											<td class="view_alltxt">
-												<a href="#">전문보기<span class="click_arrow"></span></a>
-											</td>
-											
-										</tr>
-										<tr class="no_last"><!-- [D] 인풋값에러시 error클래스추가  -->
-											<td class="clear">
-												<span class="fl">
-													<input type="checkbox" class="check_s" id="check01_04">
-													<label for="check01_04"><b><span>[선택]이메일 수신</span></b></label>
-												</span>
-												<span class="fl ml40">
-													<input type="checkbox" class="check_s" id="check01_05">
-													<label for="check01_05"><b><span>[선택]SMS 수신</span></b></label>
-												</span>		
-											</td>
-											<td class="view_alltxt">
-												<a href="#">전문보기<span class="click_arrow"></span></a>
-											</td>
-											
-										</tr>
-									</tbody>
-									
-								</table>
-								<ul class="star_list mt15" style="font-size:13px;">
-									<li>수신거부와 상관없이 반드시 고지의무가 있는 사항에 대해서는 이메일 및 SMS가 발송됩니다.</li>
-								
-								</ul>
-							</div>
-				</div>
 			</div>
-			<div class="member_area mt60">
-				<button type="button" class="btn_l radius common w100p">가입하기</button>
-			</div>
-        </div>
+		</div>
     </div>
     <!--//container-->
     <div id="gnbDimmed" class="dimmed"></div>
@@ -669,6 +628,7 @@
     <!-- //footer -->
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
-</body>
+
+
 
 </html>

@@ -118,15 +118,15 @@
 .bs_member_dese{margin-top:50px; padding-top:50px; border-top:1px solid #d3d4d1; font-size:17px; line-height:24px; margin-left:80px; margin-right:80px;}
 
 /*회원가입 공통 팝업*/
-.form_popup .tit{font-size:25px; font-weight:700;}
-.form_popup .desc{font-size:15px;}
+.form_popup > .tit{font-size:25px; font-weight:700;}
+.form_popup > .desc{font-size:15px;}
 .form_popup .form .form_wrap table tr:first-child th, .form_popup .form .form_wrap table tr:first-child td{padding-top:40px;}
-.alert_popup .tit{font-size:25px; font-weight:700;}
-.alert_popup .desc{line-height:26px; font-size:17px;}
-.alert_popup .desc span{font-weight:700; color:#7a101b;}
-.alert_popup .desc02{font-size:14px; color:#7a101b;}
-.policy_popup .tit{font-size:25px; font-weight:700;}
-.policy_popup .sub_tit{font-size:15px; line-height:30px; font-weight:500;} 
-.policy_popup .desc{font-size:15px; line-height:30px; font-weight:300;} 
+.alert_popup > .tit{font-size:25px; font-weight:700;}
+.alert_popup > .desc{line-height:26px; font-size:17px;}
+.alert_popup > .desc span{font-weight:700; color:#7a101b;}
+.alert_popup > .desc02{font-size:14px; color:#7a101b;}
+.policy_popup > .tit{font-size:25px; font-weight:700;}
+.policy_popup > .sub_tit{font-size:15px; line-height:30px; font-weight:500;} 
+.policy_popup > .desc{font-size:15px; line-height:30px; font-weight:300;} 
 .no_last > th, .no_last > td{padding-bottom:20px!important;}
-.view_alltxt a{font-size:13px; font-weight:400; color:#312f2d;}
+.view_alltxt > a{font-size:13px; font-weight:400; color:#312f2d;}
