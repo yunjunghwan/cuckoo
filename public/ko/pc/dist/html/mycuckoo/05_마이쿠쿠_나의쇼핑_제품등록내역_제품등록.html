@@ -380,37 +380,24 @@
                 <ul>
                     <li><a href="#">홈</a></li>
                     <li>마이쿠쿠</li>
+                    <li>나의쇼핑</li>
+                    <li>제품등록내역</li>
+                    <li>제품등록</li>
                 </ul>
             </div>
             <div class="top_tit">
                 <h2 class="tit_02">마이쿠쿠</h2>
             </div>
-            <div class="top_state_box">
-                <div class="left_area">
-                    <p class="tit"><span class="bold">김쿠쿠</span>님 안녕하세요!</p>
-                    <a href="#" class="btn_ss radius"><span>회원정보수정</span><i class="ico btnArrow"></i></a>
-                </div>
-                <div class="right_area">
-                    <div class="coupon">
-                        <p class="tit">사용가능 쿠폰</p>
-                        <p class="txt"><strong>2</strong>장</p>
-                    </div>
-                    <div class="point">
-                        <p class="tit">사용가능 포인트</p>
-                        <p class="txt"><strong>3,000</strong>P</p>
-                    </div>
-                </div>
-            </div><!-- //top_state_box -->
         </div>
         <div class="content type_lnb"><!-- [P] lnb있을시 type_lnb클래스 추가 -->
             <div class="lnb">
                 <ul class="depth01">
-                    <li class="tit"><a href="#" class="on">마이쿠쿠</a></li><!-- 활성화시 해당 a태그에 on클래스 추가 -->
+                    <li class="tit"><a href="#">마이쿠쿠</a></li>
                     <li class="depth02_wrap"><span>나의쇼핑</span><!-- [P] 하위뎁스있을시 depth02_wrap클래스 추가 -->
                         <ul class="depth02">
                             <li><a href="#">주문내역</a></li>
                             <li><a href="#">취소/반품/교환 내역</a></li>
-                            <li><a href="#">제품등록내역</a></li>
+                            <li><a href="#" class="on">제품등록내역</a></li><!-- 활성화시 해당 a태그에 on클래스 추가 -->
                         </ul>
                     </li>
                     <li class="depth02_wrap"><span>나의렌탈</span>
@@ -436,105 +423,101 @@
             <div class="inner_content">
                 <div class="section_wrap">
                     <div class="top_area">
-                        <h3 class="tit_03">쿠쿠몰 주문내역 <span class="desc">(최근 한달 기준)</span></h3>
-                        <a href="#" class="right"><span>주문내역 전체보기</span><i class="ico btnLink"></i></a>
+                        <h3 class="tit_03">제품등록</h3>
                     </div>
-                    <div class="order_state_wrap section">
-                        <ul class="order_state">
-                            <li class="state01">
-                                <p class="tit">주문접수</p>
-                                <span class="num">0</span>
-                            </li>
-                            <li class="state02">
-                                <p class="tit">결제완료</p>
-                                <span class="num">0</span>
-                            </li>
-                            <li class="state03">
-                                <p class="tit">제품준비중</p>
-                                <span class="num">0</span>
-                            </li>
-                            <li class="state04">
-                                <p class="tit">배송중</p>
-                                <span class="num">0</span>
-                            </li>
-                            <li class="state05">
-                                <p class="tit">배송완료</p>
-                                <span class="num">0</span>
-                            </li>
-                            <li class="state06">
-                                <p class="tit">취소/반품/교환</p>
-                                <span class="num">0</span>
-                            </li>
-                        </ul>
-                        <ul class="order_section">
-                            <li><span>주문취소/배송지 변경 가능</span></li>
-                            <li><span>주문취소/배송지 변경 불가능</span></li>
-                            <li><span>배송완료 후 7일 이내반품/교환 가능</span></li>
-                        </ul>
+                    <div class="section type_noBorder">
+                        <div class="benefit_top">
+                            <p class="tit">제품을 등록하시면 혜택을 받으실 수 있습니다.</p>
+                            <ul>
+                                <li class="coupon">
+                                    <p class="tit">쿠쿠몰 12% 할이니쿠폰 증정</p>
+                                    <p class="desc">(렌탈 혹은 렌탈 일시불 제품 제외)</p>
+                                </li>
+                                <li class="as">
+                                    <p class="tit">무상 A/S기간 6개월 연장</p>
+                                    <p class="desc">(연장조건에 맞는 제품에 한함)</p>
+                                    <p class="mt10"><a href="#" class="btn_ss radius"><span>무상 A/S기간 연장 안내</span><i class="ico btnArrow2"></i></a></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="benefit_bottom">
+                            <ul class="notice_list">
+                                <li>해외용 제품 및 면세점 제품, 렌탈제품, 부속품 및 기타제품은 제품등록에서 제외됩니다.</li>
+                                <li>무상 A/S기간 6개월 연장 혜택은 회원탈퇴, 제품등록 내역 삭제, 허위 및 잘못 된 제품 정보 입력 시 취소됩니다.</li>
+                            </ul>
+                        </div>
+                        <div class="form_wrap">
+                            <table>
+                                <caption>제품등록</caption>
+                                <colgroup>
+                                    <col style="width:180px;">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="essential"><label for="input01_01">모델명</label></th>
+                                        <td>
+                                            <div class="input-btn-right w370">
+                                                <input type="text"  id="input01_01" placeholder="모델명을 검색해주세요.">
+                                                <button type="button" class="btn_m">검색</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="error"><!-- [D] 인풋값에러시 error클래스추가  -->
+                                        <th scope="row" class="essential"><label for="input01_02">제조번호</label></th>
+                                        <td>
+                                            <input type="number" id="input01_02" class="w370">
+                                            <p class="error_txt">에러메시지</p>
+                                            <ul class="notice_list mt15">
+                                                <li>제조번호는 제품 밑면 스티커에 표기 되어 있습니다. </li>
+                                                <li>제조번호는 정확하게 입력 해주셔야 하며, 잘못 입력 시 모든 혜택이 취소 될 수 있습니다.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="essential"><label for="input01_03">구입시기</label></th>
+                                        <td>
+                                            <div class="btn-col2 w370">
+                                                <div class="select_box">
+                                                    <a href="#" class="tit">년</a>
+                                                    <ul class="hidden">
+                                                        <li class="on"><a href="#">옵션1</a></li>
+                                                        <li><a href="#">옵션2</a></li>
+                                                        <li><a href="#">옵션3</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="select_box">
+                                                    <a href="#" class="tit">월</a>
+                                                    <ul class="hidden">
+                                                        <li class="on"><a href="#">옵션1</a></li>
+                                                        <li><a href="#">옵션2</a></li>
+                                                        <li><a href="#">옵션3</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="essential"><label for="input01_04">구입처</label></th>
+                                        <td>
+                                            <div class="select_box w370">
+                                                <a href="#" class="tit">선택</a>
+                                                <ul class="hidden">
+                                                    <li class="on"><a href="#">옵션1</a></li>
+                                                    <li><a href="#">옵션2</a></li>
+                                                    <li><a href="#">옵션3</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- //form_wrap -->
                     </div>
                 </div><!-- section_wrap -->
-                <div class="section_wrap mt120">
-                    <div class="top_area">
-                        <h3 class="tit_03">쿠쿠렌탈 이용내역</h3>
-                    </div>
-                    <div class="scetion type_noBorder">
-                        <div class="rental_use_box">
-                            <div class="left_area">
-                                <a href="#">
-                                    <span class="tit">이용중인 렌탈제품</span>
-                                    <span class="txt"><span class="bold">2</span>개</span>
-                                </a>
-                            </div>
-                            <div class="right_area">
-                                <div class="img"><img src="../../images/mycuckoo/temp_manager_150x150.png" alt="매니저사진"></div>
-                                <p class="tit">쿠쿠 고객님! <br>다음 점검제품은 <span class="bold">CP-TS011DS(S)</span> 입니다.</p>
-                                <ul class="bul_list">
-                                    <li>담당매니저 : 김쿠쿠 (010-1234-5678)</li>
-                                    <li class="btn-list"><span>점검예정일 : 2019. 09. 01  09시</span> <button type="button" onclick="layerPopOpen('changeDate')" class="btn_ss radius"><i class="ico canlender"></i><span>점검일 변경</span></button></li>
-                                </ul>
-                            </div>
-                        </div><!-- //rental_use_box -->
-                        <div class="rental_use_box">
-                            <div class="left_area">
-                                <a href="#">
-                                    <span class="tit">이용중인 렌탈제품</span>
-                                    <span class="txt"><span class="bold">2</span>개</span>
-                                </a>
-                            </div>
-                            <div class="right_area">
-                                <div class="img"><img src="../../images/mycuckoo/temp_manager_150x150.png" alt="매니저사진"></div>
-                                <p class="tit">쿠쿠 고객님! <br>다음 점검제품은 <span class="bold">CP-TS011DS(S)</span> 입니다.</p>
-                                <ul class="bul_list">
-                                    <li>담당매니저 : 김쿠쿠 (010-1234-5678)</li>
-                                    <li class="btn-list"><span>점검예정일 : 2019. 09. 01  09시</span> <span class="btn_ss radius type_ing">점검일 변경중 : 2019-09-30 09:00</span></li>
-                                </ul>
-                            </div>
-                        </div><!-- //rental_use_box -->
-                        <div class="rental_use_box">
-                            <div class="left_area">
-                                <a href="#">
-                                    <span class="tit">이용중인 렌탈제품</span>
-                                    <span class="txt"><span class="bold">2</span>개</span>
-                                </a>
-                            </div>
-                            <div class="right_area">
-                                <div class="img"><img src="../../images/mycuckoo/temp_manager_150x150.png" alt="매니저사진"></div>
-                                <p class="tit">쿠쿠 고객님! <br>다음 점검제품은 <span class="bold">CP-TS011DS(S)</span> 입니다.</p>
-                                <ul class="bul_list">
-                                    <li>담당매니저 : 김쿠쿠 (010-1234-5678)</li>
-                                    <li class="btn-list"><span>점검예정일 : 2019. 09. 01  09시</span> <span class="btn_ss radius type_complate"><i class="ico complate"></i><span>점검일 변경완료</span></span></li>
-                                </ul>
-                            </div>
-                        </div><!-- //rental_use_box -->
-                    </div><!-- //scetion -->
-                    <div class="section no_data">
-                        <p class="txt1">렌탈 이용내역이 없습니다.</p>
-                        <p class="txt2">렌탈 이용중인 제품이 있다면 ‘렌탈정보 조회’를 통해 나의 렌탈 제품을 확인해보세요.</p>
-                        <div class="btn-wrap">
-                            <button type="button" class="btn_l radius">렌탈 정보 조회</button>
-                        </div>
-                    </div>
-                </div><!-- //section_wrap -->
+                <div class="btn-border-wrap">
+                    <button type="button" class="btn_l radius common">제품등록</button>
+                </div>
             </div><!-- //inner_content -->
         </div><!-- //content -->
     </div>
@@ -628,110 +611,9 @@
         </div>
     </footer>
     <!-- //footer -->
-    <div id="changeDate" class="wrap_layer_pop">
-        <div class="layer_pop w550">
-            <div class="container_pop">
-                <div class="header_pop">
-                    <h2 class="tit_03">점검일 변경</h2>
-                </div>
-                <div class="section form">
-                    <table>
-                        <caption>점검일 변경</caption>
-                        <colgroup>
-                            <col style="width:165px">
-                            <col style="width:auto">
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th scope="row">기존 점검 예상일</th>
-                                <td>2019-09-29(월) 09:00</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">점검 변경 요청일</th>
-                                <td>
-                                    <div class="datepicker">
-                                        <input type="text" class="datepicker_input_typeA w200" readonly>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">방문 희망시간</th>
-                                <td>
-                                    <div class="select_box w200">
-                                        <a href="#" class="tit">09:00</a>
-                                        <ul class="hidden">
-                                            <li class="on"><a href="#">옵션1</a></li>
-                                            <li><a href="#">옵션2</a></li>
-                                            <li><a href="#">옵션3</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="btn-wrap">
-                <button type="button" class="btn_l radius">취소</button>
-                <button type="button" class="btn_l radius common">변경</button>
-            </div>
-            <button type="button" class="btn-close-pop" onclick="layerPopClose('changeDate')"><span class="blind">팝업닫기</span></button>
-        </div>
-    </div>
+
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
-    <script>
-    //선택가능 날짜
-    var availableDates = ["2019-07-13","2019-07-14","2019-07-15"];
-
-
-
-    function available(date) {
-
-    	var thismonth = date.getMonth()+1;
-    	var thisday = date.getDate();
-
-    	if(thismonth<10){
-    		thismonth = "0"+thismonth;
-    	}
-    	if(thisday<10){
-    		thisday = "0"+thisday;
-    	}
-
-    	ymd = date.getFullYear() + "-" + thismonth + "-" + thisday;
-
-    	if ($.inArray(ymd, availableDates) >= 0) {
-    		return [true,"",""];
-
-    	} else {
-    		return [false,"",""];
-    	}
-    }
-    $('.datepicker_input_typeA').datepicker({//범례를 가지는 데이트피커
-        dateFormat: 'yy-mm-dd',
-        showMonthAfterYear:true ,
-        monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
-        monthNames: ['01','02','03','04','05','06','07','08','09','10','11','12'], //달력의 월 부분 Tooltip 텍스트 //달력의 월 부분 텍스트
-        dayNamesMin: ['일','월','화','수','목','금','토'], //달력의 요일 부분 텍스트
-        beforeShowDay: available,
-        beforeShow:function(input, inst){
-            $('.ui-datepicker').addClass('change_date');
-            insertMessage();
-        }
-    });
-    function insertMessage() {
-        clearTimeout(insertMessage.timer);
-        var str = '';
-            str += '<div class="date_legend">';
-            str += '<span><span class="icon typeA"></span><span>설치가능일</span></span>';
-            str += '</div>';
-
-        if ($('#ui-datepicker-div .ui-datepicker-calendar').is(':visible'))
-            $('#ui-datepicker-div').append(str);
-        else
-            insertMessage.timer = setTimeout(insertMessage, 10);
-    }
-    </script>
 </body>
 
 </html>

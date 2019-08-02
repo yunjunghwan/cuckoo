@@ -403,10 +403,12 @@
                 </div><!--  /section -->
                 <div class="section">
                     <h3 class="tit_04"><span class="num">02</span>배송정보를 입력해주세요.</h3>
-
+                    <div class="tit_border">
+                        <h4 class="tit_04">주문자 정보</h4>
+                    </div>
                     <div class="form_wrap">
                         <table>
-                            <caption>배송정보 입력</caption>
+                            <caption>주문자 정보 입력</caption>
                             <colgroup>
                                 <col style="width:150px;">
                                 <col style="width:auto">
@@ -428,13 +430,43 @@
                                 <tr>
                                     <th scope="row"><label for="input01_03">휴대폰번호</label></th>
                                     <td>
-                                        <input type="text" id="input01_03" placeholder="숫자만 입력(ex.01012341234)" class="w100p">
+                                        <input type="number" id="input01_03" placeholder="숫자만 입력(ex.01012341234)" class="w100p">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tit_border mt40">
+                        <h4 class="tit_04">배송지 정보</h4>
+                        <span class="ml25">
+                            <input type="checkbox" class="check_s" id="check01_01">
+                            <label for="check01_01"><span>주문자와 동일</span></label>
+                        </span>
+                    </div>
+                    <div class="form_wrap">
+                        <table>
+                            <caption>배송지 정보 입력</caption>
+                            <colgroup>
+                                <col style="width:150px;">
+                                <col style="width:auto">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><label for="input02_01">받는 분</label></th>
+                                    <td>
+                                        <input type="text" id="input01_01" placeholder="이름을 입력해주세요." class="w100p">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row"><label for="input01_04">주소</label></th>
+                                    <th scope="row"><label for="input02_03">휴대폰번호</label></th>
                                     <td>
-                                        <input type="text" id="input01_04"><button tyle="button" class="btn_m ml10">주소찾기</button>
+                                        <input type="number" id="input02_03" placeholder="숫자만 입력(ex.01012341234)" class="w100p">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="input02_04">주소</label></th>
+                                    <td>
+                                        <input type="text" id="input02_04"><button tyle="button" class="btn_m ml10">주소찾기</button>
                                         <input type="text" class="w100p mt10">
                                         <input type="text" class="w100p mt10">
                                     </td>

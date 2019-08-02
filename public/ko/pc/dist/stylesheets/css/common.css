@@ -167,6 +167,9 @@ select, input, button, textarea { -webkit-appearance: none; -moz-appearance: non
 select[type="checkbox"], input[type="checkbox"], button[type="checkbox"], textarea[type="checkbox"] { -webkit-appearance: checkbox; }
 select[type="radio"], input[type="radio"], button[type="radio"], textarea[type="radio"] { -webkit-appearance: radio; }
 select::-ms-expand, input::-ms-expand, button::-ms-expand, textarea::-ms-expand { display: none; }
+input::-ms-clear { display: none; }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none; -moz-appearance: none; appearance: none;}
 html, body { font-family: Gotham, "Noto Sans KR", "Apple SD Gothic Neo", AppleGothic, "돋움", Dotum, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: 300; color: #312f2d; word-break: keep-all; line-height: 1; letter-spacing: -0.5px; -webkit-font-smoothing: antialiased; }
 strong, h1, h2, h3, h4, h5, h6 { font-weight: 700; }
 label, button { cursor: pointer; }
@@ -352,7 +355,7 @@ body {position:relative; min-width: 1280px; margin: 0 auto; }
   header dimmed :100
 */
 input[type=text], textarea, select { outline: none; -webkit-transition: border-color 0.2s ease; -moz-transition: border-color 0.2s ease; -o-transition: border-color 0.2s ease; -ms-transition: border-color 0.2s ease; }
-input[type=text]:focus, textarea:focus, select:focus { border-color: #302f2b !important; }
+input[type=text]:focus, input[type=number]:focus, input[type=password]:focus, textarea:focus, select:focus { border-color: #302f2b !important; outline: 0}
 input[type=text].error, input[type=number].error, input[type=tel].error, input[type=password].error{border:1px solid #d51a2d}
 /* ::selection { background: #7a101b; color: #fff; text-shadow: none; }
 ::-moz-selection { background: #7a101b; color: #fff; text-shadow: none; } */
@@ -385,12 +388,19 @@ img { vertical-align: top; image-rendering: -webkit-optimize-contrast; }
 #container{position:relative; background-color:#fff}
 .content{position:relative; width:1180px; margin:0 auto; padding:50px 0 185px 0}
 .content:after{display:block; content:''; clear:both}
+.content.type_lnb{margin-top:80px}
 .blind{display:block;height:0;width:0;font-size:0;line-height:0;margin:0;padding:0;overflow:hidden}
 .bold{font-weight:500}
 .bold.price{font-weight:500; color:#272524}
+.link_num{font-size:13px; color:#1a35d6; border-bottom:1px solid #1a35d6}
 .txt_left{text-align:left !important}
 .txt_center{text-align:center !important}
+.txt_right{text-align:right !important}
 .w100p{width:100% !important}
+.w100{width:100px !important}
+.w200{width:200px !important}
+.w370{width:370px !important}
+.w380{width:380px !important}
 .top_content > div{width:1180px; margin:0 auto}
 .top_content .location{padding-top:30px}
 .top_content + .content{padding-top:0}
@@ -402,14 +412,24 @@ img { vertical-align: top; image-rendering: -webkit-optimize-contrast; }
 .mt20{margin-top:20px !important}
 .mt30{margin-top:30px !important}
 .mt40{margin-top:40px !important}
+.mt120{margin-top:120px !important}
 .mr40{margin-right:40px !important}
+.ml25{margin-left:25px !important}
+.pt12{padding-top:12px !important}
 .pb40{padding-bottom:40px !important}
 .pl20{padding-left:20px !important}
+.fontS{font-size:13px !important}
+.font17{font-size:17px !important}
+.font25{font-size:25px !important}
+.verT{vertical-align:top !important}
 /* 공통 타이틀 */
 .tit_02{display:inline-block; font-size:38px; font-weight:700; vertical-align:middle}
 .tit_03{display:inline-block; font-size:25px; font-weight:500; vertical-align:middle}
 .tit_04{display:inline-block; font-size:20px; font-weight:500; vertical-align:middle}
 .tit_05{display:inline-block; font-size:17px; font-weight:500; vertical-align:middle}
+.tit_border{display:block; margin-bottom:40px; padding-bottom:20px; box-sizing:border-box; border-bottom:2px solid #312f2d}
+.tit_border .tit_04{margin-bottom:0 !important}
+.tit_03 .desc{font-size:15px; color:#585856}
 h2[class^="tit_"] + a, h2[class^="tit_"] + button{margin-left:7px}
 h3[class^="tit_"] + a, h3[class^="tit_"] + button{margin-left:7px}
 h4[class^="tit_"] + a, h4[class^="tit_"] + button{margin-left:7px}
@@ -437,17 +457,19 @@ h5[class^="tit_"] + a, h5[class^="tit_"] + button{margin-left:7px}
 /* 공통 포인트컬러 */
 .point01{color:#7a101b !important}
 .point02{color:#ffffff !important}
+.point03{color:#d61a2e !important}
 .discount{margin-right:5px; font-size:17px; color:#8a8b87; text-decoration:line-through; font-weight:500}
 /* 공통 버튼 */
 a[class^="btn_"], button[class^="btn_"]{display:inline-block; text-align:center; box-sizing:border-box; -webkit-transtion:.3s ease; -moz-transtion:.3s ease; transition:.3s ease; font-weight:300; letter-spacing:-1px; ; vertical-align:middle}
 a[class^="btn_"]:hover, button[class^="btn_"]:hover{background-color:#312f2d; color:#fff; border:1px solid #312f2d}
+a[class^="btn_"] span, button[class^="btn_"] span{vertical-align:middle;}
 .radius[class^="btn_"]{padding:15px 30px; border-radius:25px}
 .common[class^="btn_"]{background-color:#312f2d; border:1px solid #312f2d; color:#fff}
 .common[class^="btn_"]:hover{background-color:#fff; border:1px solid #c7c8c4; color:#312f2d}
 .action[class^="btn_"]{background-color:#7a101b; border:1px solid #7a101b; color:#fff}
 .action[class^="btn_"]:hover{background-color:#312f2d; border:1px solid #312f2d; color:#fff}
 .btn_s{min-width:80px; padding:12px 18px 11px 18px; border:1px solid #c7c8c4; color:#312f2d; font-size:13px}
-.btn_ss{min-width:54px; padding:7px 14px 7px 14px; border:1px solid #c7c8c4; color:#312f2d; font-size:13px}
+.btn_ss{display:inline-block; min-width:54px; padding:7px 14px 7px 14px; border:1px solid #c7c8c4; color:#312f2d; font-size:13px}
 .btn_ss.radius{padding:7px 14px 7px 14px; border-radius:15px}
 .btn_s.radius{padding:12px 20px 11px 20px; border-radius:20px}
 .btn_m{padding:17px 30px 16px 30px; border:1px solid #c7c8c4;}
@@ -492,22 +514,29 @@ a[class^="btn_"]:hover, button[class^="btn_"]:hover{background-color:#312f2d; co
 .ico.reg{width:16px; height:19px; margin-right:13px; background-position:-61px 0}
 .ico.notice{width:13px; height:13px; margin-right:10px; background-position:-161px -285px}
 .ico.notice2{width:18px; height:18px; margin-right:10px; background-position:-192px -280px}
+.ico.notice3{width:14px; height:14px; margin-right:10px; background-position:-92px -347px;}
 .ico.file{width:12px; height:12px; margin-right:5px; background-position:0 -380px}
 .ico.lock{width:15px; height:18px; margin-right:5px; background-position:-1px -316px}
 .ico.search{width:28px; height:28px; background-position:-394px -255px}
 .ico.point{width:19px; height:19px; margin-right:8px; background-position:-390px -305px;}
 .ico.cart{width:18px; height:21px; margin-right:13px; background-position:-437px -303px;}
 .ico.btnArrow{width:5px; height:9px; margin-left:10px; background-position:-474px -308px;}
+.ico.btnArrow2{width:5px; height:10px; margin-left:10px; background-position:-288px -350px;}
+.ico.btnLink{width:7px; height:12px; margin-left:10px; background-position:-281px -284px;}
+.ico.canlender{width:18px; height:17px; margin-right:10px; background-position:0 -345px;}
+.ico.complate{width:12px; height:9px; margin-right:10px; background-position:-33px -348px;}
 
 /* 공통 인풋 */
 input[type="text"], input[type="password"], input[type="number"], input[type="tel"]{height:50px; line-height:50px; padding:0 20px; border:1px solid #d5d6d3; box-sizing:border-box; font-weight:300; vertical-align:middle}
-input[type="radio"], input[type="checkbox"]{display:block;height:0;width:0;font-size:0;line-height:0;margin:0;padding:0;overflow:hidden}
-input[type="checkbox"] + label, input[type="checkbox"] + label span {vertical-align:middle}
+input[type="radio"], input[type="checkbox"]{/*display:block;*/height:0;width:0;font-size:0;line-height:0;margin:0;padding:0;overflow:hidden}
+/* input[type="checkbox"] + label, input[type="checkbox"] + label span {vertical-align:middle} */
 input[type="checkbox"] + label:before{content:''; display:inline-block;background:url(../../images/common/ico_zip.png) no-repeat -200px 0; padding-left:25px; min-height:20px; vertical-align:middle}
 input[type="checkbox"]:checked + label:before{background:url(../../images/common/ico_zip.png) no-repeat -200px -30px;}
 input[type="checkbox"].check_s + label:before{content:''; min-height:18px; background-position:-301px -30px}
+input[type="checkbox"].check_s.no_label + label:before{padding-left:16px}
 input[type="checkbox"].check_s:checked + label:before{background-position:-301px -60px}
 input[type="checkbox"].check_m + label:before{content:''; min-height:20px; padding-left:35px; background-position:-200px 0}
+input[type="checkbox"].check_m.no_label + label:before{padding-left:20px}
 input[type="checkbox"].check_m:checked + label:before{background-position:-200px -30px}
 input[type="checkbox"].check_l + label:before{content:''; min-height:30px; padding-right:6px; background-position:-150px 0}
 input[type="checkbox"].check_l:disabled + label:before{content:''; background-position:-359px -30px}
@@ -523,6 +552,7 @@ input[type="radio"].radio_s:checked + label:before{background-position:-246px -3
 
 textarea{padding:20px; border:1px solid #d5d6d3; box-sizing:border-box; font-weight:300;}
 input::placeholder, textarea::placeholder {color:#8a8b87; font-weight:300}
+.datepicker_wrap .datepicker + button{margin-left:5px}
 .datepicker{display:inline-block; position:relative}
 .datepicker:after{content:''; display:inline-block; position:absolute; top:15px; right:15px; width:18px; height:17px; background:url(../../images/common/ico_zip.png) no-repeat -32px -316px;}
 /* 공통 인풋 파일  */
@@ -544,6 +574,7 @@ html.dim body .wrap-dim{position:fixed; left:0; top:0; width:100%; height:100%; 
 .layer_pop{position:absolute; top:50%; left:50%; max-height:800px; overflow-y:auto; padding:50px; background-color:#fff; box-sizing:border-box;}
 .layer_pop.w400{width:400px}
 .layer_pop.w500{width:500px}
+.layer_pop.w550{width:550px}
 .layer_pop.w560{width:560px}
 .layer_pop.w830{width:830px}
 .layer_pop.w1124{width:1124px}
@@ -553,7 +584,10 @@ html.dim body .wrap-dim{position:fixed; left:0; top:0; width:100%; height:100%; 
 .layer_pop .type_data th, .layer_pop .type_data td{font-size:13px}
 .layer_pop .txt1{line-height:26px}
 .layer_pop .txt1 + .txt1{margin-top:15px}
-.layer_pop .btn-wrap{margin-top:30px}
+.layer_pop .btn-wrap{margin-top:30px; text-align:center}
+.layer_pop .section.form{padding:30px 0; border-top:2px solid #312f2d; border-bottom:1px solid #d5d6d3}
+.layer_pop .section.form th, .layer_pop .section.form td{padding:10px 0; color:#312f2d}
+.layer_pop .section.form th{padding-left:30px; font-weight:500}
 
 /* 공통 레이어팝업(컨펌) */
 .wrap_layer_pop.type_confirm .layer_pop{padding:45px 35px 40px 35px; text-align:center}
@@ -561,21 +595,31 @@ html.dim body .wrap-dim{position:fixed; left:0; top:0; width:100%; height:100%; 
 .wrap_layer_pop.type_confirm .layer_pop .inner_txt{display:table-cell; height:175px; vertical-align:middle}
 .wrap_layer_pop.type_confirm .layer_pop .txt1{font-size:17px; line-height:30px}
 .wrap_layer_pop.type_confirm .layer_pop .txt2{margin-top:8px; font-size:15px; color:#585856}
-.wrap_layer_pop.type_confirm .layer_pop .btn-wrap{margin-top:0}
+.wrap_layer_pop.type_confirm .layer_pop .btn-wrap{margin-top:0;}
 .wrap_layer_pop.type_confirm .layer_pop .btn-wrap > *{min-width:160px}
 
 /* 공통 테이블 */
 .tbl_wrap .btn-wrap-left{margin-top:20px; text-align:left;}
+.tbl.type_border thead{border-top:2px solid #312f2d}
+.tbl.type_border thead th{background-color:#f5f5f5; font-weight:300; border-bottom:0}
 .tbl.type_border th{font-weight:500}
 .tbl.type_border th, .tbl.type_border td{padding:15px 10px; border-bottom:1px solid #d5d6d3; font-size:15px; text-align:center}
+.tbl.type_border.type_m td{padding:30px 0}
+.tbl .btn_s{min-width:52px; padding:12px 14px 11px 14px;}
 .tbl.type_data{border-top:3px solid #312f2d}
 .tbl.type_data th{background-color:#f5f5f5; font-weight:500}
 .tbl.type_data th, .tbl.type_data td{padding:13px 0; border-bottom:1px solid #c7c8c4; border-left:1px solid #c7c8c4; text-align:center}
 .tbl.type_data th:first-child, .tbl.type_data td:first-child{ border-left:0;}
+.tbl .tbl_top{position:relative}
+.tbl .tbl_top + table{margin-top:20px}
+.tbl .tbl_top .right_area{position:absolute; top:-15px; right:0}
+.tbl .no_data:before{display:none}
+.tbl .no_data{padding:95px 0 !important; font-weight:300}
 /* 공통 로케이션 */
-.location li{display:inline-block; color:#272524; font-weight:500}
+.location li{display:inline-block; color:#585856}
 .location li:before{content:''; display:inline-block; width:6px; height:11px; background:url(../../images/common/ico_zip.png) no-repeat -463px -106px; margin:0 10px 0 7px}
 .location li:first-child:before{content:'';display:none}
+.location li:last-child{color:#272524; font-weight:500}
 .location li a{color:#585856; font-weight:300}
 /* 공통 별 */
 .ui_star{display:inline-block; width:137px; height:20px; background:url(../../images/common/ico_zip.png) no-repeat 0 -278px; vertical-align:middle}
@@ -627,19 +671,29 @@ html.dim body .wrap-dim{position:fixed; left:0; top:0; width:100%; height:100%; 
 .notice_list li{position:relative; padding-left:22px; color:#585856; letter-spacing:-0.5px}
 .notice_list li + li{margin-top:10px}
 .notice_list li:before{content:''; display:inline-block; position:absolute; left:0; top:0; width:13px; height:13px; background:url(../../images/common/ico_zip.png) no-repeat -161px -285px}
+.notice_list li.type_red {font-size:13px; color:#d61a2e}
+.notice_list li.type_red:before{background-position:-63px -348px;}
 .dash_list li{position:relative; padding-left:10px; letter-spacing:-1px}
 .dash_list li + li{margin-top:15px}
 .dash_list li:before{content:''; display:inline-block; position:absolute; left:0; top:7px; width:6px; height:1px; background-color:#484645}
 .bul_list li{position:relative; padding-left:10px; letter-spacing:-1px}
 .bul_list li + li{margin-top:15px}
 .bul_list li:before{content:''; display:inline-block; position:absolute; left:0; top:7px; width:2px; height:2px; background-color:#585856}
+.bul_list.type_s li{font-size:13px}
+.bul_list.type_s li + li{margin-top:10px}
+.bul_list.type_s li:before{top:5px}
 .star_list li{position:relative; padding-left:10px; letter-spacing:-1px; line-height:20px}
 .star_list li + li{margin-top:12px}
 .star_list li:before{content:'*'; display:inline-block; position:absolute; left:0; top:2px; color:#5b5a59;}
 /* 공통 폼 */
 .form_wrap tr{}
 .form_wrap th{padding-top:20px; font-weight:500; vertical-align:top}
+.form_wrap th.essential label:after{content:''; display:inline-block; width:4px; height:4px; margin-left:6px; vertical-align:top; background-color:#7a101b; border-radius:2px}
 .form_wrap td{padding-bottom:20px}
+.form_wrap td .input-btn-right{position:relative; padding-right:95px; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.form_wrap td .input-btn-right input[type="text"], .form_wrap td .input-btn-right input[type="number"], .form_wrap td .input-btn-right input[type="password"]{width:100%;}
+.form_wrap td .input-btn-right button, .form_wrap td .input-btn-right a{position:absolute; right:0; top:0}
+.form_wrap td.txt_area{padding:20px 0}
 .form_wrap tr:last-child th, .form_wrap tr:last-child td{padding-bottom:0}
 .form_wrap tr.error input[type="text"], .form_wrap tr.error input[type="password"], .form_wrap tr.error input[type="number"], .form_wrap tr.error input[type="tel"]{border:1px solid #d51a2d;}
 .form_wrap .error_txt{margin-top:20px; font-size:13px; color:#d61a2e}
@@ -653,9 +707,9 @@ html.dim body .wrap-dim{position:fixed; left:0; top:0; width:100%; height:100%; 
 .line_type td{position:relative}
 .line_type td .error_txt{display:none; margin-top:0; position:absolute; bottom:-23px; left:0;}
 .line_type tr.error .error_txt{display:block}
-.line_type input[type="text"], input[type="password"], input[type="number"], input[type="tel"]{width:100%; padding-left:0; height:auto; line-height:normal; border:0 !important; -webkit-transition: border-color 0.2s ease;}
+.line_type input[type="text"], .line_type input[type="password"], .line_type input[type="number"], .line_type input[type="tel"]{width:100%; padding-left:0; height:auto; line-height:normal; border:0 !important; -webkit-transition: border-color 0.2s ease;}
 /* 공통 페이징 */
-.pagination { margin:30px 0 75px; text-align:center; }
+.pagination { margin:30px 0 0 0; text-align:center; }
 .pagination a { display:inline-block; min-width:29px; padding:4px 18px; text-align:center; color:#8a8b87; vertical-align: middle; box-sizing: border-box;}
 .pagination a:hover {font-weight:500; color:#312f2d; }
 .pagination a.on { font-weight:500; color:#312f2d; }
@@ -711,16 +765,16 @@ html.dim body .wrap-dim{position:fixed; left:0; top:0; width:100%; height:100%; 
 body > .ui-datepicker{display:none}
 .ui-datepicker table { border-collapse:collapse; border-spacing:0; }
 .ui-datepicker .ui-datepicker-header { position:relative; padding-bottom:13px;}
-.ui-datepicker .ui-datepicker-header .ui-datepicker-title { line-height:23px; font-size:24px; font-weight:600; color:#111; text-align:center; }
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title { line-height:23px; font-size:20px; font-weight:500; color:#111; text-align:center; }
 .ui-datepicker .ui-datepicker-header .ui-datepicker-prev { position:absolute; top:0; left:0; width:10px; height:19px; font-size:0; background:url(../../images/common/ico_zip.png) no-repeat -307px -311px; }
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next { position:absolute; top:0; right:0;width:10px; height:19px; font-size:0; background:url(../../images/common/ico_zip.png) no-repeat -343px -311px; }
 .ui-datepicker .ui-datepicker-calendar thead th { height:36px; color:#585856; text-align:center}
+.ui-datepicker .ui-datepicker-calendar thead th span[title="Sunday"]{color:#d61a2e}
+.ui-datepicker .ui-datepicker-calendar thead th span[title="Saturday"]{color:#1a35d6}
 .ui-datepicker .ui-datepicker-calendar td { width:30px; height:30px; padding:0; }
-
-.ui-datepicker .ui-datepicker-calendar tr:first-child td{padding-top:11px}
-.ui-datepicker .ui-datepicker-calendar tr:last-child td{padding-bottom:17px}
-.ui-datepicker .ui-datepicker-calendar .ui-state-default { display:block; width:30px; height:30px; font-size:13px; text-align:center; color:#111; line-height:30px; }
-.ui-datepicker .ui-datepicker-calendar .ui-state-hover, .ui-datepicker .ui-datepicker-calendar  .ui-state-active { color:#fff; background:#312f2d; border-radius:15px}
+/* .ui-datepicker .ui-datepicker-calendar td.able{background-color:#f5f5f5; color:#585856} */
+.ui-datepicker .ui-datepicker-calendar .ui-state-default { display:block; width:34px; height:34px; font-size:13px; text-align:center; color:#111; line-height:34px; }
+.ui-datepicker .ui-datepicker-calendar .ui-state-hover, .ui-datepicker .ui-datepicker-calendar  .ui-state-active { color:#fff; background:#312f2d; border-radius:17px}
 .ui-datepicker .ui-datepicker-calendar  .ui-state-able{background-color:#ffecef; color:#111}
 .datepicker-ticketing .ui-datepicker-title .ui-datepicker-year{margin-right:-5px}
 .datepicker-ticketing .ui-datepicker-title .ui-datepicker-year:after{content:'.'}
@@ -731,15 +785,22 @@ body > .ui-datepicker{display:none}
 .ui-datepicker .ui-datepicker-other-month .ui-state-default { color:#aaa; }
 .ui-datepicker-title .ui-datepicker-year{margin-right:-5px}
 .ui-datepicker-title .ui-datepicker-year:after{content:'.'}
-.ui-datepicker .ui-datepicker-calendar .ui-datepicker-current-day a{color: #fff; font-weight:500; background: #312f2d; border-radius:15px}
-
+.ui-datepicker .ui-datepicker-calendar .ui-datepicker-current-day a{color: #fff; background: #312f2d; border-radius:17px}
 .ui-datepicker{width:300px; padding: 30px 30px 20px; border:1px solid #585856; background-color:#fff; -webkit-box-sizing:border-box; box-sizing:border-box; position:absolute;}
+.ui-datepicker.change_date a.ui-state-default{border-radius:0; background-color:#f5f5f5; color:#585856}
+.ui-datepicker.change_date a.ui-state-default:hover,
+.ui-datepicker.change_date a.ui-state-active{border-radius:0; background-color:#312f2d; color:#fff}
+.ui-datepicker.change_date span.ui-state-default{color:#cecfcc}
 /*datepicer 버튼 롤오버 시 손가락 모양 표시*/
 .ui-datepicker-trigger{cursor: pointer;}
 /*datepicer input 롤오버 시 손가락 모양 표시*/
 .hasDatepicker{cursor: pointer;}
+.date_legend{margin-top:20px; text-align:right; font-size:12px; color:#585856}
+.date_legend .icon{display:inline-block; width:10px; height:10px; border-radius:5px; margin-right:10px}
+.date_legend .icon.typeA{background-color:#f5f5f5}
+.date_legend .icon.typeB{background-color:#312f2d}
 /* 노데이터 */
-.no_data{position:relative; min-height:280px; padding-top:20px; text-align:center}
+.no_data{position:relative; min-height:280px; padding-top:20px; text-align:center; box-sizing:border-box;}
 .no_data{font-size:30px; font-weight:500; color:#312f2d}
 .no_data:before{content:''; display:inline-block; margin-bottom:55px; background:url(../../images/common/img_ico_zip.png) no-repeat}
 .no_data.shopping:before{width:70px; height:75px; background-position:-470px -280px;}
@@ -766,3 +827,4 @@ body > .ui-datepicker{display:none}
 .lnb .depth02{margin-top:20px}
 .lnb .depth02 > li > a{font-size:13px; color:#585856}
 .lnb .depth02 > li + li{margin-top:18px}
+.inner_content{float:left; width:980px}
