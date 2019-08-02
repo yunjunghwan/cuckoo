@@ -20,9 +20,9 @@
   <link rel="stylesheet" href="../../stylesheets/css/common.css">
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
   <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
+  <link rel="stylesheet" href="../../stylesheets/css/customer.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
-
 </head>
 
 <body>
@@ -375,207 +375,134 @@
   <!-- //header-->
 
   <!--container-->
-    <div id="container" class="mypage_container">
-        <div class="top_content">
+    <div id="container" class="customer">
+		<div class="top_content">
             <div class="location">
                 <ul>
                     <li><a href="#">홈</a></li>
-                    <li>회원가입</li>
+                    <li><a href="#">고객센터</a></li>
+					<li>스스로 제품 점검</li>
                 </ul>
             </div>
             <div class="top_tit">
-                <h2 class="tit_02">쿠쿠 사업자회원 가입</h2>
-				<div class="desc mt35">사업자 회원은 렌탈만 가능합니다.</div>
+                <h2 class="tit_02">고객센터</h2>
             </div>
         </div>
         <div class="content">
-			<div class="member_area">
-				<div class="tit">사업자 정보</div>
-				<div class="desc">
-					<div class="form_wrap line_type mt20">
-								<table>
-									<caption>캡션명입력</caption>
-									<colgroup>
-										<col style="width:95px;">
-										<col style="width:auto">
-										<col style="width:auto">
-									</colgroup>
-									<tbody>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_01"><span>사업자번호</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_01" placeholder="번호 10자리를 입력해주세요.">
-											</td>
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_02"><span>회사명</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_02" placeholder="회사명을 입력해주세요.">
-											</td>
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_03"><span>대표자명</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_03" placeholder="대표자명을 입력해주세요.">
-											</td>
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_03"><span>대표전화번호</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_03" placeholder="숫자만 입력 (ex.01012341234)">
-											</td>
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_03"><span>사업자등록증</span></label></th>
-											<td>
-												<input type="text" id="input01_03" placeholder="사업자등록증을 첨부해주세요.">
-											</td>
-											<td class="add_td"><button type="button" class="btn_s">첨부하기</button></td>
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_03"><span>아이디</span></label></th>
-											<td>
-												<input type="text" id="input01_03" placeholder="6~18자 이내의 영소문자, 숫자 조합">
-											</td>
-											<td class="add_td"><button type="button" class="btn_s">중복확인</button></td>
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_03"><span>비밀번호</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_03" placeholder="6~18자 이내의 영문,숫자조합(@#$%^&+-=)">
-											</td>
-										</tr>
-										<tr class="no_last"><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_03"><span>비밀번호 확인</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_03" placeholder="비밀번호를 한번 더 확인해주세요.">
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+			<div class="customer_sub clear">
+				<div class="fl customer_left">
+					
+					<div class="tit">고객센터 홈</div>
+					<ul>
+						<li class="on"><a href="#">스스로 제품 점검</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">카카오톡 상담</a></li>
+						<li><a href="#">렌탈 상담신청</a></li>
+						<li><a href="#">1:1 문의하기</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">출장 A/S 신청</a></li>
+						<li><a href="#">서비스센터 찾기</a></li>
+						<li><a href="#">제품등록</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">쿠쿠 매장 찾기</a></li>
+						<li><a href="#">해외서비스 안내</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">공지사항</a></li>
+					</ul>
+
 				</div>
-			</div>
-			<div class="member_area mt80">
-				<div class="tit">담당자 정보</div>
-				<div class="desc">
-					<div class="form_wrap line_type mt20">
-								<table>
-									<caption>캡션명입력</caption>
-									<colgroup>
-										<col style="width:95px;">
-										<col style="width:auto">
-										<col style="width:auto">
-									</colgroup>
-									<tbody>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_01"><span>이름</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_01" placeholder="담당자 실명을 입력해주세요.">
-											</td>
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_02"><span>이메일 주소</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_02" placeholder="담당자 이메일 주소를 입력해주세요.">
-											</td>
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_03"><span>휴대폰번호</span></label></th>
-											<td colspan="2">
-												<input type="text" id="input01_03" placeholder="숫자만 입력 (ex.01012341234)">
-											</td>
-										</tr>
-										<tr class="no_last"><!-- [D] 인풋값에러시 error클래스추가  -->
-											<th scope="row"><label for="input01_03"><span>재직증명서</span></label></th>
-											<td>
-												<input type="text" id="input01_03" placeholder="재직증명서를 첨부해주세요.">
-											</td>
-											<td class="add_td"><button type="button" class="btn_s">첨부하기</button></td>
-										</tr>
-									
-									</tbody>
-								</table>
+				<div class="fr customer_right">
+					<div class="tit">스스로 제품 점검</div>
+					<div class="customer_inbox">
+						<div class="top_desc">
+							<div class="search_box search_select clear">
+								<div class="select_box w180px fl">
+									<a href="#" class="tit">정수기</a>
+									<ul class="hidden">
+										<li class="on"><a href="#">옵션1</a></li>
+										<li><a href="#">옵션2</a></li>
+										<li><a href="#">옵션3</a></li>
+									</ul>
+								</div>
+								<div class="fr ml20">
+									<button type="button" class="btn_m radius common">관리하기</button>
+								</div>
 							</div>
-				</div>
-			</div>
-			<div class="member_area mt80">
-				<div class="tit">
-					<div class="clear">
-						<div class="fl">약관 및 마케팅 수신 동의</div>
-						<div class="fr">
-							<span>
-								<input type="checkbox" class="check_s" id="check01_01">
-								<label for="check01_01"><b><span>전체동의</span></b></label>
-							</span>		
+						</div>
+						<div class="search_data mt60">
+							<div class="tit clear">
+								<div class="fl">검색결과 총<span>4</span>건</div>
+								<div class="fr">
+									<ul>
+										<li class="on">전체</li>
+										<li>관리방법</li>
+										<li>고장자가진단</li>
+									</ul>
+								</div>
+							</div>
+							<div class="desc">
+								<ul>
+									<li>
+										<a href="#">
+											<div class="img"><img src="../../images/customer/data_img05.png"></div>
+											<div class="desc">
+												<div class="tit">정수기 전원이 갑자기 들어오지 않을 경우</div>
+												<div class="cate">고장자가진단</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="img"><img src="../../images/customer/data_img06.png"></div>
+											<div class="desc">
+												<div class="tit">이보다 쉬울 수 없는 정수기 필터 교환 방법</div>
+												<div class="cate">관리방법</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="img"><img src="../../images/customer/data_img07.png"></div>
+											<div class="desc">
+												<div class="tit">정수기에서 물이 나오지 않는다면</div>
+												<div class="cate">고장자가진단</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="img"><img src="../../images/customer/data_img08.png"></div>
+											<div class="desc">
+												<div class="tit">안과 밖을 자동 살균하는 방법</div>
+												<div class="cate">관리방법</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						
+						</div>
+						<div class="pagination">
+							<a href="#" class="paging first disabled"><span class="blind">첫페이지</span></a>
+							<a href="#" class="paging prev disabled"><span class="blind">이전</span></a>
+							<a href="#" class="on">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+							<a href="#" class="paging next"><span class="blind">다음</span></a>
+							<a href="#" class="paging last"><span class="blind">마지막페이지</span></a>
 						</div>
 					</div>
 				</div>
-				<div class="desc">
-					<div class="form_wrap line_type mt20 accept_terms">
-								<table>
-									<caption>캡션명입력</caption>
-									<colgroup>
-										
-										<col style="width:auto">
-										<col style="width:60px;">
-										
-									</colgroup>
-									<tbody>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<td>
-												<span>
-													<input type="checkbox" class="check_s" id="check01_02">
-													<label for="check01_02"><b><span>[필수] 약관동의</span></b></label>
-												</span>		
-											</td>
-											<td class="view_alltxt">
-												<a href="#">전문보기<span class="click_arrow"></span></a>
-											</td>
-											
-										</tr>
-										<tr class=""><!-- [D] 인풋값에러시 error클래스추가  -->
-											<td>
-												<span>
-													<input type="checkbox" class="check_s" id="check01_03">
-													<label for="check01_03"><b><span>[필수] 개인정보수집 및 활용, 취급위탁 약관</span></b></label>
-												</span>		
-											</td>
-											<td class="view_alltxt">
-												<a href="#">전문보기<span class="click_arrow"></span></a>
-											</td>
-											
-										</tr>
-										<tr class="no_last"><!-- [D] 인풋값에러시 error클래스추가  -->
-											<td class="clear">
-												<span class="fl">
-													<input type="checkbox" class="check_s" id="check01_04">
-													<label for="check01_04"><b><span>[선택]이메일 수신</span></b></label>
-												</span>
-												<span class="fl ml40">
-													<input type="checkbox" class="check_s" id="check01_05">
-													<label for="check01_05"><b><span>[선택]SMS 수신</span></b></label>
-												</span>		
-											</td>
-											<td class="view_alltxt">
-												<a href="#">전문보기<span class="click_arrow"></span></a>
-											</td>
-											
-										</tr>
-									</tbody>
-									
-								</table>
-								<ul class="star_list mt15" style="font-size:13px;">
-									<li>수신거부와 상관없이 반드시 고지의무가 있는 사항에 대해서는 이메일 및 SMS가 발송됩니다.</li>
-								
-								</ul>
-							</div>
-				</div>
 			</div>
-			<div class="member_area mt60">
-				<button type="button" class="btn_l radius common w100p">가입하기</button>
-			</div>
-        </div>
+		</div>
     </div>
     <!--//container-->
     <div id="gnbDimmed" class="dimmed"></div>
@@ -669,6 +596,6 @@
     <!-- //footer -->
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
-</body>
+
 
 </html>
