@@ -182,7 +182,7 @@ span.circle_black02{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form02{ margin-left:120px; width:822px; height:338px; background:url(../../images/customer/txt_box02.png);}
 .content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form03{ margin-left:66px; width:822px; height:470px; background:url(../../images/customer/txt_box03.png);}
 .content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form01 > .txt_box01{ padding-top:90px; padding-left:100px;  width:600px;}
-.content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form02 > .txt_box01{ padding-top:90px; padding-left:83px; width:600px;}
+.content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form02 > .txt_box01{ padding-top:90px; padding-left:83px; width:620px;}
 .content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form03 > .txt_box01{ padding-top:90px; padding-lefT:100px;  width:600px;}
 .content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > div > .txt_box01 > .tit{font-size:30px; font-weight:400;letter-spacing:-2px;}
 .content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form03 .txt_box01 > .sub_tit{font-size:17px; font-weight:300; margin-top:20px;}
@@ -317,9 +317,12 @@ span.circle_black02{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .content .customer_sub .customer_right > .customer_inbox .product_reg_form .notice_list{margin-top:15px;}
 .content .customer_sub .customer_right > .customer_inbox .product_reg_form .notice_list li{font-size:13px;}
 
-.content .customer_sub .customer_right > .customer_inbox > .top_desc04{padding:80px 0 70px 0; background-color:#f5f5f5; border:1px solid #312f2d;}
+.content .customer_sub .customer_right > .customer_inbox > .top_desc04{padding:80px 0 70px 0; background-color:#f5f5f5; }
 .content .customer_sub .customer_right > .customer_inbox > .top_desc04 .top_desc04_inbox{text-align:center; width:620px; margin:0 auto;}
 .content .customer_sub .customer_right > .customer_inbox > .top_desc04 .tit{font-size:30px; font-weight:500; }
+.content .customer_sub .customer_right > .customer_inbox > .top_desc04 .product_reg_c_img{position:relative; padding-top:110px;}
+.content .customer_sub .customer_right > .customer_inbox > .top_desc04 .product_reg_c_img:before{content:''; display:inline-block; width:66px; height:68px; background:url(../../images/customer/c_icon_zip.png); background-position:-271px -995px; position:absolute; top:0; left:276px;}
+
 .content .customer_sub .customer_right > .customer_inbox > .top_desc04 .sub_tit{font-size:17px; margin-top:20px; padding-bottom:40px; border-bottom:1px solid #d5d6d3;}
 .content .customer_sub .customer_right > .customer_inbox > .top_desc04 .desc{margin-top:40px; font-size:15px; line-height:30px;}
 .content .customer_sub .customer_right > .customer_inbox > .top_desc04 .desc b{font-weight:500;}
@@ -454,7 +457,6 @@ span.circle_black02{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .foreign_service_tab ul:after{clear:both; display:block; content:'';}
 .foreign_service_tab li:before{content: ''; display: inline-block; position: absolute; left:0px; top: 0px; width: 1px; height: 57px; background-color: #d5d6d3;}
 .foreign_service_tab li:after{content: ''; display: inline-block; position: absolute; right:-1px; top: 0px; width: 1px; height: 57px; background-color: #d5d6d3;}
-
 .foreign_service_tab ul{position:relative;}
 .foreign_service_tab ul:before {content: ''; display: inline-block; top: 0px; position: absolute; width: 100%; height: 100%; border-top: 1px solid #d5d6d3;}
 .foreign_service_tab li a{display: block; width: 100%; height: 100%; padding: 20px 0; font-size: 17px; position:relative; z-index:3;}
@@ -491,13 +493,16 @@ span.circle_black02{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .service_info .section03 > .section03_insec > .bottom_desc{margin-top:80px;}
 .service_info .section03 > .section03_insec > .bottom_desc > .tit{text-align:center; font-weight:500; font-size:25px;}
 .service_info .section03 > .section03_insec > .bottom_desc > ul{margin-top:60px;}
-.service_info .section03 > .section03_insec > .bottom_desc > ul > li{display:inline-block; padding-left:105px; position:relative;}
+.service_info .section03 > .section03_insec > .bottom_desc > ul:after{clear:both; display:block; content:'';}
+.service_info .section03 > .section03_insec > .bottom_desc > ul > li{float:left; padding-left:105px; position:relative;}
 .service_info .section03 > .section03_insec > .bottom_desc > ul > li:before{content:''; display:inline-block; position:absolute; background:url(../../images/customer/c_icon_zip.png); width:105px; height:105px; left:0; background-position:-7px -316px;}
 .service_info .section03 > .section03_insec > .bottom_desc > ul > li > .txt01{font-size:17px; font-weight:500; margin-left:20px; margin-top:20px;}
-.service_info .section03 > .section03_insec > .bottom_desc > ul > li > .txt02{margin-top:16px; font-size:15px; margin-left:20px; line-height:24px;}
+.service_info .section03 > .section03_insec > .bottom_desc > ul > li > .txt02{margin-top:10px; font-size:15px; margin-left:20px; line-height:24px;}
 .service_info .section03 > .section03_insec > .bottom_desc > ul > li:first-child{padding-right:100px;}
+.service_info .section03 > .section03_insec > .bottom_desc > ul > li:first-child:after{content:''; display:inline-block; width:8px; height:15px; background:url(../../images/customer/c_icon_zip.png); position:absolute; top:44px; left:312px; background-position:-245px -79px;}
 .service_info .section03 > .section03_insec > .bottom_desc > ul > li:nth-child(2){padding-right:85px;}
+.service_info .section03 > .section03_insec > .bottom_desc > ul > li:nth-child(2):after{content:''; display:inline-block; width:8px; height:15px; background:url(../../images/customer/c_icon_zip.png); position:absolute; top:44px; left:289px; background-position:-245px -79px;}
 .service_info .section03 > .section03_insec > .bottom_desc > .desc{margin-top:80px; padding:30px; background-color:#f5f5f5;}
-
+.service_info .section03 > .section03_insec > .bottom_desc > .desc > ul > li{font-size:13px;}
 .customer_content .customer_sec03 > .in_section01 > .desc > div > a:hover{border:1px solid #585856;}
 .customer_content .customer_sec03 > .in_section01 > .desc > div > a:hover .tit, .customer_content .customer_sec03 > .in_section01 > .desc > div > a:hover .link > span.a_tag{border-bottom:1px solid #585856;}
