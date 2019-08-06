@@ -397,8 +397,11 @@ img { vertical-align: top; image-rendering: -webkit-optimize-contrast; }
 .txt_center{text-align:center !important}
 .txt_right{text-align:right !important}
 .w100p{width:100% !important}
+.w90{width:90px !important}
 .w100{width:100px !important}
+.w110{width:110px !important}
 .w200{width:200px !important}
+.w270{width:270px !important}
 .w370{width:370px !important}
 .w380{width:380px !important}
 .top_content > div{width:1180px; margin:0 auto}
@@ -414,6 +417,7 @@ img { vertical-align: top; image-rendering: -webkit-optimize-contrast; }
 .mt40{margin-top:40px !important}
 .mt120{margin-top:120px !important}
 .mr40{margin-right:40px !important}
+.ml15{margin-left:15px !important}
 .ml25{margin-left:25px !important}
 .pt12{padding-top:12px !important}
 .pb40{padding-bottom:40px !important}
@@ -422,6 +426,7 @@ img { vertical-align: top; image-rendering: -webkit-optimize-contrast; }
 .font17{font-size:17px !important}
 .font25{font-size:25px !important}
 .verT{vertical-align:top !important}
+.dash{display:inline-block; width:23px; text-align:center}
 /* 공통 타이틀 */
 .tit_02{display:inline-block; font-size:38px; font-weight:700; vertical-align:middle}
 .tit_03{display:inline-block; font-size:25px; font-weight:500; vertical-align:middle}
@@ -450,7 +455,7 @@ h5[class^="tit_"] + a, h5[class^="tit_"] + button{margin-left:7px}
 .tab.type_m li a{padding-bottom:15px; font-size:25px}
 .tab .tab_cont_wrap .cont{display:none}
 .tab .tab_cont_wrap .cont:first-child{display:block}
-.date_tab .tab_btn li a{padding:12px 0; border:1px solid #c7c8c4; border-left:0; text-align:center; min-width:80px; box-sizing:border-box;}
+.date_tab .tab_btn li a{padding:12px 0 11px 0; border:1px solid #c7c8c4; border-left:0; text-align:center; min-width:80px; box-sizing:border-box; vertical-align: middle;}
 .date_tab .tab_btn li:first-child a{border-left:1px solid #c7c8c4;}
 .date_tab .tab_btn li.on a{margin-left:-1px; border:1px solid #312f2d}
 .date_tab .tab_btn li:first-child.on a{/*margin-left:0*/}
@@ -458,6 +463,8 @@ h5[class^="tit_"] + a, h5[class^="tit_"] + button{margin-left:7px}
 .point01{color:#7a101b !important}
 .point02{color:#ffffff !important}
 .point03{color:#d61a2e !important}
+.point04{color:#585856 !important}
+.point05{color:#c7c8c4 !important}
 .discount{margin-right:5px; font-size:17px; color:#8a8b87; text-decoration:line-through; font-weight:500}
 /* 공통 버튼 */
 a[class^="btn_"], button[class^="btn_"]{display:inline-block; text-align:center; box-sizing:border-box; -webkit-transtion:.3s ease; -moz-transtion:.3s ease; transition:.3s ease; font-weight:300; letter-spacing:-1px; ; vertical-align:middle}
@@ -492,6 +499,9 @@ a[class^="btn_"] span, button[class^="btn_"] span{vertical-align:middle;}
 .btn-col2 > *:first-child{margin-right:2%}
 .btn-border-wrap{padding-top:40px; border-top:1px solid #d5d6d3; text-align:center}
 .btn-border-wrap * + *{margin-left:5px}
+.link_arrow{color:#585856}
+.link_arrow span{vertical-align:middle;}
+.btn.mt60.tac button, .btn.mt60.tac a{min-width:140px}
 /* 공통 아이콘 */
 .ico + span{vertical-align:middle}
 .ico{display:inline-block; vertical-align:middle; background:url(../../images/common/ico_zip.png) no-repeat}
@@ -580,14 +590,23 @@ html.dim body .wrap-dim{position:fixed; left:0; top:0; width:100%; height:100%; 
 .layer_pop.w1124{width:1124px}
 .wrap_layer_pop .btn-close-pop{display:inline-block; position:absolute; top:25px; right:25px; width:21px; height:21px; background:url(../../images/common/ico_zip.png) no-repeat -452px -60px}
 .layer_pop .header_pop{margin-bottom:25px}
+.layer_pop .header_pop .txt{margin-top:35px; color:#272524; line-height:26px}
 .layer_pop .type_data{margin-top:30px}
 .layer_pop .type_data th, .layer_pop .type_data td{font-size:13px}
 .layer_pop .txt1{line-height:26px}
 .layer_pop .txt1 + .txt1{margin-top:15px}
 .layer_pop .btn-wrap{margin-top:30px; text-align:center}
+.layer_pop .btn-wrap.typeA{margin-top:40px}
 .layer_pop .section.form{padding:30px 0; border-top:2px solid #312f2d; border-bottom:1px solid #d5d6d3}
 .layer_pop .section.form th, .layer_pop .section.form td{padding:10px 0; color:#312f2d}
 .layer_pop .section.form th{padding-left:30px; font-weight:500}
+.layer_pop .section.form tr:last-child th,
+.layer_pop .section.form tr:last-child td{padding-bottom:0}
+.layer_pop .section.form td.txt_area{padding:20px 0}
+.layer_pop .section{border-top:2px solid #312f2d; border-bottom:1px solid #d5d6d3}
+.layer_pop .section .form_wrap{padding:40px 30px}
+.layer_pop .btn-wrap > *{min-width:170px}
+.layer_pop .tbl.type_data th, .layer_pop .tbl.type_data td{padding:13px 0}
 
 /* 공통 레이어팝업(컨펌) */
 .wrap_layer_pop.type_confirm .layer_pop{padding:45px 35px 40px 35px; text-align:center}
@@ -604,12 +623,15 @@ html.dim body .wrap-dim{position:fixed; left:0; top:0; width:100%; height:100%; 
 .tbl.type_border thead th{background-color:#f5f5f5; font-weight:300; border-bottom:0}
 .tbl.type_border th{font-weight:500}
 .tbl.type_border th, .tbl.type_border td{padding:15px 10px; border-bottom:1px solid #d5d6d3; font-size:15px; text-align:center}
+.tbl.type_border.type_m thead th{font-size:13px}
 .tbl.type_border.type_m td{padding:30px 0}
 .tbl .btn_s{min-width:52px; padding:12px 14px 11px 14px;}
-.tbl.type_data{border-top:3px solid #312f2d}
+.tbl.type_data{border-top:2px solid #312f2d}
 .tbl.type_data th{background-color:#f5f5f5; font-weight:500}
-.tbl.type_data th, .tbl.type_data td{padding:13px 0; border-bottom:1px solid #c7c8c4; border-left:1px solid #c7c8c4; text-align:center}
+.tbl.type_data th, .tbl.type_data td{padding:20px; border-bottom:1px solid #c7c8c4; border-left:1px solid #c7c8c4; text-align:center}
 .tbl.type_data th:first-child, .tbl.type_data td:first-child{ border-left:0;}
+.tbl.type_data.type_left td, .tbl.type_data.type_left th{border-left:0}
+.tbl.type_data.type_left td{text-align:left}
 .tbl .tbl_top{position:relative}
 .tbl .tbl_top + table{margin-top:20px}
 .tbl .tbl_top .right_area{position:absolute; top:-15px; right:0}

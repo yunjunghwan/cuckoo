@@ -19,7 +19,8 @@
   <meta name="robots" content="ALL">
   <link rel="stylesheet" href="../../stylesheets/css/common.css">
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
-    <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
+  <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
+  <link rel="stylesheet" href="../../stylesheets/css/customer.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
 </head>
@@ -436,7 +437,7 @@
                                 <li class="as">
                                     <p class="tit">무상 A/S기간 6개월 연장</p>
                                     <p class="desc">(연장조건에 맞는 제품에 한함)</p>
-                                    <p class="mt10"><a href="#" class="btn_ss radius"><span>무상 A/S기간 연장 안내</span><i class="ico btnArrow2"></i></a></p>
+                                    <p class="mt10"><button type="button" onclick="layerPopOpen('pop02')" class="btn_ss radius"><span>무상 A/S기간 연장 안내</span><i class="ico btnArrow2"></i></button></p>
                                 </li>
                             </ul>
                         </div>
@@ -611,7 +612,62 @@
         </div>
     </footer>
     <!-- //footer -->
+    <div id="pop02" class="wrap_layer_pop">
+        <div class="layer_pop w830px">
+			<div class="layer_pop_container">
+				<div class="tit">무상 A/S 기간 연장 안내(6개월)</div>
+				<div class="pop_wrap_section">
+					<div class="pop_in_section">
+						<div class="dot_tit tit">대상 제품</div>
+						<div class="desc">
+							<div class="border_box">
+								<div class="tit">아래의 조건에 모두 해당되면 무상 A/S 기간 연장이 가능합니다.</div>
+								<ul class="bul_list">
+									<li>제품 내 무상 A/S 기간 연장 쿠폰이 있는 제품</li>
+									<li>기존 무상 A/S 기간 1년 이내 (가습기와 같은 계절가전도 1년 이내) 제품 등록을 한 제품</li>
+								</ul>
+							</div>
 
+						</div>
+					</div>
+					<div class="pop_in_section">
+						<div class="dot_tit tit">제외 제품</div>
+						<div class="desc">
+							<div class="border_box">
+								<div class="tit">해외용 제품 및 면세점 제품, 렌탈제품, 부속품 및 기타상품은 제품등록에서 제외됩니다.</div>
+							</div>
+						</div>
+					</div>
+					<div class="pop_in_section">
+						<div class="dot_tit tit">연장 방법</div>
+						<div class="desc">
+							<div class="border_box">
+								<div class="tit">‘로그인 &gt; 고객센터 &gt; 제품등록’  또는 ‘로그인 &gt; 마이쿠쿠 &gt; 제품등록내역’ 에서 가능합니다.</div>
+							</div>
+							<ul class="notice_list">
+								<li>회원가입을 하지 않으셨다면 먼저 회원가입을 해주세요.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="pop_in_section">
+						<div class="dot_tit tit">혜택 취소</div>
+						<div class="desc">
+							<div class="border_box">
+								<ul class="bul_list mt0">
+									<li>무상 A/S기간 6개월 연장은 쿠쿠 온라인 회원에게만 드리는 혜택으로 회원탈퇴 시 그 혜택이 취소됩니다.</li>
+									<li>무상 A/S기간 6개월 연장된 제품등록 내역을 삭제하시면 그 혜택이 취소됩니다.</li>
+									<li>허위로 입력하거나 잘못된 제품정보를 입력하시면 그 혜택이 취소됩니다.</li>
+									<li>1년 이상 로그인 기록이 없는 장기 미접속자(비로그인)회원은 정보통신방법 이용촉진 및 정보보호 등에 관한 법률에 의거 개인정보를 파기하도록 되어 있으므로 개인정보파기 시 무상 A/S기간 6개월 연장 혜택이 취소됩니다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('pop02')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
 </body>

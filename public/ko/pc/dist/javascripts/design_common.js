@@ -150,23 +150,26 @@ $window.load(function () {
         }
     });
     /*상품상세 앵커이동*/
-	var tabArray = [];
-	$('.prd_tab').each(function(index){
-		tabArray[index] = parseInt($(this).offset().top-73);//탭영역 제외
-	});
+    if($('#container').hasClass('prd_view')){
+        var tabArray = [];
+    	$('.prd_tab').each(function(index){
+    		tabArray[index] = parseInt($(this).offset().top-73);//탭영역 제외
+    	});
 
-	$('.prd_tab a').on('click', function(e){
-		e.preventDefault();
-		var index = $(this).parent().index();
+    	$('.prd_tab a').on('click', function(e){
+    		e.preventDefault();
+    		var index = $(this).parent().index();
 
-		$('html, body').stop().animate({scrollTop:tabArray[index]},500);
-	});
-    $('.line_type input[type="text"], input[type="password"], input[type="number"], input[type="tel"]').on('focus', function(){
-        $(this).closest('tr').addClass('on')
-    });
-    $('.line_type input[type="text"], input[type="password"], input[type="number"], input[type="tel"]').on('blur', function(){
-        $(this).closest('tr').removeClass('on')
-    });
+    		$('html, body').stop().animate({scrollTop:tabArray[index]},500);
+    	});
+        $('.line_type input[type="text"], input[type="password"], input[type="number"], input[type="tel"]').on('focus', function(){
+            $(this).closest('tr').addClass('on')
+        });
+        $('.line_type input[type="text"], input[type="password"], input[type="number"], input[type="tel"]').on('blur', function(){
+            $(this).closest('tr').removeClass('on')
+        });
+    }
+
 });
 function layout() {
     var $header = $("#header");
@@ -309,7 +312,7 @@ function layout() {
         dayNamesMin: ['일','월','화','수','목','금','토'], //달력의 요일 부분 텍스트
     });
 
-    
+
 }
 
 function object(){

@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="../../stylesheets/css/common.css">
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
     <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
+    <link rel="stylesheet" href="../../stylesheets/css/customer.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
 </head>
@@ -374,19 +375,19 @@
   <!-- //header-->
 
   <!--container-->
-    <div id="container" class="mypage">
+    <div id="container" class="mypage customer">
         <div class="top_content">
             <div class="location">
                 <ul>
                     <li><a href="#">홈</a></li>
                     <li>마이쿠쿠</li>
-                    <li>나의쇼핑</li>
-                    <li>취소/반품/교환 내역</li>
+                    <li>출장 A/S 신청</li>
                 </ul>
             </div>
             <div class="top_tit">
                 <h2 class="tit_02">마이쿠쿠</h2>
             </div>
+
         </div>
         <div class="content type_lnb"><!-- [P] lnb있을시 type_lnb클래스 추가 -->
             <div class="lnb">
@@ -395,7 +396,7 @@
                     <li class="depth02_wrap"><span>나의쇼핑</span><!-- [P] 하위뎁스있을시 depth02_wrap클래스 추가 -->
                         <ul class="depth02">
                             <li><a href="#">주문내역</a></li>
-                            <li><a href="#" class="on">취소/반품/교환 내역</a></li><!-- 활성화시 해당 a태그에 on클래스 추가 -->
+                            <li><a href="#">취소/반품/교환 내역</a></li>
                             <li><a href="#">제품등록내역</a></li>
                         </ul>
                     </li>
@@ -407,7 +408,7 @@
                             <li><a href="#">취소/반품/교환내역</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">출장 A/S 내역</a></li>
+                    <li><a href="#" class="on">출장 A/S 내역</a></li><!-- 활성화시 해당 a태그에 on클래스 추가 -->
                     <li><a href="#">관심제품</a></li>
                     <li><a href="#">1:1문의내역</a></li>
                     <li class="depth02_wrap"><span>쿠폰/포인트</span>
@@ -422,138 +423,136 @@
             <div class="inner_content">
                 <div class="section_wrap">
                     <div class="top_area">
-                        <h3 class="tit_03">취소/반품/교환내역</h3>
+                        <h3 class="tit_03">출장 A/S 상세</h3>
                     </div>
-                    <div class="search_area">
-                        <div class="tab date_tab">
-                            <ul class="tab_btn">
-                                <li class="on"><a href="#">오늘</a></li>
-                                <li class=""><a href="#">1주일</a></li>
-                                <li class=""><a href="#">1개월</a></li>
-                                <li class=""><a href="#">3개월</a></li>
-                                <li class=""><a href="#">6개월</a></li>
-                            </ul>
-                        </div>
-                        <div class="right">
-                            <div class="datepicker_wrap">
-                                <div class="datepicker">
-                                    <input type="text" class="datepicker_input" readonly>
-                                </div> -
-                                <div class="datepicker">
-                                    <input type="text" class="datepicker_input" readonly>
-                                </div>
-                                <button type="button" class="btn_s common">검색</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tbl tbl_order">
-                        <div class="order_info_wrap">
-                            <ul class="order_info">
-                                <li>주문일자 <span class="bold">2019-09-30</span></li>
-                                <li>주문번호 <span class="bold"><a href="#">20190511-423127</a></span></li>
-                            </ul>
-                        </div>
-                        <table>
-                            <caption>장바구니</caption>
-                            <colgroup>
-                                <col style="width:20%">
-                                <col style="width:auto">
-                                <col style="width:15%;">
-                                <col style="width:15%;">
-                                <col style="width:15%;">
-                                <col style="width:15%;">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <td><div class="img"><img src="../../images/order/temp_prd_140x140.png" alt=""></div></td>
-                                    <td class="txt_left prd_info">
-                                        <p class="category">IH전기압력밥솥</p>
-                                        <p class="name">CRP-KHT1020FD</p>
-                                    </td>
-                                    <td><span class="bold">1</span></td>
-                                    <td><span class="bold price">577,600원</span></td>
-                                    <td>
-                                        <p class="bold">취소요청</p>
-                                        <p class="mt10">2019-09-10</p>
-                                    </td>
-                                    <td>
-                                        <p class="bold">취소완료</p>
-                                        <p class="mt10">2019-09-10</p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div><!-- tbl_order -->
-                    <div class="tbl tbl_order">
-                        <div class="order_info_wrap">
-                            <ul class="order_info">
-                                <li>주문일자 <span class="bold">2019-09-30</span></li>
-                                <li>주문번호 <span class="bold"><a href="#">20190511-423127</a></span></li>
-                            </ul>
-                        </div>
-                        <table>
-                            <caption>장바구니</caption>
-                            <colgroup>
-                                <col style="width:20%">
-                                <col style="width:auto">
-                                <col style="width:15%;">
-                                <col style="width:15%;">
-                                <col style="width:15%;">
-                                <col style="width:15%;">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <td><div class="img"><img src="../../images/order/temp_prd_140x140.png" alt=""></div></td>
-                                    <td class="txt_left prd_info">
-                                        <p class="category">IH전기압력밥솥</p>
-                                        <p class="name">CRP-KHT1020FD</p>
-                                    </td>
-                                    <td><span class="bold">1</span></td>
-                                    <td><span class="bold price">577,600원</span></td>
-                                    <td>
-                                        <p class="bold">취소요청</p>
-                                        <p class="mt10">2019-09-10</p>
-                                    </td>
-                                    <td>
-                                        <p class="bold">취소완료</p>
-                                        <p class="mt10">2019-09-10</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><div class="img"><img src="../../images/order/temp_prd_140x140.png" alt=""></div></td>
-                                    <td class="txt_left prd_info">
-                                        <p class="category">내솥</p>
-                                        <p class="name">CRP-KHT1020FD</p>
-                                    </td>
-                                    <td><span class="bold">1</span></td>
-                                    <td><span class="bold price">577,600원</span></td>
-                                    <td>
-                                        <p class="bold">취소요청</p>
-                                        <p class="mt10">2019-09-10</p>
-                                    </td>
-                                    <td class="btn-wrap">
-                                        <p class="bold">교환제품발송</p>
-                                        <p class="mt10">2019-09-10</p>
-                                        <p class="delivery">CJ대한통운</p>
-                                        <p class="mt10"><a href="#" class="link_num">61775423695</a></p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div><!-- tbl_order -->
-                </div><!-- section_wrap -->
-                <div class="pagination">
-    				<a href="#" class="paging first disabled"><span class="blind">첫페이지</span></a>
-    				<a href="#" class="paging prev disabled"><span class="blind">이전</span></a>
-    				<a href="#" class="on">1</a>
-    				<a href="#">2</a>
-    				<a href="#">3</a>
-    				<a href="#">4</a>
-    				<a href="#">5</a>
-    				<a href="#">6</a>
-    				<a href="#" class="paging next"><span class="blind">다음</span></a>
-    				<a href="#" class="paging last"><span class="blind">마지막페이지</span></a>
-    			</div>
+                    <div class="customer_inbox">
+						<div class="top_desc_02">
+							<div class="img business_trip_c"></div>
+							<div class="tit">출장 A/S 서비스 신청이 접수완료 되었습니다.</div>
+							<div class="desc">서비스 받으시는 분 휴대폰번호로 문자 안내가 전송 되었습니다.</div>
+						</div>
+						<div class="section">
+							<h3 class="tit_04"><span class="num">01</span>서비스 신청 정보</h3>
+							<div class="tbl type_border type_border_02">
+								<table>
+									<caption>서비스 신청 정보</caption>
+									<colgroup>
+										<col style="width:170px">
+										<col style="width:auto">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">서비스 신청자</th>
+											<td>김쿠쿠</td>
+										</tr>
+										<tr>
+											<th scope="row">서비스 신청일</th>
+											<td>2019-05-06</td>
+										</tr>
+										<tr>
+											<th scope="row">연락처</th>
+											<td>010-1234-1234</td>
+										</tr>
+										<tr>
+											<th scope="row">구입시기</th>
+											<td>1개월 이내</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+						</div><!-- //section -->
+						<div class="section">
+							<h3 class="tit_04"><span class="num">02</span>제품정보</h3>
+							<div class="tbl type_border type_border_02">
+								<table>
+									<caption>제품정보</caption>
+									<colgroup>
+										<col style="width:170px">
+										<col style="width:auto">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">제품군</th>
+											<td>밥솥 > 트윈프레셔</td>
+										</tr>
+										<tr>
+											<th scope="row">모델명</th>
+											<td>CRP-HSXB0630FB</td>
+										</tr>
+										<tr>
+											<th scope="row">고장증상</th>
+											<td>무압으로 밥 할 때 밥이 질게 됨</td>
+										</tr>
+										<tr>
+											<th scope="row">구입시기</th>
+											<td>1개월 이내</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+						</div><!-- //section -->
+                        <div class="section">
+							<h3 class="tit_04"><span class="num">03</span>서비스 받으시는 분 정보</h3>
+							<div class="tbl type_border type_border_02">
+								<table>
+									<caption>서비스 받으시는 분 정보</caption>
+									<colgroup>
+										<col style="width:170px">
+										<col style="width:auto">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">고객명</th>
+											<td>박재범</td>
+										</tr>
+										<tr>
+											<th scope="row">주소</th>
+											<td>(06098) 서울특별시 강남구 논현동 2동 언주로 652 쿠쿠빌딩 5층 김쿠쿠</td>
+										</tr>
+										<tr>
+											<th scope="row">휴대폰번호</th>
+											<td>010-1234-1234</td>
+										</tr>
+										<tr>
+											<th scope="row">추가연락처</th>
+											<td>010-1234-1234</td>
+										</tr>
+                                        <tr>
+											<th scope="row">이메일</th>
+											<td>cuckoo123@cuckoo.com</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+						</div><!-- //section -->
+						<div class="section">
+							<h3 class="tit_04"><span class="num">04</span>예약정보</h3>
+
+
+							<div class="visit_status">
+								<div>
+									<div class="tit">서비스 기사명</div>
+									<div class="desc">오진오 기사</div>
+								</div>
+								<div>
+									<div class="tit">소속지점</div>
+									<div class="desc">영등포점</div>
+								</div>
+								<div>
+									<div class="tit">방문 예정일</div>
+									<div class="desc gotham">05-24 13:00</div>
+								</div>
+							</div>
+
+						</div><!-- //section -->
+                        <div class="btn mt60 tac">
+							<button type="button" class="btn_l radius common">목록</button>
+						</div>
+					</div>
+                </div><!-- //section_wrap -->
             </div><!-- //inner_content -->
         </div><!-- //content -->
     </div>
@@ -647,6 +646,20 @@
         </div>
     </footer>
     <!-- //footer -->
+    <div id="deleteConfirm" class="wrap_layer_pop type_confirm">
+        <div class="layer_pop w400">
+            <div class="container_pop">
+                <div class="inner_txt">
+                    <p class="txt1">등록하신 제품 내역을 삭제하시겠습니까?<br>삭제한 내역은 복구가 불가능하며<br>제품을 등록으로 받은 혜택은 모두 사라집니다.</p>
+                </div>
+            </div>
+            <div class="btn-wrap btn-col2">
+                <button type="button" class="btn_l radius">취소</button>
+                <button type="button" class="btn_l radius common">확인</button>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('deleteConfirm')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
 </body>
