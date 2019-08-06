@@ -421,8 +421,8 @@
 					<div class="customer_inbox foreign_service">
 						<div class="foreign_service_tab">
 							<ul>
-								<li class="on"><a href="#">서비스 안내</a></li>
-								<li><a href="#">국가별 센터 위치</a></li>
+								<li><a href="#">서비스 안내</a></li>
+								<li class="on"><a href="#">국가별 센터 위치</a></li>
 								<li><a href="#">해외서비스 신청</a></li>
 								<li><a href="#">해외구입처 안내</a></li>
 							</ul>
@@ -447,7 +447,7 @@
 												<h3 class="tit_04"><span class="num">01</span>수출제품의 국내 구매가 불가능한 이유는 국내외 규격, 규제사항이 다르기 때문입니다.</h3>
 												<div class="indesc">해외 수출제품은 국내 유통제품과 다른 정격전압, 국가별 전기안전 규격상의 규제 등 사용에 있어 차이점이 많기 때문에 국내 판매가 금지되어 있습니다. 따라서 수출제품은 현지에서만 구매가 가능합니다.
 												<ul class="bul_list">
-													<li>관련 법령: 전기용품 안전 관리법 (법률 7441호) <button type="button" onclick="layerPopOpen('pop06')" class="btn_s radius">자세히보기<span class="small_arrow"></span> </button></li>
+													<li>관련 법령: 전기용품 안전 관리법 (법률 7441호) <button type="button" onclick="layerPopOpen('pop06')" class="btn_s radius">자세히보기<span style="top:-1px" class="small_arrow"></span> </button></li>
 
 												</ul>
 												</div>
@@ -466,17 +466,17 @@
 										<div class="tit">해외서비스 기준 및 절차</div>
 										<div class="section03_insec">
 											<div class="top_desc02">
-												<div class="icon_tit">정식 통관을 거친 수입품</div>
+												<div class="icon_tit service_in">정식 통관을 거친 수입품</div>
 												<p class="txt01">(해외 현지 구매제품, 정식 수출제품)</p>
 												<p class="txt02">국가별 기준에 맞는 기간 내에는 무상 서비스를 제공하며 그 이후에는 유상 서비스가 제공됩니다.<br>
 												해외 현제 수입제품은 현지에서만 A/S가 가능합니다.	</p>
 												<div class="link">
-													<button type="button" onclick="" class="btn_s radius">국가별 센터바로가기<span class="small_arrow"></span></button>
+													<button type="button" onclick="" class="btn_s radius">국가별 센터바로가기<span style="top:-1px"  class="small_arrow"></span></button>
 												</div>
 											</div>
 											<div class="bottom_desc">
 												<div class="tit">해외제품 A/S는 이렇게 진행됩니다.</div>
-												<ul>
+												<ul class="overseas">
 													<li>
 														<p class="txt01">STEP 01.</p>
 														<p class="txt02">해외 서비스센터 및 해외<br>현지 고객상담실에 접수</p>
@@ -500,38 +500,54 @@
 												</div>
 											</div>
 										</div>
-										<div class="section03_insec">
+										<div class="section03_insec mt100">
 											<div class="top_desc02">
-												<div class="icon_tit">정식 통관을 거친 수입품</div>
-												<p class="txt01">(해외 현지 구매제품, 정식 수출제품)</p>
-												<p class="txt02">국가별 기준에 맞는 기간 내에는 무상 서비스를 제공하며 그 이후에는 유상 서비스가 제공됩니다.<br>
-												해외 현제 수입제품은 현지에서만 A/S가 가능합니다.	</p>
-												<div class="link">
-													<button type="button" onclick="" class="btn_s radius">국가별 센터바로가기<span class="small_arrow"></span></button>
-												</div>
+												<div class="icon_tit service_out">소비자가 한국에서 구매하여 해외로 가져가 사용하는 제품</div>
+												<p class="txt01">(한국 내수용 제픔, 한국 내 구매 제품)</p>
+												<p class="txt02">무상 서비스 기간에 관계없이 서비스가 가능한 지역에서는 유상 서비스를 원칙으로 합니다.<br>
+												또한 내수/수출 공용부품의 경우 현지 수출모델과 같은 부품이 있는 경우에는 바로 조치가 가능하나,<br>
+												내수 전용 부품의 경우 한국에서 부품 조립 후 해외 배송하여 서비스를 실시합니다.</p>
+													
 											</div>
 											<div class="bottom_desc">
-												<div class="tit">해외제품 A/S는 이렇게 진행됩니다.</div>
-												<ul>
+												<div class="tit">내수용 A/S는 이렇게 진행됩니다.</div>
+												<ul class="domestic"> 
 													<li>
 														<p class="txt01">STEP 01.</p>
-														<p class="txt02">해외 서비스센터 및 해외<br>현지 고객상담실에 접수</p>
+														<p class="txt02">쿠쿠 홈페이지를 통한<br>서비스 신청</p>
 													</li>
 													<li>
 														<p class="txt01">STEP 02.</p>
-														<p class="txt02">고객이 서비스센터로<br>제품 발송</p>
+														<p class="txt02">쿠쿠에서<br>서비스 내용 확인</p>
 													</li>
 													<li>
 														<p class="txt01">STEP 03.</p>
+														<p class="txt02">고객님께 서비스<br>처리방법 회신</p>
+													</li>
+													<li>
+														<p class="txt01">STEP 06.</p>
+														<p class="txt02">한국에서 해외로<br>부품발송</p>
+													</li>
+													<li>
+														<p class="txt01">STEP 05.</p>
+														<p class="txt02">내수 전용 부품의<br>경우 부품 청구</p>
+													</li>
+													<li>
+														<p class="txt01">STEP 04.</p>
+														<p class="txt02">고객께서 서비스센터로<br>제품 발송</p>
+													</li>
+													<li>
+														<p class="txt01">STEP 07.</p>
 														<p class="txt02">서비스센터 수리 후<br>제품 발송</p>
 													</li>
 												</ul>
 												<div class="desc">
 													<ul class="bul_list">
-														<li>상기 절차는 무상기간 내에 한하며, 무상기간 완료 후에는 유상으로 서비스가 가능합니다.</li>
-														<li>단, 무상기간 내라도 고객님의 귀책사유로 인한 A/S 신청 시 유상 서비스로 처리됩니다.</li>
-														<li>무상 서비스 기간 내 배송비, 부품비, 수리비는 현지 A/S센터에서 부담합니다.</li>
-														<li>유상 서비스 기간의 배송비, 부품비, 수리비는 고객님 부담이며, 배송비는 현지 A/S센터의 규정에 따릅니다.</li>
+														<li>국내 제품의 해외 유상 서비스가 가능한 지역 : 미국, 캐나다, 중국, 베트남</li>
+														<li>국내제품 해외 사용 시 제품 전압은 220V에 맞추어 사용하셔야 하며, 일반적인 A/S가 아닌 전압변경 등의 제품특성 변경은 불가합니다.</li>
+														<li>한국 제품의 해외 사용 A/S의 경우 국내 기준으로 무상기간 내라 할지라도 수리비 및 센터발송 왕복 택배비는 고객님 부담입니다.</li>
+														<li>해외부품발송비 및 부품비는 쿠쿠에서 부담합니다.</li>
+														<li>해외부품발송의 경우 시간이 다소 소요될 수 있습니다.</li>
 													</ul>
 												</div>
 											</div>
@@ -541,9 +557,7 @@
 								</div>
 								
 							</div>
-							<div></div>
-							<div></div>
-							<div></div>
+							
 						</div>
 					</div>
 				</div>
