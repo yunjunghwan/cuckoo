@@ -591,3 +591,14 @@
 .rental_state .price_list li.btn{margin-left:20px; padding-left:0}
 .rental_state .price_list li.btn:before{display:none}
 .customer_inbox > .top_desc{background:#f5f5f5; padding:30px 0 30px 30px;}
+/* 마이쿠쿠 관심제품 */
+.prd_list2{border-bottom:1px solid #d5d6d3}
+.prd_list2 ul:after{display:block; content:''; clear:both}
+.prd_list2 ul{margin-left:-40px}
+.prd_list2 li{float:left; position:relative; width:300px; margin:0 0 60px 40px; text-align:center; }
+.prd_list2 li .info_area{margin-top:20px}
+.prd_list2 li .category{color:#8a8b87}
+.prd_list2 li .name{margin-top:10px; font-size:20px; font-weight:500}
+.prd_list2 li .btn-wrap{margin-top:20px}
+.prd_list2 li .btn-wrap > button, .prd_list2 li .btn-wrap > a{min-width:88px}
+.prd_list2 li .btn-del{position:absolute; top:0; right:0}

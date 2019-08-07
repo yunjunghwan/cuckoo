@@ -19,8 +19,7 @@
   <meta name="robots" content="ALL">
   <link rel="stylesheet" href="../../stylesheets/css/common.css">
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
-  <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
-  <link rel="stylesheet" href="../../stylesheets/css/customer.css">
+    <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
 </head>
@@ -375,15 +374,13 @@
   <!-- //header-->
 
   <!--container-->
-    <div id="container" class="mypage customer">
+    <div id="container" class="mypage">
         <div class="top_content">
             <div class="location">
                 <ul>
                     <li><a href="#">홈</a></li>
                     <li>마이쿠쿠</li>
-                    <li>나의쇼핑</li>
-                    <li>제품등록내역</li>
-                    <li>제품등록</li>
+                    <li>관심제품</li>
                 </ul>
             </div>
             <div class="top_tit">
@@ -398,7 +395,7 @@
                         <ul class="depth02">
                             <li><a href="#">주문내역</a></li>
                             <li><a href="#">취소/반품/교환 내역</a></li>
-                            <li><a href="#" class="on">제품등록내역</a></li><!-- 활성화시 해당 a태그에 on클래스 추가 -->
+                            <li><a href="#">제품등록내역</a></li>
                         </ul>
                     </li>
                     <li class="depth02_wrap"><span>나의렌탈</span>
@@ -410,7 +407,7 @@
                         </ul>
                     </li>
                     <li><a href="#">출장 A/S 내역</a></li>
-                    <li><a href="#">관심제품</a></li>
+                    <li><a href="#" class="on">관심제품</a></li><!-- 활성화시 해당 a태그에 on클래스 추가 -->
                     <li><a href="#">1:1문의내역</a></li>
                     <li class="depth02_wrap"><span>쿠폰/포인트</span>
                         <ul class="depth02">
@@ -424,26 +421,215 @@
             <div class="inner_content">
                 <div class="section_wrap">
                     <div class="top_area">
-                        <h3 class="tit_03">제품등록</h3>
+                        <h3 class="tit_03">관심제품</h3>
                     </div>
-                    <div class="top_desc04">
-						<div class="top_desc04_inbox">
-							<div class="tit product_reg_c_img">제품등록이 완료 되었습니다.</div>
-							<div class="sub_tit">쿠쿠 제품을 구매해주셔서 감사합니다.</div>
-							<div class="desc">
-								제품등록 정보는 마이쿠쿠 &gt; 나의쇼핑 &gt; <b>제품등록내역</b>에서 확인 가능합니다.<br>
-								발급 된 쿠폰은 마이쿠쿠 &gt; <b>쿠폰내역</b>에서 확인 가능합니다.
-							</div>
-							<div class="btn_area mt50">
-								<button type="button" class="btn_l radius">메인으로 이동</button>
-								<button type="button" class="btn_l radius common ml10">마이쿠쿠로 이동</button>
-							</div>
-						</div>
-
-
-
-					</div>
+                    <div class="tab">
+                        <div class="prd_tab typeA col2">
+                            <ul class="tab_btn">
+                                <li class="on"><a href="#">쿠쿠몰(6)</a></li>
+                                <li><a href="#">쿠쿠렌탈(1)</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab_cont_wrap">
+                            <div class="cont">
+                                <div class="prd_list2">
+                                    <ul>
+                                        <li>
+                                            <div class="img"><img src="../../images/common/temp_prd_300x300.png" alt=""></div>
+                                            <div class="info_area">
+                                                <p class="category">IH 전기압력밥솥</p>
+                                                <p class="name">CRP-KHT1020FD</p>
+                                                <div class="btn-wrap">
+                                                    <button type="button" class="btn_s radius">장바구니</button>
+                                                    <button type="button" class="btn_s radius common">바로구매</button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-del"><i class="ico del4"></i></button>
+                                        </li>
+                                        <li>
+                                            <div class="img"><img src="../../images/common/temp_prd_300x300.png" alt=""></div>
+                                            <div class="info_area">
+                                                <p class="category">IH 전기압력밥솥</p>
+                                                <p class="name">CRP-KHT1020FD</p>
+                                                <div class="btn-wrap">
+                                                    <button type="button" class="btn_s radius">장바구니</button>
+                                                    <button type="button" class="btn_s radius common">바로구매</button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-del"><i class="ico del4"></i></button>
+                                        </li>
+                                        <li>
+                                            <div class="img"><img src="../../images/common/temp_prd_300x300.png" alt=""></div>
+                                            <div class="info_area">
+                                                <p class="category">IH 전기압력밥솥</p>
+                                                <p class="name">CRP-KHT1020FD</p>
+                                                <div class="btn-wrap">
+                                                    <button type="button" class="btn_s radius">장바구니</button>
+                                                    <button type="button" class="btn_s radius common">바로구매</button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-del"><i class="ico del4"></i></button>
+                                        </li>
+                                        <li>
+                                            <div class="img"><img src="../../images/common/temp_prd_300x300.png" alt=""></div>
+                                            <div class="info_area">
+                                                <p class="category">IH 전기압력밥솥</p>
+                                                <p class="name">CRP-KHT1020FD</p>
+                                                <div class="btn-wrap">
+                                                    <button type="button" class="btn_s radius">장바구니</button>
+                                                    <button type="button" class="btn_s radius common">바로구매</button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-del"><i class="ico del4"></i></button>
+                                        </li>
+                                        <li>
+                                            <div class="img"><img src="../../images/common/temp_prd_300x300.png" alt=""></div>
+                                            <div class="info_area">
+                                                <p class="category">IH 전기압력밥솥</p>
+                                                <p class="name">CRP-KHT1020FD</p>
+                                                <div class="btn-wrap">
+                                                    <button type="button" class="btn_s radius">장바구니</button>
+                                                    <button type="button" class="btn_s radius common">바로구매</button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-del"><i class="ico del4"></i></button>
+                                        </li>
+                                        <li>
+                                            <div class="img"><img src="../../images/common/temp_prd_300x300.png" alt=""></div>
+                                            <div class="info_area">
+                                                <p class="category">IH 전기압력밥솥</p>
+                                                <p class="name">CRP-KHT1020FD</p>
+                                                <div class="btn-wrap">
+                                                    <button type="button" class="btn_s radius">장바구니</button>
+                                                    <button type="button" class="btn_s radius common">바로구매</button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-del"><i class="ico del4"></i></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pagination">
+                    				<a href="#" class="paging first disabled"><span class="blind">첫페이지</span></a>
+                    				<a href="#" class="paging prev disabled"><span class="blind">이전</span></a>
+                    				<a href="#" class="on">1</a>
+                    				<a href="#">2</a>
+                    				<a href="#">3</a>
+                    				<a href="#">4</a>
+                    				<a href="#">5</a>
+                    				<a href="#">6</a>
+                    				<a href="#" class="paging next"><span class="blind">다음</span></a>
+                    				<a href="#" class="paging last"><span class="blind">마지막페이지</span></a>
+                    			</div>
+                                <div class="no_data prd_like">
+                                    <p class="txt1">관심제품이 없습니다.</p>
+                                    <div class="btn-wrap">
+                                        <a href="#" class="btn_l radius common">쿠쿠몰 쇼핑하러 가기</a>
+                                    </div>
+                                </div>
+                            </div><!-- //쿠쿠몰 -->
+                            <div class="cont">
+                                <div class="prd_list2">
+                                    <ul>
+                                        <li>
+                                            <div class="img"><img src="../../images/common/temp_prd2_300x300.png" alt=""></div>
+                                            <div class="info_area">
+                                                <p class="category">얼음정수기</p>
+                                                <p class="name">CP-SS011HW</p>
+                                                <div class="btn-wrap">
+                                                    <button type="button" class="btn_s radius">제품상세</button>
+                                                    <button type="button" class="btn_s radius common">일시불구매</button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-del"><i class="ico del4"></i></button>
+                                        </li>
+                                        <li>
+                                            <div class="img"><img src="../../images/common/temp_prd2_300x300.png" alt=""></div>
+                                            <div class="info_area">
+                                                <p class="category">얼음정수기</p>
+                                                <p class="name">CP-SS011HW</p>
+                                                <div class="btn-wrap">
+                                                    <button type="button" class="btn_s radius">제품상세</button>
+                                                    <button type="button" class="btn_s radius common">일시불구매</button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-del"><i class="ico del4"></i></button>
+                                        </li>
+                                        <li>
+                                            <div class="img"><img src="../../images/common/temp_prd2_300x300.png" alt=""></div>
+                                            <div class="info_area">
+                                                <p class="category">얼음정수기</p>
+                                                <p class="name">CP-SS011HW</p>
+                                                <div class="btn-wrap">
+                                                    <button type="button" class="btn_s radius">제품상세</button>
+                                                    <button type="button" class="btn_s radius common">일시불구매</button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-del"><i class="ico del4"></i></button>
+                                        </li>
+                                        <li>
+                                            <div class="img"><img src="../../images/common/temp_prd2_300x300.png" alt=""></div>
+                                            <div class="info_area">
+                                                <p class="category">얼음정수기</p>
+                                                <p class="name">CP-SS011HW</p>
+                                                <div class="btn-wrap">
+                                                    <button type="button" class="btn_s radius">제품상세</button>
+                                                    <button type="button" class="btn_s radius common">일시불구매</button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-del"><i class="ico del4"></i></button>
+                                        </li>
+                                        <li>
+                                            <div class="img"><img src="../../images/common/temp_prd2_300x300.png" alt=""></div>
+                                            <div class="info_area">
+                                                <p class="category">얼음정수기</p>
+                                                <p class="name">CP-SS011HW</p>
+                                                <div class="btn-wrap">
+                                                    <button type="button" class="btn_s radius">제품상세</button>
+                                                    <button type="button" class="btn_s radius common">일시불구매</button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-del"><i class="ico del4"></i></button>
+                                        </li>
+                                        <li>
+                                            <div class="img"><img src="../../images/common/temp_prd2_300x300.png" alt=""></div>
+                                            <div class="info_area">
+                                                <p class="category">얼음정수기</p>
+                                                <p class="name">CP-SS011HW</p>
+                                                <div class="btn-wrap">
+                                                    <button type="button" class="btn_s radius">제품상세</button>
+                                                    <button type="button" class="btn_s radius common">일시불구매</button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-del"><i class="ico del4"></i></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pagination">
+                    				<a href="#" class="paging first disabled"><span class="blind">첫페이지</span></a>
+                    				<a href="#" class="paging prev disabled"><span class="blind">이전</span></a>
+                    				<a href="#" class="on">1</a>
+                    				<a href="#">2</a>
+                    				<a href="#">3</a>
+                    				<a href="#">4</a>
+                    				<a href="#">5</a>
+                    				<a href="#">6</a>
+                    				<a href="#" class="paging next"><span class="blind">다음</span></a>
+                    				<a href="#" class="paging last"><span class="blind">마지막페이지</span></a>
+                    			</div>
+                                <div class="no_data prd_like">
+                                    <p class="txt1">관심제품이 없습니다.</p>
+                                    <div class="btn-wrap">
+                                        <a href="#" class="btn_l radius common">쿠쿠렌탈 쇼핑하러 가기</a>
+                                    </div>
+                                </div>
+                            </div><!-- //쿠쿠렌탈 -->
+                        </div>
+                    </div>
                 </div><!-- section_wrap -->
+                <div class="section_wrap">
+
+
+                </div><!-- //section_wrap -->
             </div><!-- //inner_content -->
         </div><!-- //content -->
     </div>
@@ -536,6 +722,7 @@
             </div><!-- //bottom_arear -->
         </div>
     </footer>
+    <!-- //footer -->
 
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
