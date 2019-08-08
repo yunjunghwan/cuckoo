@@ -378,12 +378,30 @@
   <!--container-->
     <div id="container" class="mypage_container">
 		<ul style="text-align:center;">
-			<li onclick="layerPopOpen('pop01')">서비스요금안내</li>
-			<li onclick="layerPopOpen('pop02')">무상as기간연장안내</li>
-			<li onclick="layerPopOpen('pop03')">출장as신청 예약내용확인</li>
-			<li onclick="layerPopOpen('pop04')">제품등록 모델검색 검색실행</li>
-			<li onclick="layerPopOpen('pop05')">제품등록 모델검색 검색미실행</li>
-			<li onclick="layerPopOpen('pop06')">전기용품 안전 관리법(법률 7441호)</li>
+			<li style="margin:30px;">
+				출장 A/S신청 서비스 요금안내<BR>
+				<button type="button" onclick="layerPopOpen('pop01')" class="not_hover_raidus_btn">서비스요금 안내 <span class="small_arrow"></span></button>
+			</li>
+			<li style="margin:30px;" >
+				제품등록 무상as기간연장안내<BR>
+				<button type="button" class="not_hover_raidus_btn" onclick="layerPopOpen('pop02')">무상 A/S기간 연장 안내  <span class="small_arrow"></span></button>	
+				</li>
+			<li style="margin:30px;">
+				출장 A/S신청 작성완료<BR>
+				<button type="button" class="btn_l radius common" onclick="layerPopOpen('pop02')">작성완료</button>
+			</li>
+			<li style="margin:30px;" >
+				제품등록 모델검색 검색실행<BR>
+				<button type="button" class="btn_m" onclick="layerPopOpen('pop04')">검색</button>
+			</li>
+			<li style="margin:30px;" >
+				제품등록 모델검색 검색미실행<BR>
+				<button type="button" class="btn_m" onclick="layerPopOpen('pop05')">검색</button>	
+			</li>
+			<li style="margin:30px;">
+				전기용품 안전 관리법(법률 7441호)<BR>
+				<button type="button" onclick="layerPopOpen('pop06')" class="not_hover_raidus_btn">자세히보기 <span class="small_arrow"></span></button>
+			</li>
 		</ul>
     </div>
     <!--//container-->

@@ -1,4 +1,5 @@
 .inline{display:inline-block;}
+.bdnone{border:none!important;}
 .w140px{width:140px;}
 .w180px{width:180px;}
 .w184px{width:184px;}
@@ -26,6 +27,7 @@
 .mb60{margin-bottom:60px;}
 .pd0{padding:0px;}
 .pt60{padding-top:60px;}
+.bolder{font-weight:500;}
 .not_hover_raidus_btn{font-size: 13px; padding: 7px 11px 7px 11px; font-weight: 300; border: 1px solid #c7c8c4; border-radius: 20px;}
 .website_icon{background:url(../../images/customer/c_icon_zip.png); background-position:-327px -83px; width:12px; height:12px; display:inline-block; text-indent:-9999px;}
 .ns_dot{position:relative;}
@@ -214,6 +216,8 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form02 > .txt_box01 > .desc .select_box .tit{bordeR:none; padding:0px; border-bottom:2px solid #312f2d;}
 .content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form02 > .txt_box01 > .desc .select_box .tit.selected{font-weight:500;}
 .content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form02 > .txt_box01 > .desc .select_box .tit:after{right:10px;}
+
+
 .customer_inbox .section{border-bottom:1px solid #e0e0de; margin-top:80px;}
 .customer_inbox .section + .section{margin-top:80px}
 .customer_inbox .section .form_wrap, .customer_inbox .section .inner{padding:0 30px 40px 30px}
@@ -231,13 +235,17 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .service_price .section .sub_tit img{position:relative; top:11px; margin-right:9px;}
 .service_price .section{margin-top:50px; border-bottom:none;}
 
-
+/*출장as신청완료*/
 .tbl.type_border_02 th, .tbl.type_border_02 td{padding:20px 30px; text-align:left; }
 .top_desc_02{background-color:#f5f5f5; padding:60px 0 60px 0;}
 .top_desc_02 .img{text-align:center;}
 .top_desc_02 .tit{text-align:center; font-size:30px; font-weight:500; letter-spacing:-1px; margin-top:40px;}
 .top_desc_02 .desc{text-align:center; font-size:17px; margin-top:20px;}
-
+.bg_right{width:790px; padding-right:190px; position:relative;}
+.bg_right:after{content:''; display:inline-block; background:url(../../images/customer/c_icon_zip.png); background-position:-308px -126px; width:160px; height:160px; position:absolute; top:10px; right:-190px;}
+.top_desc_bg{text-align:center; background:url(../../images/customer/top_desc_bg.png); width:980px; height:187px; background-repeat:no-repeat; }
+.top_desc_bg .tit{font-size:30px; font-weight:500; padding-top:60px;}
+.top_desc_bg .desc{font-size:17px; margin-top:20px;}
 /*고객센터_faq*/
 .tab_col_06{position:relative; left:5px;}
 .tab_col_06 li{width:16.6667%; float:left; text-align:center; box-sizing:border-box; padding:18px 0 18px 0; position:relative;margin-top: -1px; margin-left: -1px; cursor:pointer;}
@@ -447,7 +455,7 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .layer_pop_container > .pop_wrap_section > .search_area{background-color:#f5f5f5; padding:45px 0 45px 0;}
 .layer_pop_container > .pop_wrap_section > .search_area > .search_box{width:380px; margin:0 auto;}
 .layer_pop_container > .pop_wrap_section > .search_area > .search_box > .search_wrap{padding:0px;}
-.layer_pop_container > .pop_wrap_section > .search_area > .search_box > .search_wrap > .search_input > input[type="text"]{height:50px; line-height:50px; font-size:17px; font-weight:500;}
+.layer_pop_container > .pop_wrap_section > .search_area > .search_box > .search_wrap > .search_input > input[type="text"]{height:50px; line-height:50px; font-size:17px; font-weight:500; background:none;}
 .layer_pop_container > .pop_wrap_section > .search_area > .search_box > .search_wrap > .search_input > input[type="text"]::placeholder{font-size:17px; color:#312f2d; font-weight:500;}
 .layer_pop_container > .pop_wrap_section > .search_area > .search_box > .search_wrap > .search_input .search_result{top:15px; right:11px;}
 .layer_pop_container > .pop_wrap_section > .search_area > .search_box > .search_wrap > .search_input .search_del{top:15px; right:54px;}
