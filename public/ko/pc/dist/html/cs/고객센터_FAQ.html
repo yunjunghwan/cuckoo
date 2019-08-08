@@ -766,7 +766,14 @@
     <!-- //footer -->
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
-
+	<script>
+		$(document).ready(function(){
+			$('.tab_col_06 li').click(function(){
+				$('.tab_col_06 li.on').removeClass('on');
+				$(this).addClass('on');
+			});
+		});
+	</script>
 
 </html>
 
