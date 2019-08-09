@@ -374,221 +374,220 @@
   <!-- //header-->
 
   <!--container-->
-    <div id="container" class="mypage nonmember"><!-- 비회원일경우 nonmember 클래스 추가 -->
+    <div id="container" class="mypage">
         <div class="top_content">
             <div class="location">
                 <ul>
                     <li><a href="#">홈</a></li>
-                    <li>나의쇼핑</li>
-                    <li>주문내역</li>
+                    <li>마이쿠쿠</li>
+                    <li>나의렌탈</li>
+                    <li>일시불구매내역</li>
                 </ul>
             </div>
             <div class="top_tit">
-                <h2 class="tit_02">나의쇼핑</h2>
+                <h2 class="tit_02">마이쿠쿠</h2>
             </div>
         </div>
         <div class="content type_lnb"><!-- [P] lnb있을시 type_lnb클래스 추가 -->
             <div class="lnb">
                 <ul class="depth01">
-                    <li class="depth02_wrap"><!-- [P] 하위뎁스있을시 depth02_wrap클래스 추가 -->
+                    <li class="tit"><a href="#">마이쿠쿠</a></li>
+                    <li class="depth02_wrap"><span>나의쇼핑</span><!-- [P] 하위뎁스있을시 depth02_wrap클래스 추가 -->
                         <ul class="depth02">
-                            <li><a href="#" class="on">주문내역</a></li><!-- 활성화시 해당 a태그에 on클래스 추가 -->
+                            <li><a href="#">주문내역</a></li>
                             <li><a href="#">취소/반품/교환 내역</a></li>
+                            <li><a href="#">제품등록내역</a></li>
                         </ul>
                     </li>
+                    <li class="depth02_wrap"><span>나의렌탈</span>
+                        <ul class="depth02">
+                            <li><a href="#">렌탈이용내역</a></li>
+                            <li><a href="#">사은품배송조회</a></li>
+                            <li><a href="#" class="on">일시불구매내역</a></li><!-- 활성화시 해당 a태그에 on클래스 추가 -->
+                            <li><a href="#">취소/반품/교환내역</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">출장 A/S 내역</a></li>
+                    <li><a href="#">관심제품</a></li>
+                    <li><a href="#">1:1문의내역</a></li>
+                    <li class="depth02_wrap"><span>쿠폰/포인트</span>
+                        <ul class="depth02">
+                            <li><a href="#">쿠폰내역</a></li>
+                            <li><a href="#">포인트내역</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">회원정보수정</a></li>
                 </ul>
             </div><!-- //lnb -->
             <div class="inner_content">
                 <div class="section_wrap">
                     <div class="top_area">
-                        <h3 class="tit_03">주문취소 상세내역</h3>
+                        <h3 class="tit_03">일시불 구매내역</h3>
                     </div>
-                    <div class="top_step">
-                        <ul>
-                            <li class="on"><!-- 활성화시 on클래스 추가 -->
-                                <p class="num">01</p>
-                                <p class="txt">주문취소 제품선택</p>
-                            </li>
-                            <li>
-                                <p class="num">02</p>
-                                <p class="txt">주문취소 완료</p>
-                            </li>
-                        </ul>
+                    <div class="search_area">
+                        <div class="tab date_tab">
+                            <ul class="tab_btn">
+                                <li class="on"><a href="#">오늘</a></li>
+                                <li class=""><a href="#">1주일</a></li>
+                                <li class=""><a href="#">1개월</a></li>
+                                <li class=""><a href="#">3개월</a></li>
+                                <li class=""><a href="#">6개월</a></li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <div class="datepicker_wrap">
+                                <div class="datepicker">
+                                    <input type="text" class="datepicker_input" readonly>
+                                </div> -
+                                <div class="datepicker">
+                                    <input type="text" class="datepicker_input" readonly>
+                                </div>
+                                <button type="button" class="btn_s common">검색</button>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="bul_list type_s">
-                        <li>부분취소의 경우 부분취소한 제품만 취소/반품/교환 내역에서 확인 가능합니다.</li>
-                        <li>무통장 입금의 경우 부분 취소가 불가합니다.</li>
-                    </ul>
                     <div class="tbl tbl_order">
                         <div class="order_info_wrap">
-
                             <ul class="order_info">
-                                <li>
-                                    <span>
-                                        <input type="checkbox" class="check_m" id="check01_01">
-                                        <label for="check01_01"></label>
-                                    </span>주문일자
-                                    <span class="bold">2019-09-30</span>
-                                </li>
+                                <li>주문일자 <span class="bold">2019-09-30</span></li>
                                 <li>주문번호 <span class="bold"><a href="#">20190511-423127</a></span></li>
                             </ul>
+                            <div class="right_area">
+                                <button type="button" class="btn_s common">주문취소</button>
+                            </div>
+                        </div>
+                        <table>
+                            <caption>일시불 구매내역</caption>
+                            <colgroup>
+                                <col style="width:20%">
+                                <col style="width:auto">
+                                <col style="width:15%;">
+                                <col style="width:15%;">
+                                <col style="width:15%;">
+                                <col style="width:15%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td><div class="img"><img src="../../images/common/temp_prd_200x200.png" alt=""></div></td>
+                                    <td class="txt_left prd_info">
+                                        <p class="category">정수기</p>
+                                        <p class="name">CP-TS011DS(S)</p>
+                                    </td>
+                                    <td><span class="bold">1</span></td>
+                                    <td><span class="bold price">577,600원</span></td>
+                                    <td><p class="bold">주문접수</p></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- tbl_order -->
+                    <div class="tbl tbl_order">
+                        <div class="order_info_wrap">
+                            <ul class="order_info">
+                                <li>주문일자 <span class="bold">2019-09-30</span></li>
+                                <li>주문번호 <span class="bold"><a href="#">20190511-423127</a></span></li>
+                            </ul>
+                            <div class="right_area">
+                                <button type="button" class="btn_s common">주문취소</button>
+                            </div>
+                        </div>
+                        <table>
+                            <caption>일시불 구매내역</caption>
+                            <colgroup>
+                                <col style="width:20%">
+                                <col style="width:auto">
+                                <col style="width:15%;">
+                                <col style="width:15%;">
+                                <col style="width:15%;">
+                                <col style="width:15%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td><div class="img"><img src="../../images/common/temp_prd_200x200.png" alt=""></div></td>
+                                    <td class="txt_left prd_info">
+                                        <p class="category">정수기</p>
+                                        <p class="name">CP-TS011DS(S)</p>
+                                    </td>
+                                    <td><span class="bold">1</span></td>
+                                    <td><span class="bold price">577,600원</span></td>
+                                    <td><p class="bold">결제완료</p></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- tbl_order -->
+                    <div class="tbl tbl_order">
+                        <div class="order_info_wrap">
+                            <ul class="order_info">
+                                <li>주문일자 <span class="bold">2019-09-30</span></li>
+                                <li>주문번호 <span class="bold"><a href="#">20190511-423127</a></span></li>
+                            </ul>
+                            <div class="right_area">
+                                <button type="button" class="btn_s common">반품요청</button>
+                                <button type="button" class="btn_s common">교환요청</button>
+                            </div>
                         </div>
                         <table>
                             <caption>장바구니</caption>
                             <colgroup>
-                                <col style="width:8%">
-                                <col style="width:19%;">
-                                <col style="width:22%;">
-                                <col style="width:20%;">
+                                <col style="width:20%">
                                 <col style="width:auto">
+                                <col style="width:15%;">
+                                <col style="width:15%;">
+                                <col style="width:15%;">
+                                <col style="width:15%;">
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <td>
-                                        <input type="checkbox" class="check_m no_label" id="check01_02">
-                                        <label for="check01_02"></label>
-                                    </td>
-                                    <td class="txt_left"><div class="img"><img src="../../images/order/temp_prd_140x140.png" alt=""></div></td>
+                                    <td><div class="img"><img src="../../images/common/temp_prd_200x200.png" alt=""></div></td>
                                     <td class="txt_left prd_info">
-                                        <p class="category">IH전기압력밥솥</p>
-                                        <p class="name">CRP-KHT1020FD</p>
-                                        <p class="discount"></p><!-- [D] 값이없어도 태그유지 -->
-                                        <p class="price">577,600</p>
+                                        <p class="category">정수기</p>
+                                        <p class="name">CP-TS011DS(S)</p>
                                     </td>
                                     <td><span class="bold">1</span></td>
-                                    <td class="txt_left"><span class="bold price">8,000원</span></td>
+                                    <td><span class="bold price">577,600원</span></td>
+                                    <td>
+                                        <p class="bold font17">배송중</p>
+                                        <p class="delivery">CJ대한통운</p>
+                                        <p class="mt10"><a href="#" class="link_num">61775423695</a></p>
+                                    </td>
+                                    <td class="btn-wrap">
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <input type="checkbox" class="check_m no_label" id="check01_03">
-                                        <label for="check01_03"></label>
-                                    </td>
-                                    <td class="txt_left"><div class="img"><img src="../../images/order/temp_prd_140x140.png" alt=""></div></td>
+                                    <td><div class="img"><img src="../../images/common/temp_prd_200x200.png" alt=""></div></td>
                                     <td class="txt_left prd_info">
-                                        <p class="category">IH전기압력밥솥</p>
-                                        <p class="name">CRP-KHT1020FD</p>
-                                        <p class="discount"></p><!-- [D] 값이없어도 태그유지 -->
-                                        <p class="price">577,600</p>
-                                        <p class="option">옵션 : CRP-D105SX</p>
+                                        <p class="category">정수기</p>
+                                        <p class="name">CP-TS011DS(S)</p>
                                     </td>
                                     <td><span class="bold">1</span></td>
-                                    <td class="txt_left"><span class="bold price">8,000원</span></td>
+                                    <td><span class="bold price">577,600원</span></td>
+                                    <td>
+                                        <p class="bold font17">배송중</p>
+                                        <p class="delivery">CJ대한통운</p>
+                                        <p class="mt10"><a href="#" class="link_num">61775423695</a></p>
+                                    </td>
+                                    <td class="btn-wrap">
+                                        <p class="txt1">구매확정<br>2019-10-15</p>
+                                        <p><button type="button" class="btn_s">리뷰쓰기</button></p>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div><!-- tbl_order -->
                 </div><!-- section_wrap -->
-                <div class="section_wrap">
-                    <div class="top_area type_sub"><!-- [P]하위뎁스일경우 type_sub추가 -->
-                        <h4 class="tit_04">결제정보</h4>
-                        <span class="right">결제수단 : 신용/체크카드(신한)</span>
-                    </div>
-                    <div class="section">
-                        <div class="total_box">
-                            <div class="col">
-                                <p class="tit">총 제품 금액</p>
-                                <p class="txt">42,000원</p>
-                            </div>
-                            <div class="col minus">
-                                <p class="tit">제품 할인</p>
-                                <p class="txt">2,000원</p>
-                            </div>
-                            <div class="col total">
-                                <p class="tit">최종 결제 금액</p>
-                                <p class="txt">40,000원</p>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- section_wrap -->
-                <div class="section_wrap">
-                    <div class="top_area type_sub"><!-- [P]하위뎁스일경우 type_sub추가 -->
-                        <h4 class="tit_04">취소사유</h4>
-                    </div>
-                    <div class="section form_wrap">
-                        <table>
-                            <caption>취소사유</caption>
-                            <colgroup>
-                                <col style="width:150px;">
-                                <col style="width:auto">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="row"><label for="input01_01">취소사유</label></th>
-                                    <td>
-                                        <div class="select_box w380">
-                                            <a href="#" class="tit">취소사유</a>
-                                            <ul class="hidden">
-                                                <li class="on"><a href="#">옵션1</a></li>
-                                                <li><a href="#">옵션2</a></li>
-                                                <li><a href="#">옵션3</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><label for="input01_02">상세사유</label></th>
-                                    <td>
-                                        <textarea style="width:100%; height:80px" placeholder="취소하시는 상세 사유를 작성해주세요."></textarea>
-                                        <ul class="notice_list mt20">
-                                            <li>취소 완료 후에는 취소 철회가 불가합니다.</li>
-                                            <li>주문 취소는 결제하신 결제수단으로만 가능합니다.</li>
-                                            <li>취소 시에는 수량 선택을 하실 수 없습니다.</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div><!-- section_wrap -->
-                <div class="section_wrap">
-                    <div class="top_area type_sub"><!-- [P]하위뎁스일경우 type_sub추가 -->
-                        <h4 class="tit_04">환불계좌정보</h4>
-                    </div>
-                    <div class="section form_wrap">
-                        <table>
-                            <caption>환불계좌정보</caption>
-                            <colgroup>
-                                <col style="width:150px;">
-                                <col style="width:auto">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="row"><label for="input02_01">은행</label></th>
-                                    <td>
-                                        <div class="select_box w380">
-                                            <a href="#" class="tit">은행을 선택해주세요.</a>
-                                            <ul class="hidden">
-                                                <li class="on"><a href="#">옵션1</a></li>
-                                                <li><a href="#">옵션2</a></li>
-                                                <li><a href="#">옵션3</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><label for="input02_02">계좌번호</label></th>
-                                    <td><input type="number" id="input02_02" class="w380" placeholder="계좌번호를 입력해주세요."></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><label for="input02_03">예금주명</label></th>
-                                    <td><input type="text" id="input02_03" class="w380" placeholder="예금주명을 입력해주세요."></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">취소예상금액</th>
-                                    <td class="txt_area pt12">
-                                        <strong class="font25">75,900원</strong>
-                                        <ul class="notice_list mt20">
-                                            <li class="type_red">취소 금액 처리는 결제수단에 따라 2~3일 정도 소요됩니다.</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div><!-- section_wrap -->
-                <div class="btn-wrap">
-                    <button type="button" class="btn_l radius common">주문취소 요청</button>
-                </div>
+                <div class="pagination">
+    				<a href="#" class="paging first disabled"><span class="blind">첫페이지</span></a>
+    				<a href="#" class="paging prev disabled"><span class="blind">이전</span></a>
+    				<a href="#" class="on">1</a>
+    				<a href="#">2</a>
+    				<a href="#">3</a>
+    				<a href="#">4</a>
+    				<a href="#">5</a>
+    				<a href="#">6</a>
+    				<a href="#" class="paging next"><span class="blind">다음</span></a>
+    				<a href="#" class="paging last"><span class="blind">마지막페이지</span></a>
+    			</div>
             </div><!-- //inner_content -->
         </div><!-- //content -->
     </div>

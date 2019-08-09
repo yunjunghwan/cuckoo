@@ -392,15 +392,20 @@
                 </div>
                 <div class="right_area">
                     <div class="coupon">
-                        <p class="tit">사용가능 쿠폰</p>
+                        <p class="tit">쿠폰</p>
                         <p class="txt"><strong>2</strong>장</p>
                     </div>
                     <div class="point">
-                        <p class="tit">사용가능 포인트</p>
+                        <p class="tit">포인트</p>
                         <p class="txt"><strong>3,000</strong>P</p>
                     </div>
                 </div>
             </div><!-- //top_state_box -->
+            <!-- 카카오회원일경우 노출 -->
+            <div class="top_notice">
+                <i class="ico notice"></i>정확한 회원정보를 위해 회원정보수정에서 휴대폰 본인인증을 진행해주세요.
+            </div>
+            <!-- //카카오회원일경우 노출 -->
         </div>
         <div class="content type_lnb"><!-- [P] lnb있을시 type_lnb클래스 추가 -->
             <div class="lnb">
@@ -490,7 +495,7 @@
                                 <p class="tit">쿠쿠 고객님! <br>다음 점검제품은 <span class="bold">CP-TS011DS(S)</span> 입니다.</p>
                                 <ul class="bul_list">
                                     <li>담당매니저 : 김쿠쿠 (010-1234-5678)</li>
-                                    <li class="btn-list"><span>점검예정일 : 2019. 09. 01  09시</span> <button type="button" onclick="layerPopOpen('changeDate')" class="btn_ss radius"><i class="ico canlender"></i><span>점검일 변경</span></button></li>
+                                    <li class="btn-list"><span>점검예정일 : 2019-09-01 09시</span> <button type="button" onclick="layerPopOpen('changeDate')" class="btn_ss radius"><i class="ico canlender"></i><span>점검일 변경</span></button></li>
                                 </ul>
                             </div>
                         </div><!-- //rental_use_box -->
@@ -506,7 +511,7 @@
                                 <p class="tit">쿠쿠 고객님! <br>다음 점검제품은 <span class="bold">CP-TS011DS(S)</span> 입니다.</p>
                                 <ul class="bul_list">
                                     <li>담당매니저 : 김쿠쿠 (010-1234-5678)</li>
-                                    <li class="btn-list"><span>점검예정일 : 2019. 09. 01  09시</span> <span class="btn_ss radius type_ing">점검일 변경중 : 2019-09-30 09:00</span></li>
+                                    <li class="btn-list"><span>점검예정일 : 2019-09-01 09시</span> <span class="btn_ss radius type_ing">점검일 변경중 : 2019-09-30 09:00</span></li>
                                 </ul>
                             </div>
                         </div><!-- //rental_use_box -->
@@ -522,16 +527,16 @@
                                 <p class="tit">쿠쿠 고객님! <br>다음 점검제품은 <span class="bold">CP-TS011DS(S)</span> 입니다.</p>
                                 <ul class="bul_list">
                                     <li>담당매니저 : 김쿠쿠 (010-1234-5678)</li>
-                                    <li class="btn-list"><span>점검예정일 : 2019. 09. 01  09시</span> <span class="btn_ss radius type_complate"><i class="ico complate"></i><span>점검일 변경완료</span></span></li>
+                                    <li class="btn-list"><span>점검예정일 : 2019-09-01 09시</span> <span class="btn_ss radius type_complate"><i class="ico complate"></i><span>점검일 변경완료</span></span></li>
                                 </ul>
                             </div>
                         </div><!-- //rental_use_box -->
                     </div><!-- //scetion -->
-                    <div class="section no_data">
+                    <div class="rental_use_box no_data">
                         <p class="txt1">렌탈 이용내역이 없습니다.</p>
                         <p class="txt2">렌탈 이용중인 제품이 있다면 ‘렌탈정보 조회’를 통해 나의 렌탈 제품을 확인해보세요.</p>
                         <div class="btn-wrap">
-                            <button type="button" class="btn_l radius">렌탈 정보 조회</button>
+                            <button type="button" class="btn_l radius">렌탈정보조회</button>
                         </div>
                     </div>
                 </div><!-- //section_wrap -->
@@ -682,7 +687,7 @@
     <script src="../../javascripts/design_common.js"></script>
     <script>
     //선택가능 날짜
-    var availableDates = ["2019-07-13","2019-07-14","2019-07-15"];
+    var availableDates = ["2019-08-13","2019-08-14","2019-08-15"];
 
 
 

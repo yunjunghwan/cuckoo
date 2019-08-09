@@ -19,6 +19,8 @@
   <meta name="robots" content="ALL">
   <link rel="stylesheet" href="../../stylesheets/css/common.css">
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
+  <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
+  <link rel="stylesheet" href="../../stylesheets/css/customer.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
 </head>
@@ -393,8 +395,15 @@
             <button type="button" onclick="layerPopOpen('payInfo')" class="btn_m radius">서비스요금안내</button>
             <button type="button" onclick="layerPopOpen('searchModel')" class="btn_m radius">모델명 검색</button>
             <button type="button" onclick="layerPopOpen('noSearchModel')" class="btn_m radius">모델명 검색결과없음</button>
-            <button type="button" onclick="layerPopOpen('cartOptionNo')" class="btn_m radius">장바구니(옵션없음)</button>
-            <button type="button" onclick="layerPopOpen('cartOption')" class="btn_m radius">장바구니(옵션)</button>
+            <button type="button" onclick="layerPopOpen('cartOptionNo')" class="btn_m radius">쿠쿠몰 장바구니(옵션없음)</button>
+            <button type="button" onclick="layerPopOpen('cartOption')" class="btn_m radius">쿠쿠몰 장바구니(옵션)</button>
+            <button type="button" onclick="layerPopOpen('cartOptionNo2')" class="btn_m radius">쿠쿠렌탈 제품상세(옵션없음)</button>
+            <button type="button" onclick="layerPopOpen('cartOption2')" class="btn_m radius">쿠쿠렌탈 장바구니(옵션)</button>
+            <button type="button" onclick="layerPopOpen('leaveNo')" class="btn_m radius">회원탈퇴불가시</button>
+            <button type="button" onclick="layerPopOpen('leaveConfirm')" class="btn_m radius">탈퇴학인</button>
+            <button type="button" onclick="layerPopOpen('leaveEnd')" class="btn_m radius">탈퇴완료</button>
+            <button type="button" onclick="layerPopOpen('deleteConfirm')" class="btn_m radius">제품등록리스트(삭제)</button>
+            <button type="button" onclick="layerPopOpen('reservationOk')" class="btn_m radius">출장as신청확인</button>
         </div>
     </div>
     <!--//container-->
@@ -996,7 +1005,7 @@
         </div>
     </div>
     <!-- //모델명 검색결과없음 -->
-    <!-- 장바구니클릭시(옵션없음) -->
+    <!-- 쿠쿠몰 장바구니클릭시(옵션없음) -->
     <div id="cartOptionNo" class="wrap_layer_pop type_confirm">
         <div class="layer_pop w440">
             <div class="container_pop">
@@ -1011,8 +1020,8 @@
             <button type="button" class="btn-close-pop" onclick="layerPopClose('cartOptionNo')"><span class="blind">팝업닫기</span></button>
         </div>
     </div>
-    <!-- //장바구니클릭시(옵션없음) -->
-    <!-- 장바구니클릭시(옵션) -->
+    <!-- //쿠쿠몰 장바구니클릭시(옵션없음) -->
+    <!-- 쿠쿠몰 장바구니클릭시(옵션) -->
     <div id="cartOption" class="wrap_layer_pop prd_view">
         <div class="layer_pop w550">
             <div class="container_pop">
@@ -1020,6 +1029,13 @@
                     <h2 class="tit_03">주문사항 선택</h2>
                 </div>
                 <div class="prd_info">
+                    <div class="top_area">
+                        <div class="img"><img src="../../images/common/temp_prd_150x150.png" alt=""></div>
+                        <div class="info">
+                            <p class="category">IH전기압력밥솥</p>
+                            <p class="name">CRP-JHTR0610FD</p>
+                        </div>
+                    </div>
                     <div class="body_area">
                         <ul>
                             <li>
@@ -1047,7 +1063,7 @@
                         </ul>
                     </div><!-- //body_area -->
                     <div class="bottom_area">
-                        <div class="select_box">
+                        <div class="select_box typeA">
                             <a href="#" class="tit">옵션선택</a>
                             <ul class="hidden">
                                 <li class="on"><a href="#">옵션1</a></li>
@@ -1059,13 +1075,251 @@
                 </div>
             </div>
             <div class="btn-wrap">
-                <button type="button" class="btn_l radius">취소</button>
-                <button type="button" class="btn_l radius common">변경</button>
+                <button type="button" class="btn_l radius common">장바구니 담기</button>
             </div>
             <button type="button" class="btn-close-pop" onclick="layerPopClose('cartOption')"><span class="blind">팝업닫기</span></button>
         </div>
     </div>
-    <!-- //장바구니클릭시(옵션) -->
+    <!-- //쿠쿠몰 장바구니클릭시(옵션) -->
+    <!-- 쿠쿠렌탈 제품상세(옵션없음) -->
+    <div id="cartOptionNo2" class="wrap_layer_pop type_confirm">
+        <div class="layer_pop w400">
+            <div class="container_pop">
+                <div class="inner_txt">
+                    <p class="txt1">옵션을 선택해주세요.</p>
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <button type="button" class="btn_l radius common">확인</button>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('cartOptionNo2')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+    <!-- //쿠쿠렌탈 제품상세(옵션없음) -->
+    <!-- 쿠쿠몰 장바구니클릭시(옵션) -->
+    <div id="cartOption2" class="wrap_layer_pop prd_view">
+        <div class="layer_pop w550">
+            <div class="container_pop">
+                <div class="header_pop">
+                    <h2 class="tit_03">주문사항 선택</h2>
+                </div>
+                <div class="prd_info">
+                    <div class="top_area">
+                        <div class="img"><img src="../../images/common/temp_prd_150x150.png" alt=""></div>
+                        <div class="info">
+                            <p class="category">IH전기압력밥솥</p>
+                            <p class="name">CRP-JHTR0610FD</p>
+                        </div>
+                    </div>
+                    <div class="body_area">
+                        <ul>
+                            <li>
+                                <span class="tit">포인트</span>
+                                <span class="txt"><strong>13,500P</strong>2% 추가적립</span>
+                            </li>
+                            <li>
+                                <span class="tit">쿠폰</span>
+                                <span class="txt">쿠폰 적용 불가 제품</span>
+                            </li>
+                            <li>
+                                <span class="tit">무이자할부</span>
+                                <span class="txt">6개월</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <span class="tit">정상가</span>
+                                <span class="txt"><span class="discount">57,000원</span></span>
+                            </li>
+                            <li>
+                                <span class="tit">판매가</span>
+                                <span class="txt price">478,400원<span class="point01">10% <i class="ico price_down"></i></span></span>
+                            </li>
+                        </ul>
+                    </div><!-- //body_area -->
+                    <div class="bottom_area">
+                        <div class="select_box typeA">
+                            <a href="#" class="tit">옵션선택</a>
+                            <ul class="hidden">
+                                <li class="on"><a href="#">옵션1</a></li>
+                                <li><a href="#">옵션2</a></li>
+                                <li><a href="#">옵션3</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- //bottom_area -->
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <button type="button" class="btn_l radius common">바로구매</button>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('cartOption2')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+    <!-- //쿠쿠몰 장바구니클릭시(옵션) -->
+    <!-- 회원탈퇴불가시 -->
+    <div id="leaveNo" class="wrap_layer_pop type_confirm">
+        <div class="layer_pop w400">
+            <div class="container_pop">
+                <div class="inner_txt">
+                    <p class="txt1">현재 진행중인 주문건이 있어<br>회원탈퇴가 불가능합니다.</p>
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <button type="button" class="btn_l radius">취소</button>
+                <button type="button" class="btn_l radius common">확인</button>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('leaveNo')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+    <!-- //회원탈퇴불가시 -->
+    <!-- 탈퇴확인(탈퇴가능) -->
+    <div id="leaveConfirm" class="wrap_layer_pop type_confirm">
+        <div class="layer_pop w400">
+            <div class="container_pop">
+                <div class="inner_txt">
+                    <p class="txt1">회원탈퇴를 진행하시겠습니까?</p>
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <button type="button" class="btn_l radius">취소</button>
+                <button type="button" class="btn_l radius common">확인</button>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('leaveConfirm')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+    <!-- //탈퇴확인(탈퇴가능) -->
+    <!-- 탈퇴완료 -->
+    <div id="leaveEnd" class="wrap_layer_pop type_confirm">
+        <div class="layer_pop w400">
+            <div class="container_pop">
+                <div class="inner_txt">
+                    <p class="tit">쿠쿠 통합회원 탈퇴가<br>완료되었습니다.</p>
+                    <p class="txt1">그 동안 보내주신 사랑에 다시 한번 감사드리며,<br>고객님께서 다시 찾을 수 있는 서비스를<br>만들기 위해 노력하는 쿠쿠가 되겠습니다.</p>
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <button type="button" class="btn_l radius common">확인</button>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('leaveEnd')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+    <!-- //탈퇴완료 -->
+    <!-- 제품등록리스트(삭제) -->
+    <div id="deleteConfirm" class="wrap_layer_pop type_confirm">
+        <div class="layer_pop w400">
+            <div class="container_pop">
+                <div class="inner_txt">
+                    <p class="txt1">등록하신 제품 내역을 삭제하시겠습니까?<br>삭제한 내역은 복구가 불가능하며<br>제품을 등록으로 받은 혜택은 모두 사라집니다.</p>
+                </div>
+            </div>
+            <div class="btn-wrap btn-col2">
+                <button type="button" class="btn_l radius">취소</button>
+                <button type="button" class="btn_l radius common">확인</button>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('deleteConfirm')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+    <!-- //제품등록리스트(삭제) -->
+    <!-- 예약신청확인 -->
+    <div id="reservationOk" class="wrap_layer_pop">
+        <div class="layer_pop w830px">
+			<div class="layer_pop_container">
+				<div class="dot_tit tit">예약 신청 내용을 다시 한번 확인해주세요.</div>
+				<div class="pop_wrap_section">
+					<div class="pop_in_section">
+						<div class="dot_tit tit">제품정보</div>
+						<div class="desc">
+							<table class="service_price_tb">
+								<colgroup>
+									<col style="width:160px;">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">제품군</th>
+										<td>밥솥 > 트윈프레셔</td>
+									</tr>
+									<tr>
+										<th scope="row">모델명</th>
+										<td>-</td>
+									</tr>
+									<tr>
+										<th scope="row">고장증상</th>
+										<td>무압으로 밥 할 때 밥이 질게 됨</td>
+									</tr>
+                                    <tr>
+										<th scope="row">구입시기</th>
+										<td>1개월 이내</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="pop_in_section">
+						<div class="dot_tit tit">서비스 받으시는 분 정보</div>
+						<div class="desc">
+							<table class="service_price_tb">
+								<colgroup>
+									<col style="width:160px;">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">고객명</th>
+										<td>박재범</td>
+									</tr>
+									<tr>
+										<th scope="row">주소</th>
+										<td>(06098)서울특별시 강남구 논현2동 언주로 652</td>
+									</tr>
+                                    <tr>
+										<th scope="row">휴대폰 번호</th>
+										<td>010-1234-1234</td>
+									</tr>
+                                    <tr>
+										<th scope="row">추가연락처</th>
+										<td>-</td>
+									</tr>
+                                    <tr>
+										<th scope="row">이메일</th>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="pop_in_section">
+						<div class="dot_tit tit">예약정보</div>
+						<div class="desc">
+							<table class="service_price_tb">
+								<colgroup>
+									<col style="width:160px;">
+									<col style="width:auto">
+								</colgroup>
+								<tbody>
+									<tr>
+                                        <th scope="row">서비스기사명</th>
+										<td>오진오</td>
+									</tr>
+                                    <tr>
+                                        <th scope="row">소속</th>
+										<td>쿠쿠영등포점</td>
+									</tr>
+                                    <tr>
+                                        <th scope="row">방문예정일</th>
+										<td>2019-05-24 13:00</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+			</div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('reservationOk')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+    <!-- //예약신청확인 -->
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
     <script>

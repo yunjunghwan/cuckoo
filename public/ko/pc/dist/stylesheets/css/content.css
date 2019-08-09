@@ -148,8 +148,8 @@
 .prd_view .prd_info .body_area ul{padding:30px 0}
 .prd_view .prd_info .body_area ul + ul{border-top:1px solid #d5d6d3}
 .prd_view .prd_info .body_area li + li{margin-top:20px}
-.prd_view .prd_info .body_area li .tit, .prd_view .prd_info .body_area li .txt{display:inline-block; vertical-align:middle}
-.prd_view .prd_info .body_area li .tit{width:80px; margin-right:17px; font-weight:500}
+.prd_view .prd_info .body_area li .tit, .prd_view .prd_info .body_area li .txt{display:inline-block; vertical-align:middle; box-sizing: border-box;}
+.prd_view .prd_info .body_area li .tit{width:80px; margin-right:17px; font-weight:500; }
 .prd_view .prd_info .body_area li .txt{width:380px;}
 .prd_view .prd_info .body_area .price{font-size:24px; font-weight:700}
 .prd_view .prd_info .body_area .price .point01{margin-left:10px}
@@ -231,6 +231,7 @@
 .no_review{padding:110px 0 75px 0; border-bottom:1px solid #d5d6d3; text-align:center}
 .no_review .txt1{font-size:25px}
 .no_review .txt2{margin-top:20px; line-height:26px; font-size:17px}
+.no_review .txt3{line-height:26px; font-size:15px}
 /* 리뷰작성 */
 .write_area_wrap{position:relative; padding:0 100px}
 .write_area_wrap .tit_03{margin-bottom:40px}
@@ -260,18 +261,18 @@
 .qa_list .hidden .file_down .bold{margin-right:5px}
 .qa_list .hidden .btn-wrap{margin-top:40px}
 .qa_list .hidden .complete{background-color:#f5f5f5}
-.qa_list > ul > li{padding:30px 0; border-bottom:1px solid #d5d6d3;}
+.qa_list > ul > li{padding:23px 0 22px 0; border-bottom:1px solid #d5d6d3; box-sizing:border-box;}
 .qa_list > ul > li.on .hidden{display:block}
 .qa_list > ul > li.on .tit{font-weight:500}
 .qa_list > ul > li.on .btn-more{background-position:-354px -277px;}
 .qa_list > ul > li .qustion{display:table; width:100%; position:relative}
 .qa_list > ul > li .qustion > *{display:table-cell; vertical-align:top; text-align:center}
-.qa_list > ul > li .qustion .state{width:10%; font-weight:500}
+.qa_list > ul > li .qustion .state{width:12%; font-weight:500}
 .qa_list > ul > li .qustion .tit_wrap{width:auto}
 .qa_list > ul > li .qustion .tit_wrap .tit{display:block}
 .qa_list > ul > li .qustion .name{width:12%}
-.qa_list > ul > li .qustion .date{width:10%}
-.qa_list > ul > li .qustion .more_wrap{width:7%}
+.qa_list > ul > li .qustion .date{width:12%}
+.qa_list > ul > li .qustion .more_wrap{width:10%}
 .qa_list > ul > li .answer{padding-left:116px}
 .qa_list > ul > li .complete{margin-top:30px; padding:40px 116px}
 .qa_list > ul > li .complete .txt{margin-top:15px; letter-spacing:-0.5px}
@@ -452,23 +453,24 @@
 
 /* 마이페이지 */
 .mypage .top_tit{padding-bottom:60px; border-bottom:2px solid #312f2d;}
-.mypage .top_state_box{margin-top:-2px; padding:54px 60px 54px 70px; background-color:#312f2d; box-sizing:border-box;}
+.mypage .top_state_box{margin-top:-2px; padding:54px 115px 54px 70px; background-color:#312f2d; box-sizing:border-box;}
 .mypage .top_state_box:after{display:block; content:''; clear:both}
 .mypage .top_state_box .left_area{float:left}
 .mypage .top_state_box .left_area .tit{margin-bottom:30px; font-size:30px; color:#fff}
-.mypage .top_state_box .left_area .btn_ss{color:#fff}
+.mypage .top_state_box .left_area .btn_ss{color:#fff; background-color:#312f2d}
 .mypage .top_state_box .left_area .btn_ss:hover{border:1px solid #c7c8c4}
 .mypage .top_state_box.company{padding-bottom:45px}
 .mypage .top_state_box.company .left_area .company_name{margin-bottom:20px; font-weight:500; font-size:15px; color:#fff}
 .mypage .top_state_box.company .left_area .tit{margin:-7px 0 15px 0}
 .mypage .top_state_box .right_area{float:right}
 .mypage .top_state_box .right_area > div{display:inline-block; position:relative; min-height:90px; padding:15px 0 0 120px; box-sizing:border-box;}
-.mypage .top_state_box .right_area > div + div{margin-left:60px}
+.mypage .top_state_box .right_area > div + div{margin-left:115px}
 .mypage .top_state_box .right_area > div .tit{font-size:20px; color:#fff}
 .mypage .top_state_box .right_area > div .txt{margin-top:15px; font-size:25px; color:#fff}
 .mypage .top_state_box .right_area > div:before{content:''; display:inline-block; position:absolute; left:0; top:0; width:90px; height:90px; background:url(../../images/common/img_ico_zip.png) no-repeat}
 .mypage .top_state_box .right_area .coupon:before{background-position:-754px -672px;}
 .mypage .top_state_box .right_area .point:before{background-position:-897px -672px;}
+.mypage .top_notice{padding:18px 0; background-color:#f5f5f5; text-align:center; font-size:13px}
 /* 주문내역 */
 .mypage h3.tit_03 + .section{margin-top:30px}
 .mypage .section.no_data{min-height:290px}
@@ -478,6 +480,7 @@
 .mypage .section.no_data.typeA{border-top:0}
 .mypage .section.form_wrap,
 .mypage .section .form_wrap{padding:40px 30px}
+.mypage .section.type_noBorder .form_wrap{padding-top:0}
 .mypage .section.form_wrap.type_view tr:first-child th, .mypage .section.form_wrap.type_view tr:first-child td{padding-top:0}
 .mypage .section_wrap{position:relative;}
 .mypage .section_wrap + .section_wrap{margin-top:80px}
@@ -495,6 +498,7 @@
 .mypage .tbl_order .order_info_wrap .right_area{top:22px}
 .mypage .tbl_order .order_info_wrap .right_area.type_noButton{top:33px}
 .mypage .tbl_order .order_info_wrap input[type="checkbox"] + label{display:inline-block; margin-top:-3px}
+.mypage .qa_list .no_review{padding:90px 0}
 .order_state_wrap .order_state{display:table; width:100%}
 .order_state_wrap .order_state li{display:table-cell; position:relative; text-align:center}
 .order_state_wrap .order_state li .tit{font-size:17px}
@@ -511,7 +515,7 @@
 .order_state_wrap .order_section li{float:left; position:relative; width:33.3%; font-size:13px; text-align:center; color:#8a8b87}
 .order_state_wrap .order_section li:before{content:''; display:inline-block; position:absolute; top:-35px; left:0; width:1px; height:16px; background-color:#c7c8c4}
 .order_state_wrap .order_section li:last-child:after{content:''; display:inline-block; position:absolute; top:-35px; right:0; width:1px; height:16px; background-color:#c7c8c4}
-.rental_use_box{display:table; padding:40px 0; border:1px solid #dbdbd9; box-sizing:border-box;}
+.rental_use_box{display:table; width:100%; padding:40px 0; border:1px solid #dbdbd9; box-sizing:border-box;}
 .rental_use_box:after{display:block; content:''; clear:both}
 .rental_use_box .left_area{display:table-cell; width:250px; height:200px; vertical-align:middle; border-right:1px solid #dbdbd9; box-sizing:border-box; text-align:center}
 .rental_use_box .left_area .tit{display:block; margin-bottom:30px}
@@ -528,6 +532,11 @@
 .rental_use_box .right_area .bul_list li.btn-list .btn_ss.type_ing{border:1px solid #f5f5f5; background-color:#f5f5f5; color:#8a8b87}
 .rental_use_box .right_area .bul_list li.btn-list .btn_ss.type_complate{border:1px solid #d61a2e; background-color:#fff; color:#d61a2e}
 .rental_use_box .right_area .bul_list li.btn-list:before{top:16px}
+.rental_use_box.no_data{padding:60px 0}
+.rental_use_box.no_data:before{display:none}
+.rental_use_box.no_data .txt1{font-size:25px; font-weight:300}
+.rental_use_box.no_data .txt2{margin-top:25px; font-size:15px; font-weight:300}
+.rental_use_box.no_data .btn-wrap{margin-top:30px}
 .search_area{position:relative; margin-bottom:20px}
 .search_area .right{position:absolute; top:0; right:0}
 .search_area .right > *{display:inline-block; vertical-align:middle;}
@@ -559,7 +568,7 @@
 .benefit_top li:before{content:''; display:inline-block; position:absolute; left:0; top:0; background:url(../../images/common/img_ico_zip.png) no-repeat}
 .benefit_top li.coupon:before{width:102px; height:88px; background-position:-378px -677px}
 .benefit_top li.as:before{width:98px; height:93px; background-position:-594px -677px}
-.benefit_bottom{padding:20px 0 20px 205px; background-color:#ebebeb}
+.benefit_bottom{margin-bottom:40px; padding:20px 0 20px 205px; background-color:#ebebeb}
 /* 비회원 주문상세 */
 .nonmember .lnb .depth02_wrap{margin-top:0}
 .nonmember .lnb .depth02{margin-top:0}
@@ -602,3 +611,94 @@
 .prd_list2 li .btn-wrap{margin-top:20px}
 .prd_list2 li .btn-wrap > button, .prd_list2 li .btn-wrap > a{min-width:88px}
 .prd_list2 li .btn-del{position:absolute; top:0; right:0}
+/* 주문사항선택 팝업 */
+.wrap_layer_pop.prd_view .prd_info{float:none; width:100%}
+.wrap_layer_pop.prd_view .prd_info .top_area{display:table; width:100%; padding-bottom:10px}
+.wrap_layer_pop.prd_view .prd_info .top_area .img{display:table-cell; width:150px; }
+.wrap_layer_pop.prd_view .prd_info .top_area .img img{width:150px; height:150px}
+.wrap_layer_pop.prd_view .prd_info .top_area .info{display:table-cell; padding-left:20px; vertical-align:middle;}
+.wrap_layer_pop.prd_view .prd_info .top_area .category{color:#585856}
+.wrap_layer_pop.prd_view .prd_info .top_area .name{margin-top:15px; font-weight:500; font-size:25px}
+.wrap_layer_pop.prd_view .prd_info .body_area li .tit, .wrap_layer_pop.prd_view .prd_info .body_area li .txt{padding-left:20px}
+.wrap_layer_pop.prd_view .prd_info .body_area li .txt{width:320px}
+
+/* 상단입력영역 */
+.top_info_desc{display:table; width:100%; min-height:140px; margin:20px 0 40px 0; padding:0 90px; box-sizing:border-box; background-color:#f5f5f5; text-align:center}
+.top_info_desc > *{display:table-cell; vertical-align:middle;}
+.top_info_desc .tit{font-size:25px; font-weight:500; color:#272524; text-align:left}
+.top_info_desc .input input[type="text"], .top_desc .input input[type="number"], .top_desc .input input[type="tel"], .top_desc .input input[type="email"]{min-width:380px; padding-left:0; background-color: transparent; border:0; border-bottom:3px solid #312f2d; font-size:17px}
+
+/* 쿠폰 */
+.coupon_wrap:after{display:block; content:''; clear:both}
+.coupon_wrap{margin:-30px 0 0 -30px}
+.coupon_box{display:table; overflow:hidden; float:left; width:475px; min-height:230px; margin:30px 0 0 30px; border:1px solid #d5d6d3; border-radius:15px; box-sizing:border-box;}
+.coupon_box .info{display:table-cell; width:434px; padding:40px 0 40px 32px; box-sizing:border-box; background:url(../../images/common/bg_repeat01.png) repeat-y right top}
+.coupon_box .tit{font-size:19px; font-weight:500; letter-spacing:-1px}
+.coupon_box .tit > *{vertical-align:middle;}
+.coupon_box .tit .day{display:inline-block; width:50px; height:23px; margin-left:10px; line-height:23px; background-color:#312f2d; color:#fff; font-weight:700; font-size:13px; text-align:center}
+.coupon_box .coupon_point{margin:15px 0 31px 0; color:#7a101b; font-size:17px; font-weight:500}
+.coupon_box .coupon_point strong{font-size:38px}
+.coupon_box .notice{color:#585856}
+.coupon_box .notice + .notice{margin-top:13px}
+.coupon_box .label{display:table-cell; position:relative; width:41px; height:100%}
+.coupon_box.typeA .label{background-color:#fcebec}
+.coupon_box.typeB .label{background-color:#e2edf1}
+.coupon_box .logo{display:inline-block; position:absolute; left:50%; top:50%; width:10px; height:68px; margin:-34px 0 0 -5px;  background:url(../../images/common/txt_zip.png) no-repeat -169px 0}
+
+/* 포인트내역 */
+.point_info{display:table; width:100%; min-height:130px; margin:20px 0 60px 0; padding:25px 40px; background-color:#f5f5f5; box-sizing:border-box;}
+.point_info > *{display:table-cell; position:relative; width:50%; box-sizing:border-box; border-left:1px solid #d5d6d3; vertical-align:middle;}
+.point_info > *:after{content:''; display:inline-block; position:absolute; right:40px; top:10px; width:63px; height:55px; background:url(../../images/common/img_ico_zip.png) no-repeat}
+.point_info > *:first-child{border-left:0}
+.point_info .point_use:after{background-position:-1227px 0;}
+.point_info .point_end:after{right:0; background-position:-1373px 0;}
+.point_info .point_end{padding-left:40px}
+.point_info .tit{font-weight:500; font-size:17px}
+.point_info .point{margin-top:10px; font-weight:700; font-size:25px}
+
+/* 회원정보수정 */
+.password_confirm{padding:60px 0; background-color:#f5f5f5; box-sizing:border-box; text-align:center}
+.password_confirm .tit{font-weight:500; font-size:30px}
+.password_confirm .txt{margin:25px 0 40px 0; font-size:17px}
+.password_confirm input[type="password"]{width:350px}
+.password_confirm .btn_m{width:110px; margin-left:5px}
+.password_desc{margin-top:60px; text-align:center; font-size:17px}
+.password_desc .sns_list, .password_desc .txt{display:inline-block; vertical-align:middle;}
+.password_desc .txt{margin-right:37px}
+.password_desc .sns_list li{display:inline-block}
+.password_desc .sns_list li + li{margin-left:18px}
+.password_desc .sns_list li button{display:inline-block; width:60px; height:60px; background:url(../../images/common/ico_zip.png) no-repeat}
+.password_desc .sns_list li.naver button{background-position:0 -422px}
+.password_desc .sns_list li.kakao button{background-position:-85px -422px}
+.password_desc .sns_list li.facebook button{background-position:-170px -422px}
+.leave_box{position:relative; margin-top:80px; padding:41px 40px 42px 40px; background:#f5f5f5}
+.leave_box .tit{font-weight:500; font-size:17px}
+.leave_box .txt{margin-left:13px; font-size:13px; color:#585856}
+.leave_box .btn_s{position:absolute; top:32px; right:40px}
+.company_info_box{padding:80px 0 70px 0; background-color:#f5f5f5; text-align:center}
+.company_info_box:before{content:''; display:block; width:92px; height:76px; margin:0 auto 40px auto; background:url(../../images/common/img_ico_zip.png) no-repeat -1233px -141px}
+.company_info_box .txt1{font-weight:500; font-size:30px}
+.company_info_box .txt2{margin-top:40px; font-size:17px; line-height:26px}
+.company_info_box .btn_wrap{margin-top:45px}
+.leave_info{padding:75px 40px 50px 40px; background-color:#f5f5f5;}
+.leave_info .top_area{text-align:center}
+.leave_info .top_area > .txt1{font-size:30px; font-weight:500; color:#272524}
+.leave_info .top_area > .txt2{margin-top:30px; font-size:17px; }
+.leave_info .top_area .benefit{margin-top:40px}
+.leave_info .top_area .benefit > div:before{content:''; display:inline-block; position:absolute; left:0; top:0; background:url(../../images/common/img_ico_zip.png) no-repeat}
+.leave_info{margin-bottom:60px}
+.leave_info .top_area{margin-bottom:0 !important; padding-bottom:50px; border-bottom:1px solid #d5d6d3}
+.leave_info .top_area .benefit > div{display:inline-block; position:relative;; min-width: 240px; padding:10px 0 0 130px; text-align: left; min-height:88px; box-sizing:border-box;}
+.leave_info .top_area .benefit > .point_area:before{width:95px; height:88px; background-position:-867px -273px}
+.leave_info .top_area .benefit > .coupon_area:before{width:102px; height:88px; background-position:-1056px -273px}
+.leave_info .top_area .benefit > .coupon_area{margin-left:95px}
+.leave_info .top_area .benefit .tit{font-size:17px; color:#585856}
+.leave_info .top_area .benefit .txt{margin-top:10px; font-size:32px}
+.leave_info .bottom_area{padding-top:45px}
+.leave_info .bottom_area .bul_list > li{line-height:30px}
+.leave_info .bottom_area .bul_list > li + li{margin-top:3px}
+.leave_info .bottom_area .bul_list > li:before{top:13px}
+.leave_info .bottom_area .dash_list > li{margin-top:0; line-height:24px; font-size:13px}
+.leave_info .bottom_area .dash_list > li:before{top:11px; width:4px}
+.leave_info .bottom_area .dash_list{margin:5px}
+#leaveEnd .btn-wrap{margin-top:50px}
