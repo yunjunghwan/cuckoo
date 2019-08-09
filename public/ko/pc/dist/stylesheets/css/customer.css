@@ -241,8 +241,8 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .top_desc_02 .img{text-align:center;}
 .top_desc_02 .tit{text-align:center; font-size:30px; font-weight:500; letter-spacing:-1px; margin-top:40px;}
 .top_desc_02 .desc{text-align:center; font-size:17px; margin-top:20px;}
-.bg_right{width:790px; padding-right:190px; position:relative;}
-.bg_right:after{content:''; display:inline-block; background:url(../../images/customer/c_icon_zip.png); background-position:-308px -126px; width:160px; height:160px; position:absolute; top:10px; right:-190px;}
+.bg_right{width:790px; position:relative;}
+
 .top_desc_bg{text-align:center; background:url(../../images/customer/top_desc_bg.png); width:980px; height:187px; background-repeat:no-repeat; }
 .top_desc_bg .tit{font-size:30px; font-weight:500; padding-top:60px;}
 .top_desc_bg .desc{font-size:17px; margin-top:20px;}
@@ -306,10 +306,10 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .search_result_view .tit .fr ul li{float:left; position:relative; margin-left:20px;}
 .search_result_view .tit .fr ul li a{position:relative;}
 .search_result_view .tit .fr ul:after{clear:both; display:block; content:'';}
-.search_result_view .tit .fr ul li a{background:url(../../images/common/ico_zip.png); text-indent:-9999px;}
-.search_result_view .tit .fr ul li.kakao a{width:19px; height:17px; display:inline-block; background-position:-201px -253px; position:relative;}
-.search_result_view .tit .fr ul li.facebook a{width:11px; height:19px; display:inline-block; background-position:-240px -252px; position:relative; top:-2px;}
-.search_result_view .tit .fr ul li.url a{width:29px; height:10px; display:inline-block; background-position:-270px -256px; position:relative; top:3px;}
+.fr.sns_icon li a{background:url(../../images/common/ico_zip.png); text-indent:-9999px;}
+.fr.sns_icon li.kakao a{width:19px; height:17px; display:inline-block; background-position:-201px -253px; position:relative;}
+.fr.sns_icon li.facebook a{width:11px; height:19px; display:inline-block; background-position:-240px -252px; position:relative; top:-2px;}
+.fr.sns_icon li.url a{width:29px; height:10px; display:inline-block; background-position:-270px -256px; position:relative; top:3px;}
 .search_result_view .desc{border-top:1px solid #d5d6d3; border-bottom:1px solid #d5d6d3;}
 .top_desc .img.rental{background:url(../../images/customer/c_icon_zip.png); width:72px; height:66px; background-position:-112px -581px; }
 .top_desc .img.contact11{background:url(../../images/customer/c_icon_zip.png); width:73px; height:58px; background-position: -12px -591px;}

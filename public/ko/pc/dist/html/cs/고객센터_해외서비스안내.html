@@ -1815,7 +1815,13 @@
 				$('.wrold_wrap_cont > div.on').removeClass('on');
 				$('.wrold_wrap_cont > div').eq(map_index).addClass('on');
 			});
-		})
+			$('.nation_dot').toggle(function(){
+				$(this).addClass('on');
+			},function(){
+				$(this).removeClass('on');
+			});
+		});
+		
 	</script>
 
 </html>
