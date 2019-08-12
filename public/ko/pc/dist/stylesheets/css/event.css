@@ -25,8 +25,8 @@
 .event_view .tit .fr ul li.date{color:#8a8b87; font-size:15px; position:relative;}
 .event_view .tit .fr ul li.date:after{content:''; display:inline-block; width:1px; height:13px; background-color:#d5d6d3; margin-left:20px;}
 .event_view .tit .fr ul li.kakao{margin-left:15px;}
-.event_view .view{padding:80px 100px;}
-.related_prd{padding:0 100px;}
+.event_view .view{padding:80px 30px 0 30px;}
+.related_prd{padding:0 100px; margin-top:80px;}
 .related_prd .related_prd_tit{font-size:25px; text-align:center; font-weight:500;}
 
 .related_prd ul li .img{border-bottom:1px solid #d5d6d3; }
@@ -54,7 +54,7 @@
 .comment_list{margin-top:40px; font-size:17px;}
 .comment_list > span{font-weight:500;}
 .comment_list ul li{border-bottom:1px solid #d5d6d3; padding-top:30px; padding-bottom:30px;}
-.comment_list ul li .name_date .name{font-size:15px; color:#312f2d}
+.comment_list ul li .name_date .name{font-size:15px; color:#312f2d; font-weight:500;}
 .comment_list ul li .name_date .date{font-size:15px; color:#585856; margin-left:13px;}
 .comment_list ul li .link{margin-top:15px;}
 .comment_list ul li .comment_btn{margin-top:15px;}
