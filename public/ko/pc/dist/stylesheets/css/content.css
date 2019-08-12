@@ -228,7 +228,7 @@
 .review_list li .txt{margin-top:26px; line-height:26px}
 .review_list li .img{position:absolute; top:45px; right:0}
 .review_list li + li{border-top:1px solid #d5d6d3}
-.no_review{padding:110px 0 75px 0; border-bottom:1px solid #d5d6d3; text-align:center}
+.no_review{padding:100px 0; text-align:center}
 .no_review .txt1{font-size:25px}
 .no_review .txt2{margin-top:20px; line-height:26px; font-size:17px}
 .no_review .txt3{line-height:26px; font-size:15px}
@@ -387,13 +387,14 @@
 .order_area .section_select{margin-bottom:40px}
 .order_area .section_select:after{display:block; content:''; clear:both}
 .order_area .section_select > span{float:left}
-.order_area .tbl_order .gift_box_wrap{padding-top:0}
-.order_area .tbl_order .gift_box{position:relative; min-height:100px; padding:30px; border:1px solid #d5d6d3; border-top:0; text-align:left}
-.order_area .tbl_order .gift_box .img{position:absolute; top:30px; left:30px;}
-.order_area .tbl_order .gift_box .info{margin-top:10px; padding-left:348px}
-.order_area .tbl_order .gift_box .info .tit{margin-bottom:17px; font-weight:500}
-.order_area .tbl_order .gift_box .info .bul_list li{color:#585856; font-size:13px}
-.order_area .tbl_order .gift_box .info .bul_list li + li{margin-top:5px}
+/* 테이블내 사은품정보 */
+.tbl_order .gift_box_wrap{padding-top:0}
+.tbl_order .gift_box{position:relative; min-height:100px; padding:30px; border:1px solid #d5d6d3; border-top:0; text-align:left}
+.tbl_order .gift_box .img{position:absolute; top:30px; left:30px;}
+.tbl_order .gift_box .info{margin-top:10px; padding-left:348px}
+.tbl_order .gift_box .info .tit{margin-bottom:17px; font-weight:500}
+.tbl_order .gift_box .info .bul_list li{color:#585856; font-size:13px}
+.tbl_order .gift_box .info .bul_list li + li{margin-top:5px}
 .tab_pay .tab_btn{margin:-10px 0 0 -10px}
 .tab_pay .tab_btn li{position:relative; width:152px; height:152px; margin:10px 0 0 10px; text-align:center; border:1px solid #c7c8c4; box-sizing:border-box;}
 .tab_pay .tab_btn li .img{display:inline-block; position:absolute; top:35px; left:50%; background:url(../../images/common/img_ico_zip.png) no-repeat}
