@@ -289,19 +289,19 @@ function layout() {
     //footer
     var $familySite = $("#familySite");
     var $familyBtn = $familySite.find(".tit");
-    var $familySiteH = $familySite.find('.hidden').height() + 71;
+    var $familySiteH = $familySite.find('.hidden').height() + 137;
     $familyBtn.click(function (e) {
         e.preventDefault();
         if(!$familySite.hasClass("on")){
             TweenMax.to($familySite, .2, {height:$familySiteH});
             $familySite.addClass("on");
         } else {
-            TweenMax.to($familySite, .2, {height: 44});
+            TweenMax.to($familySite, .2, {height: 46});
             $familySite.removeClass("on");
         }
     });
     $familySite.mouseleave(function () {
-        TweenMax.to($familySite, .2, {height: 44});
+        TweenMax.to($familySite, .2, {height: 46});
         $familySite.removeClass("on");
     });
     $('.datepicker_input').datepicker({

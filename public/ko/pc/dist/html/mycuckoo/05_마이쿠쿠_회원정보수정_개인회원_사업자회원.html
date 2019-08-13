@@ -435,15 +435,15 @@
                                 <tbody>
                                     <tr>
                                         <th scope="row">사업자등록번호</th>
-                                        <td class="txt_area">123-45-67890</td>
+                                        <td><input type="text" value="123-45-67890" style="width:380px" readonly></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">회사명</th>
-                                        <td class="txt_area">쿠쿠전자</td>
+                                        <td><input type="text" value="쿠쿠전자" style="width:380px" readonly></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">대표자명</th>
-                                        <td class="txt_area">구본학</td>
+                                        <td><input type="text" value="구본학" style="width:380px" readonly></td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><label for="input01_01">대표전화번호</label></th>
@@ -451,11 +451,17 @@
                                     </tr>
                                     <tr>
                                         <th scope="row">사업자등록증</th>
-                                        <td class="txt_area"><a href="#">쿠쿠사업자등록증.jpg</a></td>
+                                        <td>
+                                            <div class="fileBox2">
+                                                <input type="text" class="fileName" id="input01_07" readonly="readonly">
+                                            	<label for="uploadBtn" class="btn_file">첨부하기</label>
+                                            	<input type="file" id="uploadBtn" class="uploadBtn">
+                                            </div>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">아이디</th>
-                                        <td class="txt_area">cuckoo1345</td>
+                                        <td><input type="text" value="cuckoo1234" style="width:380px" readonly></td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><label for="input01_02">비밀번호</label></th>
@@ -494,7 +500,7 @@
                                     </tr>
                                     <tr>
                                         <th scope="row">개인정보수집동의<span class="font_light">(필수)</span></th>
-                                        <td class="txt_area">
+                                        <td class="txt_area type_input">
                                             <input type="checkbox" class="check_m" id="check01_01">
                                             <label for="check01_01"><span>개인정보수집 및 활용, 취급위탁 약관에 동의합니다.</span></label>
                                             <a href="javascript:;" class="link_arrow2 fontS ml20"><span>전문보기</span><i class="ico btnArrow2"></i></a>
@@ -502,7 +508,7 @@
                                     </tr>
                                     <tr>
                                         <th scope="row">마케팅수신동의<span class="font_light">(선택)</span></th>
-                                        <td class="txt_area">
+                                        <td class="txt_area type_input">
                                             <input type="checkbox" class="check_m" id="check02_01">
                                             <label for="check02_01"><span>이메일 수신에 동의합니다.</span></label>
                                             <input type="checkbox" class="check_m" id="check02_02" style="margin-left:30px">

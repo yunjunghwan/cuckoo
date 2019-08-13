@@ -404,6 +404,7 @@
             <button type="button" onclick="layerPopOpen('leaveEnd')" class="btn_m radius">탈퇴완료</button>
             <button type="button" onclick="layerPopOpen('deleteConfirm')" class="btn_m radius">제품등록리스트(삭제)</button>
             <button type="button" onclick="layerPopOpen('reservationOk')" class="btn_m radius">출장as신청확인</button>
+            <button type="button" onclick="layerPopOpen('taxRequest')" class="btn_m radius">세금계산서신청</button>
         </div>
     </div>
     <!--//container-->
@@ -580,8 +581,8 @@
                                 <tr>
                                     <th scope="row"><label for="input01_02">이전 주소</label></th>
                                     <td>
-                                        <div class="input-btn-right">
-                                            <input type="text" style="width:180px"><button type="button" class="btn_m">주소찾기</button>
+                                        <div class="input-btn-right w305">
+                                            <input type="text" style="width:204px"><button type="button" class="btn_m">주소찾기</button>
                                         </div>
                                         <input type="text" style="width:100%; margin-top:10px">
                                         <input type="text" placeholder="나머지 주소를 입력해주세요." style="width:100%; margin-top:10px">
@@ -599,7 +600,7 @@
             <button type="button" class="btn-close-pop" onclick="layerPopClose('installRequest')"><span class="blind">팝업닫기</span></button>
         </div>
     </div>
-    <!-- //휴대폰 본인인증 -->
+    <!-- //이전설치요청 -->
     <!-- 납부정보 변경(카드) -->
     <div id="payCard" class="wrap_layer_pop">
         <div class="layer_pop w550">
@@ -1320,6 +1321,103 @@
         </div>
     </div>
     <!-- //예약신청확인 -->
+    <!-- 세금계산서 신청 -->
+    <div id="taxRequest" class="wrap_layer_pop">
+        <div class="layer_pop w550">
+            <div class="container_pop">
+                <div class="header_pop">
+                    <h2 class="tit_03">세금계산서 신청</h2>
+                </div>
+                <div class="section">
+                    <div class="form_wrap">
+                        <table>
+                            <caption>세금계산서 신청</caption>
+                            <colgroup>
+                                <col style="width:110px;">
+                                <col style="width:auto">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="essential">
+                                        <label for="input01_01">신청종류 및 <br>사유</label>
+                                    </th>
+                                    <td>
+                                        <div class="select_box">
+                                            <a href="#" class="tit">신규신청</a>
+                                            <ul class="hidden">
+                                                <li class="on"><a href="#">옵션1</a></li>
+                                                <li><a href="#">옵션2</a></li>
+                                                <li><a href="#">옵션3</a></li>
+                                            </ul>
+                                        </div>
+                                        <p class="info_txt">세금 계산서 발행은 다음달부터 변경된 정보로 발행됩니다.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="essential">
+                                        <label for="input01_02">발행일</label>
+                                    </th>
+                                    <td>
+                                        <div class="select_box">
+                                            <a href="#" class="tit">1일</a>
+                                            <ul class="hidden">
+                                                <li class="on"><a href="#">옵션1</a></li>
+                                                <li><a href="#">옵션2</a></li>
+                                                <li><a href="#">옵션3</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="input01_03">세부요청사항</label>
+                                    </th>
+                                    <td>
+                                        <textarea name="" id="input01_03" style="width:100%; height:120px"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="essential">
+                                        <label for="input01_04">담당자명</label>
+                                    </th>
+                                    <td>
+                                        <div class="clear">
+                                            <input type="text" id="input01_04" value="김쿠쿠" style="width:170px">
+                                            <button type="button" class="btn_m fr">변경</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="essential">
+                                        <label for="input01_05">이메일주소</label>
+                                    </th>
+                                    <td>
+                                        <input type="text" id="input01_05" class="w100p" value="cuckoo@naver.com">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="essential">
+                                        <label for="input01_06">휴대폰 번호</label>
+                                    </th>
+                                    <td>
+                                        <input type="text" id="input01_06" class="w100p" value="010-1234-1234">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div><!-- //section -->
+                <ul class="notice_list mt20">
+                    <li>기재된 이메일 주소로 세금계산서가 발행됩니다. <br>다시 한 번 이메일 주소와 연락처 정보를 확인해 주시기 바랍니다.</li>
+                </ul>
+            </div>
+            <div class="btn-wrap typeA"><!-- [P] typeA : margin-top:40 -->
+                <button type="button" class="btn_l radius common">신청하기</button>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('taxRequest')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+    <!-- //세금계산서 신청 -->
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
     <script>

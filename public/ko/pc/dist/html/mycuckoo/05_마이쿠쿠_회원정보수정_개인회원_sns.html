@@ -434,20 +434,26 @@
                                 </colgroup>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">SNS계정</th>
-                                        <td class="txt_btn_area"><i class="ico naver_s"></i><i class="ico facebook_s"></i><i class="ico kakao_s"></i><span>네이버로그인</span></td><!-- txt_btn_area : 텍스트 + 버튼또는 아이콘이 올경우 -->
+                                        <th scope="row" class="pt7">SNS계정</th>
+                                        <td><i class="ico naver_s"></i><i class="ico facebook_s"></i><i class="ico kakao_s"></i><span>네이버로그인</span></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">이름</th>
-                                        <td class="txt_btn_area">김쿠쿠 <button type="button" class="btn_s ml10">휴대폰 본인인증</button></td>
+                                        <td>
+                                            <div class="input-btn-right w380">
+                                                <input type="text" value="김쿠쿠" style="width:238px" readonly>
+                                                <button type="button" class="btn_m">휴대폰 본인인증</button>
+                                            </div>
+                                            <span class="ml20"><i class="ico notice4"></i><span>휴대폰 본인인증이 완료되었습니다.</span></span>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">이메일</th>
-                                        <td class="txt_area">cuckoo@naver.com</td>
+                                        <td><input type="text" value="cuckoo@naver.com" style="width:380px" readonly></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">휴대폰번호</th>
-                                        <td class="txt_area">010-1234-1234</td>
+                                        <td><input type="text" value="010-1234-5678" style="width:380px" readonly></td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><label for="input01_01">생년월일</label></th>
@@ -456,14 +462,16 @@
                                     <tr>
                                         <th scope="row"><label for="input01_02">주소</label></th>
                                         <td>
-                                            <input type="text" id="input01_02" value="06098" style="width:257px"><button tyle="button" class="btn_m ml10">주소찾기</button>
+                                            <div class="input-btn-right w380">
+                                                <input type="text" id="input01_02" value="06098" style="width:276px"><button tyle="button" class="btn_m">주소 찾기</button>
+                                            </div>
                                             <input type="text" class="w100p mt10" value="서울특별시 강남국 언주로 652 쿠쿠빌딩">
                                             <input type="text" class="w100p mt10" value="3층 김쿠쿠">
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row">마케팅수신동의<span class="font_light">(선택)</span></th>
-                                        <td class="txt_area">
+                                        <td class="txt_area type_input">
                                             <input type="checkbox" class="check_m" id="check01_01">
                                             <label for="check01_01"><span>마케팅정보 수신에 동의합니다.</span></label>
                                             <a href="javascript:;" class="link_arrow2 fontS ml20"><span>전문보기</span><i class="ico btnArrow2"></i></a>
