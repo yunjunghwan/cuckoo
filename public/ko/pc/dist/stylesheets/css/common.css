@@ -891,9 +891,12 @@ body > .ui-datepicker{display:none}
 .inner_content{float:left; width:980px}
 
 /* 메인 */
+.main{min-width:1600px}
 .top_visual{position:relative; height:680px}
+/* .top_visual .img{position:relative; left:50%; width:1920px; height:680px; margin-left:-960px;}
 .top_visual .img a{display:block; width:100%; height:680px; outline:0}
-.top_visual .img a img{position:relative; left:50%; width:1920px; height:680px; margin-left:-960px;}
+.top_visual .img a img{position:absolute; top:0; left:0} */
+.top_visual .img a{display:block; width:100%; height:680px; outline:0; background-repeat: no-repeat; background-position:center;}
 .top_visual .slick-arrow{display:inline-block; position:absolute; top:50%; margin-top:-25px; width:26px; height:50px; background:url(../../images/common/ico_zip.png) no-repeat; text-indent: -9999px; z-index:10}
 .top_visual .slick-arrow.slick-prev{background-position:-369px -432px; left:50%; margin-left:-800px}
 .top_visual .slick-arrow.slick-next{background-position:-430px -432px; right:50%; margin-right:-800px}
