@@ -21,9 +21,9 @@
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
   <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
   <link rel="stylesheet" href="../../stylesheets/css/customer.css">
+  <link rel="stylesheet" href="../../stylesheets/css/event.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
-
 </head>
 
 <body>
@@ -376,33 +376,72 @@
   <!-- //header-->
 
   <!--container-->
-    <div id="container" class="mypage_container">
-		<ul style="text-align:center;">
-			<li style="margin:30px;">
-				출장 A/S신청 서비스 요금안내<BR>
-				<button type="button" onclick="layerPopOpen('pop01')" class="not_hover_raidus_btn">서비스요금 안내 <span class="small_arrow"></span></button>
-			</li>
-			<li style="margin:30px;" >
-				제품등록 무상as기간연장안내<BR>
-				<button type="button" class="not_hover_raidus_btn" onclick="layerPopOpen('pop02')">무상 A/S기간 연장 안내  <span class="small_arrow"></span></button>	
-				</li>
-			<li style="margin:30px;">
-				출장 A/S신청 작성완료<BR>
-				<button type="button" class="btn_l radius common" onclick="layerPopOpen('pop03')">작성완료</button>
-			</li>
-			<li style="margin:30px;" >
-				제품등록 모델검색 검색실행<BR>
-				<button type="button" class="btn_m" onclick="layerPopOpen('pop04')">검색</button>
-			</li>
-			<li style="margin:30px;" >
-				제품등록 모델검색 검색미실행<BR>
-				<button type="button" class="btn_m" onclick="layerPopOpen('pop05')">검색</button>	
-			</li>
-			<li style="margin:30px;">
-				전기용품 안전 관리법(법률 7441호)<BR>
-				<button type="button" onclick="layerPopOpen('pop06')" class="not_hover_raidus_btn">자세히보기 <span class="small_arrow"></span></button>
-			</li>
-		</ul>
+    <div id="container" class="event">
+		<div class="top_content">
+            <div class="location">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>투자정보</li>
+					<li>쿠쿠홀딩스</li>
+                </ul>
+            </div>
+            <div class="top_tit">
+                <h2 class="tit_02">투자정보</h2>
+            </div>
+        </div>
+		<div class="content event_content">
+			<div class="tab type_m tac">
+				<ul class="tab_btn">
+					<li class=""><a href="#">쿠쿠홀딩스</a></li>
+					<li class=""><a href="#">쿠쿠전자</a></li>
+					<li class="on"><a href="#">쿠쿠홈시스</a></li>
+				</ul>
+			</div>
+			<div class="ir_list mt80">
+				<div class="foreign_service_tab">
+					<ul>
+						<li class="on">전자공고</li>
+						<li>재무정보</li>
+						<li>공시정보</li>
+					</ul>
+				</div>
+				<div class="foreign_service_tabcon mt0">
+					<div class="on">
+						<div class="ir_list_view">
+							<div class="view_cont">
+								<div class="tit clear">
+									<div class="fl">주식액면분할에 따른 구주권 제출 공고</div>
+									<div class="fr">2019-04-01</div>
+								</div>
+								<div class="desc">
+									<p style="text-align:center;">
+										<img src="../../images/invest/invest_img06.png">
+									</p>				
+					
+								</div>
+							</div>
+							<div class="next_prev clear bdtnone">
+								<div class="fl">
+									<span>Prev</span>
+									<a href="#">게시물이 없습니다.</a>
+								</div>
+								<div class="fr">
+									<a href="#">쿠쿠홈시스 제 2기 결산공고문</a>
+									<span>Next</span>
+								</div>
+							</div>
+							<div class="btn_area tac mt60">
+								<button type="button" class="btn_l radius common">목록</button>
+							</div>
+						</div>
+					</div>
+					<div class=""></div>
+					<div class=""></div>
+				</div>
+			
+			</div>
+		</div>
+		
     </div>
     <!--//container-->
     <div id="gnbDimmed" class="dimmed"></div>
@@ -494,414 +533,21 @@
         </div>
     </footer>
     <!-- //footer -->
-	<!-- 레이어팝업 -->
-	<div id="pop01" class="wrap_layer_pop">
-        <div class="layer_pop w830px" style="top: 9590px; left: 549px;">
-			<div class="layer_pop_container">
-				<div class="dot_tit tit">서비스요금 안내</div>
-				<div class="pop_wrap_section">
-					<div class="pop_in_section">
-						<div class="dot_tit tit">요금 책정기준</div>
-						<div class="desc">
-							<table class="service_price_tb">
-								<colgroup>
-									<col style="width:160px;">
-									<col style="width:auto">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th>부품비</th>
-										<td>제품 수리 시 부품교체가 발생 할 경우 소요되는 부품가격을 말합니다.</td>
-									</tr>
-									<tr>
-										<th>수리비(기술료)</th>
-										<td>유상 수리 시 부품비를 제외한 수리 난이도와 소요시간에 따른 순수 기술료를 말합니다.</td>
-									</tr>
-									<tr>
-										<th>출장비(출장점검료)</th>
-										<td>유상수리 대상에 대하여 출장수리를 요구하는 경우 적용되며, 거리에 상관없이<br>
-										동일하게 13,000원의 비용만 청구됩니다.(추가요금 없음)</td>
-									</tr>
-								</tbody>
-							</table>
-							<ul class="star_list">
-								<li>서비스 종류에 따라 최종 서비스 요금이 책정 됩니다. (무상수리 및 부품교체 필요 없는 경우 출장비만 발생)</li>
-							</ul>
-						</div>
-					</div>
-					<div class="pop_in_section">
-						<div class="dot_tit tit">유무상 수리기준</div>
-						<div class="desc">
-							<table class="service_price_tb">
-								<colgroup>
-									<col style="width:160px;">
-									<col style="width:auto">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th>무상수리</th>
-										<td>
-											<ul class="bul_list">
-												<li>품질 보증기간 이내에 정상적인 사용상태에서 발생되는 성능, 기능상의 고장인 경우</li>
-												<li>당사 서비스센터를 통한 수리 후 3개월 이내 동일부위 재고장 발생한 경우</li>
-											</ul>
-										</td>
-									</tr>
-									<tr>
-										<th>유상수리</th>
-										<td>
-											<ul class="bul_list">
-												<li>품질보증기간이 경과 된 제품 수리 시</li>
-												<li>고객부주의로 수리 시(이동,낙하,충격,파손,사용설명서내의 주의사항을 지키지 않아<br>
-												고장발생 / 무리한 작동 등) </li>
-												<li>당사 서비스센터 외의 곳에서 부당한 수리, 개조로 인한 고장 시</li>
-												<li>천재지변으로 인한 고장 시 (낙뢰,이상전원,화재,지진,풍수해,해일 등)</li>
-												<li>정상적으로 사용하여 마모 된 소모성 부품을 교환하는 경우</li>
-												<li>사용전원의 이상 및 접속기기의 불량으로 인한 고장 시</li>
-											</ul>
-										</td>
-
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-					<div class="pop_in_section">
-						<div class="dot_tit tit">보증기간 안내</div>
-						<div class="desc">
-							<table class="service_price_tb">
-								<colgroup>
-									<col style="width:160px;">
-									<col style="width:auto">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th>제품보증기간</th>
-										<td>구입일자를 기준으로 산정하며, 구입일자의 확인은 제품보증서(구입영수증)를<br>기준으로 함</td>
-									</tr>
-									<tr>
-										<th>제품보증서 없는 경우</th>
-										<td>유통기간을 감안하여 생산년월(제조번호)을 기준으로 6개월을 추가하여 구입일자를<br>적용하여 보증시간을 산정함.</td>
-									</tr>
-									<tr>
-										<th>보증기간을<br>단축 적용하는 경우</th>
-										<td>
-											<ul class="bul_list">
-												<li>일반 가정용 제품을 영업용도나 영업장에서 사용할 경우 </li>
-												<li>(단,영업용/업소용 제품은 제외)</li>
-												<li>차량,선박 등에 탑재하는 등 정상적인 사용환경이 아닌 곳에서 사용한 경우</li>
-												<li>중고품 (전파상, 모조품) 구입 시 보증기간은 적용되지 않으며 수리불가의 경우<br>피해보상을 책임지지 않음</li>
-											</ul>
-										</td>
-									</tr>
-									<tr>
-										<th>품목별 보증기간</th>
-										<td>
-											<ul class="bul_list">
-												<li>일반제품 : 1년 (선풍기 등 계정성 제품을 제외한 전 제품)</li>
-												<li>계정성제품 : 2년 (선풍기 등)</li>
-											</ul>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-            <button type="button" class="btn-close-pop" onclick="layerPopClose('pop01')"><span class="blind">팝업닫기</span></button>
-        </div>
-    </div>
-	<div id="pop02" class="wrap_layer_pop">
-        <div class="layer_pop w830px" style="top: 9590px; left: 549px;">
-			<div class="layer_pop_container">
-				<div class="tit">무상 A/S 기간 연장 안내(6개월)</div>
-				<div class="pop_wrap_section">
-					<div class="pop_in_section">
-						<div class="dot_tit tit">대상 제품</div>
-						<div class="desc">
-							<div class="border_box">
-								<div class="tit">아래의 조건에 모두 해당되면 무상 A/S 기간 연장이 가능합니다.</div>
-								<ul class="bul_list">
-									<li>제품 내 무상 A/S 기간 연장 쿠폰이 있는 제품</li>
-									<li>기존 무상 A/S 기간 1년 이내 (가습기와 같은 계절가전도 1년 이내) 제품 등록을 한 제품</li>
-								</ul>
-							</div>
-						
-						</div>
-					</div>
-					<div class="pop_in_section">
-						<div class="dot_tit tit">제외 제품</div>
-						<div class="desc">
-							<div class="border_box">
-								<div class="tit">해외용 제품 및 면세점 제품, 렌탈제품, 부속품 및 기타상품은 제품등록에서 제외됩니다.</div>
-							</div>
-						</div>
-					</div>
-					<div class="pop_in_section">
-						<div class="dot_tit tit">연장 방법</div>
-						<div class="desc">
-							<div class="border_box">
-								<div class="tit">‘로그인 > 고객센터 > 제품등록’  또는 ‘로그인 > 마이쿠쿠 > 제품등록내역’ 에서 가능합니다.</div>
-							</div>
-							<ul class="notice_list">
-								<li>회원가입을 하지 않으셨다면 먼저 회원가입을 해주세요.</li>
-							</ul>
-						</div>
-					</div>
-					<div class="pop_in_section">
-						<div class="dot_tit tit">혜택 취소</div>
-						<div class="desc">
-							<div class="border_box">
-								<ul class="bul_list mt0">
-									<li>무상 A/S기간 6개월 연장은 쿠쿠 온라인 회원에게만 드리는 혜택으로 회원탈퇴 시 그 혜택이 취소됩니다.</li>
-									<li>무상 A/S기간 6개월 연장된 제품등록 내역을 삭제하시면 그 혜택이 취소됩니다.</li>
-									<li>허위로 입력하거나 잘못된 제품정보를 입력하시면 그 혜택이 취소됩니다.</li>
-									<li>1년 이상 로그인 기록이 없는 장기 미접속자(비로그인)회원은 정보통신방법 이용촉진 및 정보보호 등에 관한 법률에 의거 개인정보를 파기하도록 되어 있으므로 개인정보파기 시 무상 A/S기간 6개월 연장 혜택이 취소됩니다.</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-            <button type="button" class="btn-close-pop" onclick="layerPopClose('pop02')"><span class="blind">팝업닫기</span></button>
-        </div>
-    </div>
-	<div id="pop03" class="wrap_layer_pop">
-        <div class="layer_pop w830px" style="top: 9590px; left: 549px;">
-			<div class="layer_pop_container">
-				<div class="tit">예약하신 내용을 다시 한번 확인해주세요.</div>
-				<div class="pop_wrap_section">
-					<div class="pop_in_section">
-						<div class="tit circle_tit"><span class="circle_black02">01</span>제품 정보</div>
-						<div class="desc">
-							<ul class="border_li">
-								<li class="clear">
-									<div class="fl">제품군</div>
-									<div class="fl">밥솥 > 트윈프레셔</div>
-								</li>
-								<li class="clear">
-									<div class="fl">모델명</div>
-									<div class="fl">CRP-HSXB0630FB</div>
-								</li>
-								<li class="clear">
-									<div class="fl">고장증상</div>
-									<div class="fl">무압으로 밥 할 때 밥이 질게 됨</div>
-								</li>
-								<li class="clear">
-									<div class="fl">구입시기</div>
-									<div class="fl">1개월 이내</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="pop_in_section">
-						<div class="tit circle_tit"><span class="circle_black02">02</span>서비스 받으시는 분 정보</div>
-						<div class="desc">
-							<ul class="border_li">
-								<li class="clear">
-									<div class="fl">고객명</div>
-									<div class="fl">박재범</div>
-								</li>
-								<li class="clear">
-									<div class="fl">주소</div>
-									<div class="fl">(06098) 서울특별시 강남구 논현 2동 언주로 652 쿠쿠빌딩 5층 김쿠쿠</div>
-								</li>
-								<li class="clear">
-									<div class="fl">휴대폰번호</div>
-									<div class="fl">010-1234-5678</div>
-								</li>
-								<li class="clear">
-									<div class="fl">추가연락처</div>
-									<div class="fl">010-1234-5678</div>
-								</li>
-								<li class="clear">
-									<div class="fl">이메일</div>
-									<div class="fl">cuckoo124@cuckoo.com</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="pop_in_section">
-						<div class="tit circle_tit"><span class="circle_black02">03</span>예약정보</div>
-						<div class="desc">
-							<div class="visit_status">
-								<div>
-									<div class="tit">서비스 기사명</div>
-									<div class="desc">오진오 기사</div>
-								</div>
-								<div>
-									<div class="tit">소속지점</div>
-									<div class="desc">영등포점</div>
-								</div>
-								<div>
-									<div class="tit">방문 예정일</div>
-									<div class="desc gotham">05-24 13:00</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="pop_btn_arae tac mt40">
-						<button type="button" class="btn_l radius">수정하기</button>
-						<button type="button" class="btn_l radius common ml10">접수하기</button>
-					</div>
-					
-					
-				</div>
-			</div>
-          
-            <button type="button" class="btn-close-pop" onclick="layerPopClose('pop03')"><span class="blind">팝업닫기</span></button>
-        </div>
-    </div>
-	<div id="pop04" class="wrap_layer_pop">
-        <div class="layer_pop w830" style="top: 9590px; left: 549px;">
-			<div class="layer_pop_container">
-				<div class="tit">모델명 검색</div>
-				<div class="desc mt30">모델명을 검색하신 후, 등록하실 제품을 선택해주세요.</div>
-				<div class="pop_wrap_section">
-					<div class="search_area">
-						<div class="search_box">
-							<div class="search_wrap">
-								<div class="search_input">
-								  <input type="text" placeholder="CRP-">
-								  <button type="button" class="search_del"><i class="ico_s del_s"></i><span class="hidden-txt">삭제</span></button>
-								  <button type="button" class="search_result"><i class="ico_s search_s"></i><span class="hidden-txt">검색</span></button>
-								</div>  
-							</div>
-						</div>
-					</div>
-					<div class="search_result_area">
-						<div class="tit">검색결과 총 <span>15</span>건</div>
-						<div class="list">
-							<table>
-								<caption></caption>
-								<tbody>
-									<tr>
-										<td class="clear">
-											<div class="fl"><img src="../../images/customer/data_img14.png"></div>
-											<div class="fl"><p class="txt01">IH전기압력밥솥</p><p class="txt02">CRP-JHR0660FBM</p></div>
-										</td>
-										<td class="clear">
-											<div class="fl"><img src="../../images/customer/data_img14.png"></div>
-											<div class="fl"><p class="txt01">IH전기압력밥솥</p><p class="txt02">CRP-JHR0660FBM</p></div>
-										</td>
-									</tr>
-									<tr>
-										<td class="clear">
-											<div class="fl"><img src="../../images/customer/data_img14.png"></div>
-											<div class="fl"><p class="txt01">IH전기압력밥솥</p><p class="txt02">CRP-JHR0660FBM</p></div>
-										</td>
-										<td class="clear">
-											<div class="fl"><img src="../../images/customer/data_img14.png"></div>
-											<div class="fl"><p class="txt01">IH전기압력밥솥</p><p class="txt02">CRP-JHR0660FBM</p></div>
-										</td>
-									</tr>
-									<tr>
-										<td class="clear">
-											<div class="fl"><img src="../../images/customer/data_img14.png"></div>
-											<div class="fl"><p class="txt01">IH전기압력밥솥</p><p class="txt02">CRP-JHR0660FBM</p></div>
-										</td>
-										<td class="clear">
-											<div class="fl"><img src="../../images/customer/data_img14.png"></div>
-											<div class="fl"><p class="txt01">IH전기압력밥솥</p><p class="txt02">CRP-JHR0660FBM</p></div>
-										</td>
-									</tr>
-									<tr>
-										<td class="clear">
-											<div class="fl"><img src="../../images/customer/data_img14.png"></div>
-											<div class="fl"><p class="txt01">IH전기압력밥솥</p><p class="txt02">CRP-JHR0660FBM</p></div>
-										</td>
-										<td class="clear">
-											<div class="fl"><img src="../../images/customer/data_img14.png"></div>
-											<div class="fl"><p class="txt01">IH전기압력밥솥</p><p class="txt02">CRP-JHR0660FBM</p></div>
-										</td>
-									</tr>
-									<tr>
-										<td class="clear">
-											<div class="fl"><img src="../../images/customer/data_img14.png"></div>
-											<div class="fl"><p class="txt01">IH전기압력밥솥</p><p class="txt02">CRP-JHR0660FBM</p></div>
-										</td>
-										<td class="clear">
-											<div class="fl"><img src="../../images/customer/data_img14.png"></div>
-											<div class="fl"><p class="txt01">IH전기압력밥솥</p><p class="txt02">CRP-JHR0660FBM</p></div>
-										</td>
-									</tr>
-
-								</tbody>
-							</table>
-						</div>
-						<div class="pagination">
-							<a href="#" class="paging first disabled"><span class="blind">첫페이지</span></a>
-							<a href="#" class="paging prev disabled"><span class="blind">이전</span></a>
-							<a href="#" class="on">1</a>
-							<a href="#">2</a>
-							
-							<a href="#" class="paging next"><span class="blind">다음</span></a>
-							<a href="#" class="paging last"><span class="blind">마지막페이지</span></a>
-						</div>
-					</div>
-				</div>
-			</div>
-            <button type="button" class="btn-close-pop" onclick="layerPopClose('pop04')"><span class="blind">팝업닫기</span></button>
-        </div>
-    </div>
-	<div id="pop05" class="wrap_layer_pop">
-        <div class="layer_pop w830" style="top: 9590px; left: 549px;">
-			<div class="layer_pop_container">
-				<div class="tit">모델명 검색</div>
-				<div class="desc mt30">모델명을 검색하신 후, 등록하실 제품을 선택해주세요.</div>
-				<div class="pop_wrap_section">
-					<div class="search_area">
-						<div class="search_box">
-							<div class="search_wrap">
-								<div class="search_input">
-								  <input type="text" placeholder="모델명을 입력해주세요.">
-								  <button type="button" class="search_del"><i class="ico_s del_s"></i><span class="hidden-txt">삭제</span></button>
-								  <button type="button" class="search_result"><i class="ico_s search_s"></i><span class="hidden-txt">검색</span></button>
-								</div>  
-							</div>
-						</div>
-					</div>
-					<div class="search_result_area">
-						<div class="tit">검색결과 총 <span>0</span>건</div>
-						<div class="list">
-							<div class="no_result">
-								<div>검색 결과가 없습니다.</div>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-            <button type="button" class="btn-close-pop" onclick="layerPopClose('pop05')"><span class="blind">팝업닫기</span></button>
-        </div>
-    </div>
-	<div id="pop06" class="wrap_layer_pop">
-        <div class="layer_pop w500" style="top: 9590px; left: 549px;">
-			<div class="layer_pop_container">
-				<div class="tit tac">전기용품 안전 관리법(법률 7441호)</div>
-				<div class="cs_pop_01">
-						외국에서 살 수 있는 전자제품의 부품은 동일한 기능의<br>
-						제품이라 할지라도 국내 제품의 그것과는 다르다.<br>
-						국내용과 수출용의 제품이 차이가 나는 이유는 각 국가마다<br>
-						전기/전자 제품에 대한 규제사항이 틀리고 그 국가의<br>
-						기후와 환경, 그리고 법적인 문제 등에서<br>
-						요구하는 사항들이 상이하기 때문이다.<br>
-						따라서  반드시 그 국가에 맞는 전기제품을 사용하여야 한다.
-				</div>
-				<div class="cs_pop_02">예) 한국 - 안전인증, 유럽 - CE, 중국 - CCC, 미국 - UL.ETL,<br>캐나다 - CSA/CUL 등</div>
-				
-			</div>
-            <button type="button" class="btn-close-pop" onclick="layerPopClose('pop06')"><span class="blind">팝업닫기</span></button>
-        </div>
-    </div>
-
-	
-	<!-- //레이어팝업 -->
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.foreign_service_tab ul li').click(function(){
+				var foreign_index = $(this).index();
+				$('.foreign_service_tab ul li.on').removeClass('on');
+				$(this).addClass('on');
+				$('.foreign_service_tabcon > div.on').removeClass('on');
+				$('.foreign_service_tabcon > div').eq(foreign_index).addClass('on');
+
+			});
+		});
+	</script>
+
 </body>
 
 </html>

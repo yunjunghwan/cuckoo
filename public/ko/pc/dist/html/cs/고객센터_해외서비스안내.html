@@ -427,7 +427,7 @@
 								<li>해외구입처 안내</li>
 							</ul>
 						</div>
-						<div class="foreign_service_tabcon">
+						<div class="foreign_service_tabcon mt50">
 							<!-- 서비스안내 -->
 							<div class="on">
 								<div class="service_info">
@@ -592,10 +592,11 @@
 												</div>
 											</div>
 										</diV>
+										
 										<div class="view_all_btn tar">
-											<!--<button type="button" class="btn_s radius"><span>All View</span></button>-->
-											
+											<button type="button" class="btn_s radius"><span>All View</span></button>	
 										</div>
+									
 										<div class="world_location_list">
 											<ul>
 												<li class="clear">
@@ -817,10 +818,11 @@
 												</div>
 											</div>
 										</div>
+									
 										<div class="view_all_btn tar">
-											<!--<button type="button" class="btn_s radius"><span>All View</span></button>-->
-											
+											<button type="button" class="btn_s radius"><span>All View</span></button>	
 										</div>
+									
 										<div class="world_location_list">
 											<ul>
 												<li class="clear">
@@ -1037,10 +1039,11 @@
 												</div>
 											</div>
 										</diV>
+										
 										<div class="view_all_btn tar">
-											<!--<button type="button" class="btn_s radius"><span>All View</span></button>-->
-											
+											<button type="button" class="btn_s radius"><span>All View</span></button>	
 										</div>
+								
 										<div class="world_location_list world_location_list_02">
 											<ul>
 												<li class="clear">
@@ -1816,7 +1819,10 @@
 				$('.wrold_wrap_cont > div').eq(map_index).addClass('on');
 			});
 			$('.nation_dot').toggle(function(){
+				$('.nation_dot.on').removeClass('on');
 				$(this).addClass('on');
+				$('.view_all_btn').css('display','block');
+
 			},function(){
 				$(this).removeClass('on');
 			});
