@@ -1,6 +1,8 @@
 .inline{display:inline-block;}
 .bdnone{border:none!important;}
+.bdtnone{border-top:none!important;}
 .w140px{width:140px;}
+.w160px{width:160px;}
 .w180px{width:180px;}
 .w184px{width:184px;}
 .w185px{width:185px;}
@@ -24,6 +26,7 @@
 .mt100{margin-top:100px;}
 .ml20{margin-left:20px;}
 .ml20{margin-left:20px;}
+.mb20{margin-bottom:20px;}
 .mb60{margin-bottom:60px;}
 .pd0{padding:0px;}
 .pt60{padding-top:60px;}
@@ -109,7 +112,7 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .customer_content > .customer_sec01 > div .ars_bottom .ars_table .last_mg0 .bul_list{margin-right:15px;}
 
 .customer_content > .customer_sec01 > div.ars_btn{font-weight:500; width:194px; height:46px; background:url(../../images/customer/button.png); line-height:46px; text-align:center; cursor:pointer; margin:0 auto; font-size:13px; position:relative; top:-2px;}
-.customer_content > .customer_sec01 > div.ars_btn span{background:url(../../images/common/ico_zip.png); background-position:-227px -289px; width:11px; height:5px; display:inline-block; margin-left:4px; position:relative; top:-1px;} 
+.customer_content > .customer_sec01 > div.ars_btn span{background:url(../../images/common/ico_zip.png); background-position:-227px -287px; width:11px; height:5px; display:inline-block; margin-left:4px; position:relative; top:-1px;} 
 .customer_content > .customer_sec01 > div.ars_btn.on span{background-position:-250px -287px;}
 .customer_content .customer_sec02{margin-top:80px; height:360px; background:url(../../images/customer/bg.png);}
 .customer_content .customer_sec02 > .inbox_01 > .tit{ font-size:32px; font-weight:500; padding-top:110px;}
@@ -365,6 +368,7 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .map_search_result_data{margin-top:25px;}
 .map_search_result_data > table tr{border-bottom:1px solid #d5d6d3;}
 .map_search_result_data > table tr td{line-height:80px;}
+.map_search_result_data > table tr td:first-child{font-weight:500;}
 .map_search_result_data > table tr td > .cuckoo_home{padding-left:20px;}
 .map_search_result_data > table tr td > .cuckoo_ele{padding-left:20px;}
 .map_search_result_data > table tr td:nth-child(5){text-align:center;}
@@ -609,6 +613,7 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .world_location_list ul{ border-bottom:1px solid #d5d6d3;}
 .world_location_list.world_location_list_02 ul li > .fl{width:250px;}
 .world_location_list.world_location_list_02 ul li > .fr{width:710px;}
+.view_all_btn{display:none;}
 .view_all_btn > button > span:before{content:''; display:inline-block; width:11px; height:13px; background:url(../../images/customer/c_icon_zip.png); background-position:-407px -81px; margin-right:5px;}
 .view_all_btn > button:hover > span:before{background-position:-448px -81px;}
 .wrold_wrap_cont > div{display:none;}
