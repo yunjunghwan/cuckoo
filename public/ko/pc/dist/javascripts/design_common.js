@@ -384,9 +384,9 @@ function layerPopOpen(obj){// 레이어팝업 열기, obj : 해당팝업 id
     if($('#'+obj).length >= 1){
 		$('#'+obj).addClass('open');
 
-        thisPop.css("top", ((winH - thisPop.outerHeight()) / 2) + $(window).scrollTop());
-        thisPop.css("left", ((winW - thisPop.outerWidth()) / 2) + $(window).scrollLeft());
-
+        //thisPop.css("top", ((winH - thisPop.outerHeight()) / 2) + $(window).scrollTop());
+        //thisPop.css("left", ((winW - thisPop.outerWidth()) / 2) + $(window).scrollLeft());
+        $('html, body').css('overflow','hidden');
         if($('#reviewPhoto').hasClass('open')){
             $('.photo_review').slick('refresh');
         }
@@ -397,6 +397,7 @@ function layerPopOpen(obj){// 레이어팝업 열기, obj : 해당팝업 id
 function layerPopClose(obj){// 레이어팝업 닫기, obj : 해당팝업 id
 
     $('#'+obj).removeClass('open');
+    $('html, body').css('overflow','auto');
 }
 function uiTab(){
 
