@@ -284,7 +284,7 @@ body {position:relative; min-width: 1280px; margin: 0 auto; }
 /* 검색팝업 */
 .search_wrap{padding:0 50px}
 .search_wrap .search_input{position:relative}
-.search_wrap .search_input input[type="text"]{width:100%; height:74px; line-height:74px; padding-right:100px; padding-left:0; border:0; border-bottom:2px solid #272524; font-size:25px; font-weight:700}
+.search_wrap .search_input input[type="text"]{width:100%; height:74px; line-height:74px; padding-right:100px; padding-left:0; border:0; border-bottom:3px solid #272524; font-size:25px; font-weight:700}
 .search_wrap .search_input input[type="text"]::placeholder{color:#c7c8c4; font-size:24px}
 .search_wrap .search_input .search_del{position:absolute; top:28px; right:67px}
 .search_wrap .search_input .search_result{position:absolute; top:28px; right:20px}
@@ -941,21 +941,39 @@ body > .ui-datepicker{display:none}
 .section02 .slick-dots li button{width:15px; height:15px; border-radius:8px; background-color:#c4c5c3}
 .section02 .slick-dots li.slick-active button{background-color:#7a101b}
 .section02 .slick-dots li + li{margin-left:30px}
-.section03{margin-top:120px}
+.section03{position:relative; margin-top:120px}
 .section03 .slick-list{padding-bottom:20px !important}
 .section03 .slick-slide{position:relative}
 .section03 .slick-slide{transform: scale(1, 0.85); -webkit-transition: all .3s;	-moz-transition: all .3s;	-o-transition: all .3s; -ms-transition: all .3s;transition: all .3s;}
 .section03 .slick-slide + .slick-slide{margin-left:120px}
 .section03 .slick-slide.slick-current{transform: scale(1);}
 .section03 .slick-slide .info{position:absolute; bottom:-20px; left:0; right:0; width:780px; padding-top:50px; margin:0 auto; text-align:center; background-color:#fff; font-size:30px }
-.section03 .slick-arrow{display:inline-block; position:absolute; top:50%; margin-top:-25px; width:26px; height:50px; background:url(../../images/common/ico_zip.png) no-repeat; text-indent: -9999px; z-index:10}
+.section03 .slick-arrow{display:inline-block; position:absolute; top:50%; margin-top:-70px; width:26px; height:50px; background:url(../../images/common/ico_zip.png) no-repeat; text-indent: -9999px; z-index:10}
 .section03 .slick-arrow.slick-prev{background-position:-369px -432px; left:50%; margin-left:-590px}
 .section03 .slick-arrow.slick-next{background-position:-430px -432px; right:50%; margin-right:-590px}
 .section03 .slick-dots{margin-top:60px; text-align:center}
 .section03 .slick-dots li button{width:15px; height:15px; border-radius:8px; background-color:#c4c5c3}
 .section03 .slick-dots li.slick-active button{background-color:#7a101b}
 .section03 .slick-dots li + li{margin-left:30px}
+.section03 .pager{position:absolute; bottom:95px; left:0; right:0; width:780px; margin:0 auto; height:60px; font-size:30px; background-color:#fff; text-align:center}
+.section03 .pager li{display:none; padding-top:50px}
+.section03 .pager li:first-child{display:block}
+.section03 .video:before{content:''; display:inline-block; position:absolute; top:50%; left:50%; width:100px; height:100px; margin:-50px 0 0 -50px; background:url(../../images/common/ico_zip.png) no-repeat -528px -91px;}
 .section04{height:502px; margin-top:120px; background:url(../../images/main/bg_section04.png) no-repeat center}
 .section04 .tit_area{margin-bottom:25px; padding-top:98px}
 .section04 .txt{font-size:20px; color:#585856; line-height:28px; text-align:center}
-.section04 .search_box{margin-top:50px; background-color:#fff; border-radius:15px}
+.section04 .search_box{width:980px; margin:50px auto 0 auto; padding:40px 50px 50px 50px; background-color:#fff; border-radius:15px; box-sizing:border-box; -webkit-box-shadow: 0px 30px 20px -5px rgba(220,220,220,1); -moz-box-shadow: 0px 30px 20px -5px rgba(220,220,220,1); box-shadow: 0px 30px 20px -5px rgba(220,220,220,1);}
+.section04 .search_box:after{display:block; content:''; clear:both}
+.section04 .search_box > *{float:left}
+.section04 .search_box > * + *{margin-left:30px}
+.section04 .search_box .select_box{width:200px}
+.section04 .search_box .select_box:nth-child(3){width:300px}
+.section04 .search_box .select_box .tit{padding-left:0; font-size:17px; font-weight:500; border:0; border-bottom:3px solid #312f2d}
+.section04 .search_box .select_box .tit:after{right:0; width:17px; height:10px; background-position:-738px 0}
+.section04 .search_box .btn_m{min-width:90px}
+.section05{margin-top:120px; padding-bottom:120px}
+.section05 .col3_list:after{display:block; content:''; clear:both}
+.section05 .col3_list li{float:left; text-align:center}
+.section05 .col3_list li + li{margin-left:20px}
+.section05 .col3_list li .tit{margin-top:30px; font-size:20px; font-weight:500}
+.section05 .col3_list li .txt{margin-top:20px;}

@@ -550,31 +550,25 @@
             <h2 class="tit_02">쿠쿠채널</h2>
         </div>
         <div class="slider center">
-			<div>
-                <a href="#" class="cont">
-                    <div class="img"><img src="../../images/main/temp_section03_prd01.png" alt=""></div>
-                    <div class="info">간편하고 깔끔하게 일상의 여유를 선사하다</div>
-                </a>
+            <div class="video">
+                <a href="#"><img src="../../images/main/temp_section03_prd01.png" alt=""></a>
 			</div>
             <div>
-                <a href="#" class="cont">
-                    <div class="img"><img src="../../images/main/temp_section03_prd01.png" alt=""></div>
-                    <div class="info">간편하고 깔끔하게 일상의 여유를 선사하다</div>
-                </a>
+                <a href="#"><img src="../../images/main/temp_section03_prd01.png" alt=""></a>
 			</div>
             <div>
-                <a href="#" class="cont">
-                    <div class="img"><img src="../../images/main/temp_section03_prd01.png" alt=""></div>
-                    <div class="info">간편하고 깔끔하게 일상의 여유를 선사하다</div>
-                </a>
+                <a href="#"><img src="../../images/main/temp_section03_prd01.png" alt=""></a>
 			</div>
             <div>
-                <a href="#" class="cont">
-                    <div class="img"><img src="../../images/main/temp_section03_prd01.png" alt=""></div>
-                    <div class="info">간편하고 깔끔하게 일상의 여유를 선사하다</div>
-                </a>
+                <a href="#"><img src="../../images/main/temp_section03_prd01.png" alt=""></a>
 			</div>
 		</div>
+        <ul class="pager">
+            <li><a href="#" data-slick-index="0" class="active">간편하고 깔끔하게 일상의 여유를 선사하다</a></li>
+			<li><a href="#" data-slick-index="1">쿠쿠채널22</a></li>
+			<li><a href="#" data-slick-index="2">쿠쿠채널33</a></li>
+			<li><a href="#" data-slick-index="3">쿠쿠채널44</a></li>
+        </ul>
     </div><!-- //section03 -->
     <div class="section04">
         <div class="inner">
@@ -611,6 +605,36 @@
             </div>
         </div>
     </div><!-- //section04 -->
+    <div class="section05">
+        <div class="inner">
+            <div class="tit_area">
+                <h2 class="tit_02">고객 서비스</h2>
+            </div>
+            <ul class="col3_list">
+                <li>
+                    <a href="#">
+                        <span class="img"><img src="../../images/main/temp_section05_prd01.png" alt="서비스센터"></span>
+                        <p class="tit">서비스 센터</p>
+                        <p class="txt">가까운 서비스 센터에서 빠르게 수리하세요.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="img"><img src="../../images/main/temp_section05_prd02.png" alt="쿠쿠매장"></span>
+                        <p class="tit">쿠쿠매장</p>
+                        <p class="txt">원하는 매장에서 다양한 제품을 직접 보고 구매하세요.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="img"><img src="../../images/main/temp_section05_prd03.png" alt="출장A/S신청"></span>
+                        <p class="tit">출장A/S신청</p>
+                        <p class="txt">전문기사가 직접 방문하여 맞춤 서비스를 제공해 드립니다.</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div><!-- //section05 -->
 </div>
 <!--//mainContainer-->
 
@@ -726,7 +750,11 @@
         infinite: true,
         slidesToShow: 1,
         centerMode: true,
-        variableWidth: true
+        variableWidth: true,
+    });
+    $('.section03 .center').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      $('.pager li').hide();
+      $('.pager li').eq(nextSlide).show();
     });
 </script>
 </body>
