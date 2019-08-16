@@ -73,7 +73,7 @@
 .search_input.search_input02 > button.search_result .ico{background:url(../../images/customer/c_icon_zip.png); background-position:-52px -76px; width:24px; height:24px;}
 .search_result_placeholder input[type="text"]::placeholder{color:#312f2d; font-weight:500;}
 .search_input.search_input02 .ico.del{position:absolute; width:20px; height:20px;}
-.search_input.search_input02 .search_del{top:12px; right:50px; position:absolute;}
+.search_input.search_input02 .search_del{top:10px; right:55px; position:absolute;}
 .event_list_search_result{font-size:20px; font-weight:500;}
 .event_list_search_result span{color:#7a101b;}
 .ir_list .foreign_service_tab ul li{width:33.334%;}
@@ -90,9 +90,10 @@
 .invest_tb tr th{background-color:#f5f5f5; border-top:2px solid #312f2d; padding:20px 0; text-align:center; font-size:13px;}
 .invest_tb tr td{text-align:center; padding:20px 0; border-bottom:1px solid #d5d6d3;}
 .invest_tb tr td:first-child{font-weight:500;}
-
 .invest_tb tr.highlight td{font-weight:500; background:#f5f5f5; border-bottom:none; position:relative; top:-1px;}
 .invest_tb tr.highlight:last-child td{border-bottom:1px solid #d5d6d3;}
+.financial_if > div > .star_list li{display:inline-block; font-size:13px; color:#585856;}
+.financial_if > div > .star_list{margin-top:25px; text-align:right;}
 
 /*terms*/
 .terms_content{border-top:2px solid #312f2d; padding-top:80px;}
