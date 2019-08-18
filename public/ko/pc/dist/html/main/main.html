@@ -726,10 +726,37 @@
         </div><!-- //bottom_arear -->
     </div>
 </footer>
+<!-- 이벤트팝업 -->
+<div id="mainEvent" class="wrap_layer_pop">
+    <div class="layer_pop">
+        <div class="slider single-item">
+			<div class="img">
+                <a href="#"><img src="../../images/main/temp_event01.png" alt=""></a>
+			</div>
+            <div class="img">
+                <a href="#"><img src="../../images/main/temp_event01.png" alt=""></a>
+			</div>
+            <div class="img">
+                <a href="#"><img src="../../images/main/temp_event01.png" alt=""></a>
+			</div>
+		</div>
+        <div class="bottom_area">
+            <span class="left">
+                <input type="checkbox" class="check_m" id="check01_01">
+                <label for="check01_01"><span>다시 보지 않기</span></label>
+            </span>
+            <a href="#" class="pop_close" onclick="layerPopClose('mainEvent')">닫기</a>
+        </div>
+    </div>
+</div>
+<!-- //이벤트팝업 -->
 <!-- //footer -->
 <script src="../../javascripts/plugin.js"></script>
 <script src="../../javascripts/design_common.js"></script>
 <script>
+    $('#mainEvent .single-item').slick({
+        dots: true
+    });
     $('.top_visual .single-item').slick({
         dots: true
     });
