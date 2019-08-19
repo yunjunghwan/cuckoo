@@ -679,11 +679,11 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .customer_top_businesstrip{position:relative;}
 .customer_top_businesstrip li span{font-weight:500; font-size:15px;}
 .customer_top_businesstrip{padding-left:110px; position:relative;}
-.customer_top_businesstrip:before{content:''; display:inline-block; width:72px; height:48px; background:url(../../images/customer/c_icon_zip.png); background-position:-12px -789px; position:absolute; left:0; top:18px;}
+.customer_top_businesstrip:before{content:''; display:inline-block; width:72px; height:48px; background:url(../../images/customer/c_icon_zip.png); background-position:-308px -591px; position:absolute; left:0; top:18px;}
 .customer_top_businesstrip .notice_list li{font-size:13px;}
 .customer_top_businesstrip .notice_list{margin-top:20px; margin-left:10px;}
 .customer_top_businesstrip button{position:absolute; top:63px; left:453px; font-size:13px; padding:8px 12px 8px 12px; font-weight:300; border:1px solid #c7c8c4; border-radius:20px;} 
-
+.customer_top_businesstrip .notice_list li:before{top:5px;}
 /*고객센터 메인 아이콘수정*/
 .consulting_01 .icon{background:url(../../images/customer/c_icon_zip.png); background-position:-219px -581px; left:12px;}
 .consulting_02 .icon{background:url(../../images/customer/c_icon_zip.png); background-position:-112px -581px;}
