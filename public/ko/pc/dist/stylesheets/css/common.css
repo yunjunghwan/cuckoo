@@ -228,7 +228,7 @@ body {position:relative; min-width: 1280px; margin: 0 auto; }
 #header .header_bottom #gnb .all_depth .depth_wrap li:last-child a:after, #header .header_bottom #gnb .all_depth .depth_wrap li:last-child a:before { width: 6px; height: 1px; display: block; content: ""; background-color: #8a8b87; position: absolute; right: -12px; -webkit-transition: background-color 0.2s ease; -moz-transition: background-color 0.2s ease; -o-transition: background-color 0.2s ease; -ms-transition: background-color 0.2s ease; }
 #header .header_bottom #gnb .all_depth .depth_wrap li:last-child a:before { top: 5px; -webkit-transform: rotate(225deg); -moz-transform: rotate(225deg); -ms-transform: rotate(225deg); -o-transform: rotate(225deg); transform: rotate(225deg); }
 #header .header_bottom #gnb .all_depth .depth_wrap li:last-child a:after { top: 9px; -webkit-transform: rotate(135deg); -moz-transform: rotate(135deg); -ms-transform: rotate(135deg); -o-transform: rotate(135deg); transform: rotate(135deg); }
-#header .header_bottom #headerAllBtn { position: absolute; left: 0; top: 17px; display:block; width:24px; height:19px; background:url(../../images/common/ico_zip.png) no-repeat -400px -220px; text-indent: -9999px; z-index:10}
+#header .header_bottom #headerAllBtn { position: absolute; left: 0; top: 17px; display:block; width:24px; height:20px; background:url(../../images/common/ico_zip.png) no-repeat -400px -220px; text-indent: -9999px; z-index:10}
 #header .header_bottom .header_my_menu { position: absolute; top: 26px; right: 0; z-index:10}
 #header .header_bottom .header_my_menu > li { float: left; margin: 0 0 0 40px; }
 #header .header_bottom .header_my_menu > li:first-child { margin: 0; }
@@ -409,6 +409,7 @@ img { vertical-align: top; image-rendering: -webkit-optimize-contrast; }
 .w370{width:370px !important}
 .w380{width:380px !important}
 .top_content > div{width:1180px; margin:0 auto}
+.top_content .search_input{width:580px; margin:0 auto}
 .top_content .location{padding-top:30px}
 .top_content + .content{padding-top:0}
 .top_tit{padding:76px 0 100px 0; /*border-bottom:2px solid #312f2d;*/ text-align:center}
@@ -420,6 +421,7 @@ img { vertical-align: top; image-rendering: -webkit-optimize-contrast; }
 .mt20{margin-top:20px !important}
 .mt30{margin-top:30px !important}
 .mt40{margin-top:40px !important}
+.mt80{margin-top:80px !important}
 .mt120{margin-top:120px !important}
 .mr40{margin-right:40px !important}
 .ml15{margin-left:15px !important}
@@ -513,6 +515,9 @@ a[class^="btn_"] span, button[class^="btn_"] span{vertical-align:middle;}
 .link_arrow{color:#585856}
 .link_arrow span{vertical-align:middle;}
 .btn.mt60.tac button, .btn.mt60.tac a{min-width:140px}
+.btn-top{display:none; position:fixed; left:50%; bottom:50px; width:60px; height:60px; margin-left:640px; background:url(../../images/common/ico_zip.png) no-repeat -644px -210px;}
+.btn-top.fixed{display:block;}
+.btn-top.stop{display:block; position:absolute;}
 /* 공통 아이콘 */
 .ico + span{vertical-align:middle}
 .ico{display:inline-block; vertical-align:middle; background:url(../../images/common/ico_zip.png) no-repeat}
@@ -569,6 +574,10 @@ input[type="checkbox"].check_m:checked + label:before{background-position:-200px
 input[type="checkbox"].check_l + label:before{content:''; min-height:30px; padding-right:6px; background-position:-150px 0}
 input[type="checkbox"].check_l:disabled + label:before{content:''; background-position:-359px -30px}
 input[type="checkbox"].check_l:checked + label:before{background-position:-150px -30px}
+
+input[type="checkbox"].check_circle + label:before{content:''; min-height:28px; padding-left:35px; background-position:-521px -220px;}
+input[type="checkbox"].check_circle:checked + label:before{background-position:-570px -220px;}
+
 .input_right input[type="checkbox"].check_l + label:before{position:absolute; right:0; top:-5px}
 .input_right input[type="checkbox"].check_l + label{position:relative; padding-right:45px}
 
@@ -866,7 +875,9 @@ body > .ui-datepicker{display:none}
 .no_data.no_coupon{margin-top:80px}
 .no_data.no_coupon:before{width:98px; height:63px; background-position:-1061px -148px;}
 .no_data .btn-wrap{margin-top:60px}
-
+.no_data.prd_search{min-height:250px; padding-top:100px}
+.no_data.prd_search .txt{position:absolute; top:0; left:0; right:0; font-size:20px; font-weight:500}
+.no_data.prd_search:before{width:67px; height:67px; background-position:-1403px -143px;}
 /* 약관동의 */
 .agree_box{padding:25px; border:1px solid #c7c8c4; box-sizing:border-box; max-height:188px; overflow-y:auto}
 .agree_box .tit{font-size:13px; font-weight:500}
@@ -899,7 +910,7 @@ body > .ui-datepicker{display:none}
 .top_visual .img a{display:block; width:100%; height:680px; outline:0}
 .top_visual .img a img{position:absolute; top:0; left:0} */
 .top_visual .img a{display:block; position:relative; width:100%; height:680px; outline:0; background-repeat: no-repeat; background-position:center;}
-.top_visual .img a .inner_txt{width:1600px; height:680px; margin:0 auto; padding:250px 200px 0 200px; box-sizing: border-box;}
+.top_visual .img a .inner_txt{width:1180px; height:680px; margin:0 auto; padding-top:250px; box-sizing: border-box;}
 .top_visual .img a .inner_txt .txt1{font-size:48px;}
 .top_visual .img a .inner_txt .txt2{margin-top:15px; font-size:48px; font-weight:500}
 .top_visual .img a .inner_txt .txt3{margin-top:40px; font-size:25px; color:#585856}
@@ -986,6 +997,6 @@ body > .ui-datepicker{display:none}
 #mainEvent .slick-dots li button{width:15px; height:15px; border-radius:8px; background-color:#c4c5c3}
 #mainEvent .slick-dots li.slick-active button{background-color:#7a101b}
 #mainEvent .slick-dots li + li{margin-left:13px}
-#mainEvent .bottom_area{position:relative; padding:40px 30px 25px 25px}
+#mainEvent .bottom_area{position:relative; padding:35px 30px 25px 25px}
 #mainEvent .bottom_area label{font-size:17px}
 #mainEvent .bottom_area .pop_close{position:absolute; top:37px; right:30px; font-size:20px}

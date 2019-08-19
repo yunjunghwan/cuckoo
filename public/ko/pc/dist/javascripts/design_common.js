@@ -28,8 +28,17 @@ $window.load(function () {
         if(!($('#header').hasClass('all_menu_open'))){
             if(winSc > 0){
                 $('#header').addClass('fixed');
+                $('.btn-top').addClass('fixed');
+                console.log(position, $('#footer').offset().top)
+                if(position+850 >= $('#footer').offset().top){
+        			$('.btn-top').addClass('stop');
+
+        		}else{
+                    $('.btn-top').removeClass('stop');
+                }
             }else{
                 $('#header').removeClass('fixed');
+                $('.btn-top').removeClass('fixed');
             }
         }
 
@@ -85,7 +94,10 @@ $window.load(function () {
             }
         }
     });
-
+    $(document).on('click', '.btn-top', function(e){
+        e.preventDefault();
+        $('html, body').stop().animate({scrollTop :0})
+    })
     var $wrap_tooltip = $('.tooltip_wrap'),
         $box_tooltip = $wrap_tooltip.find('.box_tooltip'),
         $ico_tooltip = $box_tooltip.find('.ico.tooltip'),

@@ -83,6 +83,14 @@
 .prd_list.type_simple .img_area{display:block; width:370px; height:370px}
 .prd_list.type_simple .info_area{margin-top:5px}
 .prd_list.type_simple .info_area .bottom_area{padding-top:15px}
+/* 렌탈상품리스트 */
+.prd_list.type_rental .info_area .top_area{padding-bottom:30px; border-bottom:0}
+.prd_list.type_rental .code_no{margin-top:15px; font-size:25px; font-weight:500}
+.prd_list.type_rental .info_area .bottom_area{padding-top:0; }
+.prd_list.type_rental .rental_price{width:100%; margin-top:-25px; padding-bottom:20px; border-bottom:1px solid #d5d6d3}
+.prd_list.type_rental .rental_price:after{display:block; content:''; clear:both}
+.prd_list.type_rental .rental_price dt, .prd_list.type_rental .rental_price dd{float:left; width:50%; margin-top:25px}
+.prd_list.type_rental .rental_price dd{text-align:right; font-size:20px; font-weight:700}
 /* 사용자(리뷰)제품리스트 */
 .user_prd{position:relative; min-height:120px; padding:15px 0 0 150px; box-sizing:border-box;}
 .user_prd .img{position:absolute; left:0; top:0; width:120px; height:120px}

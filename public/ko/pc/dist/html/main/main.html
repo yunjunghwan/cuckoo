@@ -731,18 +731,18 @@
     <div class="layer_pop">
         <div class="slider single-item">
 			<div class="img">
-                <a href="#"><img src="../../images/main/temp_event01.png" alt=""></a>
+                <a href="#"><img src="../../images/main/temp_event01.jpg" alt=""></a>
 			</div>
             <div class="img">
-                <a href="#"><img src="../../images/main/temp_event01.png" alt=""></a>
+                <a href="#"><img src="../../images/main/temp_event02.jpg" alt=""></a>
 			</div>
             <div class="img">
-                <a href="#"><img src="../../images/main/temp_event01.png" alt=""></a>
+                <a href="#"><img src="../../images/main/temp_event01.jpg" alt=""></a>
 			</div>
 		</div>
         <div class="bottom_area">
             <span class="left">
-                <input type="checkbox" class="check_m" id="check01_01">
+                <input type="checkbox" class="check_circle" id="check01_01">
                 <label for="check01_01"><span>다시 보지 않기</span></label>
             </span>
             <a href="#" class="pop_close" onclick="layerPopClose('mainEvent')">닫기</a>
@@ -783,6 +783,9 @@
       $('.pager li').hide();
       $('.pager li').eq(nextSlide).show();
     });
+    $('.pop_close').on('click', function(){
+        $('#mainEvent').hide();
+    })
 </script>
 </body>
 </html>

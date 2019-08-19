@@ -7,6 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <!-- //공통적용헤더정보 -->
+  <link rel="shortcut icon" href="../../images/common/favicon.png">
   <meta name="Description" content="CUCKOO">
   <meta property="og:type" content="website">
   <meta property="og:title" content="CUCKOO">
@@ -19,7 +20,8 @@
   <meta name="robots" content="ALL">
   <link rel="stylesheet" href="../../stylesheets/css/common.css">
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
-    <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
+  <link rel="stylesheet" href="../../stylesheets/css/mypage.css">
+  <link rel="stylesheet" href="../../stylesheets/css/customer.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
 </head>
@@ -374,183 +376,31 @@
   <!-- //header-->
 
   <!--container-->
-    <div id="container" class="mypage nonmember"><!-- 비회원일경우 nonmember 클래스 추가 -->
+    <div id="container">
         <div class="top_content">
             <div class="location">
                 <ul>
                     <li><a href="#">홈</a></li>
-                    <li>나의쇼핑</li>
-                    <li>주문내역</li>
+                    <li>검색</li>
+                    <li>검색결과</li>
                 </ul>
             </div>
             <div class="top_tit">
-                <h2 class="tit_02">나의쇼핑</h2>
+                <div class="search_wrap">
+                    <div class="search_input">
+                      <input type="text" placeholder="검색어를 입력해 주세요.">
+                      <button type="button" class="search_del"><i class="ico del"></i><span class="hidden-txt">삭제</span></button>
+                      <button type="button" class="search_result"><i class="ico search"></i><span class="hidden-txt">검색</span></button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="content type_lnb"><!-- [P] lnb있을시 type_lnb클래스 추가 -->
-            <div class="lnb">
-                <ul class="depth01">
-                    <li class="depth02_wrap"><!-- [P] 하위뎁스있을시 depth02_wrap클래스 추가 -->
-                        <ul class="depth02">
-                            <li><a href="#" class="on">주문내역</a></li><!-- 활성화시 해당 a태그에 on클래스 추가 -->
-                            <li><a href="#">취소/반품/교환 내역</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div><!-- //lnb -->
-            <div class="inner_content">
-                <div class="section_wrap">
-                    <div class="top_area">
-                        <h3 class="tit_03">교환요청 상세내역</h3>
-                    </div>
-                    <div class="top_step">
-                        <ul>
-                            <li>
-                                <p class="num">01</p>
-                                <p class="txt">교환제품선택</p>
-                            </li>
-                            <li>
-                                <p class="num">02</p>
-                                <p class="txt">교환요청</p>
-                            </li>
-                            <li>
-                                <p class="num">03</p>
-                                <p class="txt">교환요청승인</p>
-                            </li>
-                            <li class="on"><!-- 활성화시 on클래스 추가 -->
-                                <p class="num">04</p>
-                                <p class="txt">교환처리중</p>
-                            </li>
-                            <li>
-                                <p class="num">05</p>
-                                <p class="txt">교환완료</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <ul class="bul_list type_s">
-                        <li>제품회수 후 제품 상태에 따라 교환이 불가할 수 있습니다.</li>
-                        <li>교환 시 고객사유일 경우 배송비가 추가 청구 될 수 있습니다.</li>
-                    </ul>
-                    <div class="tbl tbl_order">
-                        <div class="order_info_wrap">
-                            <ul class="order_info">
-                                <li>주문일자<span class="bold">2019-09-30</span></li>
-                                <li>주문번호 <span class="bold"><a href="#">20190511-423127</a></span></li>
-                            </ul>
-                        </div>
-                        <table>
-                            <caption>장바구니</caption>
-                            <colgroup>
-                                <col style="width:20%">
-                                <col style="width:auto">
-                                <col style="width:15%;">
-                                <col style="width:15%;">
-                                <col style="width:15%;">
-                                <col style="width:15%;">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <td><div class="img"><img src="../../images/order/temp_prd_140x140.png" alt=""></div></td>
-                                    <td class="txt_left prd_info">
-                                        <p class="category">IH전기압력밥솥</p>
-                                        <p class="name">CRP-KHT1020FD</p>
-                                        <p class="discount">608,000원</p>
-                                        <p class="price">577,600원 <span class="point01">10%</span></p>
-                                    </td>
-                                    <td><span class="bold">1</span></td>
-                                    <td><span class="bold price">577,600원</span></td>
-                                    <td>
-                                        <p class="bold">교환요청</p>
-                                        <p class="mt10">2019-09-10</p>
-                                    </td>
-                                    <td>
-                                        <p class="bold">교환처리중</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><div class="img"><img src="../../images/order/temp_prd_140x140.png" alt=""></div></td>
-                                    <td class="txt_left prd_info">
-                                        <p class="category">내솥</p>
-                                        <p class="name">CRP-KHT1020FD</p>
-                                        <p class="discount"><!-- [D] 값이없어도 태그유지 --></p>
-                                        <p class="price">577,600원</p>
-                                        <p class="option">옵션 : CRP-D105SX</p>
-                                    </td>
-                                    <td><span class="bold">1</span></td>
-                                    <td><span class="bold price">577,600원</span></td>
-                                    <td>
-                                        <p class="bold">교환요청</p>
-                                        <p class="mt10">2019-09-10</p>
-                                    </td>
-                                    <td class="btn-wrap">
-                                        <p class="bold">교환완료</p>
-                                        <p class="mt10">2019-09-10</p>
-                                        <p class="delivery">CJ대한통운</p>
-                                        <p class="mt10"><a href="#" class="link_num">61775423695</a></p>
-                                    </td>
-                                </tr>
-                                <!-- 반품불가메시지 -->
-                                <tr class="notice_message">
-                                    <td colspan="6" class="txt_right"><i class="ico notice3"></i><span class="point03"><span class="bold">반품불가 사유 :</span>제품훼손으로 반품이 불가합니다.</span></td>
-                                </tr>
-                                <!-- //반품불가메시지 -->
-                            </tbody>
-                        </table>
-                    </div><!-- tbl_order -->
-                </div><!-- section_wrap -->
-                <div class="section_wrap">
-                    <div class="top_area type_sub"><!-- [P]하위뎁스일경우 type_sub추가 -->
-                        <h4 class="tit_04">결제정보</h4>
-                        <span class="right">결제수단 : 신용/체크카드(신한)</span>
-                    </div>
-                    <div class="section">
-                        <div class="total_box">
-                            <div class="col">
-                                <p class="tit">총 제품 금액</p>
-                                <p class="txt">42,000원</p>
-                            </div>
-                            <div class="col minus">
-                                <p class="tit">제품 할인</p>
-                                <p class="txt">2,000원</p>
-                            </div>
-                            <div class="col total">
-                                <p class="tit">최종 결제 금액</p>
-                                <p class="txt">40,000원</p>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- section_wrap -->
-                <div class="section_wrap">
-                    <div class="top_area type_sub"><!-- [P]하위뎁스일경우 type_sub추가 -->
-                        <h4 class="tit_04">교환정보</h4>
-                    </div>
-                    <div class="section form_wrap type_view">
-                        <table>
-                            <caption>교환정보</caption>
-                            <colgroup>
-                                <col style="width:150px;">
-                                <col style="width:auto">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">교환사유</th>
-                                    <td class="txt_area">구매의사없음</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">상세사유</th>
-                                    <td class="txt_area">상세사유 없음</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">수거방법선택</th>
-                                    <td class="txt_area"><span class="bold">직접배송</span> <span class="font13 ml10">편의점택배</span> <a href="#" class="link_num verT">61775423695</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div><!-- section_wrap -->
-
-            </div><!-- //inner_content -->
-        </div><!-- //content -->
+        <div class="content">
+            <div class="no_data prd_search">
+                <p class="txt"><strong>'커피머신'</strong>검색결과 총0건</p>
+                <p class="txt1">검색어에 맞는 제품이 없습니다.</p>
+            </div>
+        </div>
         <button type="button" class="btn-top"><span class="blind">TOP</span></button>
     </div>
     <!--//container-->
@@ -600,8 +450,6 @@
                     </li>
                 </ul>
                 <div class="right_area">
-                    <a href="#">이용약관</a>
-                    <a href="#" class="point02">개인정보취급방침</a>
                     <div id="familySite" class="footer_select">
                         <a href="#" class="tit">패밀리 사이트</a>
                         <div class="hidden">
@@ -612,6 +460,16 @@
                             </ul>
                         </div>
                     </div>
+                    <a href="#">이용약관</a>
+                    <a href="#" class="point02">개인정보취급방침</a>
+                </div>
+                <div class="sns_wrap">
+                    <ul>
+                        <li class="facebook"><a href="#"><span class="blind">페이스북</span></a></li>
+                        <li class="twiter"><a href="#"><span class="blind">트위터</span></a></li>
+                        <li class="instar"><a href="#"><span class="blind">인스타그램</span></a></li>
+                        <li class="youtube"><a href="#"><span class="blind">유투브</span></a></li>
+                    </ul>
                 </div>
             </div><!-- //top_arear -->
             <div class="bottom_area">
@@ -631,14 +489,6 @@
                     <copyright>COPYRIGHTⓒCUCKOO HOMESYS ALL RIGHTS RESERVED</copyright>
                 </div>
                 <p class="desc">쿠쿠홀딩스/전자/홈시스 사이트의 콘텐츠는 저작권법의 보호를 받는 바 무단 전재, 복사, 배포를 금합니다.</p>
-                <div class="sns_wrap">
-                    <ul>
-                        <li class="facebook"><a href="#"><span class="blind">페이스북</span></a></li>
-                        <li class="twiter"><a href="#"><span class="blind">트위터</span></a></li>
-                        <li class="instar"><a href="#"><span class="blind">인스타그램</span></a></li>
-                        <li class="youtube"><a href="#"><span class="blind">유투브</span></a></li>
-                    </ul>
-                </div>
             </div><!-- //bottom_arear -->
         </div>
     </footer>
