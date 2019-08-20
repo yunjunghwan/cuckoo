@@ -29,7 +29,6 @@ $window.load(function () {
             if(winSc > 0){
                 $('#header').addClass('fixed');
                 $('.btn-top').addClass('fixed');
-                console.log(position, $('#footer').offset().top)
                 if(position+850 >= $('#footer').offset().top){
         			$('.btn-top').addClass('stop');
 

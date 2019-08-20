@@ -57,6 +57,7 @@
 .prd_list > ul > li{float:left; position:relative; width:338px; margin:40px 0 0 20px; padding:20px; border:1px solid transparent; box-sizing:content-box; -webkit-transtion:.3s ease; -moz-transtion:.3s ease; transition:.3s ease;}
 .prd_list > ul > li:hover{border:1px solid #302f2b}
 .prd_list > ul > li .input_right{display:none; position:absolute; top:330px; right:20px; font-size:15px; transition:0.3s ease}
+.prd_list > ul > li > a{display:inline-block; width:100%; height:100%}
 .prd_list .flag_wrap{position:absolute; top:20px; right:20px}
 .prd_list .info_area{display:block; margin-top:18px}
 .prd_list .info_area .top_area{display:block; padding-bottom:20px; border-bottom:1px solid #d5d6d1}
@@ -74,6 +75,7 @@
 .prd_list.type_banner:after{display:block; content:''; clear:both}
 .prd_list.type_banner .banner_area{float:left; width:740px; margin:0 40px 0 20px}
 .prd_list.type_banner .banner_area img{width:740px; height:554px}
+.prd_list.type_banner.type_rental .banner_area img{width:740px; height:661px}
 .prd_list.type_banner > ul{float:left}
 .prd_list.comparsion_layer_open > ul > li > a{pointer-events:none}
 .prd_list.comparsion_layer_open > ul > li .input_right{display:block;}
@@ -91,6 +93,9 @@
 .prd_list.type_rental .rental_price:after{display:block; content:''; clear:both}
 .prd_list.type_rental .rental_price dt, .prd_list.type_rental .rental_price dd{float:left; width:50%; margin-top:25px}
 .prd_list.type_rental .rental_price dd{text-align:right; font-size:20px; font-weight:700}
+.prd_list.type_rental .keyword_wrap{display:inline-block; margin-top:20px}
+.prd_list.type_rental .keyword{display:inline-block; padding:7px 10px; font-size:12px; color:#585856; border:1px solid #c7c8c4; border-radius:15px; box-sizing:border-box;}
+.prd_rental .prd_list.type_rental > ul > li{min-height:613px}
 /* 사용자(리뷰)제품리스트 */
 .user_prd{position:relative; min-height:120px; padding:15px 0 0 150px; box-sizing:border-box;}
 .user_prd .img{position:absolute; left:0; top:0; width:120px; height:120px}
@@ -113,8 +118,8 @@
 .comparison_wrap .prd_area ul:after{display:block; content:''; clear:both}
 .comparison_wrap .prd_area ul li{float:left; position:relative; min-width:110px; max-width:120px}
 .comparison_wrap .prd_area ul li + li{margin-left:100px}
-.comparison_wrap .prd_area ul li .img{display:block; position:relative; width:100px; height:100px; margin:0 auto; background:url(../../images/common/temp_more.png) no-repeat center}
-.comparison_wrap .prd_area ul li .name{margin-top:15px; font-size:13px; font-weight:500}
+.comparison_wrap .prd_area ul li .img{display:block; position:relative; width:110px; height:110px; margin:0 auto; background:url(../../images/common/temp_more.png) no-repeat center}
+.comparison_wrap .prd_area ul li .name{margin-top:10px; font-size:13px; font-weight:500}
 .comparison_wrap .prd_area ul li .btn-del{display:none; position:absolute; top:0; right:0}
 .comparison_wrap .prd_area ul li.on .img{background:none}
 .comparison_wrap .prd_area ul li.on .btn-del{display:block}
@@ -127,7 +132,8 @@
 .comparison_wrap.open .btn-layer{-webkit-box-shadow:none; -moz-box-shadow:none; box-shadow:none}
 
 /* 제품비교 레이어팝업 */
-#prdComparison .container_prd{padding-bottom:35px}
+#prdComparison .container_prd{padding:0 0 35px 0}
+#prdComparison .container_prd .btn_s{width:90px}
 #prdComparison .container_prd div{margin-top:5px}
 #prdComparison .tbl.type_border tr:first-child th, #prdComparison .tbl.type_border tr:first-child td{border-bottom:0}
 /* 상품상세 */
@@ -157,13 +163,13 @@
 .prd_view .prd_info .sns_area .strong{font-weight:700; text-decoration:underline;}
 .prd_view .prd_info .sns_wrap{position:absolute; top:0; right:0;}
 .prd_view .prd_info .body_area{border-top:1px solid #312f2d; border-bottom:1px solid #312f2d}
-.prd_view .prd_info .body_area ul{padding:30px 0}
-.prd_view .prd_info .body_area ul + ul{border-top:1px solid #d5d6d3}
-.prd_view .prd_info .body_area li + li{margin-top:20px}
-.prd_view .prd_info .body_area li .tit, .prd_view .prd_info .body_area li .txt{display:inline-block; vertical-align:middle; box-sizing: border-box;}
-.prd_view .prd_info .body_area li .tit{width:80px; margin-right:17px; font-weight:500; }
-.prd_view .prd_info .body_area li .txt{width:380px;}
-.prd_view .prd_info .body_area .price{font-size:24px; font-weight:700}
+.prd_view .prd_info .body_area .price_info{padding:30px 0}
+.prd_view .prd_info .body_area .price_info + .price_info{border-top:1px solid #d5d6d3}
+.prd_view .prd_info .body_area .price_info li + li{margin-top:20px}
+.prd_view .prd_info .body_area .price_info li .tit, .prd_view .prd_info .body_area .price_info li .txt{display:inline-block; vertical-align:middle; box-sizing: border-box;}
+.prd_view .prd_info .body_area .price_info li .tit{width:80px; margin-right:17px; font-weight:500; }
+.prd_view .prd_info .body_area .price_info li .txt{width:380px;}
+.prd_view .prd_info .body_area .price{font-size:24px; font-weight:700; vertical-align:middle; letter-spacing:-1px}
 .prd_view .prd_info .body_area .price .point01{margin-left:10px}
 .prd_view .prd_info .bottom_area .select_box .tit{border:0; border-bottom:1px solid #312f2d}
 .prd_view .prd_info .bottom_area .select_box .hidden{top:49px}
@@ -180,6 +186,19 @@
 .prd_view .prd_info .option_view .box + .box{border-top:1px dotted #999a97}
 .prd_view .prd_info .option_view .box .price{margin-right:18px; font-size:20px; color:#272524}
 .prd_view .prd_info .option_view .box .price_area{position:absolute; right:20px; bottom:20px;}
+/* 렌탈 제품상세 */
+.prd_rental.prd_view .prd_info .body_area .price_info li .tit{width:115px}
+.prd_rental.prd_view .prd_info .body_area .price_info li .txt{width:345px}
+.prd_rental.prd_view .prd_info .body_area{border-top:0; border-bottom:0}
+.prd_rental.prd_view .prd_info .tab.type_box .tab_btn li{width:50%; height:52px; margin-left:-1px; line-height:52px; text-align:center}
+.prd_rental.prd_view .prd_info .tab.type_box .tab_btn li a{border:1px solid #c7c8c4; z-index:10}
+.prd_rental.prd_view .prd_info .tab.type_box .tab_btn li.on a{border:2px solid #312f2d; z-index:20}
+.prd_rental.prd_view .prd_info .body_area .price_info .btn_ss{font-size:12px; color:#585856}
+.prd_rental.prd_view .prd_info .body_area .price{margin-right:17px}
+.prd_rental.prd_view .prd_info .body_area .price_info .desc{font-size:13px; color:#585856}
+.prd_rental.prd_view .prd_info .body_area .price_info .desc > *{vertical-align:middle;}
+.prd_rental.prd_view .prd_info .body_area .price_info .desc .link{display:inline-block; padding-bottom:2px; margin-left:10px; border-bottom:1px solid #312f2d; font-weight:500; color:#312f2d}
+
 .prd_banner{margin-top:140px; text-align:center}
 .prd_banner .tit{font-size:25px; font-weight:500; vertical-align:middle}
 .prd_banner .tit span{vertical-align:middle}

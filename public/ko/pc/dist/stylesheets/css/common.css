@@ -304,12 +304,15 @@ body {position:relative; min-width: 1280px; margin: 0 auto; }
 
 /* 푸터 */
 #footer{position:relative; background-color:#312f2d}
-#footer .inner{max-width:1590px; min-width:1180px; margin:0 auto; padding:80px 50px}
+#footer .inner{width:1180px; margin:0 auto; padding:80px 0; box-sizing: border-box;}
 #footer .top_arear{position:relative;}
 #footer .footer_list:after{display:block; content:''; clear:both}
-#footer .footer_list > li{float:left; width:268px; color:#8a8b87}
+#footer .footer_list > li{float:left; color:#8a8b87}
 #footer .footer_list .tit{margin-bottom:30px; font-weight:500; color:#e7e7e7}
 #footer .footer_list li a{color:#8a8b87; letter-spacing:-1px}
+#footer .footer_list .list01{width:318px}
+#footer .footer_list .list02{width:235px}
+#footer .footer_list .list01 li{font-size:17px; font-weight:500; color:#d5d6d3}
 #footer .footer_list .list01 li + li{margin-top:18px}
 #footer .footer_list .list01 .time{margin-top:20px; font-size:13px; line-height:24px; color:#888887}
 #footer .footer_list .list02 ul + ul{margin-top:27px}
@@ -342,14 +345,14 @@ body {position:relative; min-width: 1280px; margin: 0 auto; }
 #footer .sns_wrap ul:after{display:block; content:''; clear:both}
 #footer .sns_wrap ul li{float:left}
 #footer .sns_wrap ul li + li{margin-left:30px}
-#footer .sns_wrap a{display:inline-block; background:url(../../images/common/img_ico_zip.png) no-repeat}
+#footer .sns_wrap a{display:block; background:url(../../images/common/img_ico_zip.png) no-repeat}
 #footer .sns_wrap ul li.facebook a{width:14px; height:24px; background-position:0 -805px}
 #footer .sns_wrap ul li.facebook a:hover{background-position:0 -869px}
-#footer .sns_wrap ul li.twiter a{width:27px; height:22px; background-position:-53px -806px}
+#footer .sns_wrap ul li.twiter a{width:27px; height:22px; margin-top:2px; background-position:-53px -806px}
 #footer .sns_wrap ul li.twiter a:hover{background-position:-53px -870px}
-#footer .sns_wrap ul li.instar a{width:25px; height:24px; background-position:-119px -805px}
+#footer .sns_wrap ul li.instar a{width:25px; height:24px; margin-top:1px; background-position:-119px -805px}
 #footer .sns_wrap ul li.instar a:hover{background-position:-119px -869px}
-#footer .sns_wrap ul li.youtube a{width:24px; height:17px; background-position:-182px -809px}
+#footer .sns_wrap ul li.youtube a{width:24px; height:17px; margin-top:4px; background-position:-182px -809px}
 #footer .sns_wrap ul li.youtube a:hover{background-position:-182px -873px}
 #footer .sns_wrap > *{margin-right:0}
 /*
@@ -455,8 +458,8 @@ h5[class^="tit_"] + a, h5[class^="tit_"] + button{margin-left:7px}
 /* 공통 탭 */
 .tab{}
 .tab .tab_btn:after{display:block; content:''; clear:both}
-.tab .tab_btn li{float:left}
-.tab .tab_btn li a{display:inline-block; width:100%; height:100%; color:#585856;}
+.tab .tab_btn li{float:left; }
+.tab .tab_btn li a{display:inline-block; position:relative; width:100%; height:100%; color:#585856; box-sizing:border-box;}
 .tab .tab_btn li.on a{border-bottom:3px solid #312f2d; color:#312f2d; font-weight:500}
 .tab.type_s li + li{margin-left:30px}
 .tab.type_s li a{padding-bottom:10px; font-size:15px}
@@ -468,6 +471,7 @@ h5[class^="tit_"] + a, h5[class^="tit_"] + button{margin-left:7px}
 .date_tab .tab_btn li:first-child a{border-left:1px solid #c7c8c4;}
 .date_tab .tab_btn li.on a{margin-left:-1px; border:1px solid #312f2d}
 .date_tab .tab_btn li:first-child.on a{/*margin-left:0*/}
+
 /* 공통 포인트컬러 */
 .point01{color:#7a101b !important}
 .point02{color:#ffffff !important}
@@ -550,6 +554,7 @@ a[class^="btn_"] span, button[class^="btn_"] span{vertical-align:middle;}
 .ico.cart{width:18px; height:21px; margin-right:13px; background-position:-437px -303px;}
 .ico.btnArrow{width:5px; height:9px; margin-left:10px; background-position:-474px -308px;}
 .ico.btnArrow2{width:5px; height:10px; margin-left:10px; background-position:-288px -350px;}
+.ico.btnArrow3{width:5px; height:9px; margin-left:8px; background-position:-373px -317px;}
 .ico.btnLink{width:7px; height:12px; margin-left:10px; background-position:-281px -284px;}
 .ico.canlender{width:18px; height:17px; margin-right:10px; background-position:0 -345px;}
 .ico.complate{width:12px; height:9px; margin-right:10px; background-position:-33px -348px;}
@@ -902,6 +907,8 @@ body > .ui-datepicker{display:none}
 .inner_content{float:left; width:980px}
 
 /* 메인 */
+#header.main_header{border-bottom:0}
+#header.main_header.fixed{border-bottom:1px solid #c7c8c4;}
 .main{min-width:1600px}
 .main .tit_area{margin-bottom:50px; text-align:center}
 .main .inner{position:relative; width:1180px; margin:0 auto}
