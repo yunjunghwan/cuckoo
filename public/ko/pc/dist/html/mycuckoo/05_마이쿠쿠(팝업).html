@@ -582,7 +582,7 @@
                                     <th scope="row"><label for="input01_02">이전 주소</label></th>
                                     <td>
                                         <div class="input-btn-right w305">
-                                            <input type="text" style="width:204px"><button type="button" class="btn_m">주소찾기</button>
+                                            <input type="text" style="width:185px"><button type="button" class="btn_m m110">주소찾기</button>
                                         </div>
                                         <input type="text" style="width:100%; margin-top:10px">
                                         <input type="text" placeholder="나머지 주소를 입력해주세요." style="width:100%; margin-top:10px">
@@ -593,7 +593,7 @@
                     </div>
                 </div>
             </div>
-            <div class="btn-wrap typeA"><!-- [P] typeA : margin-top:40 -->
+            <div class="btn-wrap">
                 <button type="button" class="btn_l radius">취소</button>
                 <button type="button" class="btn_l radius common">이전설치 요청</button>
             </div>
@@ -885,7 +885,8 @@
     <div id="searchModel" class="wrap_layer_pop">
         <div class="layer_pop w830">
 			<div class="layer_pop_container">
-				<div class="tit">모델명검색</div>
+                <div class="tit">모델명검색</div>
+                <div class="top_txt">모델명을 검색하신 후 , 등록하실 제품을 선택해주세요.</div>
 				<div class="pop_wrap_section">
 					<div class="search_area">
 						<div class="search_box">
@@ -979,6 +980,7 @@
         <div class="layer_pop w830">
 			<div class="layer_pop_container">
 				<div class="tit">모델명검색</div>
+                <div class="top_txt">모델명을 검색하신 후 , 등록하실 제품을 선택해주세요.</div>
 				<div class="pop_wrap_section">
 					<div class="search_area">
 						<div class="search_box">
@@ -1038,7 +1040,7 @@
                         </div>
                     </div>
                     <div class="body_area">
-                        <ul>
+                        <ul class="price_info">
                             <li>
                                 <span class="tit">포인트</span>
                                 <span class="txt"><strong>13,500P</strong>2% 추가적립</span>
@@ -1052,7 +1054,7 @@
                                 <span class="txt">6개월</span>
                             </li>
                         </ul>
-                        <ul>
+                        <ul class="price_info">
                             <li>
                                 <span class="tit">정상가</span>
                                 <span class="txt"><span class="discount">57,000원</span></span>
@@ -1113,7 +1115,7 @@
                         </div>
                     </div>
                     <div class="body_area">
-                        <ul>
+                        <ul class="price_info">
                             <li>
                                 <span class="tit">포인트</span>
                                 <span class="txt"><strong>13,500P</strong>2% 추가적립</span>
@@ -1127,7 +1129,7 @@
                                 <span class="txt">6개월</span>
                             </li>
                         </ul>
-                        <ul>
+                        <ul class="price_info">
                             <li>
                                 <span class="tit">정상가</span>
                                 <span class="txt"><span class="discount">57,000원</span></span>
@@ -1226,96 +1228,87 @@
         <div class="layer_pop w830px">
 			<div class="layer_pop_container">
 				<div class="dot_tit tit">예약 신청 내용을 다시 한번 확인해주세요.</div>
-				<div class="pop_wrap_section">
-					<div class="pop_in_section">
-						<div class="dot_tit tit">제품정보</div>
-						<div class="desc">
-							<table class="service_price_tb">
-								<colgroup>
-									<col style="width:160px;">
-									<col style="width:auto">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th scope="row">제품군</th>
-										<td>밥솥 > 트윈프레셔</td>
-									</tr>
-									<tr>
-										<th scope="row">모델명</th>
-										<td>-</td>
-									</tr>
-									<tr>
-										<th scope="row">고장증상</th>
-										<td>무압으로 밥 할 때 밥이 질게 됨</td>
-									</tr>
-                                    <tr>
-										<th scope="row">구입시기</th>
-										<td>1개월 이내</td>
-									</tr>
-								</tbody>
-							</table>
+				<div class="pop_wrap_section customer_inbox">
+                    <h3 class="tit_04"><span class="num">01</span>제품정보</h3>
+                    <div class="tbl type_border type_border_02">
+                        <table>
+                            <caption>제품정보</caption>
+                            <colgroup>
+                                <col style="width:170px">
+                                <col style="width:auto">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">제품군</th>
+                                    <td>밥솥 &gt; 트윈프레셔</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">모델명</th>
+                                    <td>CRP-HSXB0630FB</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">고장증상</th>
+                                    <td>무압으로 밥 할 때 밥이 질게 됨</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">구입시기</th>
+                                    <td>1개월 이내</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3 class="tit_04"><span class="num">02</span>서비스 받으시는 분 정보</h3>
+                    <div class="tbl type_border type_border_02">
+						<table>
+							<caption>서비스 받으시는 분 정보</caption>
+							<colgroup>
+								<col style="width:170px">
+								<col style="width:auto">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">고객명</th>
+									<td>박재범</td>
+								</tr>
+								<tr>
+									<th scope="row">주소</th>
+									<td>(06098) 서울특별시 강남구 논현동 2동 언주로 652 쿠쿠빌딩 5층 김쿠쿠</td>
+								</tr>
+								<tr>
+									<th scope="row">휴대폰번호</th>
+									<td>010-1234-1234</td>
+								</tr>
+								<tr>
+									<th scope="row">추가연락처</th>
+									<td>010-1234-1234</td>
+								</tr>
+                                <tr>
+									<th scope="row">이메일</th>
+									<td>cuckoo123@cuckoo.com</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+                    <h3 class="tit_04"><span class="num">03</span>예약정보</h3>
+                    <div class="visit_status">
+						<div>
+							<div class="tit">서비스 기사명</div>
+							<div class="desc">오진오 기사</div>
+						</div>
+						<div>
+							<div class="tit">소속지점</div>
+							<div class="desc">영등포점</div>
+						</div>
+						<div>
+							<div class="tit">방문 예정일</div>
+							<div class="desc gotham">05-24 13:00</div>
 						</div>
 					</div>
-					<div class="pop_in_section">
-						<div class="dot_tit tit">서비스 받으시는 분 정보</div>
-						<div class="desc">
-							<table class="service_price_tb">
-								<colgroup>
-									<col style="width:160px;">
-									<col style="width:auto">
-								</colgroup>
-								<tbody>
-									<tr>
-										<th scope="row">고객명</th>
-										<td>박재범</td>
-									</tr>
-									<tr>
-										<th scope="row">주소</th>
-										<td>(06098)서울특별시 강남구 논현2동 언주로 652</td>
-									</tr>
-                                    <tr>
-										<th scope="row">휴대폰 번호</th>
-										<td>010-1234-1234</td>
-									</tr>
-                                    <tr>
-										<th scope="row">추가연락처</th>
-										<td>-</td>
-									</tr>
-                                    <tr>
-										<th scope="row">이메일</th>
-										<td>-</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-					<div class="pop_in_section">
-						<div class="dot_tit tit">예약정보</div>
-						<div class="desc">
-							<table class="service_price_tb">
-								<colgroup>
-									<col style="width:160px;">
-									<col style="width:auto">
-								</colgroup>
-								<tbody>
-									<tr>
-                                        <th scope="row">서비스기사명</th>
-										<td>오진오</td>
-									</tr>
-                                    <tr>
-                                        <th scope="row">소속</th>
-										<td>쿠쿠영등포점</td>
-									</tr>
-                                    <tr>
-                                        <th scope="row">방문예정일</th>
-										<td>2019-05-24 13:00</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-
 				</div>
+			</div>
+            <div class="btn-wrap">
+				<button type="button" class="btn_l radius">수정하기</button>
+				<button type="button" class="btn_l radius common">접수하기</button>
 			</div>
             <button type="button" class="btn-close-pop" onclick="layerPopClose('reservationOk')"><span class="blind">팝업닫기</span></button>
         </div>
@@ -1329,6 +1322,17 @@
                     <h2 class="tit_03">세금계산서 신청</h2>
                 </div>
                 <div class="section">
+                    <div class="prd_tax">
+                        <div class="img"><img src="../../images/common/temp_prd_120x120.png" alt=""></div>
+                        <div class="info_wrap">
+                            <p class="category">정수기</p>
+                            <ul class="info">
+                                <li class="name">CP-TS011S</li>
+                                <li class="count">수량: <strong>1</strong>개</li>
+                            </ul>
+                            <p class="desc">계약번호 : 20190701-12345678</p>
+                        </div>
+                    </div>
                     <div class="form_wrap">
                         <table>
                             <caption>세금계산서 신청</caption>
@@ -1411,7 +1415,7 @@
                     <li>기재된 이메일 주소로 세금계산서가 발행됩니다. <br>다시 한 번 이메일 주소와 연락처 정보를 확인해 주시기 바랍니다.</li>
                 </ul>
             </div>
-            <div class="btn-wrap typeA"><!-- [P] typeA : margin-top:40 -->
+            <div class="btn-wrap">
                 <button type="button" class="btn_l radius common">신청하기</button>
             </div>
             <button type="button" class="btn-close-pop" onclick="layerPopClose('taxRequest')"><span class="blind">팝업닫기</span></button>

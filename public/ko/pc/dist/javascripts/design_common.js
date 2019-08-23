@@ -70,6 +70,7 @@ $window.load(function () {
     object();
     comparisonLayer();
     uiTab();
+    uiAcodian();
     $(document).on('click', '.select_box > a', function(e){
         e.preventDefault();
         if(!($(this).parent().hasClass('disabled'))){
@@ -307,12 +308,12 @@ function layout() {
             TweenMax.to($familySite, .2, {height:$familySiteH});
             $familySite.addClass("on");
         } else {
-            TweenMax.to($familySite, .2, {height: 46});
+            TweenMax.to($familySite, .2, {height: 48});
             $familySite.removeClass("on");
         }
     });
     $familySite.mouseleave(function () {
-        TweenMax.to($familySite, .2, {height: 46});
+        TweenMax.to($familySite, .2, {height: 48});
         $familySite.removeClass("on");
     });
     if($('.datepicker_input').length > 0){
@@ -323,6 +324,7 @@ function layout() {
             monthNames: ['01','02','03','04','05','06','07','08','09','10','11','12'], //달력의 월 부분 Tooltip 텍스트 //달력의 월 부분 텍스트
             dayNamesMin: ['일','월','화','수','목','금','토'], //달력의 요일 부분 텍스트
         });
+        $(".datepicker_input").datepicker().datepicker("setDate", new Date());
     }
 
 
@@ -423,6 +425,17 @@ function uiTab(){
         $('.tab_cont_wrap').find('.cont').eq(index).show();
 
     });
+}
+function uiAcodian(){
+    $(document).on('click', '.ui_acodian .btn-view', function(e){
+        e.preventDefault();
+        if(!($(this).parents('.ui_acodian').hasClass('on'))){
+            $(this).parents('.ui_acodian').addClass('on');
+        }else{
+            $(this).parents('.ui_acodian').removeClass('on');
+        }
+
+    })
 }
 var uploadFile = $('.fileBox2 .uploadBtn');
 uploadFile.on('change', function(){
