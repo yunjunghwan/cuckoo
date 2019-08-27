@@ -53,6 +53,7 @@
 .w630px{width:630px;}
 .w830px{width:830px;}
 .mw140px{min-width:140px;}
+.mw180px{min-width:180px;}
 .bgwhite{background-color:#fff;}
 .clear:after{clear:both; display:block; content:'';}
 .fl{float:left;}
@@ -71,7 +72,7 @@
 .pd0{padding:0px;}
 .pdl30{padding-left:30px!important;}
 .pt60{padding-top:60px;}
-.content{min-height:900px;}
+
 .gray[class^="btn_"]{background-color:#8a8b87; border:1px solid #8a8b87;}
 .bolder{font-weight:500;}
 .not_hover_raidus_btn{font-size: 13px; padding: 7px 11px 7px 11px; font-weight: 300; border: 1px solid #c7c8c4; border-radius: 20px;}
@@ -263,10 +264,11 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form01 .txt_box01 > .desc > .search_wrap .search_input input[type="text"]{line-height:60px; height:60px; font-weight:300; font-size:15px;}
 .content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form01 .txt_box01 > .desc > .search_wrap .search_input .search_result{right:10px; top:15px;}
 .content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form02 > .txt_box01 > .desc{margin-top:20px;}
-.content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form02 > .txt_box01 > .desc .select_box .tit{bordeR:none; padding:0px; border-bottom:2px solid #312f2d;}
+.content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form02 > .txt_box01 > .desc .select_box .tit{bordeR:none; padding:0px; border-bottom:3px solid #312f2d;}
 .content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form02 > .txt_box01 > .desc .select_box .tit.selected{font-weight:500;}
-.content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form02 > .txt_box01 > .desc .select_box .tit:after{right:10px; width:16px; height:9px; background: url(../../images/customer/c_icon_zip.png); background-position:-281px -83px; }
 
+.content .customer_sub .select_box .tit:after{right:10px; width:16px; height:9px; background: url(../../images/customer/c_icon_zip.png); background-position:-281px -83px; }
+.content .customer_sub .select_box .tit.on:after{transform: rotate(180deg)}
 
 .customer_inbox .section{border-bottom:1px solid #e0e0de; margin-top:80px;}
 .customer_inbox .section + .section{margin-top:80px}
@@ -738,11 +740,14 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .rental_tab{margin-bottom:75px;}
 .rental_tab ul li{float:left; width:50%; line-height:50px; position:relative;  box-sizing:border-box; text-align:center; z-index:2;}
 .rental_tab ul li:after{content:'';  display:block; width:100%; height:50px; position:absolute; top:0; box-shadow: inset 0 0 0 1px #d5d6d3;  -webkit-transtion:.3s ease; -moz-transtion:.3s ease; transition:.3s ease; z-indeX:1}
-.rental_tab ul li.on:after{box-shadow: inset 0 0 0 2px #312f2d;  -webkit-transtion:.3s ease; -moz-transtion:.3s ease; transition:.3s ease; left:-1px;}
+.rental_tab ul li.on:after{box-shadow: inset 0 0 0 2px #312f2d;  -webkit-transtion:.3s ease; -moz-transtion:.3s ease; transition:.3s ease;}
+.rental_tab ul li:first-child.on{left:1px; z-index:3;}
+
 .rental_tab ul li a{font-size:15px; color:#585856; letter-spacing:-1px; position:relative; z-index:2;}
 .rental_tab ul li a span{color:#312f2d;}
 .rental_tab ul li.on a{font-weight:500; color:#312f2d;}
 .rental_tab ul:after{clear:both; display:block; content:'';}
+.rental_tab ul li:nth-child(2).on:after{left:-1px;}
 .rental_order .row_discount{margin-bottom:28px;}
 
 .rental_order .no_data.shopping .txt1{line-height:46px;}
@@ -750,7 +755,7 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 /* 쿠쿠렌탈 주문결제 */
 .rental_order .rental_customer_info{background:url(../../images/rental_order/top_bg.png); width:1180px; max-height:143px; background-repeat:no-repeat; padding:58px 80px; box-sizing:border-box;}
 .rental_order .rental_customer_info .clear .fl{font-size:25px; font-weight:600;}
-.rental_order .rental_customer_info .clear .fr{float:left;}
+.rental_order .rental_customer_info .clear .fr{float:left; margin-top:3px;}
 .rental_order .rental_customer_info .clear .fr ul li{font-size:17px; font-weight:500; position:relative; color:#312f2d; letter-spacing:-1px; padding-left:12px; float:left; margin-left:78px}
 .rental_order .rental_customer_info .clear .fr ul li:before{content: ''; position: absolute; top: 7px; left: 0; display: block; width: 3px; height: 3px; background-color: #312f2d; border-radius:2px;}
 .rental_order .rental_customer_info .clear .fr ul li span{font-weight:300; margin-left:20px;}
@@ -764,6 +769,9 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .rental_order .rental_order_area .accordion_tab > div.on{border:1px solid #d5d6d3; border-top:2px solid #312f2d; position:relative; margin-top:-1px; z-index:1; }
 .rental_order .rental_order_area .accordion_tab > div > .tit:after{content:''; position:absolute; right:50px; top:46px; background:url(../../images/customer/c_icon_zip.png); background-position:-294px -20px; width:24px; height:14px; display:inline-block; transform: rotate(180deg)}
 .rental_order .rental_order_area .accordion_tab > div.on > .tit:after{transform: rotate(0deg)}
+.rental_order .all_product_num span{font-size:15px; font-weight:500; padding-left:25px; display:inline-block; margin-bottom:38px; position:relative;}
+.rental_order .all_product_num span:before{content:''; display:inline-block; width:16px; height:18px; background:url(../../images/customer/c_icon_zip.png); background-position:-400px -15px; position:absolute; left:0; top:-2px;}
+
 .not_hover_raidus_btn.search_icon{position:relative; top:5px; left:15px;}
 .not_hover_raidus_btn.search_icon:before{content:''; displaY:inline-block; width:13px; height:14px; background:url(../../images/customer/c_icon_zip.png); background-position:-38px -110px; position: relative; top: 2px; margin-right: 5px; }
 .select_box.ml-40.w215px > a:after{width:15px; height:15px; background:url(../../images/customer/c_icon_zip.png); background-position:-73px -110px; top:16px;}
@@ -1011,16 +1019,19 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .view_alltxt > a{font-size:13px; font-weight:400; color:#312f2d;}
 
 /*팝업*/
+.layer_pop.mh900{max-height:900px;}
 .layer_pop .tit_000{font-size:30px; font-weight:500; letter-spacing:-1px;}
 #addOption .inner_txt .txt1 .mt40{font-size:17px; color:#312f2d; line-height:26px;}
 #giftChoice .gift_choice{text-align:center; margin-top:40px;}
 #giftChoice .gift_choice .count_wrap{width:80px;}
-#giftChoice .gift_choice .img{width:165px; height:165px; position:relative;}
-#giftChoice .gift_choice li{display:inline-block; margin-right:15px; }
-#giftChoice .gift_choice li:nth-child(3), #giftChoice .gift_choice li:nth-child(6){margin-right:0px;}
-#giftChoice .gift_choice li:nth-child(4), #giftChoice .gift_choice li:nth-child(5), #giftChoice .gift_choice li:nth-child(6){margin-top:40px;} 
-#giftChoice .gift_choice li > div{width:165px;}
+#giftChoice .gift_choice .img{width:160px; height:160px; position:relative;}
+#giftChoice .gift_choice li{width:160px; float:left; margin-right:30px; }
+#giftChoice .gift_choice:after{clear:both; display:block; content:'';}
+#giftChoice .gift_choice li:nth-child(4), #giftChoice .gift_choice li:nth-child(8){margin-right:0px;}
+#giftChoice .gift_choice li:nth-child(5), #giftChoice .gift_choice li:nth-child(6), #giftChoice .gift_choice li:nth-child(7), #giftChoice .gift_choice li:nth-child(8){margin-top:60px;} 
+#giftChoice .gift_choice li > div{width:160px;}
 #giftChoice .gift_choice li input[type="checkbox"] + label:before{position:absolute; top:0; right:0; padding:0px; width:20px; height:20px; z-index:1;}
-#giftChoice .gift_choice li input[type="checkbox"] + label span{position:absolute; top:0; left:0;}
-#giftChoice .gift_choice li input[type="checkbox"]:checked + label span:after{width:165px; height:165px; position:absolute; top:0; lefT:0; display:block; content:''; border:2px solid #312f2d; box-sizing:border-box;}
+#giftChoice .gift_choice li input[type="checkbox"] + label span{position:absolute; top:0; left:0; display:block; width:160px; height:160px;}
+#giftChoice .gift_choice li input[type="checkbox"] + label span img{width:100%;}
+#giftChoice .gift_choice li input[type="checkbox"]:checked + label span:after{width:160px; height:160px; position:absolute; top:0; lefT:0; display:block; content:''; border:2px solid #312f2d; box-sizing:border-box;}
 #giftChoice .gift_choice li input[type="checkbox"]:checked + label span img{position:relative; z-index:0;}

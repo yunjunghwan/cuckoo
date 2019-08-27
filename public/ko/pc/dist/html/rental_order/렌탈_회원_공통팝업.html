@@ -489,7 +489,7 @@
         <div class="layer_pop w500px">
             <div class="container_pop">
 				<div class="inner_txt">
-					<div class="tit mt20">Safe Key 조회/발급 안내</div>
+					<div class="tit ">Safe Key 조회/발급 안내</div>
                     <p class="txt1">
 						세이프키는 렌탈 진행 시 본인 확인을 위해 사용되는<br>
 						13자리 숫자로 기존 주민등록번호로 진행하던<br>
@@ -517,7 +517,7 @@
         <div class="layer_pop w400">
             <div class="container_pop">
 				<div class="inner_txt">
-					<div class="tit_000 mt20">조리수 밸브란?</div>
+					<div class="tit_000 ">조리수 밸브란?</div>
                     <div class="txt1">
 						<div class="img mt50"><img src="../../images/rental_order/cooked_water.png"></div>
 						<div class="mt40">
@@ -537,10 +537,10 @@
 	
 	<!-- 사은품선택 -->
 	<div id="giftChoice" class="wrap_layer_pop">
-        <div class="layer_pop w650">
+        <div class="layer_pop w830 mh900">
             <div class="container_pop">
 				<div class="inner_txt">
-					<div class="tit_000 mt20">사은품 선택</div>
+					<div class="tit_000 ">사은품 선택</div>
 					<ul class="gift_choice">
 						<li>
 							<div class="img">
@@ -560,8 +560,40 @@
 						</li>
 						<li>
 							<div class="img">
-								<input type="checkbox" class="check_m" id="gift_choice01_02">
-								<label for="gift_choice01_02"><span>
+								<input type="checkbox" class="check_m" id="gift_choice01_07" >
+								<label for="gift_choice01_07"><span>
+									<img src="../../images/rental_order/gift_choice01.png">
+								</span></label>								
+							</div>
+							<div>
+								<div class="tit mt20">존탐스 로봇 청소기</div>
+								<div class="count_wrap mt20">
+									<button type="button" class="ico minus"><span class="blind">수량감소</span></button><!-- [D]비활성화시 disabled속성추가 -->
+									<span class="num">1</span>
+									<button type="button" class="ico plus"><span class="blind">수량증가</span></button><!-- [D]비활성화시 disabled속성추가 -->
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<input type="checkbox" class="check_m" id="gift_choice01_08">
+								<label for="gift_choice01_08"><span>
+									<img src="../../images/rental_order/gift_choice01.png">
+								</span></label>								
+							</div>
+							<div>
+								<div class="tit mt20">존탐스 로봇 청소기</div>
+								<div class="count_wrap mt20">
+									<button type="button" class="ico minus"><span class="blind">수량감소</span></button><!-- [D]비활성화시 disabled속성추가 -->
+									<span class="num">1</span>
+									<button type="button" class="ico plus"><span class="blind">수량증가</span></button><!-- [D]비활성화시 disabled속성추가 -->
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<input type="checkbox" class="check_m" id="gift_choice01_09">
+								<label for="gift_choice01_09"><span>
 									<img src="../../images/rental_order/gift_choice02.png">
 								</span></label>								
 							</div>
@@ -642,7 +674,7 @@
 					</ul>
                 </div>
 				<div class="mt50 tac">
-					<button type="button" class="btn_l radius common">확인</button>
+					<button type="button" class="btn_l radius common mw180px">확인</button>
 				</div>
             </div>
             <button type="button" class="btn-close-pop" onclick="layerPopClose('giftChoice')"><span class="blind">팝업닫기</span></button>
