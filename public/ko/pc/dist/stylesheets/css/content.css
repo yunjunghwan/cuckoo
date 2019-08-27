@@ -208,8 +208,8 @@
 .prd_rental.prd_view .prd_info .body_area .price .won{font-size:18px}
 .prd_rental.prd_view .option_info{padding-top:20px; border-top:1px dotted #dbdbdb}
 .prd_rental.prd_view .option_info > li + li{margin-top:10px}
-.prd_rental.prd_view .option_info .view_area > .tit{display:inline-block; width:134px; font-weight:500}
-.prd_rental.prd_view .option_info .view_area .right{display:inline-block; width:343px}
+.prd_rental.prd_view .option_info .view_area > .tit{display:inline-block; width:134px; margin-top:14px; font-weight:500}
+.prd_rental.prd_view .option_info .view_area .right{display:inline-block; width:343px; vertical-align:top; line-height: 24px}
 .prd_rental.prd_view .option_info .btn-view{display:inline-block; width:16px; height:16px; margin:-3px 0 0 4px; background:url(../../images/common/ico_zip.png) no-repeat -747px -218px; vertical-align:middle;}
 .prd_rental.prd_view .option_info .ui_acodian.on .btn-view{background-position:-747px -252px;}
 .prd_rental.prd_view .option_info .hidden_area{margin-top:10px; background-color:#f5f5f5; padding:20px 30px; font-size:13px}
@@ -221,6 +221,7 @@
 .prd_rental.prd_view .option_info .hidden_area .txt{font-size:13px; color:#585856; line-height:22px}
 .prd_rental.prd_view .option_info .hidden_area .txt + .tit{margin-top:27px}
 .prd_rental.prd_view .option_info .benefit{position:relative; margin-top:20px; padding-top:20px; border-top:1px solid #d5d6d3}
+.prd_rental.prd_view .option_info .benefit .view_area .tit{margin-top:5px}
 .prd_rental.prd_view .option_info .benefit .btn_ss{position:absolute; right:0; top:10px}
 .prd_rental.prd_view .prd_tab ul li{width:20%}
 .prd_rental.prd_view .prd_section01 .gray_box{padding:40px}
@@ -806,3 +807,29 @@
 .prd_tax .info .name{font-size:17px; font-weight:500}
 .prd_tax .info .count{margin-top:1px}
 .prd_tax .info_wrap .desc{margin-top:28px; font-size:13px; color:#585856}
+
+/* 렌탈 상품상세 하단고정 */
+.prd_bottom_fixed{position:fixed; bottom:0; left:0; width:100%; z-index:100; background-color:#312f2d}
+.prd_bottom_fixed .inner{width:1180px; min-height:120px; margin:0 auto; padding-top:45px; box-sizing:border-box; position:relative;}
+.prd_bottom_fixed .txt_notice{font-size:17px; color:#c7c8c4}
+.prd_bottom_fixed .btn-wrap{position:absolute; top:30px; right:0}
+.prd_bottom_fixed .btn-wrap .btn_l{width:200px; padding:20px 0; }
+.prd_bottom_fixed .btn-wrap .btn_l + .btn_l{margin-left:10px}
+.prd_bottom_fixed .btn-wrap .btn_l.common{border:1px solid #8a8b87}
+.prd_bottom_fixed .btn-wrap .btn_l.common:hover{background-color:#312f2d; border:1px solid #8a8b87; color:#fff}
+.prd_bottom_fixed .btn-wrap .btn_l.action:hover{background-color:#7a101b; border:1px solid #7a101b}
+.prd_bottom_fixed .tooltip_wrap{display:inline-block}
+.prd_bottom_fixed .count_wrap{width:90px; vertical-align:middle;}
+.prd_bottom_fixed .count_wrap .minus2{position:absolute; left:0; top:0;}
+.prd_bottom_fixed .count_wrap .plus2{position:absolute; right:0; top:0;}
+.prd_bottom_fixed .count_wrap .num{margin-top:2px; font-size:17px; font-weight:500; color:#fff}
+.prd_bottom_fixed .ico.tooltip{width:20px; height:20px; margin-left:8px; background-position:-657px -296px;}
+.prd_bottom_fixed .tooltip_cnt{width:455px}
+.prd_bottom_fixed .price_area{display:inline-block; margin-left:55px}
+.prd_bottom_fixed .price_area .left{color:#c7c8c4}
+.prd_bottom_fixed .price_area .left .bold{margin-left:5px; font-size:20px}
+.prd_bottom_fixed .price_area .left .bold .won{font-size:17px}
+.prd_bottom_fixed .price_area .right{position:relative; margin-left:18px; padding-left:30px; color:#fff; font-size:17px}
+.prd_bottom_fixed .price_area .right:before{content:''; position:absolute; left:0; top:2px; width:9px; height:14px; background:url(../../images/common/ico_zip.png) no-repeat -705px -300px}
+.prd_bottom_fixed .price_area .right strong{margin-left:5px; font-size:28px}
+.prd_bottom_fixed .price_area .right strong .won{font-size:22px}

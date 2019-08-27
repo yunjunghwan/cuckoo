@@ -116,6 +116,9 @@ $window.load(function () {
 
         $this.parent().find('.bg_arrow').css('left',(boxW-(icoW/2))-$('.bg_arrow').outerWidth()/2);
         $this.parent().find('.tooltip_cnt').css('left',(boxW-(icoW/2))-$('.bg_arrow').outerWidth()/2 - (tooltip_cntW/2));
+        if($this.hasClass('typeA')){
+            $this.parent().find('.tooltip_cnt').css('left','-95px');
+        }
 
     });
     $ico_tooltip.on('mouseleave',function(){
@@ -414,7 +417,7 @@ function layerPopClose(obj){// 레이어팝업 닫기, obj : 해당팝업 id
 }
 function uiTab(){
 
-    $(document).on('click', '.tab .tab_btn a', function(e){
+    $(document).on('click', '.ui_tab.tab_btn a', function(e){
         e.preventDefault();
 
         var index = $(this).parent().index();
@@ -423,7 +426,14 @@ function uiTab(){
         $(this).parent().addClass('on');
         $('.tab_cont_wrap').find('.cont').siblings().hide();
         $('.tab_cont_wrap').find('.cont').eq(index).show();
+    });
+    $(document).on('click', '.tab_btn a', function(e){
+        e.preventDefault();
 
+        var index = $(this).parent().index();
+
+        $(this).parent().siblings().removeClass('on');
+        $(this).parent().addClass('on');
     });
 }
 function uiAcodian(){

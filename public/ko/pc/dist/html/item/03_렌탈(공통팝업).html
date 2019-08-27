@@ -19,7 +19,6 @@
   <meta name="robots" content="ALL">
   <link rel="stylesheet" href="../../stylesheets/css/common.css">
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
-  <link rel="stylesheet" href="../../stylesheets/css/content_02.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
 </head>
@@ -374,139 +373,21 @@
   <!-- //header-->
 
   <!--container-->
-    <div id="container" class="mypage">
+    <div id="container">
         <div class="top_content">
             <div class="location">
                 <ul>
                     <li><a href="#">홈</a></li>
                     <li>마이쿠쿠</li>
-                    <li>회원정보수정</li>
                 </ul>
             </div>
             <div class="top_tit">
-                <h2 class="tit_02">마이쿠쿠</h2>
+                <h2 class="tit_02">렌탈 공통팝업</h2>
             </div>
-
         </div>
-        <div class="content type_lnb"><!-- [P] lnb있을시 type_lnb클래스 추가 -->
-            <div class="lnb">
-                <ul class="depth01">
-                    <li class="tit"><a href="#">마이쿠쿠</a></li>
-                    <li class="depth02_wrap"><span>나의쇼핑</span><!-- [P] 하위뎁스있을시 depth02_wrap클래스 추가 -->
-                        <ul class="depth02">
-                            <li><a href="#">주문내역</a></li>
-                            <li><a href="#">취소/반품/교환 내역</a></li>
-                            <li><a href="#">제품등록내역</a></li>
-                        </ul>
-                    </li>
-                    <li class="depth02_wrap"><span>나의렌탈</span>
-                        <ul class="depth02">
-                            <li><a href="#">렌탈이용내역</a></li>
-                            <li><a href="#">사은품배송조회</a></li>
-                            <li><a href="#">일시불구매내역</a></li>
-                            <li><a href="#">취소/반품/교환내역</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">출장 A/S 내역</a></li>
-                    <li><a href="#">관심제품</a></li>
-                    <li><a href="#">1:1문의내역</a></li>
-                    <li class="depth02_wrap"><span>쿠폰/포인트</span>
-                        <ul class="depth02">
-                            <li><a href="#">쿠폰내역</a></li>
-                            <li><a href="#">포인트내역</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="on">회원정보수정</a></li><!-- 활성화시 해당 a태그에 on클래스 추가 -->
-                </ul>
-            </div><!-- //lnb -->
-            <div class="inner_content">
-                <div class="section_wrap">
-                    <div class="top_area">
-                        <h3 class="tit_03">회원정보수정</h3>
-                    </div>
-                    <div class="section type_noBorder">
-                        <div class="form_wrap">
-                            <table>
-                                <caption>회원정보수정</caption>
-                                <colgroup>
-                                    <col style="width:180px;">
-                                    <col style="width:auto">
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">이름</th>
-                                        <td>
-                                            <div class="input-btn-right w380">
-                                                <input type="text" value="김쿠쿠" style="width:238px" readonly>
-                                                <button type="button" class="btn_m ml10">휴대폰 본인인증</button>
-                                            </div>
-                                            <span class="ml20"><i class="ico notice4"></i><span>휴대폰 본인인증이 완료되었습니다.</span></span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">아이디</th>
-                                        <td><input type="text" value="cuckoo1234" style="width:380px" readonly></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><label for="input01_00">휴대폰번호</label></th>
-                                        <td><input type="text" id="input01_00" value="010-1234-5678" style="width:380px" readonly></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><label for="input01_01">이메일</label></th>
-                                        <td><input type="text" id="input01_01" value="cuckoo@naver.com" style="width:380px"></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><label for="input01_02">비밀번호</label></th>
-                                        <td>
-                                            <input type="password" id="input01_02" placeholder="비밀번호를 입력해주세요." style="width:380px">
-                                            <p class="fontS mt10">6~18자 이내, 영문+숫자조합(특수문자는 !@#$%^&+-= 만 가능)</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><label for="input01_03">비밀번호 확인</label></th>
-                                        <td>
-                                            <input type="password" id="input01_03" placeholder="비밀번호를 한번 더 확인해주세요." style="width:380px">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><label for="input01_04">생년월일</label></th>
-                                        <td><input type="text" id="input01_04" value="1990-12-25" style="width:380px"></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><label for="input01_05">주소</label></th>
-                                        <td>
-                                            <div class="input-btn-right w380">
-                                                <input type="text" id="input01_05" value="06098" style="width:276px"><button tyle="button" class="btn_m">주소 찾기</button>
-                                            </div>
-                                            <input type="text" class="w100p mt10" value="서울특별시 강남국 언주로 652 쿠쿠빌딩">
-                                            <input type="text" class="w100p mt10" value="3층 김쿠쿠">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">마케팅수신동의<span class="font_light">(선택)</span></th>
-                                        <td class="txt_area type_input">
-                                            <input type="checkbox" class="check_m" id="check01_01">
-                                            <label for="check01_01"><span>마케팅정보 수신에 동의합니다.</span></label>
-                                            <a href="javascript:;" class="link_arrow2 fontS ml20"><span>전문보기</span><i class="ico btnArrow2"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div><!-- //section -->
-                    <div class="btn-border-wrap typeA">
-                        <button type="button" class="btn_l radius">수정취소</button>
-                        <button type="button" class="btn_l radius common">수정완료</button>
-                    </div>
-                    <div class="leave_box">
-                        <span class="tit">회원탈퇴를 원하시나요?</span>
-                        <span class="txt">회원탈퇴 시 보유하고 계신 쿠폰 및 포인트가 소멸됩니다.</span>
-                        <button type="button" class="btn_s">회원탈퇴</button>
-                    </div>
-                </div>
-            </div><!-- //inner_content -->
-        </div><!-- //content -->
-        <button type="button" class="btn-top"><span class="blind">TOP</span></button>
+        <div class="content">
+            <button type="button" onclick="layerPopOpen('rentalPrice')" class="btn_m radius">기간별 월 렌탈료</button>
+        </div>
     </div>
     <!--//container-->
     <div id="gnbDimmed" class="dimmed"></div>
@@ -598,6 +479,53 @@
         </div>
     </footer>
     <!-- //footer -->
+    <!-- 휴대폰 본인인증 -->
+    <div id="rentalPrice" class="wrap_layer_pop">
+        <div class="layer_pop w500">
+            <div class="container_pop">
+                <div class="header_pop">
+                    <h2 class="tit_03">기간별 월 렌탈료</h2>
+                    <div class="txt">기본 렌탈료는 의무 사용기간 60개월 입니다.</div>
+                </div>
+                <div class="tbl_wrap">
+                    <div class="tbl type_data">
+                        <table>
+                            <caption>휴대폰 본인인증안내</caption>
+                            <colgroup>
+                                <col style="width:50%">
+                                <col style="width:auto">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">기간</th>
+                                    <th scope="col">월 렌탈료</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1-36개월</td>
+                                    <td>36,900원</td>
+                                </tr>
+                                <tr>
+                                    <td>37-48개월</td>
+                                    <td>28,900원</td>
+                                </tr>
+                                <tr>
+                                    <td>49-60개월</td>
+                                    <td>24,900원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <button type="button" class="btn_l radius common">확인</button>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('rentalPrice')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+    <!-- //휴대폰 본인인증 -->
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
 </body>
