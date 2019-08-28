@@ -565,11 +565,12 @@ a[class^="btn_"] span, button[class^="btn_"] span{vertical-align:middle;}
 .ico.naver_s{width:30px; height:30px; margin-right:10px; background-position:-250px -424px;}
 .ico.facebook_s{width:30px; height:30px; margin-right:10px; background-position:-290px -424px;}
 .ico.kakao_s{width:30px; height:30px; margin-right:10px; background-position:-330px -424px;}
+.ico.call{width:22px; height:22px; margin-right:10px; background-position:-741px -297px;}
 
 /* 공통 인풋 */
 label span{vertical-align:middle;}
 input[type="text"], input[type="password"], input[type="number"], input[type="tel"]{height:50px; line-height:50px; padding:0 20px; border:1px solid #d5d6d3; box-sizing:border-box; font-weight:300; vertical-align:middle; background-color:#fff}
-input[type="radio"], input[type="checkbox"]{/*display:block;*/height:0;width:0;font-size:0;line-height:0;margin:0;padding:0;overflow:hidden}
+input[type="radio"], input[type="checkbox"]{/*display:block;*/position:absolute;height:0;width:0;font-size:0;line-height:0;margin:0;padding:0;overflow:hidden}
 input[type="text"]:read-only, input[type="number"]:read-only, input[type="tel"]:read-only, input[type="password"]:read-only{background-color:#f5f5f5; color:#8a8b87}
 /* input[type="checkbox"] + label, input[type="checkbox"] + label span {vertical-align:middle} */
 input[type="checkbox"] + label:before{content:''; display:inline-block;background:url(../../images/common/ico_zip.png) no-repeat -200px 0; padding-left:25px; min-height:20px; vertical-align:middle}
@@ -596,7 +597,7 @@ input[type="radio"]:checked + label{font-weight:500}
 input[type="radio"].radio_s + label:before{content:''; min-height:18px; background-position:-246px 0}
 input[type="radio"].radio_s:checked + label:before{background-position:-246px -30px}
 
-textarea{padding:20px; border:1px solid #d5d6d3; box-sizing:border-box; font-weight:300;}
+textarea{padding:14px 20px; border:1px solid #d5d6d3; box-sizing:border-box; font-weight:300; line-height:26px}
 input::placeholder, textarea::placeholder {color:#8a8b87; font-weight:300}
 .datepicker_wrap .datepicker + button{margin-left:5px}
 .datepicker{display:inline-block; position:relative; }
@@ -634,6 +635,7 @@ html.dim body .wrap-dim{position:fixed; left:0; top:0; width:100%; height:100%; 
 .wrap_layer_pop .btn-close-pop{display:inline-block; position:absolute; top:25px; right:25px; width:21px; height:21px; background:url(../../images/common/ico_zip.png) no-repeat -452px -60px}
 .layer_pop .header_pop{margin-bottom:24px}
 .layer_pop .header_pop .txt{margin-top:24px; color:#272524; line-height:26px}
+.layer_pop .tit_04{margin-bottom:20px}
 .layer_pop .type_data{margin-top:24px}
 .layer_pop .type_data th, .layer_pop .type_data td{font-size:13px}
 .layer_pop .txt1{line-height:26px}
@@ -647,6 +649,7 @@ html.dim body .wrap-dim{position:fixed; left:0; top:0; width:100%; height:100%; 
 .layer_pop .section.form tr:last-child td{padding-bottom:0}
 .layer_pop .section.form td.txt_area{padding:20px 0}
 .layer_pop .section{border-top:2px solid #312f2d; border-bottom:1px solid #d5d6d3}
+.layer_pop .section.type_borderNone{margin-top:60px; border:0}
 .layer_pop .section .form_wrap{padding:40px 30px}
 .layer_pop .btn-wrap > *{min-width:180px}
 .layer_pop .btn-wrap > * + *{margin-left:5px}
@@ -655,6 +658,8 @@ html.dim body .wrap-dim{position:fixed; left:0; top:0; width:100%; height:100%; 
 .layer_pop .type_border + .tit_04{margin-top:50px}
 .layer_pop_container > .top_txt{margin-top:30px; color:#272524;}
 .layer_pop_container > .top_txt + .pop_wrap_section{margin-top:40px}
+.layer_pop .top_desc{position:relative; padding:35px 0 35px 140px; background-color:#f5f5f5}
+.layer_pop .form_wrap{padding:40px 30px; border-bottom:1px solid #d5d6d3}
 
 /* 공통 레이어팝업(컨펌) */
 .wrap_layer_pop.type_confirm .layer_pop{padding:70px 35px 50px 35px; text-align:center}
@@ -759,7 +764,7 @@ table .bul_list > li:before{top:11px}
 .bul_list.type_s li:before{top:5px}
 .bul_list li .btn_ss{position:absolute; top:-9px; margin-left:15px}
 .star_list li{position:relative; padding-left:10px; letter-spacing:-1px; line-height:20px}
-.star_list li + li{margin-top:12px}
+.star_list li + li{margin-top:10px}
 .star_list li:before{content:'*'; display:inline-block; position:absolute; left:0; top:2px; color:#5b5a59;}
 /* 공통 폼 */
 .form_wrap tr{}

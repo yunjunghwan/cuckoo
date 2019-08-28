@@ -19,6 +19,7 @@
   <meta name="robots" content="ALL">
   <link rel="stylesheet" href="../../stylesheets/css/common.css">
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
+  <link rel="stylesheet" href="../../stylesheets/css/content_02.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
 </head>
@@ -387,6 +388,8 @@
         </div>
         <div class="content">
             <button type="button" onclick="layerPopOpen('rentalPrice')" class="btn_m radius">기간별 월 렌탈료</button>
+            <button type="button" onclick="layerPopOpen('advicePop')" class="btn_m radius">상담신청</button>
+            <button type="button" onclick="layerPopOpen('cardInfo')" class="btn_m radius">제휴할인 정보</button>
         </div>
     </div>
     <!--//container-->
@@ -479,7 +482,7 @@
         </div>
     </footer>
     <!-- //footer -->
-    <!-- 휴대폰 본인인증 -->
+    <!-- 기간별 월 렌탈료 -->
     <div id="rentalPrice" class="wrap_layer_pop">
         <div class="layer_pop w500">
             <div class="container_pop">
@@ -525,7 +528,275 @@
             <button type="button" class="btn-close-pop" onclick="layerPopClose('rentalPrice')"><span class="blind">팝업닫기</span></button>
         </div>
     </div>
-    <!-- //휴대폰 본인인증 -->
+    <!-- //기간별 월 렌탈료 -->
+    <!-- 상담신청 -->
+    <div id="advicePop" class="wrap_layer_pop">
+        <div class="layer_pop w830">
+            <div class="container_pop">
+                <div class="header_pop">
+                    <h2 class="tit_03">상담신청</h2>
+                </div>
+                <div class="top_desc">
+                    <ul class="star_list">
+						<li>상담 신청을 하시면 쿠쿠 렌탈 전문 상담사가 연락을 드립니다.</li>
+						<li>상담문의 처리시간은 평일 오전 9시 ~ 오후 6시이며 빠르게 답변 드리겠습니다. </li>
+					</ul>
+                </div>
+                <div class="form_wrap">
+                    <table>
+                        <caption>상담신청 입력</caption>
+                        <colgroup>
+                            <col style="width:170px;">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="essential"><label for="input01_01">이름</label></th>
+                                <td>
+                                    <input type="text" id="input01_01" placeholder="이름을 입력해 주세요." style="width:380px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="essential"><label for="input01_03">휴대폰번호</label></th>
+                                <td>
+                                    <input type="text" id="input01_03" placeholder="숫자만 입력 (ex.01012341234)" style="width:380px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="input01_04">배송요청사항</label></th>
+                                <td>
+                                    <textarea id="input01_04" placeholder="렌탈하고 싶은 제품이나 계약 진행 시 궁금한 점,&#13;&#10;또는 요청사항을 미리 남겨주세요." style="width:100%; height:160px"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="essential"><label for="input01_05">개인정보수집동의</label></th>
+                                <td class="txt_area">
+                                    <span>
+										<input type="checkbox" class="check_m" id="check01_02">
+										<label for="check01_02"><span>렌탈상담에 필요한 개인정보 수집 및 이용에 동의합니다.</span></label>
+										<span class="ml20"><a class="view_article">전문보기<span class="small_arrow"></span></a></span>
+									</span>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+				</div>
+            </div>
+            <div class="btn-wrap">
+                <button type="button" class="btn_l radius">취소</button>
+                <button type="button" class="btn_l radius common">상담신청</button>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('advicePop')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+    <!-- //상담신청 -->
+    <!-- 제휴할인 정보 -->
+    <div id="cardInfo" class="wrap_layer_pop">
+        <div class="layer_pop w830">
+            <div class="container_pop">
+                <div class="header_pop">
+                    <h2 class="tit_03">제휴할인 정보</h2>
+                </div>
+                <div class="section type_borderNone">
+                    <h3 class="tit_04">렌탈 제휴카드</h3>
+                    <div class="cardInfo_wrap">
+                        <div class="top_area">
+                            <p class="tit">쿠쿠 스페셜 롯데카드</p>
+                            <div class="right"><i class="ico call"></i><span>카드신청 <span class="bold">1577-8500</span></span></div>
+                        </div>
+                        <div class="body_area">
+                            <div class="left">
+                                <div class="img"><img src="../../images/item/temp_card01_220x139.png" alt="쿠쿠 스페셜 롯데카드"></div>
+                                <a href="#" class="btn_m radius common">홈페이지 신청</a>
+                            </div>
+                            <div class="right">
+                                <p class="tit">01.혜택</p>
+                                <p class="txt">자동 이체 시 월 23,000원 할인</p>
+                                <p class="tit">02.조건</p>
+                                <div class="cardInfo_tbl">
+                                    <table>
+                                        <caption>카드실적</caption>
+                                        <colgroup>
+                                            <col style="width:50%">
+                                            <col style="width:50%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">전월실적</th>
+                                                <td>할인금액</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">30만원 이상</th>
+                                                <td>13,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">70만원 이상</th>
+                                                <td>17,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">120만원 이상</th>
+                                                <td>23,000원</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="notice_list">
+                                    <li>카드 발급 등록일 포함 2개월간 실적 관계없이 기본 13,000원 할인</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- //cardInfo_wrap -->
+                    <div class="cardInfo_wrap">
+                        <div class="top_area">
+                            <p class="tit">쿠쿠 렌탈프리멤버십 우리카드</p>
+                            <div class="right"><i class="ico call"></i><span>카드신청 <span class="bold">1577-8500</span></span></div>
+                        </div>
+                        <div class="body_area">
+                            <div class="left">
+                                <div class="img"><img src="../../images/item/temp_card02_220x139.png" alt="쿠쿠 렌탈프리멤버십 우리카드"></div>
+                                <a href="#" class="btn_m radius common">홈페이지 신청</a>
+                            </div>
+                            <div class="right">
+                                <p class="tit">01.혜택</p>
+                                <p class="txt">자동 이체 시 월 23,000원 할인</p>
+                                <p class="tit">02.조건</p>
+                                <div class="cardInfo_tbl">
+                                    <table>
+                                        <caption>카드실적</caption>
+                                        <colgroup>
+                                            <col style="width:50%">
+                                            <col style="width:50%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">전월실적</th>
+                                                <td>할인금액</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">30만원 이상</th>
+                                                <td>13,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">70만원 이상</th>
+                                                <td>17,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">120만원 이상</th>
+                                                <td>23,000원</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="notice_list">
+                                    <li>카드 발급 등록일 포함 2개월간 실적 관계없이 기본 13,000원 할인</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- //cardInfo_wrap -->
+                </div><!-- //section -->
+                <div class="section type_borderNone">
+                    <h3 class="tit_04">장기할부 제휴카드</h3>
+                    <div class="cardInfo_wrap">
+                        <div class="top_area">
+                            <p class="tit">쿠쿠 스페셜 롯데카드</p>
+                            <div class="right"><i class="ico call"></i><span>카드신청 <span class="bold">1577-8500</span></span></div>
+                        </div>
+                        <div class="body_area">
+                            <div class="left">
+                                <div class="img"><img src="../../images/item/temp_card01_220x139.png" alt="쿠쿠 스페셜 롯데카드"></div>
+                                <a href="#" class="btn_m radius common">홈페이지 신청</a>
+                            </div>
+                            <div class="right">
+                                <p class="tit">01.혜택</p>
+                                <p class="txt">자동 이체 시 월 23,000원 할인</p>
+                                <p class="tit">02.조건</p>
+                                <div class="cardInfo_tbl">
+                                    <table>
+                                        <caption>카드실적</caption>
+                                        <colgroup>
+                                            <col style="width:50%">
+                                            <col style="width:50%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">전월실적</th>
+                                                <td>할인금액</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">30만원 이상</th>
+                                                <td>13,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">70만원 이상</th>
+                                                <td>17,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">120만원 이상</th>
+                                                <td>23,000원</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="notice_list">
+                                    <li>카드 발급 등록일 포함 2개월간 실적 관계없이 기본 13,000원 할인</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- //cardInfo_wrap -->
+                    <div class="cardInfo_wrap">
+                        <div class="top_area">
+                            <p class="tit">쿠쿠 렌탈프리멤버십 우리카드</p>
+                            <div class="right"><i class="ico call"></i><span>카드신청 <span class="bold">1577-8500</span></span></div>
+                        </div>
+                        <div class="body_area">
+                            <div class="left">
+                                <div class="img"><img src="../../images/item/temp_card02_220x139.png" alt="쿠쿠 렌탈프리멤버십 우리카드"></div>
+                                <a href="#" class="btn_m radius common">홈페이지 신청</a>
+                            </div>
+                            <div class="right">
+                                <p class="tit">01.혜택</p>
+                                <p class="txt">자동 이체 시 월 23,000원 할인</p>
+                                <p class="tit">02.조건</p>
+                                <div class="cardInfo_tbl">
+                                    <table>
+                                        <caption>카드실적</caption>
+                                        <colgroup>
+                                            <col style="width:50%">
+                                            <col style="width:50%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">전월실적</th>
+                                                <td>할인금액</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">30만원 이상</th>
+                                                <td>13,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">70만원 이상</th>
+                                                <td>17,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">120만원 이상</th>
+                                                <td>23,000원</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <ul class="notice_list">
+                                    <li>카드 발급 등록일 포함 2개월간 실적 관계없이 기본 13,000원 할인</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- //cardInfo_wrap -->
+                </div><!-- //section -->
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('cardInfo')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+    <!-- //제휴할인 정보 -->
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
 </body>

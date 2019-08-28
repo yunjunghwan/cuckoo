@@ -194,18 +194,18 @@
 .prd_view .prd_info .option_view .box .price_area{position:absolute; right:20px; bottom:20px;}
 /* 렌탈 제품상세 */
 .prd_rental.prd_view .prd_info .body_area .price_info li .tit{width:115px}
-.prd_rental.prd_view .prd_info .body_area .price_info li .txt{width:345px}
+.prd_rental.prd_view .prd_info .body_area .price_info li .txt{position:relative; width:345px}
+.prd_rental.prd_view .prd_info .body_area .price_info li .txt .right-wrap{position:absolute; top:-4px; right:0}
 .prd_rental.prd_view .prd_info .body_area{border-top:0; border-bottom:0}
 .prd_rental.prd_view .prd_info .tab.type_box .tab_btn li{width:50%; height:52px; margin-left:-1px; line-height:52px; text-align:center}
 .prd_rental.prd_view .prd_info .tab.type_box .tab_btn li a{border:1px solid #c7c8c4; z-index:10}
 .prd_rental.prd_view .prd_info .tab.type_box .tab_btn li.on a{border:2px solid #312f2d; z-index:20}
 .prd_rental.prd_view .prd_info .body_area .price_info .btn_ss{font-size:12px; color:#585856}
-.prd_rental.prd_view .prd_info .body_area .price{margin-right:17px}
-.prd_rental.prd_view .prd_info .body_area .price_info .desc{font-size:13px; color:#585856}
+.prd_rental.prd_view .prd_info .body_area .normal_price{margin-right:17px; font-size:20px; font-weight:700; vertical-align:middle; letter-spacing:-1px; box-sizing:border-box;}
+.prd_rental.prd_view .prd_info .body_area .price_info .desc{margin-top:25px; font-size:13px; color:#585856}
 .prd_rental.prd_view .prd_info .body_area .price_info .desc > *{vertical-align:middle;}
 .prd_rental.prd_view .prd_info .body_area .price_info .desc .link{display:inline-block; padding-bottom:2px; margin-left:10px; border-bottom:1px solid #312f2d; font-weight:500; color:#312f2d}
-.prd_rental.prd_view .prd_info .body_area .price{font-size:20px}
-.prd_rental.prd_view .prd_info .body_area .price .won{font-size:18px}
+.prd_rental.prd_view .prd_info .body_area .normal_price .won{font-size:18px}
 .prd_rental.prd_view .option_info{padding-top:20px; border-top:1px dotted #dbdbdb}
 .prd_rental.prd_view .option_info > li + li{margin-top:10px}
 .prd_rental.prd_view .option_info .view_area > .tit{display:inline-block; width:134px; margin-top:14px; font-weight:500}
@@ -222,7 +222,8 @@
 .prd_rental.prd_view .option_info .hidden_area .txt + .tit{margin-top:27px}
 .prd_rental.prd_view .option_info .benefit{position:relative; margin-top:20px; padding-top:20px; border-top:1px solid #d5d6d3}
 .prd_rental.prd_view .option_info .benefit .view_area .tit{margin-top:5px}
-.prd_rental.prd_view .option_info .benefit .btn_ss{position:absolute; right:0; top:10px}
+.prd_rental.prd_view .option_info .benefit .btn_ss{position:absolute; right:0; top:18px}
+.prd_rental.prd_view .option_info .benefit .view_area .right{letter-spacing:-1px}
 .prd_rental.prd_view .prd_tab ul li{width:20%}
 .prd_rental.prd_view .prd_section01 .gray_box{padding:40px}
 /* 사은품리스트 */
@@ -826,10 +827,36 @@
 .prd_bottom_fixed .ico.tooltip{width:20px; height:20px; margin-left:8px; background-position:-657px -296px;}
 .prd_bottom_fixed .tooltip_cnt{width:455px}
 .prd_bottom_fixed .price_area{display:inline-block; margin-left:55px}
-.prd_bottom_fixed .price_area .left{color:#c7c8c4}
+.prd_bottom_fixed .price_area .left{position:relative; color:#c7c8c4; margin-right:18px; padding-right:30px}
+.prd_bottom_fixed .price_area .left:after{content:''; position:absolute; right:0; top:2px; width:9px; height:14px; background:url(../../images/common/ico_zip.png) no-repeat -705px -300px}
 .prd_bottom_fixed .price_area .left .bold{margin-left:5px; font-size:20px}
 .prd_bottom_fixed .price_area .left .bold .won{font-size:17px}
-.prd_bottom_fixed .price_area .right{position:relative; margin-left:18px; padding-left:30px; color:#fff; font-size:17px}
-.prd_bottom_fixed .price_area .right:before{content:''; position:absolute; left:0; top:2px; width:9px; height:14px; background:url(../../images/common/ico_zip.png) no-repeat -705px -300px}
+.prd_bottom_fixed .price_area .right{color:#fff; font-size:17px}
 .prd_bottom_fixed .price_area .right strong{margin-left:5px; font-size:28px}
 .prd_bottom_fixed .price_area .right strong .won{font-size:22px}
+.prd_bottom_fixed .btn-wrap .soldout{display:inline-block; width:340px; background-color:#585856; border:1px solid #585856; color:#fff; font-size:17px; box-sizing:border-box; text-align:center}
+.prd_bottom_fixed .btn-wrap .btn-cart{display:inline-block; width:58px; height:58px; margin-right:10px; vertical-align:middle; background:url(../../images/common/ico_zip.png) no-repeat -535px -360px}
+
+/* 렌탈 상담신청 팝업 */
+#advicePop .layer_pop .top_desc:before{content:''; display:inline-block; position:absolute; left:30px; top:27px; width:80px; height:64px; background:url(../../images/common/img_ico_zip.png) no-repeat -1242px -295px;}
+
+/* 렌탈 제휴할인정보 팝업 */
+.cardInfo_wrap{border-top:2px solid #000}
+.cardInfo_wrap .top_area{position:relative; padding:20px 30px; background-color:#f5f5f5}
+.cardInfo_wrap .top_area .tit{font-size:17px; font-weight:500; color:#272524}
+.cardInfo_wrap .top_area .right{position:absolute; top:20px; right:30px; color:#272524}
+.cardInfo_wrap .top_area .right .bold{margin-left:5px}
+.cardInfo_wrap .body_area{padding:50px 30px 60px 30px}
+.cardInfo_wrap .body_area:after{display:block; content:''; clear:both}
+.cardInfo_wrap .body_area .left{float:left; width:220px; margin-right:40px; text-align:center}
+.cardInfo_wrap .body_area .left .img{margin-bottom:30px}
+.cardInfo_wrap .body_area .right{float:left; width:390px}
+.cardInfo_wrap .body_area .right .tit{margin-bottom:15px; font-weight:500}
+.cardInfo_wrap .body_area .right .txt{letter-spacing:-1px}
+.cardInfo_wrap .body_area .right .txt + .tit{margin-top:30px}
+.cardInfo_wrap .body_area .right .cardInfo_tbl{border:1px solid #c7c8c4}
+.cardInfo_wrap .body_area .right .cardInfo_tbl th, .cardInfo_wrap .body_area .right .cardInfo_tbl td{padding:10px; font-size:13px; text-align:center; border-bottom:1px solid #c7c8c4; color:#312f2d}
+.cardInfo_wrap .body_area .right .cardInfo_tbl th{background-color:#f5f5f5}
+.cardInfo_wrap .body_area .right .cardInfo_tbl td{border-left:1px solid #c7c8c4; font-weight:500}
+.cardInfo_wrap .body_area .right .cardInfo_tbl tr:last-child th, .cardInfo_wrap .body_area .right .cardInfo_tbl tr:last-child td{border-bottom:0}
+.cardInfo_wrap .body_area .right .notice_list{margin-top:15px}

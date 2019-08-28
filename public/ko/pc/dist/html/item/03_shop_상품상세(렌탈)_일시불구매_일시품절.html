@@ -432,11 +432,11 @@
                     <div class="body_area">
                         <div class="tab type_box">
                             <ul class="tab_btn ui_tab">
-                                <li class="on"><a href="#">렌탈</a></li>
-                                <li><a href="#">일시불</a></li>
+                                <li><a href="#">렌탈</a></li>
+                                <li class="on"><a href="#">일시불</a></li>
                             </ul>
                             <div class="tab_cont_wrap">
-                                <div class="cont">
+                                <div class="cont" style="display:none">
                                     <ul class="price_info">
                                         <li>
                                             <span class="tit">포인트</span>
@@ -547,7 +547,7 @@
                                         </li>
                                     </ul>
                                 </div><!-- //렌탈 -->
-                                <div class="cont">
+                                <div class="cont"  style="display:block">
                                     <ul class="price_info">
                                         <li>
                                             <span class="tit">포인트</span>
@@ -583,11 +583,18 @@
             <div class="prd_bottom_fixed">
                 <div class="inner">
                     <div class="left_area">
-                        <p class="txt_notice"><i class="ico notice5"></i><span>제품 의무사용기간 및 관리유형을 선택 하시면, 월 렌탈료를 확인하실 수 있습니다.</span></p>
+                        <div class="count_wrap">
+                            <button type="button" class="ico minus2" ><span class="blind">수량감소</span></button><!-- [D]비활성화시 disabled속성추가 -->
+                            <span class="num">1</span>
+                            <button type="button" class="ico plus2"><span class="blind">수량증가</span></button><!-- [D]비활성화시 disabled속성추가 -->
+                        </div>
+                        <div class="price_area">
+                            <!-- <span class="left">36개월 총 <span class="bold">1,914,000<spwn class="won">원</spwn></span></span> -->
+                            <span class="right">총금액 <strong>1,850,900<span class="won">원</span></strong></span>
+                        </div>
                     </div>
                     <div class="btn-wrap">
-                        <a href="#" class="btn_l radius common">상담신청</a>
-                        <a href="#" class="btn_l radius action">바로렌탈 장바구니</a>
+                        <span class="btn_l radius soldout">입고예정일:2019년7월9일</span>
                     </div>
                 </div>
             </div>
