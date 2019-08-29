@@ -456,7 +456,7 @@ h5[class^="tit_"] + a, h5[class^="tit_"] + button{margin-left:7px}
 .tab{}
 .tab .tab_btn:after{display:block; content:''; clear:both}
 .tab .tab_btn li{float:left; }
-.tab .tab_btn li a{display:inline-block; position:relative; width:100%; height:100%; color:#585856; box-sizing:border-box;}
+.tab .tab_btn li a{display:inline-block; position:relative; width:100%; height:100%; color:#585856; box-sizing:border-box; border-bottom:0}
 .tab .tab_btn li.on a{border-bottom:3px solid #312f2d; color:#312f2d; font-weight:500}
 .tab.type_s li + li{margin-left:30px}
 .tab.type_s li a{padding-bottom:10px; font-size:15px}
@@ -502,9 +502,9 @@ a[class^="btn_"] span, button[class^="btn_"] span{vertical-align:middle;}
 .btn_reg[class^="btn_"]:hover{border:1px solid #585856; color:#312f2d !important; background-color:#fff !important}
 .btn_guide:hover .ico.guide{background-position:-25px -30px}
 .btn_reg:hover .ico.reg{background-position:-61px -30px}
-.btn.list_more{display:block; width:100%; margin-top:60px; padding:15px; border:1px solid #c7c8c4; color:#585856; text-align:center; box-sizing:border-box;}
+.btn.list_more{display:block; width:100%; margin-top:60px; padding:20px; font-size:17px; border:1px solid #c7c8c4; color:#585856; text-align:center; box-sizing:border-box;}
 .btn.list_more:hover{border:1px solid #585856}
-.btn.list_more span{margin-left:5px}
+.btn.list_more span{margin-left:5px; font-size:15px}
 .btn.list_more span strong{color:#585856; font-weight:500}
 .btn-col2:after{display:block; content:''; clear:both}
 .btn-col2 > *{float:left; width:49%}
@@ -551,6 +551,7 @@ a[class^="btn_"] span, button[class^="btn_"] span{vertical-align:middle;}
 .ico.notice3{width:14px; height:14px; margin-right:10px; background-position:-92px -347px;}
 .ico.notice4{width:13px; height:13px; margin-right:10px; background-position:-383px -404px;}
 .ico.notice5{width:26px; height:26px; margin-right:10px; background-position:-519px -295px;}
+.ico.notice6{width:16px; height:16px; margin-right:10px; background-position:-631px -365px;}
 .ico.file{width:12px; height:12px; margin-right:5px; background-position:0 -380px}
 .ico.lock{width:15px; height:18px; margin-right:10px; background-position:-1px -316px}
 .ico.search{width:28px; height:28px; background-position:-394px -255px}
@@ -718,7 +719,8 @@ table .bul_list > li:before{top:11px}
 .sns_wrap .like:after{content:''; display:inline-block; position:absolute; right:0; top:0; width:1px; height:13px; background-color:#d5d6d3}
 /* 공통 셀렉스박스 */
 .select_box{position:relative}
-.select_box .tit{display:block; position:relative; border:1px solid #d5d6d3; height:50px; padding:0 20px; line-height:50px; box-sizing:border-box; background-color:#fff}
+.select_box .tit{display:block; position:relative; border:1px solid #d5d6d3; height:50px; padding:0 20px; line-height:50px; box-sizing:border-box; background-color:#fff;  color:#8a8b87}
+.select_box .tit.selected{color:#312f2d}
 .select_box .tit:after{content:''; display:inline-block; position:absolute; top:22px; right:20px; width:16px; height:8px; background:url(../../images/common/ico_zip.png) no-repeat -317px -257px}
 .select_box .tit.on:after{background-position:-448px -407px;}
 .select_box .hidden{display:none; position:absolute; top:49px; left:0; width:100%; padding:10px 0; max-height:177px; overflow-y:auto; border:1px solid #312f2d; background-color:#fff; box-sizing:border-box; z-index:10}
@@ -739,7 +741,7 @@ table .bul_list > li:before{top:11px}
 .tooltip_wrap{position:relative}
 .tooltip_wrap .box_tooltip{display:inline-block; position:relative}
 .tooltip_wrap .box_tooltip .bg_arrow{display:inline-block;position:absolute;bottom:30px;left:0;width:11px;height:9px;background:url(../../images/common/ico_zip.png) no-repeat -362px -219px;}
-.tooltip_wrap .ico.tooltip{display:inline-block; margin-top:-2px; font-size:0;line-height:0;vertical-align:middle}
+.tooltip_wrap .ico.tooltip{display:inline-block; margin-top:-2px; margin-left:3px; font-size:0;line-height:0;vertical-align:middle}
 .tooltip_cnt{display:none; position:absolute; bottom:38px; left:0; padding:30px; background-color:#fff; border:1px solid #656362; box-sizing: border-box;}
 .tooltip_cnt .tooltip_tit{margin-bottom:20px; font-weight:400; text-align:left}
 .tooltip_cnt .tooltip_list li{position:relative; padding-left:5px; font-size:13px; text-align:left; font-weight:300; letter-spacing:-1px; line-height:22px}
@@ -939,14 +941,15 @@ body > .ui-datepicker{display:none}
 .top_visual .img a .inner_txt .txt2{margin-top:15px; font-size:48px; font-weight:500}
 .top_visual .img a .inner_txt .txt3{margin-top:40px; font-size:25px; color:#585856}
 .top_visual .slick-arrow{display:inline-block; position:absolute; top:50%; margin-top:-25px; width:26px; height:50px; background:url(../../images/common/ico_zip.png) no-repeat; text-indent: -9999px; z-index:10}
-.top_visual .slick-arrow.slick-prev{background-position:-369px -432px; left:50%; margin-left:-800px}
-.top_visual .slick-arrow.slick-next{background-position:-430px -432px; right:50%; margin-right:-800px}
+.top_visual .slick-arrow.slick-prev{background-position:-369px -432px; left:50%; margin-left:-795px}
+.top_visual .slick-arrow.slick-next{background-position:-430px -432px; right:50%; margin-right:-795px}
 .top_visual .slick-dots{position:absolute; bottom:35px; left:0; right:0; height:4px; text-align:center}
 .top_visual .slick-dots li + li{margin-left:20px}
 .top_visual .slick-dots li button{width:60px; height:4px; background-color:#e9e8eb}
 .top_visual .slick-dots li.slick-active button{background-color:#971421}
 .section01{position:relative; margin-top:120px;}
 .section01 .tit_area .right_area{position:absolute; top:10px; right:50%; margin-right:-580px}
+.section01 .tit_area .right_area .tab_btn a{font-size:17px}
 .section01 > .slider{height:400px; overflow:hidden}
 .section01 .cont{max-width:720px;}
 .section01 .cont:after{display:block; content:''; clear:both}
@@ -955,9 +958,9 @@ body > .ui-datepicker{display:none}
 .section01 .info{float:left; width:320px; padding:85px 20px 0 20px; box-sizing:border-box;}
 .section01 .txt_label{display:inline-block; padding:8px 14px 7px 14px; border:1px solid #585856; font-size:13px; font-weight:500; color:#585856; border-radius:15px; text-align:center}
 .section01 .category{min-height:48px; margin-top:16px; line-height:24px; font-size:17px; color:#585856; letter-spacing:-1px}
-.section01 .name{margin-top:18px; font-size:25px; font-weight:500}
-.section01 .total_name{font-size:17px; margin-top:20px}
-.section01 .price{font-size:32px; margin-top:15px; font-weight:700}
+.section01 .name{margin-top:18px; font-size:25px; font-weight:700}
+.section01 .total_name{font-size:17px; margin-top:30px}
+.section01 .price{font-size:32px; margin-top:10px; font-weight:700}
 .section01 .slick-slide:after{display:block; content:''; clear:both}
 .section01 .slick-slide{position:relative; /*width:720px !important;*/ margin:0 20px; min-height:400px; background-color:#f5f5f5; box-sizing:border-box;}
 .section01 .slick-arrow{display:inline-block; position:absolute; top:50%; margin-top:-25px; width:50px; height:50px; background:url(../../images/common/ico_zip.png) no-repeat; text-indent: -9999px; z-index:10}
@@ -972,7 +975,7 @@ body > .ui-datepicker{display:none}
 .section02 .slick-arrow{display:inline-block; position:absolute; top:50%; margin-top:-25px; width:26px; height:50px; background:url(../../images/common/ico_zip.png) no-repeat; text-indent: -9999px; z-index:10}
 .section02 .slick-arrow.slick-prev{background-position:-369px -432px; left:50%; margin-left:-680px}
 .section02 .slick-arrow.slick-next{background-position:-430px -432px; right:50%; margin-right:-680px}
-.section02 .slick-dots{position:absolute; top:-60px; right:0}
+.section02 .slick-dots{position:absolute; top:-76px; right:0}
 .section02 .slick-dots li button{width:15px; height:15px; border-radius:8px; background-color:#c4c5c3}
 .section02 .slick-dots li.slick-active button{background-color:#7a101b}
 .section02 .slick-dots li + li{margin-left:30px}
@@ -1003,10 +1006,10 @@ body > .ui-datepicker{display:none}
 .section04 .search_box > * + *{margin-left:30px}
 .section04 .search_box .select_box{width:200px}
 .section04 .search_box .select_box:nth-child(3){width:300px}
-.section04 .search_box .select_box .tit{font-size:17px; font-weight:500; border:0; border-bottom:3px solid #312f2d}
+.section04 .search_box .select_box .tit{font-size:17px; font-weight:500; border:0; border-bottom:3px solid #312f2d;     color:#585856;}
 .section04 .search_box .select_box .tit:after{right:10px; width:17px; height:10px; background-position:-738px 0}
 .section04 .search_box .select_box .tit.on:after{transform: rotate(180deg);}
-.section04 .search_box .btn_m{min-width:90px}
+.section04 .search_box .btn_m{width:90px; font-size:17px; font-weight:500}
 .section05{margin-top:120px; padding-bottom:120px}
 .section05 .col3_list:after{display:block; content:''; clear:both}
 .section05 .col3_list li{float:left; text-align:center}
@@ -1019,9 +1022,12 @@ body > .ui-datepicker{display:none}
 #mainEvent .slick-arrow.slick-prev{background-position:-665px -107px; left:0;}
 #mainEvent .slick-arrow.slick-next{background-position:-726px -107px; right:0}
 #mainEvent .slick-dots{margin-top:15px; text-align:center}
-#mainEvent .slick-dots li button{width:15px; height:15px; border-radius:8px; background-color:#c4c5c3}
+#mainEvent .slick-dots li button{width:13px; height:13px; border-radius:8px; background-color:#c4c5c3}
 #mainEvent .slick-dots li.slick-active button{background-color:#7a101b}
 #mainEvent .slick-dots li + li{margin-left:13px}
 #mainEvent .bottom_area{position:relative; padding:35px 30px 25px 25px}
-#mainEvent .bottom_area label{font-size:17px}
-#mainEvent .bottom_area .pop_close{position:absolute; top:37px; right:30px; font-size:20px}
+#mainEvent .bottom_area label{font-size:17px; color:#8a8b87}
+#mainEvent .bottom_area .pop_close{position:absolute; top:37px; right:30px; font-size:20px; font-weight:500}
+/* 로딩 */
+#layer_pop_loading{display:block; background:none; }
+#layer_pop_loading .layer_pop{padding:0}

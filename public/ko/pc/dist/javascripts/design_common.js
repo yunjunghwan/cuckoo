@@ -478,3 +478,15 @@ if (navigator.userAgent.match(/Trident\/7\./)) { //ie 픽스트 버그처리
     window.scrollTo(0, currentScrollPosition - wheelDelta);
     });
 };
+function loadingOpen(){ //로딩열기
+	var str = '';
+	str += '<div id="layer_pop_loading" class="wrap_layer_pop">';
+	str	+= '<div class="layer_pop">';
+	str	+= '<img src="../../images/common/Loading.gif" alt="">';
+	str	+= '</div>';
+	str	+= '</div>';
+	$('body').append(str);
+}
+function loadingClose(){ //로딩닫기
+	$('#layer_pop_loading').remove();
+}
