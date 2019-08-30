@@ -408,6 +408,8 @@
 .tbl_order .order_info li .bold{margin-left:8px}
 .tbl_order .delivery{margin-top:30px; font-size:13px}
 .tbl_order .notice_message td{padding:0 0 30px 0; border-top:0}
+.tbl_order .discount{margin-right:0}
+.tbl_order .discount + .bold.price{font-size:17px; font-weight:700}
 .aside_box_wrap{position:relative; float:right; width:280px}
 .aside_box{position:absolute; top:0; width:280px; background-color:#fff}
 .aside_box.fixed{position:fixed;}

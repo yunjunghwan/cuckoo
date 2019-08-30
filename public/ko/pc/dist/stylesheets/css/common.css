@@ -212,7 +212,7 @@ body {position:relative; min-width: 1280px; margin: 0 auto; }
 #header .header_bottom #gnb .all_depth .depth_wrap ul:hover strong:after { width: 100%; }
 #header .header_bottom #gnb .all_depth .depth_wrap li { margin: 16px 0 0; }
 #header .header_bottom #gnb .all_depth .depth_wrap li:first-child { margin: 0; }
-#header .header_bottom #gnb .all_depth .depth_wrap li strong { width: 100%; padding: 0 0 20px; display: inline-block; font-weight: 500; font-size: 15px; position: relative; color: #312f2d; }
+#header .header_bottom #gnb .all_depth .depth_wrap li strong { width: 100%; padding: 0 0 20px; display: inline-block; font-weight: 500; font-size: 15px; position: relative; color: #312f2d; letter-spacing:-1px}
 #header .header_bottom #gnb .all_depth .depth_wrap li strong:before, #header .header_bottom #gnb .all_depth .depth_wrap li strong:after { height: 1px; display: block; content: ""; position: absolute; bottom: 0; left: 0; }
 #header .header_bottom #gnb .all_depth .depth_wrap li strong:before { width: 100%; background-color: #d5d6d3; }
 #header .header_bottom #gnb .all_depth .depth_wrap li strong:after { width: 0; background-color: #312f2d; -webkit-transition: width 0.3s ease; -moz-transition: width 0.3s ease; -o-transition: width 0.3s ease; -ms-transition: width 0.3s ease; }
