@@ -23,7 +23,6 @@
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
 </head>
-
 <body>
   <!-- skipNavigation-->
   <div id="skipNavigation">
@@ -380,7 +379,7 @@
                 <ul>
                     <li><a href="#">홈</a></li>
                     <li><a href="#">고객센터</a></li>
-					<li>제품설명서 다운로드</li>
+					<li>공지사항</li>
                 </ul>
             </div>
             <div class="top_tit">
@@ -389,7 +388,8 @@
         </div>
         <div class="content">
 			<div class="customer_sub clear">
-				<div class="fl customer_left">					
+				<div class="fl customer_left">
+					
 					<div class="tit">고객센터 홈</div>
 					<ul>
 						<li><a href="고객센터_스스로제품점검.html">스스로 제품 점검</a></li>
@@ -403,7 +403,7 @@
 						<li><a href="고객센터_출장AS신청.html">출장 A/S 신청</a></li>
 						<li><a href="고객센터_서비스센터찾기.html">서비스센터 찾기</a></li>
 						<li><a href="고객센터_제품등록.html">제품등록</a></li>
-						<li class="on"><a href="고객센터_제품설명서다운로드_모델명찾기.html">제품설명서 다운로드</a></li>
+						<li><a href="고객센터_제품설명서다운로드_모델명찾기.html">제품설명서 다운로드</a></li>
 					</ul>
 					<ul>
 						<li><a href="고객센터_쿠쿠매장찾기.html">쿠쿠 매장 찾기</a></li>
@@ -411,45 +411,115 @@
 					</ul>
 					<ul>
 						<li><a href="고객센터_faq.html">FAQ</a></li>
-						<li><a href="고객센터_공지사항_리스트.html">공지사항</a></li>
+						<li class="on"><a href="고객센터_공지사항_리스트.html">공지사항</a></li>
 					</ul>
-				</div>
 
+				</div>
 				<div class="fr customer_right">
-					<div class="tit">제품 설명서 다운로드</div>
-					<div class="customer_inbox manual_inbox">
-						<div class="foreign_service_tab manual_inbox_tab">
-							<ul>
-								<li class="">모델명으로 찾기</li>
-								<li class="on">제품군으로 찾기</li>
-							</ul>
+					<div class="tit">공지사항</div>
+					<div class="customer_inbox notice_inbox nodata">
+						<div class="search_wrap">
+							<!-- 검색되었을경우 result_placeholder 클래스추가 -->
+							<div class="search_input result_placeholder">
+							  <input type="text" placeholder="검색어">
+							  <button type="button" class="search_result"><i class="ico search"></i><span class="hidden-txt">검색</span></button>
+							</div>
 						</div>
-						<div class="mt60 maual_cate_sel">
-							<div class="tit">제품군을 선택해주세요.</div>
-							<ul class="cate_sel_icon">
-								<li>
-									<span>쿠쿠밭솥</span>
-								</li>
-								<li>
-									<span>주방가전</span>
-								</li>
-								<li>
-									<span>렌탈가전</span>
-								</li>
-								<li>
-									<span>생활가전</span>
-								</li>
-								<li>
-									<span>요리설명서</span>
-								</li>
-							</ul>
-							
+						<div class="no_data prd_search">
+							<p class="txt1">검색 결과가 없습니다.</p>
 						</div>
-					
+						<div class="board_list_01 mt20">
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">2019년 추석 연휴 배송안내</div>
+										<div class="fr date">2019-09-17</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">2019년 5월 이벤트 당첨자 발표</div>
+										<div class="fr date">2019-09-15</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">토요일 고객센터 상담시간 변경내</div>
+										<div class="fr date">2019-09-10</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">[서버점검] 홈페이지 접속제한 공지</div>
+										<div class="fr date">2019-08-28</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">제품등록 이벤트 종료 안내</div>
+										<div class="fr date">2019-08-24</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">2019년 추석 연휴 배송안내</div>
+										<div class="fr date">2019-09-17</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">2019년 5월 이벤트 당첨자 발표</div>
+										<div class="fr date">2019-09-15</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">토요일 고객센터 상담시간 변경내</div>
+										<div class="fr date">2019-09-10</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">[서버점검] 홈페이지 접속제한 공지</div>
+										<div class="fr date">2019-08-28</div>
+									</a>
+								</div>
+								<div class="clear">
+									<a href="#">
+										<div class="fl list_num">32</div>
+										<div class="fl list_cont">제품등록 이벤트 종료 안내</div>
+										<div class="fr date">2019-08-24</div>
+									</a>
+								</div>
+							<!-- 페이지네이션 -->
+							<div class="pagination mt40">
+								<a href="#" class="paging first disabled"><span class="blind">첫페이지</span></a>
+								<a href="#" class="paging prev disabled"><span class="blind">이전</span></a>
+								<a href="#" class="on">1</a>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<a href="#">5</a>
+								<a href="#">6</a>
+								<a href="#" class="paging next"><span class="blind">다음</span></a>
+								<a href="#" class="paging last"><span class="blind">마지막페이지</span></a>
+							</div>
+
+						</div>
+						
+
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
     </div>
     <!--//container-->
     <div id="gnbDimmed" class="dimmed"></div>
