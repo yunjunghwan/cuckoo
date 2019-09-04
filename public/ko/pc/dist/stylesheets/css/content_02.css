@@ -489,7 +489,7 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .manual_inbox .detail_cate ul li.select:before{background-position:-183px -82px; width:13px; height:9px; top:25px; left:-2px;}
 
 /* 고객센터 팝업 */
-.layer_pop_container > .tit{font-size:25px; font-weight:500;}
+.layer_pop_container > .tit{font-size:25px; font-weight:500; letter-spacing:-1px;}
 .layer_pop_container > .cs_pop_01{margin-top:40px; font-size:17px; text-align:center; line-height:30px;}
 .layer_pop_container > .cs_pop_02{font-size:15px; font-weight:300; color:#8a8b87; line-height:30px; text-align:center; margin-top:30px;}
 .layer_pop_container > .pop_wrap_section{margin-top:50px;}
