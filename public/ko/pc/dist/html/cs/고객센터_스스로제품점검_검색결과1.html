@@ -432,6 +432,7 @@
 							
 							</div>
 						</div>
+						<!-- 검색값 없을시 nodata class 추가 -->
 						<div class="search_data mt60">
 							<div class="tit clear">
 								<div class="fl">검색결과 총<span>4</span>건</div>
@@ -444,7 +445,7 @@
 								</div>
 							</div>
 							<div class="desc">
-								<ul>
+								<ul class="self_data">
 									<li>
 										<a href="#">
 											<div class="img"><img src="../../images/customer/data_img01.png"></div>
@@ -483,20 +484,25 @@
 									</li>
 								</ul>
 							</div>
+							
+							<div class="pagination">
+								<a href="#" class="paging first disabled"><span class="blind">첫페이지</span></a>
+								<a href="#" class="paging prev disabled"><span class="blind">이전</span></a>
+								<a href="#" class="on">1</a>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<a href="#">4</a>
+								<a href="#">5</a>
+								<a href="#">6</a>
+								<a href="#" class="paging next"><span class="blind">다음</span></a>
+								<a href="#" class="paging last"><span class="blind">마지막페이지</span></a>
+							</div>
+							<div class="no_data prd_search" style="display:block">
+								<p class="txt1">검색 결과가 없습니다.</p>
+							</div>
 						
 						</div>
-						<div class="pagination">
-							<a href="#" class="paging first disabled"><span class="blind">첫페이지</span></a>
-							<a href="#" class="paging prev disabled"><span class="blind">이전</span></a>
-							<a href="#" class="on">1</a>
-							<a href="#">2</a>
-							<a href="#">3</a>
-							<a href="#">4</a>
-							<a href="#">5</a>
-							<a href="#">6</a>
-							<a href="#" class="paging next"><span class="blind">다음</span></a>
-							<a href="#" class="paging last"><span class="blind">마지막페이지</span></a>
-						</div>
+						
 					</div>
 				</div>
 			</div>
