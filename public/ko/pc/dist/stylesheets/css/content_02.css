@@ -273,8 +273,8 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 .content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form02 > .txt_box01 > .desc .select_box .tit{bordeR:none; padding:0px; border-bottom:3px solid #312f2d;}
 .content .customer_sub .customer_right > .customer_inbox > .desc > .self_check > .form02 > .txt_box01 > .desc .select_box .tit.selected{font-weight:500;}
 
-.content .customer_sub .select_box .tit:after{right:10px; width:16px; height:9px; background: url(../../images/customer/c_icon_zip.png); background-position:-281px -83px; }
-.content .customer_sub .select_box .tit.on:after{transform: rotate(180deg)}
+.content .customer_sub .self_check .select_box .tit:after{right:10px; width:16px; height:9px; background: url(../../images/customer/c_icon_zip.png); background-position:-281px -83px; }
+.content .customer_sub .self_check .select_box .tit.on:after{transform: rotate(180deg)}
 
 .customer_inbox .section{border-bottom:1px solid #e0e0de; margin-top:80px;}
 .customer_inbox .section + .section{margin-top:80px}
