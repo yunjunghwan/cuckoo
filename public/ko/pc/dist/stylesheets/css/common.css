@@ -304,7 +304,7 @@ body {position:relative; min-width: 1280px; margin: 0 auto; }
 #footer .footer_list > li{float:left; margin-left:140px; color:#8a8b87}
 #footer .footer_list > li:first-child{margin-left:0}
 #footer .footer_list .tit{margin-bottom:30px; font-weight:500; font-size:17px; color:#e7e7e7}
-#footer .footer_list li a{color:#8a8b87; letter-spacing:-1px}
+#footer .footer_list li a{color:#8a8b87; letter-spacing:-0.5px}
 #footer .footer_list .list01 li{font-size:17px; font-weight:500; color:#d5d6d3}
 #footer .footer_list .list01 li + li{margin-top:18px}
 #footer .footer_list .list01 .time{margin-top:35px; line-height:24px; color:#888887}
@@ -330,7 +330,7 @@ body {position:relative; min-width: 1280px; margin: 0 auto; }
 #footer .bottom_area .tit.tit02{width:213px; height:33px; background-position:0 -187px}
 #footer .bottom_area .tit.tit03{width:255px; height:33px; background-position:0 -244px}
 #footer .bottom_area .address_wrap + .address_wrap{margin-top:60px}
-#footer address, #footer copyright{color:#8a8b87; letter-spacing:-1px}
+#footer address, #footer copyright{color:#8a8b87; letter-spacing:-0.5px}
 #footer address{line-height:28px}
 #footer copyright{display:block; margin-top:10px; font-size:13px}
 #footer .bottom_area .desc{margin-top:60px; color:#8a8b87; letter-spacing:-1px}

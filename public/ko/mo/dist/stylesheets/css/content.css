@@ -1,1 +1,44 @@
 @charset "UTF-8";
+
+/* 헤더공통팝업 */
+#searchPop .container_pop{padding-bottom:50px}
+#searchPop .search_input input[type="text"]{font-weight:700; color:#312f2d; font-size:18px}
+#searchPop .search_input input[type="text"]::placeholder{font-weight:500}
+#searchPop .recent_box{margin-top:50px}
+#searchPop .recent_box .tit{margin-bottom:30px; font-size:14px; font-weight:500; color:#272524}
+#searchPop .recent_box ul{margin-top:-20px}
+#searchPop .recent_box li{display:inline-block; margin:20px 30px 0 0}
+#searchPop .best_box{margin-top:50px}
+#searchPop .best_box .tit{margin-bottom:30px; font-size:14px; font-weight:500; color:#272524}
+#searchPop .best_box li + li{margin-top:15px}
+#searchPop .best_box li .num{display:inline-block; width:18px; height:18px; margin-right:10px; line-height:18px; font-size:12px; font-weight:700; text-align:center; background-color:#312f2d; color:#fff}
+@media all and (max-width: 320px){
+    #searchPop .recent_box li{margin:20px 20px 0 0}
+    #cartPop .col_box .txt{min-height:63px}
+    #cartPop .btn_m{padding:12px 15px}
+}
+
+#cartPop .header_pop{padding:35px 25px 15px 25px}
+#cartPop .header_pop .tit{font-size:24px; font-weight:500}
+#cartPop .container_pop{padding-top:0; padding-bottom:50px}
+#cartPop .top_txt{font-size:15px; line-height:24px}
+#cartPop .col_box{display:flex; margin-top:50px}
+#cartPop .col_box > div{flex:1; padding:0 10px; box-sizing:border-box; text-align:center}
+#cartPop .col_box .tit{font-size:18px; color:#272524; font-weight:500}
+#cartPop .col_box .img{display:inline-block; position:relative; width:90px; height:90px; margin-top:28px; background:url(../../images/common/img_ico_zip.png) no-repeat; background-size:500px}
+#cartPop .col_box .img .num{display:inline-block; min-width:26px; height:26px; padding:0 7px; line-height:26px; position:absolute; top:-3px; right:3px; font-size:14px; color:#fff; font-weight:500; border-radius:13px; box-sizing:border-box;}
+#cartPop .col_box > div + div{border-left:1px solid #c7c8c4}
+#cartPop .col_box > div:first-child .img{background-position:0 0}
+#cartPop .col_box > div:first-child .num{background-color:#7a101b}
+#cartPop .col_box > div:last-child .img{background-position:-121px 0}
+#cartPop .col_box > div:last-child .num{background-color:#272524}
+#cartPop .col_box .txt{margin:23px 0; line-height:21px}
+/* sns공유하기팝업 */
+#snsPop .sns_list{text-align:center}
+#snsPop .sns_list li{display:inline-block}
+#snsPop .sns_list li + li{margin-left:32px;}
+#snsPop .sns_list li a{display:inline-block; font-weight:500; font-size:15px}
+#snsPop .sns_list li a:before{content:''; display:block; margin:0 auto; background:url(../../images/common/ico_zip.png) no-repeat; background-size:500px}
+#snsPop .sns_list li.kakao a:before{width:24px; height:22px; margin-bottom:17px; background-position:-331px -49px;}
+#snsPop .sns_list li.facebook a:before{width:14px; height:25px; margin-bottom:15px; background-position:-392px -45px;}
+#snsPop .sns_list li.url a:before{width:41px; height:15px; margin-bottom:20px; background-position:-441px -52px;}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" class="sub">
+<html lang="ko">
 
 <head>
   <title>CUCKOO</title>
@@ -22,6 +22,11 @@
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
+  <style>
+    .content{padding:25px}
+    h2{font-size:35px; margin:50px 0 20px 0}
+    h2:first-child{margin-top:0}
+  </style>
 </head>
 
 <body>
@@ -40,9 +45,9 @@
             <h1 class="header_logo"><a href="#"><span class="blind">CUCKOO</span></a></h1>
             <div class="util">
                 <button type="button" class="btn-share"><span class="blind">공유하기</span></button>
-                <button type="button" onclick="layerPopOpen('searchPop')" class="btn-search"><span class="blind">검색</span></button>
+                <button type="button" class="btn-search"><span class="blind">검색</span></button>
                 <span class="cart_wrap">
-                    <button type="button" onclick="layerPopOpen('cartPop')" class="btn-cart"><span class="blind">장바구니</span></button>
+                    <button type="button" class="btn-cart"><span class="blind">장바구니</span></button>
                     <span class="num">33</span>
                 </span>
                 <button type="button" class="btn-menu"><span class="blind">메뉴</span></button>
@@ -50,7 +55,7 @@
         </div>
         <div class="header_title_wrap">
             <div class="header_title">
-                <h2 class="page_tit">타이틀</h2>
+                <h2 class="page_tit">폼요소</h2>
                 <button type="button" class="btn-back"><span class="blind">뒤로가기</span></button>
             </div>
         </div>
@@ -113,11 +118,101 @@
     <div id="container">
 
         <div class="content">
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        </div>
-        <div class="btn-float">
-            <button type="button" class="btn-kakao"><span class="blind">kakao</span></button>
-            <button type="button" class="btn-top"><span class="blind">TOP</span></button>
+            <h2>박스타입</h2>
+            <div class="form_wrap type_box">
+                <ul>
+                    <li>
+                        <label class="tit essential" for="input01_01">아이디</label><!-- essential 필수값 클래스 -->
+                        <div class="input">
+                            <input type="text" id="input01_input01" placeholder="아이디를 입력해주세요.">
+                        </div>
+                    </li>
+                    <li>
+                        <label class="tit essential" for="input01_input02">아이디</label><!-- essential 필수값 클래스 -->
+                        <div class="input">
+                            <input type="text" id="input01_input02" class="error" placeholder="아이디를 입력해주세요."><!-- error 에러값 클래스 -->
+                        </div>
+                        <p class="error_txt">아이디를 입력해주세요.</p>
+                    </li>
+                    <li>
+                        <label class="tit essential" for="input01_input03">아이디</label>
+                        <div class="input">
+                            <input type="text" id="input01_input03" placeholder="아이디를 입력해주세요.">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>보더타입</h2>
+            <div class="form_wrap type_border">
+                <ul>
+                    <li>
+                        <label class="tit" for="input02_01">아이디</label><!-- essential 필수값 클래스 -->
+                        <div class="input">
+                            <input type="text" id="input02_01" placeholder="아이디를 입력해주세요.">
+                        </div>
+                    </li>
+                    <li>
+                        <label class="tit" for="input02_input02">아이디</label><!-- essential 필수값 클래스 -->
+                        <div class="input">
+                            <input type="text" id="input02_input02" class="error" placeholder="아이디를 입력해주세요.">
+                        </div>
+                        <p class="error_txt">아이디를 입력해주세요.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>체크박스</h2>
+            <p class="input_list">
+                <input type="checkbox" id="check01_01" name="check01">
+                <label for="check01_01"><span>체크박스</span></label>
+                <input type="checkbox" id="check01_02" name="check01">
+                <label for="check01_02"><span>체크박스</span></label>
+            </p>
+
+            <h2>라디오버튼</h2>
+            <p class="input_list">
+                <input type="radio" id="radio01_01" name="radio01">
+                <label for="radio01_01"><span>라디오버튼</span></label>
+                <input type="radio" id="radio01_02" name="radio01">
+                <label for="radio01_02"><span>라디오버튼</span></label>
+            </p>
+
+            <h2>셀렉트</h2>
+            <div class="wrap_select">
+                <select>
+                    <option>선택해주세요.</option>
+                    <option>선택완료</option>
+                </select>
+            </div>
+
+            <h2>셀렉트(고객센터)</h2>
+            <div class="design_select">
+                <a href="#" class="btn-view">해외서비스신청</a>
+                <ul class="hidden_area">
+                    <li><a href="#">서비스 안내</a></li>
+                    <li><a href="#">국가별 센터 위치</a></li>
+                    <li><a href="#">해외서비스 신청</a></li>
+                    <li><a href="#">해외구입처 안내</a></li>
+                </ul>
+            </div>
+
+            <h2>텍스트박스</h2>
+            <textarea placeholder="내용을 입력해주세요. (최소 30자 이상)"></textarea>
+
+            <h2>데이트피커</h2>
+            <div class="datepicker">
+                <input type="text" class="datepicker_input" readonly placeholder="날짜를 선택해주세요.">
+            </div>
+            <h2>데이트피커(다중)</h2>
+            <div class="datepicker_wrap">
+                <div class="datepicker">
+                    <input type="text" class="datepicker_input" readonly>
+                </div><span class="dash">~</span>
+                <div class="datepicker">
+                    <input type="text" class="datepicker_input" readonly>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -168,70 +263,6 @@
         </div>
     </footer>
     <!-- //footer -->
-    <!-- 장바구니 팝업 -->
-    <div id="cartPop" class="wrap_layer_pop type_header">
-        <div class="layer_pop">
-            <div class="header_pop">
-                <h2 class="tit">장바구니</h2>
-                <button class="btn-pop-close" onclick="layerPopClose('cartPop')"><span class="blind">팝업닫기</span></button>
-            </div>
-            <div class="container_pop">
-                <p class="top_txt">몰 상품과 렌탈 상품은 동시에 결제 할 수 없습니다.<br>각각의 장바구니를 확인 해주세요.</p>
-                <div class="col_box">
-                    <div>
-                        <p class="tit">쿠쿠몰</p>
-                        <div class="img"><span class="num">2</span></div>
-                        <p class="txt">현재 쿠쿠몰 장바구니에 <span class="point01">2</span>개의 상품이 있습니다.</p>
-                        <a href="#" class="btn_m radius">결제하러 가기</a>
-                    </div>
-                    <div>
-                        <p class="tit">쿠쿠렌탈</p>
-                        <div class="img"><span class="num">2</span></div>
-                        <p class="txt">장바구니에 상품을 담아주세요.</p>
-                        <a href="#" class="btn_m radius">상품보러 가기</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- //장바구니 팝업 -->
-    <!-- 검색어 팝업 -->
-    <div id="searchPop" class="wrap_layer_pop type_header">
-        <div class="layer_pop">
-            <div class="header_pop">
-                <button class="btn-pop-close" onclick="layerPopClose('searchPop')"><span class="blind">팝업닫기</span></button>
-            </div>
-            <div class="container_pop">
-                <div class="search_input">
-                    <input type="text" placeholder="검색어를 입력해 주세요.">
-                    <button type="button" class="btn-del"><span class="blind">삭제</span></button>
-                    <button type="button" class="btn-search"><span class="blind">검색</span></button>
-                </div>
-                <div class="recent_box">
-                    <p class="tit">최근검색어</p>
-                    <ul>
-                        <li><a href="#" class="txt">밥솥</a> <a href="#"><i class="ico del"></i></a></li>
-                        <li><a href="#" class="txt">정수기</a> <a href="#"><i class="ico del"></i></a></li>
-                        <li><a href="#" class="txt">전자레인지</a> <a href="#"><i class="ico del"></i></a></li>
-                        <li><a href="#" class="txt">내솥</a> <a href="#"><i class="ico del"></i></a></li>
-                        <li><a href="#" class="txt">안마의자</a> <a href="#"><i class="ico del"></i></a></li>
-                    </ul>
-                    <p class="no_txt">최근 검색어가 없습니다.</p>
-                </div>
-                <div class="best_box">
-                    <p class="tit">인기검색어</p>
-                    <ol>
-                        <li><a href="#"><span class="num">1</span>다니엘헤니 정수기</a></li>
-                        <li><a href="#"><span class="num">2</span>강식당 밥솥</a></li>
-                        <li><a href="#"><span class="num">3</span>마시멜로 미니 식기세척기</a></li>
-                        <li><a href="#"><span class="num">4</span>냉장고를 부탁해 전기레인지</a></li>
-                        <li><a href="#"><span class="num">5</span>초고압과 무압의 트윈프레셔</a></li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- //검색어 팝업 -->
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
 </body>
