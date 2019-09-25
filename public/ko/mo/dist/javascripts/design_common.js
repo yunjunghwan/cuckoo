@@ -45,12 +45,35 @@ $window.load(function () {
     });
     $(document).on('click', '.btn-like', function(){
         if(!($(this).hasClass('on'))){
-            $(this).addClass('on')
+            $(this).addClass('on');
         }else{
-            $(this).removeClass('on')
+            $(this).removeClass('on');
         }
     });
-
+    $(document).on('click', '.btn-sub-menu', function(){
+        if(!($(this).parents('.header_title').hasClass('on'))){
+            $(this).parents('.header_title').addClass('on');
+            $('html').addClass('sub_menu_open');
+            $('html, body').css('overflow','hidden');
+            $(document).on('click', '.sub_menu li a', function(e){
+                e.preventDefault();
+                $(this).parent().siblings().removeClass('on');
+                $(this).parent().addClass('on');
+            });
+        }else{
+            $('html').removeClass('sub_menu_open');
+            $(this).parents('.header_title').removeClass('on');
+            $('html, body').css('overflow','auto');
+        }
+    });
+    $(document).on('click', '.tab_btn li a', function(e){
+        e.preventDefault();
+        var index = $(this).parent().index();
+        $(this).parent().siblings().removeClass('on');
+        $(this).parent().addClass('on');
+        $('.tab_cont_wrap').find('.cont').siblings().hide();
+        $('.tab_cont_wrap').find('.cont').eq(index).show();
+    });
     $(window).scroll(function () {
         winSc = $(this).scrollTop();
 
@@ -111,16 +134,25 @@ function uiAcodian(){
 
     })
 }
-
+var currentTop = $(window).scrollTop();
 function layerPopOpen(obj){// 레이어팝업 열기, obj : 해당팝업 id
 	$('.wrap_layer_pop').removeClass('open');
 	var thisPop = $('#'+obj).find('.layer_pop');
     var winW = $(window).width();
     var winH = $(window).height();
+
+
 	//dimOn();
     if($('#'+obj).length >= 1){
 		$('#'+obj).addClass('open');
         $('html, body').css('overflow','hidden');
+        $('body').css({
+		  'position':'fixed',
+		  'top':-currentTop,
+		  'left':0,
+		  'right':0
+	  });
+
     }
 
 }
@@ -129,4 +161,6 @@ function layerPopClose(obj){// 레이어팝업 닫기, obj : 해당팝업 id
 
     $('#'+obj).removeClass('open');
     $('html, body').css('overflow','auto');
+    $('body').removeAttr('style');
+	$('body').scrollTop(currentTop);
 }
