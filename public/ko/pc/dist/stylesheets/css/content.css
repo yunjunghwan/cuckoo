@@ -384,7 +384,7 @@
 .tbl_order tbody tr:last-child td{border-bottom:1px solid #d5d6d3;}
 .tbl_order tbody td .count_wrap{width:80px}
 .tbl_order .img{display:inline-block; position:relative; /*width:140px; height:140px*/margin:0 40px 0 30px}
-.tbl_order.type_check .img{margin:0 40px 0 20px}
+.tbl_order.type_check .img{margin:0 20px;}
 .tbl_order .img .soldout{position:absolute; left:0; bottom:0; display:block; width:100%; height:42px; line-height:42px; text-align:center; color:#fff; background:url(../../images/common/bg_layer.png) repeat}
 .tbl_order .prd_info .category{font-size:13px; color:#585856}
 .tbl_order .prd_info .name{margin-top:13px; font-weight:500}
@@ -413,7 +413,7 @@
 .tbl_order .no_data{font-size:25px; color:#312f2d}
 .tbl_order .no_data:before{content:''; display:block; width:48px; height:48px; margin:0 auto 30px auto; background:url(../../images/common/img_ico_zip.png) no-repeat -1070px -425px}
 .aside_box_wrap{position:relative; float:right; width:280px}
-.aside_box{position:absolute; top:0; width:280px; background-color:#fff}
+.aside_box{position:relative; top:0; width:280px; background-color:#fff}
 .aside_box.fixed{position:fixed;}
 .aside_box .counter_box{width:100%; padding:35px 27px 43px 27px; border:3px solid #312f2d; box-sizing:border-box;}
 .aside_box .counter_box .top_area{padding-bottom:27px; border-bottom:2px dotted #e2e2e2}

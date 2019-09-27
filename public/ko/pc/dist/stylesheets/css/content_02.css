@@ -1,11 +1,15 @@
 @charset "UTF-8";
+.vat{vertical-align:top;}
 .tac{text-align:center;}
 .tal{text-align:left;}
 .tar{text-align:right;}
+.ft13{font-size:13px!important;}
+.ft17{font-size:17px!important;}
+.ft20{font-size:20px!important;}
 .mt10{margin-top:10px;}
 .mt15{margin-top:15px;}
-.mt20{margin-top:20px;}
-.mt25{margin-top:25px;}
+.mt20{margin-top:20px!important;}
+.mt25{margin-top:25px!important;}
 .mt30{margin-top:30px;}
 .mt35{margin-top:35px;}
 .mt40{margin-top:40px;}
@@ -13,7 +17,7 @@
 .mt60{margin-top:60px;}
 .mt70{margin-top:70px;}
 .mt80{margin-top:80px!important;}
-.mt100{margin-top:100px;}
+.mt100{margin-top:100px!important;}
 .ml30{margin-left:30px;}
 .ml40{margin-left:40px;}
 .mr10{margin-right:10px;}
@@ -24,6 +28,7 @@
 .mb20{margin-bottom:20px;}
 .mb60{margin-bottom:60px;}
 .w100p{width:100%;}
+.w150px{width:150px;}
 .w400{width:400px;}
 .w500{width:500px;}
 .w600{width:600px}
@@ -32,6 +37,7 @@
 .w830{width:830px;}
 .w20px{width:20px; display:inline-block;}
 .w120px{width:120px;}
+.w130px{width:130px;}
 .w140px{width:140px;}
 .w160px{width:160px;}
 .w180px{width:180px;}
@@ -52,6 +58,7 @@
 .w570px{width:570px;}
 .w630px{width:630px;}
 .w830px{width:830px;}
+.mw120px{min-width:120px!important;}
 .mw140px{min-width:140px;}
 .mw180px{min-width:180px;}
 .lh26{line-height:26px!important;}
@@ -65,16 +72,18 @@
 .inline{display:inline-block;}
 .bdnone{border:none!important;}
 .bdtnone{border-top:none!important;}
+.bor_dotted{border-top:2px dotted #d5d6d3!important;}
 .pb80{padding-bottom:80px;}
 .pdt0{padding-top:0px!important;}
 .pdt15{padding-top:15px;}
-.pdt20{padding-top:18px;}
+.pdt20{padding-top:20px;}
 .pdt30{padding-top:30px!important;}
 .pdb40{padding-bottom:40px!important;}
 .pb20{padding-bottom:20px;}
-.pd0{padding:0px;}
+.pd0{padding:0px!important;}
 .pdl30{padding-left:30px!important;}
 .pt60{padding-top:60px;}
+.vt{vertical-align:top!important;}
 .gray[class^="btn_"]{background-color:#8a8b87; border:1px solid #8a8b87;}
 .bolder{font-weight:500;}
 .not_hover_raidus_btn{font-size: 13px; padding: 7px 11px 7px 11px; font-weight: 300; border: 1px solid #c7c8c4; border-radius: 20px;}
@@ -748,23 +757,28 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 
 /* 쿠쿠렌탈 장바구니 */
 .rental_order .discount{font-size:13px;}
-.rental_order .bold.price{margin-top:10px;}
+.rental_order .bold.price{margin-top:10px; display:inline-block;}
 .rental_order .row.tit{font-size:20px; font-weight:600;}
 .rental_tab{margin-bottom:75px;}
 .rental_tab ul li{float:left; width:50%; line-height:50px; position:relative;  box-sizing:border-box; text-align:center; z-index:2;}
 .rental_tab ul li:after{content:'';  display:block; width:100%; height:50px; position:absolute; top:0; box-shadow: inset 0 0 0 1px #d5d6d3;  -webkit-transtion:.3s ease; -moz-transtion:.3s ease; transition:.3s ease; z-indeX:1}
 .rental_tab ul li.on:after{box-shadow: inset 0 0 0 2px #312f2d;  -webkit-transtion:.3s ease; -moz-transtion:.3s ease; transition:.3s ease;}
 .rental_tab ul li:first-child.on{left:1px; z-index:3;}
-
 .rental_tab ul li a{font-size:15px; color:#585856; letter-spacing:-1px; position:relative; z-index:2;}
 .rental_tab ul li a span{color:#312f2d;}
 .rental_tab ul li.on a{font-weight:500; color:#312f2d;}
 .rental_tab ul:after{clear:both; display:block; content:'';}
 .rental_tab ul li:nth-child(2).on:after{left:-1px;}
 .rental_order .row_discount{margin-bottom:28px;}
-
 .rental_order .no_data.shopping .txt1{line-height:46px;}
-
+.aside_box02.gray_box{margin-top:30px; padding:30px;}
+.aside_box02.gray_box .star_list{margin-top:25px;}
+.aside_box02.gray_box .star_list li{font-size:13px; color:#272524;}
+.aside_box02.gray_box .box_tit{font-size:17px; font-weight:500; color:#272524; position:relative; padding-left:32px; font-size:17px;}
+.aside_box02.gray_box .box_tit:before{content:''; display:block; position:absolute; lefT:0; top:0; background:url(../../images/customer/c_icon_zip.png); background-position:-491px -15px; width:18px; height:21px; top:-2px; }
+.content.rental_box{min-height:850px;}
+.tbl_order.type_check .img{position:relative; margin:0 20px;}
+.tbl_order.type_check .img .sold_out{position:absolute; bottom:0; background:rgba(0,0,0,0.9); width:100%; line-height:42px; color:#fff}
 /* 쿠쿠렌탈 주문결제 */
 .rental_order .rental_customer_info{background:url(../../images/rental_order/top_bg.png); width:1180px; max-height:143px; background-repeat:no-repeat; padding:58px 80px; box-sizing:border-box;}
 .rental_order .rental_customer_info .clear .fl{font-size:25px; font-weight:600;}
@@ -1045,14 +1059,21 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 /*팝업*/
 .layer_pop.mh900{max-height:900px;}
 .layer_pop .tit_000{font-size:30px; font-weight:500; letter-spacing:-1px;}
+.layer_pop .tit_0000{font-size:25px; font-weight:500; letter-spacing:-1px;}
 #addOption .inner_txt .txt1 .mt40{font-size:17px; color:#312f2d; line-height:26px;}
 #giftChoice .gift_choice{text-align:center; margin-top:40px; margin-top:-20px;}
 #giftChoice .gift_choice .count_wrap{width:80px;}
-#giftChoice .gift_choice .img{width:160px; height:160px; position:relative;}
+#giftChoice .gray_box{padding:30px 0; margin-top:30px;}
+#giftChoice .gray_box .clear > div{text-align:left; width:50%; padding:0 40px; box-sizing:border-box; line-height:30px; position:relative;}
+#giftChoice .gray_box .clear > div span{position:absolute; right:40px; font-size:20px; font-weight:500; color:#312f2d; letter-spacing:-1px;}
+#giftChoice .gray_box .clear > div:nth-child(2){border-left:1px solid #d5d6d3;}
+#giftChoice .gift_choice .img{width:160px; height:160px; position:relative; border:1px solid #d5d6d3;}
 #giftChoice .gift_choice li{width:160px; float:left; margin-right:22px; margin-top:60px;}  
 #giftChoice .gift_choice:after{clear:both; display:block; content:'';}
 #giftChoice .gift_choice li:nth-child(4n){margin-right:0px;}
 #giftChoice .gift_choice li > div{width:160px;}
+#giftChoice .gift_choice li input[type="checkbox"] + label:before{display:none;}
+#giftChoice .gift_choice li input[type="checkbox"]:checked + label:before{display:block;}
 #giftChoice .gift_choice li input[type="checkbox"] + label:before{position:absolute; top:0; right:0; padding:0px; width:20px; height:20px; z-index:1;}
 #giftChoice .gift_choice li input[type="checkbox"] + label span{position:absolute; top:0; left:0; display:block; width:160px; height:160px;}
 #giftChoice .gift_choice li input[type="checkbox"] + label span img{width:100%;}
@@ -1061,3 +1082,200 @@ span.circle_black03{background-color:#312f2d; color:#fff; border-radius:50%; wid
 
 /*검색결과 placeholder*/
 .result_placeholder input[type="text"]::placeholder{color:#312f2d!important; font-weight:500!important;}
+
+/*rental product*/ 
+.rental_info_area .top_area .category{font-size: 15px; color: #585856; letter-spacing: -1px; display:block;}
+.rental_info_area .top_area .code_no{font-size:25px; color:#312f2d; letter-spacing:-1px; display:block; font-weight:500; margin-top:15px;}
+.rental_info_area .top_area .code_no .conde_no2{border-left:1px solid #d5d6d3; margin-left:15px; padding-left:15px; font-size:15px; font-weight:300; color:#585856}
+.rental_info_area .top_area .price_wrap{display:block; margin-top:30px;}
+.rental_info_area .top_area .price_wrap + .price_wrap{margin-top:20px;}
+.rental_info_area .top_area .price_wrap .price{font-weight:700; color:#272524; font-size:20px; }
+.rental_info_area .top_area{border-bottom:1px solid #d5d6d3; display:block; padding-bottom:20px; margin-top:22px;}
+.rental_info_area .bottom_area{display:block;}
+.rental_info_area .bottom_area .hash_tag{display:block;  padding-top:20px; padding-bottom:20px;}
+.rental_info_area .bottom_area .btn_area{display:block;}
+.rental_info_area .bottom_area .btn_area .bottom_btn{display:inline-block; padding:7px 10px; border:1px solid #c7c8c4; border-radius:20px; font-size:12px; margin-right:1px;}
+.rental_product .prd_list.type_banner .banner_area img{width:740px; height:652px;}
+.prd_name .conde_no2{border-left:1px solid #d5d6d3; margin-left:15px; padding-left:15px; font-size:15px; font-weight:300; color:#585856; position:relative; top:-3px;}
+.rental_fix_area{background:#312f2d; width:100%; position:fixed; bottom:0; left:0; z-index:21;}
+.rental_fix_area .inbox{width:1180px; margin:0 auto; padding:30px 0;}
+.rental_fix_area .inbox .clear .fl{color:#c7c8c4; font-size:17px; line-height:60px;}
+.rental_fix_area .fr button{border-radius:30px; padding:20px 40px; font-weight:300;}
+.rental_fix_area .fr button:first-child{background:none; color:#fff; border:1px solid #fff; margin-right:5px;}
+.rental_fix_area .fr button:nth-child(2){background:#7a101b; color:#fff;}
+.rental_fix_area .fl .fix_tit{display:inline-block; padding-left:37px; position:relative;}
+.rental_fix_area .fl .fix_tit:before{content:''; display:inline-block; position:absolute; left:0; width:26px; height:26px; background:url(../../images/customer/c_icon_zip.png); background-position:-445px -14px; top:15px;}
+.payment_choice_list > div{box-sizing:border-box; float:left; width:50%; text-align:center; font-size:15px; color:#312f2d; padding:17px 0; font-weight:500; cursor:pointer; position:relative;}
+.payment_choice_list > div:before{content:''; display:inline-block; width:100%; height:100%; border:1px solid #c7c8c4; position:absolute; top:0; left:0; box-sizing:border-box;} 
+.payment_choice_list > div:nth-child(2):before{margin-left:-1px;}
+.payment_choice_list > div.on:before{border:2px solid #312f2d; z-index:2;}
+.payment_choice_list:after{clear:both; display:block; content:'';}
+.payment_choice_cont .price_info .txt ul li{font-size:15px; position:relative;} 
+.payment_choice_cont .price_info .txt ul li .base_rental_price{font-size:17px; color:#272524; font-weight:500; }
+.pa_r0{position:absolute; right:0; top:-5px;}
+.payment_choice_cont .price_info .txt ul li ul li{font-size:13px;}
+.payment_choice_cont .price_info .txt .dis_rental_price{font-size:20px; color:#272524; font-weight:500; }
+.rental_product .body_area{border-top:none!important;}
+.rental_product_view .btn-top{bottom:150px;}
+.chioce_rental_price button{font-weight:300; text-align:left; display: block; position: relative; border: 1px solid #d5d6d3; height: 50px; padding: 0 20px; line-height: 50px; box-sizing: border-box; background-color: #fff; color: #8a8b87; width: 100%;}
+.chioce_rental_price button:after{content:''; display:inline-block; position:absolute; right:20px; width: 15px; height: 15px; background: url(../../images/customer/c_icon_zip.png); background-position: -73px -110px; top: 16px;}
+.package_discount{font-size:13px; color:#585856; display:inline-block; margin-left:20px;}
+.prd_rental.prd_view .option_info{border-top:2px dotted #dbdbdb!important;}
+.tbl.type_data_02 th, .tbl.type_data_02 td{border-left:none; padding:20px 0!important;}
+.layer_pop .type_data_02 td{font-size:15px;}
+.tbl.type_data_02 td.discount_type01{color:#312f2d; font-weight:500;}
+.gray_box.rental_type .bottom_area{margin-top:30px; border-top:2px dotted #dfdfdf; padding-top:20px;}
+.gray_box.rental_type .bottom_area ul li{padding:15px 30px;}
+.gray_box.rental_type .bottom_area ul li span.tit{float:left; display:block; line-height:25px;}
+.gray_box.rental_type .bottom_area ul li span.graph{float:left; margin-left:25px; font-weight:500; color:#312f2d; position:relative; line-height:25px; height:25px;}
+.gray_box.rental_type .bottom_area ul li span.graph > span{position:relative; }
+.gray_box.rental_type .bottom_area ul li span.graph .percent_5:before{content:'';width:25px; height:25px; background:#312f2d; display:inline-block; margin-right:10px; border-top-right-radius: 20px; border-bottom-right-radius:20px;}
+.gray_box.rental_type .bottom_area ul li span.graph .percent_10:before{content:'';width:45px; height:25px; background:#312f2d; display:inline-block; margin-right:10px; border-top-right-radius: 20px; border-bottom-right-radius:20px;}
+.gray_box.rental_type .bottom_area ul li span.graph .percent_20:before{content:'';width:85px; height:25px; background:#312f2d; display:inline-block; margin-right:10px; border-top-right-radius: 20px; border-bottom-right-radius:20px;}
+.gray_box.rental_type .bottom_area ul li span.graph .percent_40:before{content:'';width:165px; height:25px; background:#312f2d; display:inline-block; margin-right:10px; border-top-right-radius: 20px; border-bottom-right-radius:20px;}
+.gray_box.rental_type .bottom_area ul li span.graph .real_num{position:relative; top:-6px;}
+.gray_box.rental_type .bottom_area ul li:after{clear:both; display:block; content:'';}
+.price_info > ul > li{position:relative;}
+.price_info_gray_box{background:#f8f8f8; padding:22px 30px; font-size:13px; margin-top:30px!important; margin-bottom:30px;}
+.price_info_gray_box > div{line-height:24px;}
+.price_info_radio > span{margin-right:30px;}
+.alliance_mem p{line-height:24px;}
+.rental_payinfull{border-bottom:1px solid #d5d6d3}
+.select_color{clear:both; display:block; content:''; width:580px; float:right; margin-top:30px;}
+.select_color ul{text-align:center;}
+.select_color ul li{display:inline-block; margin:0 10px;}
+.select_color ul li a span.out_circle{width:30px; height:30px; border-radius:20px; border:2px solid #d5d6d3; displaY:inline-block; box-sizing:border-box; position:relative;}
+.select_color ul li a span.out_circle .in_circle{width:20px; height:20px; border-radius:20px; display:inline-block; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); }
+.select_color ul li a span.out_circle .in_circle.on:after{content:''; display:inline-block; width:12px; height:8px; position:absolute; background:url(../../images/customer/c_icon_zip.png); background-position:-482px -84px; top: 6px; left: 4px;}
+.price_area.price_area_02 > span:first-child{margin-right:25px; padding-right:25px; border-right:1px solid #585856;}
+.month_package li:before{background:#7a101b!important;}
+.bg_fix_data{background:#f5f5f5; border:1px solid #d5d6d3; color:#8a8b87; font-size:15px; line-height:50px; padding:0 20px 0 20px; box-sizing:border-box;} 
+.rental_pay_info{padding:0 100px;}
+.rental_pay_info > table tr td{height:80px; box-sizing:border-box;}
+.rental_pay_info > table + div{margin-top:60px; padding-left:160px;}
+.rental_pay_info > table + div ul li + li{margin-top:25px;}
+.rental_pay_info > table + div ul li > div:first-child{font-weight:500; font-size:17px; width:185px; text-align:left;}
+.rental_pay_info > table + div ul li > div:nth-child(2){font-size:17px;}
+.rental_use_box_bottom{background:#312f2d; padding:30px 0; text-align:center;}
+.rental_use_box_bottom > .tit{font-size:15px; color:#fff;}
+.rental_use_box_bottom > .desc{font-size:13px; color:#8a8b87; margin-top:10px;}
+.tbl_rental .prd_info .name > .category{ padding-right:20px; position:relative;}
+.tbl_rental .prd_info .name > .category:after{content:''; width:1px; height:10px; background:#d5d6d3; display:inline-block; left:10px; position:relative;}
+.rental_use_box .right_area.pd0 > .tit{font-size:25px; text-align:center;}
+.rental_use_box .right_area.pd0 > .desc{font-size:15px; margin-top:30px; text-align:center;}
+.tbl_rental_check{padding-top:80px; padding-bottom:80px; border-bottom:1px solid #d5d6d3; }
+.tbl_rental_check .tit{font-size:25px; text-align:center;}
+.tbl_rental_check .desc{margin-top:40px; text-align:center;}
+.tbl_order.tbl_rental_check{border-top:none;}
+.rental_state .txt1{letter-spacing:-1px;}
+#installRequest .gray_box{margin-top:20px; padding:30px;}
+#installRequest .gray_box ul li + li{margin-top:20px;}
+#installRequest .gray_box ul li span{width:90px; displaY:inline-block; font-weight:500;}
+#receiptConfirm .form_wrap02{border-top:2px solid #312f2d; }
+#receiptConfirm .form_wrap02 table tr{border-bottom:1px solid #d5d6d3;}
+#receiptConfirm .form_wrap02 table tr th{text-align:center; font-weight:500;}
+#receiptConfirm .form_wrap02 table tr td{padding:20px 0 20px 20px;}
+.tit_03.cuckcoo_bg{display:block; position:relative;}
+.tit_03.cuckcoo_bg:after{content:''; display:inline-block; width:120px; height:18px; background:url(../../images/customer/c_icon_zip.png); background-position:0 -167px; position:absolute; right:0; top:8px;}
+#rentalAgain .w100p{height:100%; min-height:100%;}
+#rentalProductAgain .w100p{height:100%; min-height:100%;}
+#rentalAgain .w100p .container_pop{width:1180px; margin:0 auto;}
+#rentalProductAgain .w100p .container_pop{width:1180px; margin:0 auto;}
+#rentalAgain .prd_list_wrap .top_area .total{font-size:20px;}
+#rentalProductAgain .prd_list_wrap .top_area .total{font-size:20px;}
+#rentalAgain .layer_pop .header_pop{margin-bottom:90px; position:relative;}
+#rentalProductAgain .layer_pop .header_pop{margin-bottom:90px; position:relative;}
+#rentalProductAgain .prd_view .content{padding-top:0px;}
+#rentalProductAgain .tab_cont_wrap.payment_choice_cont{border-top:1px solid #d5d6d3; border-bottom:1px solid #d5d6d3;}
+#rentalProductAgain .content{padding:0px;}
+
+/*company*/
+.company_top_area{width:100%; min-width:1180px; background:url(../../images/company/top_banner.png); height:600px; background-size:cover; background-position:center center; position:relative;}
+.company_top_area > p{font-size:30px; color:#fff; line-height:42px; text-align:center; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);}
+.company_tab{width:1180px; margin:100px auto 0; text-align:center;}
+.company_tab .tab_btn{display:inline-block;}
+.company_content{margin-top:100px; position:relative;}
+.company_inbox_type01{width:1180px; margin:0 auto;}
+.company_inbox_type01 .tit{font-size:30px; line-height:48px; letter-spacing:-2px; color:#312f2d;}
+.company_inbox_type01 .tit + .desc{margin-top:40px; line-height:32px; font-size:17px; color:#585856; letter-spacing:-1px;}
+.company_inbox_type01 .tit + .desc + .desc{line-height:32px; font-size:17px; color:#585856; letter-spacing:-1px; margin-top:25px;}
+.company_center_bg{background:url(../../images/company/center_banner.png); height:450px; width:100%; background-repeat:no-repeat; background-position:right; margin-top:60px;} 
+.company_inbox_type02{width:1180px; margin:0 auto;}
+.company_inbox_type02 .desc{font-size:17px; line-height:32px; color:#585856; letter-spacing:-1px; padding-left:500px; }
+.company_center_bg02{width:100%; min-width:1180px; height:450px; background:url(../../images/company/center_banner03.png); background-position:center; background-size:cover; margin-top:130px;}
+.company_center_bg02 .company_center_bg02_txt{width:1180px; margin:0 auto; height:100%; position:relative;}
+.company_center_bg02 .company_center_bg02_txt > p{position:absolute; right:0; bottom:80px; font-size:20px; line-height:32px; color:#fff; letter-spacing:-1px; padding-top:23px;}
+.company_center_bg02 .company_center_bg02_txt > p:before{content:''; display:inline-block; position:absolute; top:0; lefT:0; width:34px; height:4px; background:#dcd9dd;}
+.company_bottom{width:1180px; margin:140px auto;}
+.company_bottom > .tit{font-size:38px; font-weight:500; position:relative; padding-right:23px; display:inline-block;}
+.company_bottom > .tit:after{content:''; display:inline-block; position:absolute; top:-2px; right:0; width:10px; height:10px; border-radius:5px; background:#7a101b;}
+.company_bottom .desc{font-size:17px; line-height:32px; color:#585856; letter-spacing:-1px; margin-top:40px;}
+.company_bottom > .clear > div{width:600px; padding-left:70px; box-sizing:border-box;} 
+.company_bottom .clear .img{width:580px; padding-lefT:0px;}
+.company_bottom .section{margin-top:100px; display:flex; align-items:center;}
+.company_bottom .section + .section{margin-top:160px;}
+.company_bottom .clear > div > .tit{font-size:30px; letter-spacing:-2px; line-height:48px;}
+.company_bottom .clear > div > .desc{font-size:17px; line-height:32px; color:#585856; letter-spacing:-1px; margin-top:40px;}
+
+.company_content .ci_info{width:1180px; margin:0 auto;}
+.company_content .ci_info .fl > .tit{font-size:25px; font-weight:500; line-height:38px; letter-spacing:-2px; padding-top:36px; border-top:2px solid #312f2d}
+.company_content .ci_info .fl > .desc{font-size:15px; color:#8a8b87; margin-top:25px;}
+.company_content .ci_info .fr{width:880px;}
+.company_content .ci_info .fr .desc{font-size:15px; color:#585856; line-height:30px; letter-spacing:-1px;}
+.company_content .ci_info .fr .img + .desc{margin-top:45px; }
+.company_content .ci_info .section + .section{margin-top:115px;}
+.company_content .ci_info .section:last-child{margin-bottom:140px;}
+
+.color_table{margin-top:60px;}
+.color_table > div > .tit{font-size:20px; font-weight:500;}
+.color_table > div > .color{margin-top:25px; padding:30px; position:relative; display:flex; align-items:center; flex-direction: row-reverse; -webkit-flex-direction:row-reverse; }
+.color_table > div > .color > .color_name{font-size:17px; color:#fff; position:absolute; left:30px;}
+.color_table > div > .color > .cmyk{text-align:right; font-size:15px; line-height:26px;  color:#fff;}
+.color_table_type02{margin-top:60px;}
+.color_table_type02 > .clear{margin-top:25px;}
+.color_table_type02 > .clear + .clear{margin-top:20px;}
+.color_table_type02 > .clear > .color{width:430px; float:left; box-sizing:border-box; padding:30px; position:relative; display:flex; align-items:center; flex-direction: row-reverse; -webkit-flex-direction:row-reverse;}
+.color_table_type02 > .clear > .color + .color{margin-left:20px;}
+.color_table_type02 > .clear > .color > .cmyk{text-align:right; color:#fff; letter-spacing:-1px; font-size:13px; font-weighT:300; line-height:20px;}
+.color_table_type02 > .clear > .color > .color_name{font-size:17px; color:#fff; position:absolute; left:30px;}
+.company_content .history_info{padding-bottom:140px;}
+.company_content .history_info .section + .section{margin-top:40px;}
+.company_content .history_info .section > .tit{font-size:72px; font-weight:500; letter-spacing:-2px; color:#971421; text-align:center; height:72px; line-height:72px;} 
+.company_content .history_info .section{width:1180px; margin:0 auto; position:relative;}
+.company_content .history_info .section dl:nth-of-type(odd){float:left; width:591px; direction: rtl;}
+.company_content .history_info .section dl:nth-of-type(even){float:right; width:590px ; margin-right:4px;}
+.company_content .history_info .section .desc{position:relative; margin-top:30px; padding-top:105px; padding-bottom:40px;}
+.company_content .history_info .section .desc:after{clear:both; display:block; content:'';}
+.company_content .history_info .section .desc:before{width: 3px; height: 100%; display: block; content: ''; position: absolute; left: 50%; background:url(../../images/company/dot_bg.png); background-repeat:repeat-y; top:0;}
+
+.company_content .history_info .section .desc dl{margin-left:5px;}
+.company_content .history_info .section .desc dl + dl{margin-top:30px;}
+.company_content .history_info .section .desc dl dd{margin-top:40px; position:relative; right:30px; display:flex;}
+.company_content .history_info .section .desc dl dd + dd{margin-top:20px;}
+.company_content .history_info .section .desc dl:nth-of-type(even) dd{position:relative; left:30px; right:0;}
+.company_content .history_info .section .desc dl dt span{position:relative; color:#fff; font-weight:500; background:#971421; font-size:17px; padding:10px 15px; border-radius:15px;}
+.company_content .history_info .section .desc dl dt span:after{content: ''; display: inline-block; position: absolute; width: 0; height: 0; border-left: 13px solid transparent; border-right: 13px solid transparent; border-top: 15px solid #961421; top: 0; right: -12px;}
+.company_content .history_info .section .desc dl:nth-of-type(even) dt span:after{content: ''; display: inline-block; position: absolute; width: 0; height: 0; border-left: 13px solid transparent; border-right: 13px solid transparent; border-top: 15px solid #961421; top: 0; left: -12px;}
+.company_content .history_info .section .desc dl dt:before{contenT:''; display:inline-block; width:11px; height:11px; background:#971421; border-radius:6px; position:relative; top:-5px; margin-left:15px;}
+.company_content .history_info .section .desc dl:nth-of-type(even) dt:before{contenT:''; display:inline-block; width:11px; height:11px; background:#971421; border-radius:6px; position:relative; top:-5px; margin-left:0px; margin-right:15px;}
+.company_content .history_info .section .desc dl dd em{font-weight:500; width:60px; position:relative; top:4px;}
+.company_content .history_info .section .desc dl dd p{line-height:24px;}
+.company_content .history_info .section .desc dl dd p span{display:block; letter-spacing:-1px;}
+.company_content .history_info .section .desc dl dd p span + span{margin-top:20px;}
+.his_dot{width: 25px; height: 25px; background:url(../../images/company/hisdot.png); display: inline-block; position: absolute; top:-8px; left: 50%; margin-left: -11px;}
+.his_fixed_area{position:absolute; top:0; left:50%; margin-left:690px; transition: top .5s}
+.his_fixed_area.fixed{position:fixed; top:50%; margin-top:-120px;}
+.his_fixed_area:after{width: 3px; height: 100%; display: block; content: ''; position: absolute; right:0; background:url(../../images/company/dot_bg.png); background-repeat:repeat-y; top:0;}
+.his_fixed_area ul li{text-align:right; position:relative; cursor:pointer; width:110px;}
+.his_fixed_area ul li span{font-size:15px; font-weight:500; color:#8a8b87; position:relative; padding-right:40px; displaY:inline-block;}
+.his_fixed_area ul li span:after{content:''; display:block; width:8px; height:8px; border-radius:5px; background:#8a8b87; top: 4px; right: -2px; z-index: 1; position:absolute;}
+.his_fixed_area ul li.on span{font-size:20px; color:#971421; font-weight:700;}
+.his_fixed_area ul li.on span:after{width:25px; height:25px; background:url(../../images/company/hisdot.png); top:-2px; right:-11px;}
+.his_fixed_area ul li + li{margin-top:40px;}
+/*content.css 수정할것들*/
+.prd_rental.prd_view .prd_info .body_area .price_info li .tit{width:110px;}
+.prd_rental.prd_view .option_info .view_area > .tit{width:110px;}
+.prd_view .prd_info .body_area .price_info li .tit{margin-right:0px;}
+.prd_rental.prd_view .option_info{padding-bottom:20px;}
+.rental_use_box .right_area .tit{font-size:20px;}
+.tbl.type_data th{padding:20px 0;}

@@ -373,146 +373,64 @@
             <div class="location">
                 <ul>
                     <li><a href="#">홈</a></li>
-                    <li>쿠쿠렌탈 장바구니</li>
+                    <li>쿠쿠렌탈 주문완료</li>
                 </ul>
             </div>
             <div class="top_tit">
-                <h2 class="tit_02">쿠쿠렌탈 장바구니</h2>
+                <h2 class="tit_02">쿠쿠렌탈 주문완료</h2>
             </div>
         </div>
         <div class="content">
-			<div class="rental_tab">
-				<ul>
-					<li><a href="#">일시불 구매 <span>(0)</span></a></li>
-					<li class="on"><a href="#">렌탈 <span>(1)</span></a></li>
-				</ul>
-			</div>
-            <div class="total_count">
-                <input type="checkbox" class="check_m" id="check00_00">
-                <label for="check00_00"><span>담긴 제품:총 <span class="point01">1</span>개</span></label>
-            </div>
-            <div class="order_area">
-                <div class="tbl_wrap">
-                    <div class="tbl tbl_order type_check">
-                        <table>
-                            <caption>장바구니</caption>
-                            <colgroup>
-                                <col style="width:20px">
-                                <col style="width:140px">
-                                <col style="width:auto">
-                                <col style="width: 15%;">
-                                <col style="width: 10%;">
-                                <col style="width: 10%;">
-                                <col style="width: 16%;">
-								<col style="width: 12%;">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th scope="col" colspan="3">제품/옵션 정보</th>
-                                    <th scope="col">수량</th>
-                                    <th scope="col">의무사용기간</th>
-                                    <th scope="col">관리유형</th>
-                                    <th scope="col">월 렌탈료</th>
-									<th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="txt_left">
-                                        <span>
-                                            <input type="checkbox" class="check_m no_label" id="check01_01">
-                                            <label for="check01_01"><span class="blind">제품선택</span></label>
-                                        </span>
-                                    </td>
-                                    <td><div class="img"><img src="../../images/order/temp_prd_140x140.png" alt=""></div></td>
-                                    <td class="txt_left prd_info">
-                                        <p class="category">정수기</p>
-                                        <p class="name">CP-TS011S</p>
-										<p class="discount"></p>
-										<p class="price"><span class="point01 ft13">신규패키지</span></p>
-                                    </td>
-                                    <td>
-                                        <div class="count_wrap">
-                                            <button type="button" class="ico minus"><span class="blind">수량감소</span></button><!-- [D]비활성화시 disabled속성추가 -->
-                                            <span class="num">2</span>
-                                            <button type="button" class="ico plus"><span class="blind">수량증가</span></button><!-- [D]비활성화시 disabled속성추가 -->
-                                        </div>
-                                    </td>
-                                    <td><span class="">36개월</span></td>
-									<td>관리형</td>
-                                    <td>
-										<p class="discount">75,800원</p>
-										<p class="bold price">70,800원</p>
-									</td>
-                                    <td class="btn-wrap">
-                                        <p><button type="button" class="btn_s common">바로렌탈</button></p>
-                                        <p><button type="button" class="btn_s">삭제</button></p>
-                                    </td>
-
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="btn-wrap-left">
-                        <button type="button" class="btn_s">전체 제품 삭제</button>
-                        <button type="button" class="btn_s">선택 제품 삭제</button>
-                    </div>
+            <div class="complate_page order">
+                <p class="txt1">주문이 완료되었습니다!</p>
+                <p class="txt2">주문번호 : 20190511-12345678</p>
+                <ul>
+                  
+                    <li>렌탈 신청 내역은 <span class="bold">마이쿠쿠 &gt; 나의렌탈 &gt; 주렌탈이용내역</span> 에서 확인하실 수 있습니다.</li>
+                </ul>
+				<div class="rental_pay_info mt60 tbl type_border type_m">
+					<table>
+						<caption>제품등록내역</caption>
+						<thead>
+							<tr>
+								<th scope="col" width="25%">주문번호</th>
+								<th scope="col" width="25%">모델명</th>
+								<th scope="col" width="25%">의무사용기간</th>
+								<th scope="col" width="25%">예상 월 렌탈료</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>123456789</td>
+								<td>CP-TS011S(S)</td>
+								<td>할부</td>
+								<td><span class="bold ft17">13,900원</span></td>
+							</tr>
+						</tbody>
+					</table>
+					<div>
+						<ul class="bul_list">
+							<li class="clear">
+								<div class="fl">결제방법</div>
+								<div class="fl">카드 자동이체(정기결제일:매월10일)</div>
+							</li>
+							<li class="clear">
+								<div class="fl">사은품</div>
+								<div class="fl">존탐스 로봇 청소기</div>
+							</li>
+						</ul>
+					</div>
+					<div class="rental_process">
+					
+					</div>
+                <div class="btn_area">
+                    <a href="#" class="btn_l radius">메인으로 이동</a>
+                    <a href="#" class="btn_l radius common">렌탈이용내역</a>
                 </div>
-            </div><!-- //order_area -->
-            <div class="aside_box_wrap">
-                <div class="aside_box">
-                    <div class="counter_box">
-                        <div class="top_area">
-							<div>
-								<div class="row tit">
-									CP-TS011S
-								</div>
-								<div class="row">
-									<span class="tit">월 렌탈료</span>
-									<span class="price">37,900원</span>
-								</div>
-								<div class="row_discount mt20">
-									<span class="tit">패키지 할인</span>
-									<span class="price">-5,000원</span>
-								</div>
-
-							</div>
-							<div>
-								<div class="row tit">
-									CP-TS011S
-								</div>
-								<div class="row">
-									<span class="tit">월 렌탈료</span>
-									<span class="price">36,900원</span>
-								</div>
-								<div class="row_discount mt20">
-									<span class="tit">패키지 할인</span>
-									<span class="price">-5,000원</span>
-								</div>
-
-							</div>
-							<div class="row">
-								<span class="tit">총 할인 금액</span>
-								<span class="price">-10,000원</span>
-							</div>
-
-                        </div>
-                        <div class="bottom_area">
-                            <div class="price_tit">최종 월 렌탈료	</div>
-                            <div class="price_box"><spasn>64,800</spasn><span class="won">원</span></div>
-                            <div class="row_point">
-                                <span class="tit"><i class="ico point"></i><span>예상 적립 포인트</span></span>
-                                <div class="txt_point">0P</div>
-                            </div>
-                            <div class="btn-wrap">
-                                <button type="button" class="btn_l radius">선택 제품 렌탈</button>
-                                <button type="button" class="btn_l radius common">전체 제품 렌탈</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+			
+				
+				</div>
+				
             </div>
 
         </div>

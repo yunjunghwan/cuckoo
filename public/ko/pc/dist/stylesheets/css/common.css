@@ -438,10 +438,10 @@ img { vertical-align: top; image-rendering: -webkit-optimize-contrast; }
 .dash{display:inline-block; width:23px; text-align:center}
 .font_light{font-weight:300 !important}
 /* 공통 타이틀 */
-.tit_02{display:inline-block; font-size:38px; font-weight:700; vertical-align:middle}
-.tit_03{display:inline-block; font-size:25px; font-weight:500; vertical-align:middle}
-.tit_04{display:inline-block; font-size:20px; font-weight:500; vertical-align:middle}
-.tit_05{display:inline-block; font-size:17px; font-weight:500; vertical-align:middle}
+.tit_02{display:inline-block; font-size:38px; font-weight:700; vertical-align:middle; letter-spacing:-1px;}
+.tit_03{display:inline-block; font-size:25px; font-weight:500; vertical-align:middle; letter-spacing:-1px;}
+.tit_04{display:inline-block; font-size:20px; font-weight:500; vertical-align:middle; letter-spacing:-1px;}
+.tit_05{display:inline-block; font-size:17px; font-weight:500; vertical-align:middle; letter-spacing:-1px;}
 .tit_border{display:block; margin-bottom:40px; padding-bottom:20px; box-sizing:border-box; border-bottom:2px solid #312f2d}
 .tit_border .tit_04{margin-bottom:0 !important}
 .tit_03 .desc{font-size:15px; color:#585856}
@@ -725,7 +725,7 @@ table .bul_list > li:before{top:11px}
 .select_box .tit:after{content:''; display:inline-block; position:absolute; top:22px; right:20px; width:16px; height:8px; background:url(../../images/common/ico_zip.png) no-repeat -317px -257px}
 .select_box .tit.on:after{background-position:-448px -407px;}
 .select_box .hidden{display:none; position:absolute; top:49px; left:0; width:100%; padding:10px 0; max-height:177px; overflow-y:auto; border:1px solid #312f2d; background-color:#fff; box-sizing:border-box; z-index:10}
-.select_box.typeA .hidden{position:static;}
+.select_box.typeA .hidden{height:100px;}
 .select_box .tit.on + .hidden{display:block}
 .select_box .hidden a, .select_box .hidden .link_wrap{display:block; padding:15px 20px}
 .select_box .hidden a.disabled{color:#8a8b87; pointer-events: none}

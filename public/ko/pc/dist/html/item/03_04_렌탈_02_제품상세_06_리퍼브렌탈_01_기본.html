@@ -422,12 +422,11 @@
 							</li>
 						</ul>
 					</div>
-				
                 </div><!-- //gallery_wrap -->
                 <div class="prd_info">
                     <div class="top_area">
                         <p class="category">인스퓨어(셀프관리형)</p>
-                        <p class="prd_name">CP-TS011S</p>
+                        <p class="prd_name">CP-TS011S <span class="conde_no2">리퍼브렌탈</span></p>
                         <p class="desc">#6개월 렌탈료 면제  #4WAY 무빙코크  #히든터치</p>
                         <div class="sns_area">
                             <div class="ui_star"><div class="inner on2"><!-- [D] 별1개:on1, 별2개:on2, 별3개:on3, 별4개:on4, 별5개:on5 --></div></div><span class="review_txt"><a href="#" class="strong">23</a>개의 리뷰</span>
@@ -447,10 +446,10 @@
                         <div class="tab type_box">
                             <ul class="tab_btn ui_tab">
                                 <li class="on"><a href="#">렌탈</a></li>
-                                <li><a href="#">일시불 구매</a></li>
+                                <li class=""><a href="#">일시불 구매</a></li>
                             </ul>
                             <div class="tab_cont_wrap payment_choice_cont">
-                                <div class="cont">
+                                <div class="cont rental_payinfull" style="">
 									<ul class="price_info">
 										<li>
 											<span class="tit vt">기본혜택</span>
@@ -526,37 +525,13 @@
 												
                                             </div>
                                         </li>
-                                        <li class="ui_acodian benefit">
-                                            <div class="view_area">
-                                                <span class="tit">패키지혜택</span>
-												<span class="txt">
-													<button type="button" class="btn_s common">패키지안내</button>
-													<span class="package_discount">패키지 적용 시, 월 최대 2000원 할인 혜택</span>
-												</span>
-                                            </div>
-                                            
-                                        </li>
+											
                                     </ul>
                                 </div><!-- //렌탈 -->
-                                <div class="cont rental_payinfull">
+                                <div class="cont rental_payinfull" style="display:none;">
                                     <ul class="price_info">
-									   <li class="price_info_radio">
-											<span>
-												<input type="radio" class="radio_s" name="radio01" id="radio01_01">
-												<label for="radio01_01"><span>일시불</span></label>
-											</span>
-											<span>
-												<input type="radio" class="radio_s" name="radio01" id="radio01_02">
-												<label for="radio01_02"><span>제휴 멤버십</span></label>
-											</span>
-											<span>
-												<input type="radio" class="radio_s" name="radio01" id="radio01_03">
-												<label for="radio01_03"><span>할부</span></label>
-											</span>
-									   </li>
-									   <li class="price_info_gray_box">
-											일시불 결제를 통해 제품을 고객님의 소유로 구매하시는 주문 유형 입니다.
-									   </li>
+									  
+									  
                                        <li>
 											<span class="tit">포인트</span>
 											<span class="txt">포인트 2% 추가적립</span></li>
@@ -573,9 +548,26 @@
 												<button type="button" class="btn_ss radius non_hover pa_r0"><span>제휴할인정보</span> <i class="ico btnArrow2"></i></button>
 											</span>
 										</li>
+										<li class="price_info_gray_box alliance_mem"  style="display:none;">
+											<p>제휴 멤버십 판매가는 기본 36개월 관리기간 계약의 판매가 입니다.<br>관리기간 변경 시 하단 총 금액 영역에서 변경된 금액을 확인할 수 있습니다.</p>	
+							 		    </li>
 									
                                     </ul>
 									<ul class="option_info">
+										<li class="month_pay" style="display:none;">
+											 <div class="view_area">
+												 <span class="tit">할부개월</span>
+												 <div class="select_box right" id="select_month">
+                                                    <a href="#" class="tit">[선택]개월수선택</a>
+                                                    <ul class="hidden">
+														<li class="on"><a href="#">옵션1</a></li>
+														<li><a href="#">옵션2</a></li>
+														<li><a href="#">옵션3</a></li>
+													</ul>
+
+                                                </div>
+											 </div>
+										</li>
 										<li>
 											<div class="view_area">
                                                 <span class="tit">추가옵션</span>
@@ -1560,6 +1552,32 @@
             });
         })
     </script>
+	<script>
+		$('.price_info_radio > span').click(function(){
+			
+			$('.price_area').show();
+			$('.price_area.price_area_02').hide();
+			var Idx = $(this).index();
+
+			$('.price_info_gray_box > div').hide();
+			$('.price_info_gray_box > div').eq(Idx).show();
+
+			if(Idx == 1){
+				$('.month_pay').hide();
+				$('.alliance_mem').show();
+			}else if(Idx == 2){
+				$('.month_pay').show();
+				$('.alliance_mem').hide();
+
+
+			}else{
+				$('.month_pay').hide();
+				$('.alliance_mem').hide();
+			}
+
+		});
+		
+	</script>
 </body>
 
 </html>

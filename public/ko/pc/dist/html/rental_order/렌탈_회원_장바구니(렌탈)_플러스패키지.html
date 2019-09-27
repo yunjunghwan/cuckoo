@@ -373,656 +373,98 @@
             <div class="location">
                 <ul>
                     <li><a href="#">홈</a></li>
-                    <li>쿠쿠렌탈 주문결제</li>
+                    <li>쿠쿠렌탈 장바구니</li>
                 </ul>
             </div>
             <div class="top_tit">
-                <h2 class="tit_02">쿠쿠렌탈 주문결제</h2>
+                <h2 class="tit_02">쿠쿠렌탈 장바구니</h2>
             </div>
         </div>
         <div class="content">
-			<div class="rental_customer_info">
-				<div class="clear">
-					<div class="fl">
-						계약자 정보
-					</div>
-					<div class="fr">
-						<ul>
-							<li>계약자명<span>홍길동</span></li>
-							<li>휴대폰번호<span>010-1234-1234</span></li>
-							<li>이메일주소<span>abcd1234@gmail.com</span></li>
-						</ul>
-					</div>
-				</div>
-			</diV>
-			<div class="rental_order_area">
-				<div class="accordion_tab">
-					<!-- 첫번째 주문서 작성 -->
-					<div class="on">
-						<div class="tit"> 첫번째주문서 작성
+			<div class="rental_tab">
+				<ul>
+					<li><a href="#">일시불 구매 <span>(0)</span></a></li>
+					<li class="on"><a href="#">렌탈 <span>(1)</span></a></li>
+				</ul>
+			</div>
+            <div class="total_count">
+                <input type="checkbox" class="check_m" id="check00_00">
+                <label for="check00_00"><span>담긴 제품:총 <span class="point01">1</span>개</span></label>
+            </div>
+            <div class="order_area">
+                <div class="tbl_wrap">
+                    <div class="tbl tbl_order type_check">
+                        <table>
+                            <caption>장바구니</caption>
+                            <colgroup>
+                                <col style="width:20px">
+                                <col style="width:140px">
+                                <col style="width:auto">
+                                <col style="width: 15%;">
+                                <col style="width: 10%;">
+                                <col style="width: 10%;">
+                                <col style="width: 16%;">
+								<col style="width: 12%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" colspan="3">제품/옵션 정보</th>
+                                    <th scope="col">수량</th>
+                                    <th scope="col">의무사용기간</th>
+                                    <th scope="col">관리유형</th>
+                                    <th scope="col">월 렌탈료</th>
+									<th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="txt_left">
+                                        <span>
+                                            <input type="checkbox" class="check_m no_label" id="check01_01">
+                                            <label for="check01_01"><span class="blind">제품선택</span></label>
+                                        </span>
+                                    </td>
+                                    <td><div class="img"><img src="../../images/order/temp_prd_140x140.png" alt=""></div></td>
+                                    <td class="txt_left prd_info">
+                                        <p class="category">정수기</p>
+                                        <p class="name">CP-TS011S</p>
+										<p class="discount"></p>
+										<p class="price"><span class="point01 ft13">플러스 패키지</span></p>
+                                    </td>
+                                    <td>
+                                        <div class="count_wrap">
+                                            <button type="button" class="ico minus" disabled><span class="blind">수량감소</span></button><!-- [D]비활성화시 disabled속성추가 -->
+                                            <span class="num">1</span>
+                                            <button type="button" class="ico plus"><span class="blind">수량증가</span></button><!-- [D]비활성화시 disabled속성추가 -->
+                                        </div>
+                                    </td>
+                                    <td><span class="">36개월</span></td>
+									<td>관리형</td>
+                                    <td>
+										<p class="discount">37,900원</p>
+										<p class="bold price">32,900원</p>
+									</td>
+                                    <td class="btn-wrap">
+                                        <p><button type="button" class="btn_s common">바로렌탈</button></p>
+                                        <p><button type="button" class="btn_s">삭제</button></p>
+                                    </td>
 
-						</div>
-						<div class="desc order_area">
-							<div class="section">
-								<h3 class="tit_04"><span class="num">01</span>제품 정보를 확인해주세요.</h3>
-								<div class="tbl_wrap">
-									<div class="tbl tbl_order">
-										<table>
-											<caption>주문제품 확인</caption>
-											<colgroup>
+                                </tr>
 
-												<col style="width:24%">
-												<col style="width:auto">
-												<col style="width:15%">
-												<col style="width:15%">
-												<col style="width:15%">
-											</colgroup>
-											<thead>
-												<tr>
-													<th scope="col" colspan="2">제품/옵션 정보</th>
-													<th scope="col">의무사용기간</th>
-													<th scope="col">관리유형</th>
-													<th scope="col">월 렌탈료</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-
-													<td><div class="img" style=""><img src="../../images/rental_order/rental_prd.png" alt=""></div></td>
-													<td class="txt_left prd_info">
-														<p class="category">정수기</p>
-														<p class="name">CP-TS011S</p>
-														<p class="discount"></p>
-														<p class="price"><span class="point01 ft13">신규패키지</span></p>
-													</td>
-													<td>
-														<span class="">36개월</span>
-													</td>
-													<td><span class="">관리형</span></td>
-													<td>
-														<p class="discount">37,900원</p>
-														<p class="bold price">32,900원</p>
-													</td>
-												</tr>
-
-												<tr>
-													<td class="txt_left pdl30 bold">추가옵션</td>
-													<td colspan="4" class="txt_left">
-														<ul class="ml-40">
-															<li>
-																<span>
-																	<input type="checkbox" class="check_m" id="check01_01">
-																	<label for="check01_01"><span>조리수 밸브 설치 요청(매 월 렌탈료에 추가 1,000원이 부과됩니다.)</span></label>
-																</span>
-																<span><button class="not_hover_raidus_btn search_icon">미리보기</button></span>
-															</li>
-															<li class="mt20">
-																<span>
-																	<input type="checkbox" class="check_m" id="check01_02">
-																	<label for="check01_02"><span>폐가전 무료 수거 서비스</span></label>
-																</span>
-															</li>
-														</ul>
-
-													</td>
-												</tr>
-												<tr>
-													<td class="txt_left pdl30 bold">할인혜택</td>
-													<td colspan="4" class="txt_left">
-														<ul class="ml-40 ">
-															<li>
-																<span>
-																	<input type="radio" class="radio_s" name="radio09" id="radio09_01">
-																	<label for="radio09_01"><span>6개월 렌탈료 면제</span></label>
-																</span>
-															</li>
-															<li class="mt20">
-																<span>
-																	<input type="radio" class="radio_s" name="radio09" id="radio09_02">
-																	<label for="radio09_02"><span>렌탈료 10% 추가할인</span></label>
-																</span>
-															</li>
-														</ul>
-													</td>
-												</tr>
-												
-												
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</div><!-- //section -->
-							<div class="section">
-								<h3 class="tit_04 clear">
-									<div class="fl"><span class="num">02</span>실사용자 정보를 입력해주세요.</div>
-									<div class="fr">
-										<span>
-											<input type="checkbox" class="check_s" id="check09_01">
-											<label for="check09_01"><span>계약자 정보와 동일</span></label>
-										</span>
-									</div>
-
-								</h3>
-
-								<div class="form_wrap">
-
-									<table>
-										<caption>배송정보 입력</caption>
-										<colgroup>
-											<col style="width:150px;">
-											<col style="width:auto">
-										</colgroup>
-										<tbody>
-											<tr>
-												<th scope="row">설치유형</th>
-												<td class="pdt15 pdb40">
-													<div class="section_select type_install">
-														<span>
-															<input type="radio" class="radio_s" name="radio01" id="radio01_01" checked>
-															<label for="radio01_01" class="mr40"><span>방문설치</span></label>
-														</span>
-														<span>
-															<input type="radio" class="radio_s" name="radio01" id="radio01_02" class="ml40">
-															<label for="radio01_02"><span>택배발송</span></label>
-														</span>
-													</div>
-												</td>
-											</tr>
-											<tr class="visit_install">
-												<th scope="row"><label for="input01_01">사용자 이름</label></th>
-												<td>
-													<input type="text" id="input01_01" placeholder="이름을 입력해주세요." class="w100p">
-												</td>
-											</tr>
-											<tr class="visit_install error"><!-- [D] 인풋값에러시 error클래스추가  -->
-												<th scope="row"><label for="input01_02">휴대폰 번호</label></th>
-												<td>
-													<input type="text" id="input01_02" placeholder="숫자만 입력(ex.01012341234)" class="w100p">
-													<p class="error_txt">에러메시지</p>
-												</td>
-											</tr>
-
-											<tr class="visit_install">
-												<th scope="row"><label for="input01_04">주소</label></th>
-												<td>
-													<input type="text" id="input01_04" class="w150px"><button type="button" class="btn_m ml10">주소찾기</button>
-													<input type="text" class="w100p mt10">
-													<input type="text" class="w100p mt10" placeholder="나머지 주소를 입력해주세요.">
-												</td>
-											</tr>
-											<tr class="visit_install">
-												<th scope="row">설치요청일</th>
-												<td>
-													<div class="datepicker">
-														<input type="text" class="datepicker_input" readonly placeholder="날짜를 선택해주세요.">
-													</div>
-													<ul class="notice_list mt10">
-														<li>실제 설치가 진행되는 일정은 기사님과 통화 후 조율 가능합니다.</li>
-													</ul>
-
-												</td>
-											</tr>
-											<tr class="visit_install">
-												<th scope="row"><label for="input01_05">고객요청사항</label></th>
-												<td>
-													<textarea id="input01_05" style="width:100%; height:160px; resize:none;" placeholder="설치 등 기타 요청 사항이 있을 경우 내용을 남겨 주시기 바랍니다(300자이내)"></textarea>
-												</td>
-											</tr>
-											<tr class="delivery">
-												<th scope="row"><label for="input01_07">사용자 이름</label></th>
-												<td>
-													<input type="text" id="input01_07" placeholder="이름을 입력해주세요." class="w100p">
-												</td>
-											</tr>
-
-											<tr class="delivery">
-												<th scope="row"><label for="input01_08">휴대폰 번호</label></th>
-												<td>
-													<input type="text" id="input01_08" placeholder="숫자만 입력(ex.01012341234)" class="w100p">
-												</td>
-											</tr>
-											<tr class="delivery">
-												<th scope="row"><label for="input01_09">설치주소</label></th>
-												<td>
-													<input type="text" id="input01_09" class="w150px"><button type="button" class="btn_m ml10">주소찾기</button>
-													<input type="text" class="w100p mt10">
-													<input type="text" class="w100p mt10">
-												</td>
-											</tr>
-											
-											<tr class="delivery">
-												<th scope="row"><label for="input01_10">배송요청사항</label></th>
-												<td>
-													<div class="select_box">
-														<a href="#" class="tit">배송메모를 선택해 주세요.</a>
-														<ul class="hidden">
-															<li class="on"><a href="#">선택안함</a></li>
-															<li><a href="#">배송전에 미리 연락 바랍니다.</a></li>
-															<li><a href="#">부재 시 경비실에 맡겨 주세요.</a></li>
-															<li><a href="#">메시지 집접 입력(50자 이내)</a></li>
-														</ul>
-													</div>
-													
-												</td>
-											</tr>
-
-										</tbody>
-									</table>
-								</div>
-							</div><!-- //section -->
-						</div>
-					</div>
-					<!-- // 첫번째 주문서 작성 -->
-					<!-- 두번째 주문서 작성 -->
-					<div class="">
-						<div class="tit"> 두번째주문서 작성
-
-						</div>
-						<div class="desc order_area">
-							<div class="section">
-								<h3 class="tit_04"><span class="num">01</span>제품 정보를 확인해주세요.</h3>
-								<div class="tbl_wrap">
-									<div class="tbl tbl_order">
-										<table>
-											<caption>주문제품 확인</caption>
-											<colgroup>
-
-												<col style="width:24%">
-												<col style="width:auto">
-												<col style="width:15%">
-												<col style="width:15%">
-												<col style="width:15%">
-											</colgroup>
-											<thead>
-												<tr>
-													<th scope="col" colspan="2">제품/옵션 정보</th>
-													<th scope="col">의무사용기간</th>
-													<th scope="col">관리유형</th>
-													<th scope="col">월 렌탈료</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-
-													<td><div class="img" style=""><img src="../../images/rental_order/rental_prd.png" alt=""></div></td>
-													<td class="txt_left prd_info">
-														<p class="category">정수기</p>
-														<p class="name">CP-TS011S</p>
-														<p class="discount"></p>
-														<p class="price"><span class="point01 ft13">신규패키지</span></p>
-													</td>
-													<td>
-														<span class="">36개월</span>
-													</td>
-													<td><span class="">관리형</span></td>
-													<td>
-														<p class="discount">37,900원</p>
-														<p class="bold price">32,900원</p>
-													</td>
-												</tr>
-
-												<tr>
-													<td class="txt_left pdl30 bold">추가옵션</td>
-													<td colspan="4" class="txt_left">
-														<ul class="ml-40">
-															<li>
-																<span>
-																	<input type="checkbox" class="check_m" id="check01_01">
-																	<label for="check01_01"><span>조리수 밸브 설치 요청(매 월 렌탈료에 추가 1,000원이 부과됩니다.)</span></label>
-																</span>
-																<span><button class="not_hover_raidus_btn search_icon">미리보기</button></span>
-															</li>
-															<li class="mt20">
-																<span>
-																	<input type="checkbox" class="check_m" id="check01_02">
-																	<label for="check01_02"><span>폐가전 무료 수거 서비스</span></label>
-																</span>
-															</li>
-														</ul>
-
-													</td>
-												</tr>
-												<tr>
-													<td class="txt_left pdl30 bold">할인혜택</td>
-													<td colspan="4" class="txt_left">
-														<ul class="ml-40 ">
-															<li>
-																<span>
-																	<input type="radio" class="radio_s" name="radio09" id="radio09_01">
-																	<label for="radio09_01"><span>6개월 렌탈료 면제</span></label>
-																</span>
-															</li>
-															<li class="mt20">
-																<span>
-																	<input type="radio" class="radio_s" name="radio09" id="radio09_02">
-																	<label for="radio09_02"><span>렌탈료 10% 추가할인</span></label>
-																</span>
-															</li>
-														</ul>
-													</td>
-												</tr>
-												
-												
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</div><!-- //section -->
-							<div class="section">
-								<h3 class="tit_04 clear">
-									<div class="fl"><span class="num">02</span>실사용자 정보를 입력해주세요.</div>
-									<div class="fr">
-										<span>
-											<input type="checkbox" class="check_s" id="check09_01">
-											<label for="check09_01"><span>계약자 정보와 동일</span></label>
-										</span>
-									</div>
-
-								</h3>
-
-								<div class="form_wrap">
-
-									<table>
-										<caption>배송정보 입력</caption>
-										<colgroup>
-											<col style="width:150px;">
-											<col style="width:auto">
-										</colgroup>
-										<tbody>
-											<tr>
-												<th scope="row">설치유형</th>
-												<td class="pdt15 pdb40">
-													<div class="section_select type_install">
-														<span>
-															<input type="radio" class="radio_s" name="radio01" id="radio01_01" checked>
-															<label for="radio01_01" class="mr40"><span>방문설치</span></label>
-														</span>
-														<span>
-															<input type="radio" class="radio_s" name="radio01" id="radio01_02" class="ml40">
-															<label for="radio01_02"><span>택배발송</span></label>
-														</span>
-													</div>
-												</td>
-											</tr>
-											<tr class="visit_install">
-												<th scope="row"><label for="input01_01">사용자 이름</label></th>
-												<td>
-													<input type="text" id="input01_01" placeholder="이름을 입력해주세요." class="w100p">
-												</td>
-											</tr>
-											<tr class="visit_install error"><!-- [D] 인풋값에러시 error클래스추가  -->
-												<th scope="row"><label for="input01_02">휴대폰 번호</label></th>
-												<td>
-													<input type="text" id="input01_02" placeholder="숫자만 입력(ex.01012341234)" class="w100p">
-													<p class="error_txt">에러메시지</p>
-												</td>
-											</tr>
-
-											<tr class="visit_install">
-												<th scope="row"><label for="input01_04">주소</label></th>
-												<td>
-													<input type="text" id="input01_04" class="w150px"><button type="button" class="btn_m ml10">주소찾기</button>
-													<input type="text" class="w100p mt10">
-													<input type="text" class="w100p mt10" placeholder="나머지 주소를 입력해주세요.">
-												</td>
-											</tr>
-											<tr class="visit_install">
-												<th scope="row">설치요청일</th>
-												<td>
-													<div class="datepicker">
-														<input type="text" class="datepicker_input" readonly placeholder="날짜를 선택해주세요.">
-													</div>
-													<ul class="notice_list mt10">
-														<li>실제 설치가 진행되는 일정은 기사님과 통화 후 조율 가능합니다.</li>
-													</ul>
-
-												</td>
-											</tr>
-											<tr class="visit_install">
-												<th scope="row"><label for="input01_05">고객요청사항</label></th>
-												<td>
-													<textarea id="input01_05" style="width:100%; height:160px; resize:none;" placeholder="설치 등 기타 요청 사항이 있을 경우 내용을 남겨 주시기 바랍니다(300자이내)"></textarea>
-												</td>
-											</tr>
-											<tr class="delivery">
-												<th scope="row"><label for="input01_07">사용자 이름</label></th>
-												<td>
-													<input type="text" id="input01_07" placeholder="이름을 입력해주세요." class="w100p">
-												</td>
-											</tr>
-
-											<tr class="delivery">
-												<th scope="row"><label for="input01_08">휴대폰 번호</label></th>
-												<td>
-													<input type="text" id="input01_08" placeholder="숫자만 입력(ex.01012341234)" class="w100p">
-												</td>
-											</tr>
-											<tr class="delivery">
-												<th scope="row"><label for="input01_09">설치주소</label></th>
-												<td>
-													<input type="text" id="input01_09" class="w150px"><button type="button" class="btn_m ml10">주소찾기</button>
-													<input type="text" class="w100p mt10">
-													<input type="text" class="w100p mt10">
-												</td>
-											</tr>
-											
-											<tr class="delivery">
-												<th scope="row"><label for="input01_10">배송요청사항</label></th>
-												<td>
-													<div class="select_box">
-														<a href="#" class="tit">배송메모를 선택해 주세요.</a>
-														<ul class="hidden">
-															<li class="on"><a href="#">선택안함</a></li>
-															<li><a href="#">배송전에 미리 연락 바랍니다.</a></li>
-															<li><a href="#">부재 시 경비실에 맡겨 주세요.</a></li>
-															<li><a href="#">메시지 집접 입력(50자 이내)</a></li>
-														</ul>
-													</div>
-													
-												</td>
-											</tr>
-
-										</tbody>
-									</table>
-								</div>
-							</div><!-- //section -->
-						</div>
-					</div>
-					<!-- // 두번째 주문서 작성 -->
-					<!-- 사은품 선택 -->
-					<div>
-						<div class="tit">사은품 선택</div>
-						<div class="desc order_area">
-							<div class="section">
-
-								<div class="form_wrap">
-									<table>
-										<caption>사은품선택</caption>
-										<colgroup>
-											<col style="width:150px;">
-											<col style="width:auto">
-										</colgroup>
-										<tbody>
-
-											<tr>
-													<td class="txt_left bold pdt20 vat">사은품</td>
-													<td colspan="4" class="txt_left">
-														<div class="select_box ml-40 w215px">
-															<a href="#" class="tit">사은품을 선택해 주세요</a>
-														</div>
-														<!-- 사은품 선택 이후 -->
-														<div class="gift_choice_after">
-															<ul class="bul_list">
-																<li>존탐스 로봇 청소기 - 1개</li>
-																<li>자이글 핸썸 - 1개</li>
-															</ul>
-														</div>
-														<!-- // 사은품 선택 이후 -->
-													</td>
-												</tr>	
-										</tbody>
-									</table>
-								</div>
-							</div><!-- //section -->
-						</div>
-					</div>
-					<!-- // 사은품 선택-->
-					<!-- 결제 정보 작성 -->
-					<div>
-						<div class="tit">결제 정보 작성
-
-						</div>
-						<div class="desc order_area">
-							<div class="section">
-								<div class="form_wrap">
-									<table>
-										<caption>쿠폰, 포인트 선택</caption>
-										<colgroup>
-											<col style="width:150px;">
-											<col style="width:auto">
-										</colgroup>
-										<tbody>
-
-											<tr>
-												<th scope="row">결제수단</th>
-												<td class="pdt15 pdb40">
-													<div class="section_select pay_type">
-														<span>
-															<input type="radio" class="radio_s" name="radio06" id="radio03_00" checked="">
-															<label for="radio03_00" class="mr40"><span>카드 자동 이체</span></label>
-														</span>
-														<span>
-															<input type="radio" class="radio_s" name="radio06" id="radio03_01">
-															<label for="radio03_01"><span>계좌 자동 이체</span></label>
-														</span>
-													</div>
-												</td>
-											</tr>
-											<!-- 카드자동이체 -->
-											<tr class="card_auto">
-												<th scope="row">카드사</th>
-												<td class="">
-													<div class="select_box w280px" >
-														<a href="#" class="tit">카드사</a>
-														<ul class="hidden">
-															<li class="on"><a href="#">옵션1</a></li>
-															<li><a href="#">옵션2</a></li>
-															<li><a href="#">옵션3</a></li>
-														</ul>
-													</div>
-												</td>
-											</tr>
-											<tr class="card_auto">
-												<th scope="row"><label for="input03_02">카드번호</label></th>
-												<td>
-													<input type="text" id="input03_02" placeholder="" class="w280px">
-												</td>
-											</tr>
-											<tr class="card_auto">
-												<th scope="row"><label for="input03_03">유효기간</label></th>
-												<td>
-													<input type="text" id="input03_03" placeholder="MM" class="w130px"><span class="txt_center w20px">/</span><input type="text" id="input03_03" placeholder="YY" class="w130px">
-												</td>
-											</tr>
-											<tr class="card_auto">
-												<th scope="row">생년월일</th>
-												<td class=""><div class="bg_fix_data w280px">1986-03-26</div></td>
-											</tr>
-											<tr class="card_auto">
-												<th scope="row" class="pdt30">카드확인</th>
-												<td class="pdt15 pdb40"><button type="button" class="btn_m radius common mw120px">카드 인증</button></td>
-											</tr>
-											<tr class="card_auto">
-												<th scope="row">정기결제일</th>
-												<td class="">
-													<div class="select_box w280px" >
-														<a href="#" class="tit">정기결제일을 선택해 주세요.</a>
-														<ul class="hidden">
-															<li class="on"><a href="#">옵션1</a></li>
-															<li><a href="#">옵션2</a></li>
-															<li><a href="#">옵션3</a></li>
-														</ul>
-													</div>
-												</td>
-											</tr>
-											<!--//카드자동이체 -->
-											<!-- 계좌 자동이체 -->
-											<tr class="account_auto">
-												<th scope="row"><label for="input03_04">은행선택</label></th>
-												<td>
-													<div class="select_box w280px" >
-														<a href="#" class="tit">은행을 선택해주세요.</a>
-														<ul class="hidden">
-															<li class="on"><a href="#">옵션1</a></li>
-															<li><a href="#">옵션2</a></li>
-															<li><a href="#">옵션3</a></li>
-														</ul>
-													</div>
-												</td>
-											</tr>
-											<tr class="account_auto">
-												<th scope="row"><label for="input03_05">계좌번호</label></th>
-												<td>
-													<input type="text" id="input03_05" placeholder="" class="w280px">
-												</td>
-											</tr>
-
-											<tr class="account_auto" style="display: table-row;">
-												<th scope="row">생년월일</th>
-												<td class=""><div class="bg_fix_data w280px">1986-03-26</div></td>
-											</tr>
-											<tr class="account_auto">
-												<th scope="row" class="pdt30">계좌확인</th>
-												<td class="pdt15 pdb40"><button type="button" class="btn_m radius common mw120px">계좌 인증</button></td>
-											</tr>
-											<tr class="account_auto">
-												<th scope="row">예금주</th>
-												<td class=""><div class="bg_fix_data w280px">김쿠쿠</div></td>
-											</tr>
-											<tr class="account_auto">
-												<th scope="row">정기결제일</th>
-												<td class="">
-													<div class="select_box w280px" >
-														<a href="#" class="tit">정기결제일을 선택해 주세요.</a>
-														<ul class="hidden">
-															<li class="on"><a href="#">옵션1</a></li>
-															<li><a href="#">옵션2</a></li>
-															<li><a href="#">옵션3</a></li>
-														</ul>
-													</div>
-												</td>
-											</tr>
-											<tr class="account_auto">
-												<th scope="row">현금영수증신청</th>
-												<td class="pdt15 pdb40">
-													<div class="section_select">
-														<span>
-															<input type="radio" class="radio_s" name="radio07" id="radio03_06" checked="">
-															<label for="radio03_06" class="mr40"><span>발행</span></label>
-														</span>
-														<span>
-															<input type="radio" class="radio_s" name="radio07" id="radio03_07">
-															<label for="radio03_07"><span>미발행</span></label>
-														</span>
-													</div>
-												</td>
-											</tr>
-											<!--//계좌 자동이체 -->
-										</tbody>
-									</table>
-								</div>
-
-							</div><!-- //section -->
-						</div>
-					</div>
-					<!-- 결제 정보 작성 -->
-
-				</div>
-
-				<div class="aside_box_wrap">
-					<div class="aside_box">
-						<div class="counter_box">
-							<div class="top_area">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="btn-wrap-left">
+                        <button type="button" class="btn_s">전체 제품 삭제</button>
+                        <button type="button" class="btn_s">선택 제품 삭제</button>
+                    </div>
+                </div>
+            </div><!-- //order_area -->
+            <div class="aside_box_wrap">
+                <div class="aside_box">
+                    <div class="counter_box">
+                        <div class="top_area">
+							<div>
 								<div class="row tit">
 									CP-TS011S
 								</div>
@@ -1031,36 +473,35 @@
 									<span class="price">37,900원</span>
 								</div>
 								<div class="row_discount mt20">
-									<span class="tit">신규 렌탈 할인</span>
-									<span class="price">-5,000원</span>
-								</div>
-								<div class="row">
-									<span class="tit">총 할인 금액</span>
+									<span class="tit">패키지 할인</span>
 									<span class="price">-5,000원</span>
 								</div>
 
 							</div>
-							<div class="bottom_area">
-								<div class="price_tit">최종 월 렌탈료</div>
-								<div class="price_box"><spasn>32,900</spasn><span class="won">원</span></div>
-								<div class="row_point">
-									<span class="tit"><i class="ico point"></i><span>예상 적립 포인트</span></span>
-									<div class="txt_point">0P</div>
-								</div>
-								<div class="agree_area">
-									<input type="checkbox" class="check_s" id="agree01">
-									<label for="agree01">구매조건 및 결제진행 동의</label>
-									<p class="txt">주문하실 제품, 가격, 배송정보, 할인내역 등을 최종 확인하였으며, 구매 진행에 동의하시겠습니까? (전자상거래법 제 8조 2항)</p>
-								</div>
-								<div class="btn-wrap">
-									<button type="button" class="btn_l radius common gray">임시저장</button>
-									<button type="button" class="btn_l radius common">주문하기</button>
-								</div>
+							
+							<div class="row">
+								<span class="tit">총 할인 금액</span>
+								<span class="price">-5,000원</span>
 							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+
+                        </div>
+                        <div class="bottom_area">
+                            <div class="price_tit">최종 월 렌탈료	</div>
+                            <div class="price_box"><spasn>32,900</spasn><span class="won">원</span></div>
+                            <div class="row_point">
+                                <span class="tit"><i class="ico point"></i><span>예상 적립 포인트</span></span>
+                                <div class="txt_point">0P</div>
+                            </div>
+                            <div class="btn-wrap">
+                                <button type="button" class="btn_l radius">선택 제품 렌탈</button>
+                                <button type="button" class="btn_l radius common">전체 제품 렌탈</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
         <button type="button" class="btn-top"><span class="blind">TOP</span></button>
     </div>
@@ -1156,47 +597,6 @@
     <!-- //footer -->
     <script src="../../javascripts/plugin.js"></script>
     <script src="../../javascripts/design_common.js"></script>
-	<script>
-
-		$(document).ready(function(){
-			// 주문서작성 아코디언
-			$('.accordion_tab > div > .tit').click(function(){
-				$(this).parents('div').toggleClass('on');
-			});
-			// 결제수단 선택
-			$('.account_auto').hide();
-			$('.pay_type > span').click(function(){
-				var thisindex = $(this).index();
-				console.log(thisindex);
-				if( thisindex == 1 ){
-					$(this).closest('table').find('.card_auto').hide();
-					$(this).closest('table').find('.account_auto').show();
-				}else{
-					$(this).closest('table').find('.account_auto').hide();
-					$(this).closest('table').find('.card_auto').show();
-				}
-			});
-			// 설치유형 선택
-			$('.delivery').hide();
-			$('.type_install > span').click(function(){
-				var thisindex = $(this).index();
-				console.log(thisindex);
-				if(thisindex == 1){
-					$(this).closest('table').find('.visit_install').hide();
-					$(this).closest('table').find('.delivery').show();
-				}else{
-					$(this).closest('table').find('.delivery').hide();
-					$(this).closest('table').find('.visit_install').show();
-
-				}
-
-
-			});
-
-
-		});
-	</script>
-
 </body>
 
 </html>

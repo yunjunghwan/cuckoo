@@ -19,7 +19,6 @@
   <meta name="robots" content="ALL">
   <link rel="stylesheet" href="../../stylesheets/css/common.css">
   <link rel="stylesheet" href="../../stylesheets/css/content.css">
-  <link rel="stylesheet" href="../../stylesheets/css/content_02.css">
   <script src="../../javascripts/jquery-1.8.2.min.js"></script>
   <script src="../../javascripts/jquery-ui.min.js"></script>
 </head>
@@ -368,7 +367,7 @@
   <!-- //header-->
 
     <!--container-->
-    <div id="container" class="prd_view prd_rental rental_product_view" >
+    <div id="container" class="prd_view prd_rental">
         <div class="top_content">
             <div class="location">
                 <ul>
@@ -404,25 +403,6 @@
                         <div><img src="../../images/item/temp_prd02_01_80x80.png" alt=""></div>
         				<div><img src="../../images/item/temp_prd02_02_80x80.png" alt=""></div>
         			</div>
-					<div class="select_color">
-						<ul>
-							<li>
-								<a href="#">
-									<span class="out_circle">
-										<span class="in_circle on" style="background:#bcbec0"></span>
-									</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<span class="out_circle">
-										<span class="in_circle" style="background:#585856"></span>
-									</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-				
                 </div><!-- //gallery_wrap -->
                 <div class="prd_info">
                     <div class="top_area">
@@ -447,57 +427,71 @@
                         <div class="tab type_box">
                             <ul class="tab_btn ui_tab">
                                 <li class="on"><a href="#">렌탈</a></li>
-                                <li><a href="#">일시불 구매</a></li>
+                                <li><a href="#">일시불</a></li>
                             </ul>
-                            <div class="tab_cont_wrap payment_choice_cont">
+                            <div class="tab_cont_wrap">
                                 <div class="cont">
-									<ul class="price_info">
-										<li>
-											<span class="tit vt">기본혜택</span>
-											<span class="txt">
-												<ul>
-													<li>6개월 렌탈료 면제</li>
-													<li>조리수 밸브 무상설치</li>
-													<li>프리미엄 사은품</li>
-													<li>포인트 2% 추가적립 / 할인쿠폰 적용 가능</li>
-												</ul>
-											</span>
-										</li>
-									</ul>
                                     <ul class="price_info">
-										<li>
-											<span class="tit vt">기본렌탈료</span>
-											<span class="txt">
-												<ul class="rental_price">
-													<li><span class="base_rental_price">월 36,900원</span> <button type="button" class="btn_ss radius non_hover pa_r0"><span>제휴할인정보</span> <i class="ico btnArrow2"></i></button></li>
-													<li>
-														<ul class="notice_list">
-															<li>의무사용기간 36개월 / 총기간 60개월 기준</li>		
-														</ul>
-													</li>
-												</ul>
-											</span>
-										</li>
-										<li>
-											<span class="tit">할인렌탈료</span>
-											<span class="txt">
-												<span class="dis_rental_price">월 32,900원</span>
-											</span>
-										</li>
-									</ul>
-                                  
+                                        <li>
+                                            <span class="tit">포인트</span>
+                                            <span class="txt"><strong>13,500P</strong>&nbsp; 2% 추가적립</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">쿠폰</span>
+                                            <span class="txt">쿠폰 적용 불가 제품</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="price_info">
+                                        <li>
+                                            <span class="tit">기본 렌탈료</span>
+                                            <span class="txt">
+                                                <span class="normal_price"><span class="won">월</span> 17,000<span class="won">원</span></span>
+                                                <span class="right-wrap">
+                                                    <button type="button" class="btn_ss radius non_hover"><span>제휴할인정보</span> <i class="ico btnArrow2"></i></button>
+                                                    <button type="button" class="btn_ss radius non_hover"><span>혜택안내</span> <i class="ico btnArrow2"></i></button>
+                                                </span>
+                                            </span>
+                                            <p class="desc"><span>※ 기본 렌탈료는 의무사용기간 60개월 기준입니다.</span> <a href="#" class="link">기간별 렌탈료 확인하기</a></p>
+                                        </li>
+                                    </ul>
                                     <ul class="option_info">
-                                        
                                         <li class="ui_acodian">
                                             <div class="view_area">
-                                                <span class="tit">월 렌탈료</span>
-                                                <div class="select_box right chioce_rental_price" >
-                                                   
-													<button>[필수]월 렌탈료를 선택해주세요.</button>
-                                                  
+                                                <span class="tit">의무사용기간 <a href="#" class="btn-view"></a></span>
+                                                <div class="select_box right">
+                                                    <a href="#" class="tit">[필수]항목선택</a>
+                                                    <ul class="hidden">
+                                                        <li class="on"><a href="#">옵션1</a></li>
+                                                        <li><a href="#">옵션2</a></li>
+                                                        <li><a href="#">옵션3</a></li>
+                                                    </ul>
                                                 </div>
                                             </div>
-                                           
+                                            <div class="hidden_area">
+                                                <ul class="bul_list">
+                                                    <li>렌탈 기간 시 최소한으로 사용해야하는 기간을 의미합니다.</li>
+                                                    <li>각각의 의무사용기간 별 요금이 달라질 수 있으니 고객님께 적합한 의무기간을 선택해주세요.<br>Ex) 38개월 (최소한으로 사용하는 기간은 38개월)</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="ui_acodian">
+                                            <div class="view_area">
+                                                <span class="tit">관리유형 <a href="#" class="btn-view"></a></span>
+                                                <div class="select_box right">
+                                                    <a href="#" class="tit">[필수]항목선택</a>
+                                                    <ul class="hidden">
+                                                        <li class="on"><a href="#">옵션1</a></li>
+                                                        <li><a href="#">옵션2</a></li>
+                                                        <li><a href="#">옵션3</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="hidden_area">
+                                                <p class="tit">관리형이란?</p>
+                                                <p class="txt">설치된 제품을 4개월마다 한번씩 매니저님이 방문하여 필터 교체 및 점검이 진행되는 관리 유형입니다. (제품별 관리 방식이 상이할 수 있습니다.)</p>
+                                                <p class="tit">셀프형 (자가관리형) 이란?</p>
+                                                <p class="txt">보편적으로 4개월마다 한번씩 필터 및 관리에 필요한 부품을 택배로 보내 드립니다. 또한 1년에 한번 정기 방문하여 매니저님이 점검이 진행되는 관리 유형입니다. (제품별 관리 방식이 상이할 수 있습니다.)</p>
+                                            </div>
                                         </li>
                                         <li>
                                             <div class="view_area">
@@ -518,89 +512,60 @@
                                                             </span>
                                                         </li>
                                                     </ul>
-													<ul class="notice_list mt15">
-														<li>옵션 비용은 계약완료 시 월 렌탈료에 최종 청구됩니다.</li>		
-													</ul>
-
                                                 </div>
-												
                                             </div>
                                         </li>
                                         <li class="ui_acodian benefit">
                                             <div class="view_area">
-                                                <span class="tit">패키지혜택</span>
-												<span class="txt">
-													<button type="button" class="btn_s common">패키지안내</button>
-													<span class="package_discount">패키지 적용 시, 월 최대 2000원 할인 혜택</span>
-												</span>
+                                                <span class="tit">패키지혜택 <a href="#" class="btn-view"></a></span>
+                                                <div class="right">
+                                                    나에게 적용되는 패키지 정보 확인하기 <button type="button" class="btn_ss radius common">로그인</button>
+                                                </div>
                                             </div>
-                                            
+                                            <div class="hidden_area">
+                                                <p class="tit">신규 패키지?</p>
+                                                <ul class="bul_list">
+                                                    <li>2개 이상의 동시 렌탈 신청을 의미합니다.</li>
+                                                    <li>수량 추가 또는 장바구니 추가 후 2개 이상 제품 렌탈 신청 시 신규 패키지 할인금액으로 렌탈 신청이 가능합니다.</li>
+                                                </ul>
+                                                <p class="tit">당월 패키지</p>
+                                                <ul class="bul_list">
+                                                    <li>당월 (현재 월, 현재일 이전) 렌탈 신청중인 제품이 있을 경우  추가적으로 동일 또는 다른 제품을 렌탈 신청 시 당월패키지 할인금액으로 렌탈 신청이 가능합니다.<br>  (※ 단 당월 신청한 제품은 렌탈 이용중인 경우에만 할인적용을 받을 수 있습니다.)</li>
+                                                </ul>
+                                                <p class="tit">플러스 패키지</p>
+                                                <ul class="bul_list">
+                                                    <li>2개 이상의 동시 렌탈 신청을 의미합니다.</li>
+                                                    <li>수량 추가 또는 장바구니 추가 후 2개 이상 제품 렌탈 신청 시 신규 패키지 할인금액으로 렌탈 신청이 가능합니다.</li>
+                                                </ul>
+                                            </div>
                                         </li>
                                     </ul>
                                 </div><!-- //렌탈 -->
-                                <div class="cont rental_payinfull">
+                                <div class="cont">
                                     <ul class="price_info">
-									   <li class="price_info_radio">
-											<span>
-												<input type="radio" class="radio_s" name="radio01" id="radio01_01">
-												<label for="radio01_01"><span>일시불</span></label>
-											</span>
-											<span>
-												<input type="radio" class="radio_s" name="radio01" id="radio01_02">
-												<label for="radio01_02"><span>제휴 멤버십</span></label>
-											</span>
-											<span>
-												<input type="radio" class="radio_s" name="radio01" id="radio01_03">
-												<label for="radio01_03"><span>할부</span></label>
-											</span>
-									   </li>
-									   <li class="price_info_gray_box">
-											일시불 결제를 통해 제품을 고객님의 소유로 구매하시는 주문 유형 입니다.
-									   </li>
-                                       <li>
-											<span class="tit">포인트</span>
-											<span class="txt">포인트 2% 추가적립</span></li>
-									   <li>
-											<span class="tit">쿠폰</span>
-											<span class="txt">쿠폰적용 가능 제품</span></li>
-									   </li>
+                                        <li>
+                                            <span class="tit">포인트</span>
+                                            <span class="txt"><strong>13,500P</strong>&nbsp; 2% 추가적립</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">쿠폰</span>
+                                            <span class="txt">쿠폰 적용 불가 제품</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">무이자할부</span>
+                                            <span class="txt">6개월</span>
+                                        </li>
                                     </ul>
-									<ul class="price_info">
-                                       <li>
-											<span class="tit">판매가</span>
-											<span class="txt">
-												<span class="price">1,850,000원</span>
-												<button type="button" class="btn_ss radius non_hover pa_r0"><span>제휴할인정보</span> <i class="ico btnArrow2"></i></button>
-											</span>
-										</li>
-									
+                                    <ul class="price_info">
+                                        <li>
+                                            <span class="tit">정상가</span>
+                                            <span class="txt"><span class="discount">1,950,000<span class="won">원</span></span></span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">판매가</span>
+                                            <span class="txt price">1,850,000<span class="won">원</span><span class="point01">10% <i class="ico price_down"></i></span></span>
+                                        </li>
                                     </ul>
-									<ul class="option_info">
-										<li>
-											<div class="view_area">
-                                                <span class="tit">추가옵션</span>
-                                                <div class="select_box right">
-                                                    <a href="#" class="tit">[선택]옵션선택</a>
-                                                    <ul class="hidden">
-                                                        <li class="on">
-                                                            <span class="link_wrap">
-                                                                <input type="checkbox" class="check_m" id="check01_03">
-                                                                <label for="check01_03"><span>조리수밸브 렌탈 + 월 1,000원</span></label>
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <span class="link_wrap">
-                                                                <input type="checkbox" class="check_m" id="check01_04">
-                                                                <label for="check01_04"><span>폐가전 무료 수거 서비스</span></label>
-                                                            </span>
-                                                        </li>
-                                                    </ul>
-
-                                                </div>
-												
-                                            </div>
-										</li>
-									</ul>
                                 </div><!-- //일시불 -->
                             </div>
                         </div>
@@ -612,7 +577,7 @@
             <div class="prd_bottom_fixed">
                 <div class="inner">
                     <div class="left_area">
-                        <p class="txt_notice"><i class="ico notice5"></i><span>월 렌탈료를 선택해주세요.</span></p>
+                        <p class="txt_notice"><i class="ico notice5"></i><span>제품 의무사용기간 및 관리유형을 선택 하시면, 월 렌탈료를 확인하실 수 있습니다.</span></p>
                     </div>
                     <div class="btn-wrap">
                         <a href="#" class="btn_l radius common">상담신청</a>

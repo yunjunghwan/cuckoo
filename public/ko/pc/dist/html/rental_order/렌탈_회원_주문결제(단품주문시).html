@@ -428,11 +428,12 @@
 											<tbody>
 												<tr>
 
-													<td><div class="img" style="border:1px solid #ddd;"><img src="../../images/rental_order/rental_prd.png" alt=""></div></td>
+													<td><div class="img" style=""><img src="../../images/rental_order/rental_prd.png" alt=""></div></td>
 													<td class="txt_left prd_info">
 														<p class="category">정수기</p>
 														<p class="name">CP-TS011S</p>
-														<p class="option point01 mt30 bold">신규 패키지 렌탈</p>
+														<p class="discount"></p>
+														<p class="price"><span class="point01 ft13">신규패키지</span></p>
 													</td>
 													<td>
 														<span class="">36개월</span>
@@ -466,23 +467,26 @@
 													</td>
 												</tr>
 												<tr>
-													<td class="txt_left pdl30 bold">사은품</td>
+													<td class="txt_left pdl30 bold">할인혜택</td>
 													<td colspan="4" class="txt_left">
-														<div class="select_box ml-40 w215px">
-															<a href="#" class="tit">사은품을 선택해 주세요</a>
-														</div>
-														<!-- 사은품 선택 이후 -->
-														<div class="gift_choice_after">
-															<ul class="bul_list">
-																<li>존탐스 로봇 청소기 - 1개</li>
-																<li>자이글 핸썸 - 1개</li>
-															</ul>
-														</div>
-														<!-- // 사은품 선택 이후 -->
+														<ul class="ml-40 ">
+															<li>
+																<span>
+																	<input type="radio" class="radio_s" name="radio09" id="radio09_01">
+																	<label for="radio09_01"><span>6개월 렌탈료 면제</span></label>
+																</span>
+															</li>
+															<li class="mt20">
+																<span>
+																	<input type="radio" class="radio_s" name="radio09" id="radio09_02">
+																	<label for="radio09_02"><span>렌탈료 10% 추가할인</span></label>
+																</span>
+															</li>
+														</ul>
 													</td>
 												</tr>
-
-
+												
+												
 											</tbody>
 										</table>
 									</div>
@@ -541,7 +545,7 @@
 											<tr class="visit_install">
 												<th scope="row"><label for="input01_04">주소</label></th>
 												<td>
-													<input type="text" id="input01_04" class="w200px"><button type="button" class="btn_m ml10">주소찾기</button>
+													<input type="text" id="input01_04" class="w150px"><button type="button" class="btn_m ml10">주소찾기</button>
 													<input type="text" class="w100p mt10">
 													<input type="text" class="w100p mt10" placeholder="나머지 주소를 입력해주세요.">
 												</td>
@@ -552,53 +556,41 @@
 													<div class="datepicker">
 														<input type="text" class="datepicker_input" readonly placeholder="날짜를 선택해주세요.">
 													</div>
+													<ul class="notice_list mt10">
+														<li>실제 설치가 진행되는 일정은 기사님과 통화 후 조율 가능합니다.</li>
+													</ul>
 
 												</td>
 											</tr>
 											<tr class="visit_install">
-												<th scope="row"><label for="input01_05">배송요청사항</label></th>
+												<th scope="row"><label for="input01_05">고객요청사항</label></th>
 												<td>
-													<textarea id="input01_05" style="width:100%; height:160px; resize:none;" placeholder="설치 등 기타 요청 사항이 있을 경우 내용을 남겨 주시기 바랍니다."></textarea>
-												</td>
-											</tr>
-
-											<tr class="delivery">
-												<th scope="row">배송지 선택</th>
-												<td class="pdt15 pdb40">
-													<div class="section_select">
-														<span>
-															<input type="radio" class="radio_s" name="radio10" id="radio01_11" checked="">
-															<label for="radio01_11" class="mr40"><span>기본 배송지</span></label>
-														</span>
-														<span>
-															<input type="radio" class="radio_s" name="radio10" id="radio01_12">
-															<label for="radio01_12"><span>새로입력</span></label>
-														</span>
-													</div>
+													<textarea id="input01_05" style="width:100%; height:160px; resize:none;" placeholder="설치 등 기타 요청 사항이 있을 경우 내용을 남겨 주시기 바랍니다(300자이내)"></textarea>
 												</td>
 											</tr>
 											<tr class="delivery">
-												<th scope="row"><label for="input01_07">고객명</label></th>
+												<th scope="row"><label for="input01_07">사용자 이름</label></th>
 												<td>
 													<input type="text" id="input01_07" placeholder="이름을 입력해주세요." class="w100p">
 												</td>
 											</tr>
 
 											<tr class="delivery">
-												<th scope="row"><label for="input01_08">휴대폰번호</label></th>
+												<th scope="row"><label for="input01_08">휴대폰 번호</label></th>
 												<td>
 													<input type="text" id="input01_08" placeholder="숫자만 입력(ex.01012341234)" class="w100p">
 												</td>
 											</tr>
 											<tr class="delivery">
-												<th scope="row"><label for="input01_09">주소</label></th>
+												<th scope="row"><label for="input01_09">설치주소</label></th>
 												<td>
-													<input type="text" id="input01_09"><button type="button" class="btn_m ml10">주소찾기</button>
+													<input type="text" id="input01_09" class="w150px"><button type="button" class="btn_m ml10">주소찾기</button>
 													<input type="text" class="w100p mt10">
 													<input type="text" class="w100p mt10">
 												</td>
-											</tr class="delivery">
-											<tr>
+											</tr>
+											
+											<tr class="delivery">
 												<th scope="row"><label for="input01_10">배송요청사항</label></th>
 												<td>
 													<div class="select_box">
@@ -610,9 +602,10 @@
 															<li><a href="#">메시지 집접 입력(50자 이내)</a></li>
 														</ul>
 													</div>
-													<input type="text" placeholder="배송메모를 입력해주세요." class="w100p mt10">
+													
 												</td>
 											</tr>
+
 										</tbody>
 									</table>
 								</div>
@@ -620,17 +613,15 @@
 						</div>
 					</div>
 					<!-- // 주문서 작성 -->
-					<!-- 혜택 선택 -->
+					<!-- 사은품 선택 -->
 					<div>
-						<div class="tit">혜택 선택
-
-						</div>
+						<div class="tit">사은품 선택</div>
 						<div class="desc order_area">
 							<div class="section">
 
 								<div class="form_wrap">
 									<table>
-										<caption>쿠폰, 포인트 선택</caption>
+										<caption>사은품선택</caption>
 										<colgroup>
 											<col style="width:150px;">
 											<col style="width:auto">
@@ -638,29 +629,28 @@
 										<tbody>
 
 											<tr>
-												<th scope="row" class="pdt0"><label for="input02_02">쿠폰</label></th>
-												<td class="rental_cuopon">
-													<p>
-														<input type="radio" class="radio_s" name="radio02" id="radio02_01">
-														<label for="radio02_01"><span>렌탈료 10% 추가할인 쿠폰</span></label>
-													</p>
-													<p>
-														<input type="radio" class="radio_s" name="radio02" id="radio02_02">
-														<label for="radio02_02"><span>6개월 렌탈료 면제 쿠폰</span></label>
-													</p>
-													<p>
-														<input type="radio" class="radio_s" name="radio02" id="radio02_03">
-														<label for="radio02_03"><span>의무사용기간 5년 약정 할인 쿠폰</span></label>
-													</p>
-												</td>
-											</tr>
+													<td class="txt_left bold pdt20 vat">사은품</td>
+													<td colspan="4" class="txt_left">
+														<div class="select_box ml-40 w215px">
+															<a href="#" class="tit">사은품을 선택해 주세요</a>
+														</div>
+														<!-- 사은품 선택 이후 -->
+														<div class="gift_choice_after">
+															<ul class="bul_list">
+																<li>존탐스 로봇 청소기 - 1개</li>
+																<li>자이글 핸썸 - 1개</li>
+															</ul>
+														</div>
+														<!-- // 사은품 선택 이후 -->
+													</td>
+												</tr>	
 										</tbody>
 									</table>
 								</div>
 							</div><!-- //section -->
 						</div>
 					</div>
-					<!-- // 혀택 선택-->
+					<!-- // 사은품 선택-->
 					<!-- 결제 정보 작성 -->
 					<div>
 						<div class="tit">결제 정보 작성
@@ -694,32 +684,43 @@
 											</tr>
 											<!-- 카드자동이체 -->
 											<tr class="card_auto">
+												<th scope="row">카드사</th>
+												<td class="">
+													<div class="select_box w280px" >
+														<a href="#" class="tit">카드사</a>
+														<ul class="hidden">
+															<li class="on"><a href="#">옵션1</a></li>
+															<li><a href="#">옵션2</a></li>
+															<li><a href="#">옵션3</a></li>
+														</ul>
+													</div>
+												</td>
+											</tr>
+											<tr class="card_auto">
 												<th scope="row"><label for="input03_02">카드번호</label></th>
 												<td>
-													<input type="text" id="input03_02" placeholder="" class="w380px">
+													<input type="text" id="input03_02" placeholder="" class="w280px">
 												</td>
 											</tr>
 											<tr class="card_auto">
 												<th scope="row"><label for="input03_03">유효기간</label></th>
 												<td>
-													<input type="text" id="input03_03" placeholder="MM" class="w180px"><span class="txt_center w20px">/</span><input type="text" id="input03_03" placeholder="YY" class="w180px">
+													<input type="text" id="input03_03" placeholder="MM" class="w130px"><span class="txt_center w20px">/</span><input type="text" id="input03_03" placeholder="YY" class="w130px">
 												</td>
 											</tr>
 											<tr class="card_auto">
 												<th scope="row">생년월일</th>
-												<td class="pdt15 pdb40">1986-03-26</td>
+												<td class=""><div class="bg_fix_data w280px">1986-03-26</div></td>
 											</tr>
 											<tr class="card_auto">
-												<th scope="row">카드확인</th>
-												<td class="">
-													<button type="button" class="btn_m radius common">카드 인증하기</button>
-												</td>
+												<th scope="row" class="pdt30">카드확인</th>
+												<td class="pdt15 pdb40"><button type="button" class="btn_m radius common mw120px">카드 인증</button></td>
 											</tr>
 											<tr class="card_auto">
-												<th scope="row">이체일</th>
+												<th scope="row">정기결제일</th>
 												<td class="">
-													<div class="select_box w270px" >
-														<a href="#" class="tit">이체일을 선택해 주세요.</a>
+													<div class="select_box w280px" >
+														<a href="#" class="tit">정기결제일을 선택해 주세요.</a>
 														<ul class="hidden">
 															<li class="on"><a href="#">옵션1</a></li>
 															<li><a href="#">옵션2</a></li>
@@ -733,8 +734,8 @@
 											<tr class="account_auto">
 												<th scope="row"><label for="input03_04">은행선택</label></th>
 												<td>
-													<div class="select_box w380px" >
-														<a href="#" class="tit"></a>
+													<div class="select_box w280px" >
+														<a href="#" class="tit">은행을 선택해주세요.</a>
 														<ul class="hidden">
 															<li class="on"><a href="#">옵션1</a></li>
 															<li><a href="#">옵션2</a></li>
@@ -746,13 +747,34 @@
 											<tr class="account_auto">
 												<th scope="row"><label for="input03_05">계좌번호</label></th>
 												<td>
-													<input type="text" id="input03_05" placeholder="" class="w380px">
+													<input type="text" id="input03_05" placeholder="" class="w280px">
 												</td>
 											</tr>
 
+											<tr class="account_auto" style="display: table-row;">
+												<th scope="row">생년월일</th>
+												<td class=""><div class="bg_fix_data w280px">1986-03-26</div></td>
+											</tr>
 											<tr class="account_auto">
-												<th scope="row" class="pdt30">생년월일</th>
-												<td class="pdt15 pdb40">1986-03-26 	<button type="button" class="btn_m radius common ml30">계좌 인증하기</button></td>
+												<th scope="row" class="pdt30">계좌확인</th>
+												<td class="pdt15 pdb40"><button type="button" class="btn_m radius common mw120px">계좌 인증</button></td>
+											</tr>
+											<tr class="account_auto">
+												<th scope="row">예금주</th>
+												<td class=""><div class="bg_fix_data w280px">김쿠쿠</div></td>
+											</tr>
+											<tr class="account_auto">
+												<th scope="row">정기결제일</th>
+												<td class="">
+													<div class="select_box w280px" >
+														<a href="#" class="tit">정기결제일을 선택해 주세요.</a>
+														<ul class="hidden">
+															<li class="on"><a href="#">옵션1</a></li>
+															<li><a href="#">옵션2</a></li>
+															<li><a href="#">옵션3</a></li>
+														</ul>
+													</div>
+												</td>
 											</tr>
 											<tr class="account_auto">
 												<th scope="row">현금영수증신청</th>
@@ -792,7 +814,7 @@
 									<span class="tit">월 렌탈료</span>
 									<span class="price">37,900원</span>
 								</div>
-								<div class="row_discount">
+								<div class="row_discount mt20">
 									<span class="tit">신규 렌탈 할인</span>
 									<span class="price">-5,000원</span>
 								</div>

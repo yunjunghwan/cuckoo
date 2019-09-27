@@ -426,7 +426,7 @@
                     <div class="tab">
                         <div class="prd_tab typeA col3">
                             <ul class="tab_btn ui_tab">
-                                <li class="on"><a href="#">구분</a></li>
+                                <li class="on"><a href="#">계약정보</a></li>
                                 <li><a href="#">점검내역</a></li>
                                 <li><a href="#">납부내역</a></li>
                             </ul>
@@ -440,7 +440,7 @@
                                         <ul class="info_list">
                                             <li>모델명:CP-TS011DS(S)</li>
                                             <li>제품명:정수기</li>
-                                            <li>수량:1개</li>
+                                            <li>관리유형:관리형</li>
                                         </ul>
                                     </div>
                                 </div><!-- //rental_state -->
@@ -462,24 +462,28 @@
                                                     <tr>
                                                         <th scope="row">계약번호</th>
                                                         <td>20190701-12345678</td>
-                                                        <th scope="row">계약기간</th>
-                                                        <td>2019-07-05 ~ 2019-07-05 </td>
+                                                        <th scope="row">의무사용기간/총계약기간</th>
+                                                        <td>36개월 / 60개월</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">계약일</th>
+                                                        <td>2019-07-05</td>
+                                                        <th scope="row">계약종료일</th>
+                                                        <td>2024-07-05</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">계약자</th>
-                                                        <td>홍길도</td>
+                                                        <td colspan="3">홍길동</td>
+                                                    </tr>
+                                                    <tr>
                                                         <th scope="row">휴대폰번호</th>
                                                         <td>010-1234-1234</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">이메일주소</th>
+														<th scope="row">이메일주소</th>
                                                         <td>abcd1234@gmail.com</td>
-                                                        <th scope="row">의무사용기간</th>
-                                                        <td>60개월</td>
                                                     </tr>
-                                                    <tr>
+													<tr>
                                                         <th scope="row">옵션</th>
-                                                        <td colspan="3">조리수 벨브 설치 요청, 폐가전 무료 수거 </td>
+                                                        <td colspan="3">조리수 벨브 설치요청, 폐가전 무료 수거</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">사은품</th>
@@ -545,34 +549,26 @@
                                                 </colgroup>
                                                 <tbody>
                                                     <tr>
-                                                        <th scope="row">기본 월 렌탈료</th>
-                                                        <td colspan="3">25,900원</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">할인 적용 내역</th>
-                                                        <td colspan="3">신규회원 10% 할인 + 복수제품 주문 월 2천원 할인 + 신규패키지 할인 (60개월 월 렌탈료 25,000원)</td>
-                                                    </tr>
-                                                    <tr>
                                                         <th scope="row">최종 월 렌탈료</th>
                                                         <td colspan="3">25,900원</td>
                                                     </tr>
-                                                    <tr>
-                                                        <th scope="row">납부방법</th>
-                                                        <td>카드 자동이체</td>
-                                                        <th scope="row">자동 이체일</th>
-                                                        <td>매월 10일</td>
-                                                    </tr>
+													<tr>
+														<th scope="row">납부방법</th>
+														<td>카드 자동이체</td>
+														<th scope="row">자동 이체일</th>
+														<td>매월 10일</td>
+													</tr>
                                                     <tr>
                                                         <th scope="row">신용카드</th>
                                                         <td>비씨카드</td>
-                                                        <th scope="row">카드번호</th>
+														<th scope="row">카드번호</th>
                                                         <td>1234-****-****-1234</td>
                                                     </tr>
+                                                  
                                                 </tbody>
                                             </table>
                                             <div class="btn-right">
                                                 <a href="#" class="btn_s">세금계산서</a>
-                                                <a href="#" class="btn_s">약관 다운로드</a>
                                                 <a href="#" class="btn_s">계약서 다운로드</a>
                                             </div>
                                         </div>
@@ -590,14 +586,42 @@
                                         <ul class="info_list">
                                             <li>모델명:CP-TS011DS(S)</li>
                                             <li>제품명:정수기</li>
-                                            <li>수량:1개</li>
+                                            <li>관리유형:관리형</li>
                                         </ul>
                                     </div>
                                 </div><!-- //rental_state -->
                                 <div class="section_wrap">
-                                    <div class="top_area type_sub"><!-- [P]하위뎁스일경우 type_sub추가 -->
-                                        <h4 class="tit_04">점검예정 및 점검내역</h4>
+									<div class="search_area">
+                                        <div class="select_box w110">
+                                            <a href="#" class="tit">전체</a>
+                                            <ul class="hidden">
+                                                <li class="on"><a href="#">옵션1</a></li>
+                                                <li><a href="#">옵션2</a></li>
+                                                <li><a href="#">옵션3</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="right">
+                                            <div class="tab date_tab">
+                                                <ul class="tab_btn">
+                                                    <li class="on"><a href="#">당월</a></li>
+                                                    <li class=""><a href="#">전월</a></li>
+                                                    <li class=""><a href="#">3개월</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="datepicker_wrap">
+                                                <div class="datepicker">
+                                                    <input type="text" class="datepicker_input" readonly style="width:150px">
+                                                </div> -
+                                                <div class="datepicker">
+                                                    <input type="text" class="datepicker_input" readonly style="width:150px">
+                                                </div>
+                                                <button type="button" class="btn_s common">검색</button>
+                                            </div>
+
+                                        </div>
                                     </div>
+                                   
+									
                                     <div class="section type_noBorder">
                                         <div class="tbl type_border type_m">
                                             <table>
@@ -613,32 +637,39 @@
                                                     <tr>
                                                         <th scope="col">구분</th>
                                                         <th scope="col">점검(예정)일자</th>
-                                                        <th scope="col">점검내용</th>
-                                                        <th scope="col">제품설치장소</th>
-                                                        <th scope="col"></th>
+                                                        <th scope="col">송장번호</th>
+                                                        <th scope="col">점검내역</th>
+                                                        <th scope="col">점검일 변경</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td><span class="point04 bold">점검예정</span></td>
-                                                        <td>2019-10-05 14:00</td>
+                                                        <td>점검예정</td>
+                                                        <td>2019-10-05</td>
+                                                        <td>-</td>
                                                         <td>필터교체</td>
-                                                        <td>서울특별시 강남구 논현 2동 238번지 쿠쿠빌딩</td>
                                                         <td><button type="button" class="btn_s">점검일 변경</button></td>
                                                     </tr>
                                                     <tr>
-                                                        <td><span class="point05 bold">점검보류</span></td>
-                                                        <td>2019-10-05 14:00</td>
-                                                        <td>필터교체</td>
-                                                        <td>서울특별시 강남구 논현 2동 238번지 쿠쿠빌딩</td>
-                                                        <td><button type="button" class="btn_s">방문 사진보기</button></td>
+                                                        <td>점검보류</td>
+                                                        <td>2019-10-05</td>
+                                                        <td>-</td>
+                                                        <td>설치 및 최초 점검</td>
+                                                        <td><button type="button" class="btn_s">점검일 변경</button></td>
                                                     </tr>
                                                     <tr>
-                                                        <td><span class="point03 bold">점검완료</span></td>
-                                                        <td>2019-10-05 14:00</td>
-                                                        <td>필터교체</td>
-                                                        <td>서울특별시 강남구 논현 2동 238번지 쿠쿠빌딩</td>
-                                                        <td></td>
+                                                        <td>점검완료</td>
+                                                        <td>2019-10-05</td>
+                                                        <td>-</td>
+                                                        <td>설치 및 최초 점검</td>
+                                                        <td><button type="button" class="btn_s">점검일 변경</button></td>
+                                                    </tr>
+													<tr>
+                                                        <td>택배발송</td>
+                                                        <td>2019-10-05</td>
+                                                        <td>CJ택배 1234455687</td>
+                                                        <td>-</td>
+                                                        <td><button type="button" class="btn_s">점검일 변경</button></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -657,14 +688,14 @@
                                         <ul class="info_list">
                                             <li>모델명:CP-TS011DS(S)</li>
                                             <li>제품명:정수기</li>
-                                            <li>수량:1개</li>
                                             <li>납부방법:카드자동이체</li>
-                                        </ul>
+											<li><a href="javascript:;" class="link_arrow ft13 bold"><span>납부정보 변경</span><i class="ico btnLink"></i></a></li>
+										</ul>
                                         <ul class="price_list">
                                             <li><span>총 납부금액</span> <strong>51,800원</strong></li>
-                                            <li><span>총 미납금액</span> <strong>51,800원</strong></li>
+                                            <li><span>총 미납금액</span> <strong>25,900원</strong></li>
                                             <li class="btn">
-                                                <button type="button" class="btn_s">납부하기</button> <button type="button" class="btn_s">납부정보 변경</button>
+                                                <button type="button" class="btn_s">납부하기</button>
                                             </li>
                                         </ul>
                                     </div>
@@ -672,7 +703,7 @@
                                 <div class="section_wrap">
                                     <div class="search_area">
                                         <div class="select_box w110">
-                                            <a href="#" class="tit">납부완료</a>
+                                            <a href="#" class="tit">전체</a>
                                             <ul class="hidden">
                                                 <li class="on"><a href="#">옵션1</a></li>
                                                 <li><a href="#">옵션2</a></li>
@@ -682,11 +713,9 @@
                                         <div class="right">
                                             <div class="tab date_tab">
                                                 <ul class="tab_btn">
-                                                    <li class="on"><a href="#">오늘</a></li>
-                                                    <li class=""><a href="#">1주일</a></li>
-                                                    <li class=""><a href="#">1개월</a></li>
+                                                    <li class="on"><a href="#">당월</a></li>
+                                                    <li class=""><a href="#">전월</a></li>
                                                     <li class=""><a href="#">3개월</a></li>
-                                                    <li class=""><a href="#">6개월</a></li>
                                                 </ul>
                                             </div>
                                             <div class="datepicker_wrap">
@@ -734,17 +763,17 @@
                                                         <td>-</td>
                                                         <td>25,900원</td>
                                                         <td>0원</td>
-                                                        <td>카드자동이체
-                                                            <p class="mt15"><button type="button" class="btn_s w90">납부하기</button></p>
+                                                        <td>
+                                                            <p><button type="button" class="btn_s w90">납부하기</button></p>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td>2회차</td>
+                                                        <td>1회차</td>
                                                         <td>미납</td>
                                                         <td>2019-08-10</td>
-                                                        <td>-</td>
+                                                        <td>2019-07-10</td>
                                                         <td>25,900원</td>
-                                                        <td>0원</td>
+                                                        <td>25,900원</td>
                                                         <td>카드자동이체
                                                             <p class="mt15"><button type="button" class="btn_s w90">영수증출력</button></p>
                                                         </td>
