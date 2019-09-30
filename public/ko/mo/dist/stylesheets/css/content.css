@@ -31,7 +31,7 @@
 #cartPop .col_box > div:first-child .img{background-position:0 0}
 #cartPop .col_box > div:first-child .num{background-color:#7a101b}
 #cartPop .col_box > div:last-child .img{background-position:-121px 0}
-#cartPop .col_box > div:last-child .num{background-color:#272524}
+#cartPop .col_box > div:last-child .num{background-color:#7a101b}
 #cartPop .col_box .txt{margin:23px 0; line-height:21px}
 /* sns공유하기팝업 */
 #snsPop .sns_list{text-align:center}
@@ -58,7 +58,7 @@
 .prd_list a .img img{width:157px; height:157px;}
 .prd_list a .category{margin-top:15px; font-size:12px; color:#585856}
 .prd_list a .name{margin-top:10px; font-weight:500}
-.prd_list a .discount{margin-top:12px; font-size:12px; color:#8a8b87; text-decoration:line-through; font-weight:500; min-height:12px}
+.prd_list a .discount{margin-top:12px; font-size:12px; min-height:12px}
 .prd_list a .price{/*margin-top:12px;*/ margin-top:4px; font-size:18px; font-weight:700}
 .prd_list a .price .won{font-size:15px}
 .prd_list a .txt_info{overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; text-overflow:ellipsis; min-height:36px; margin-top:10px; font-size:12px; line-height:18px}
@@ -80,6 +80,63 @@
 .prd_list.type_rental .rental_price dd .won{font-size:12px}
 .prd_list.type_rental .txt_tag{overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; text-overflow:ellipsis; padding-top:10px; font-size:12px; line-height:19px; min-height:24px;}
 
+/* 장바구니 리스트 */
+.cart_list{margin:0 -25px}
+.cart_list > ul > li{padding:25px; border-top:1px solid #d5d6d3}
+.cart_list > ul > li:last-child{border-bottom:1px solid #d5d6d3}
+.cart_list .prd_info{position:relative; margin-top:10px; padding-bottom:22px; border-bottom:1px solid #d5d6d3}
+.cart_list .prd_info:after{display:block; content:''; clear:both}
+.cart_list .prd_info .img{float:left; position:relative; width:80px; height:80px; margin-right:15px}
+.cart_list .prd_info .img img{width:100%}
+.cart_list .prd_info .img .soldout_txt{position:absolute; bottom:0; left:0; height:30px; width:100%; background:url(../../images/common/bg_layer_soldout.png) repeat; text-align:center; color:#fff; font-size:12px; line-height:30px; }
+.cart_list .prd_info .info{float:left; width:calc(100% - 95px)}
+.cart_list .prd_info .info .category{font-size:12px; color:#585856}
+.cart_list .prd_info .info .name{margin-top:8px; font-weight:500}
+.cart_list .prd_info .info .discount{min-height:12px; margin-top:12px; font-size:12px}
+.cart_list .prd_info .info .price{margin-top:3px; font-size:18px; font-weight:700}
+.cart_list .prd_info .info .price .won{font-size:15px}
+.cart_list .prd_info .info .count_wrap{position:absolute; top:56px; right:0}
+.cart_list .prd_info .info .option_box{margin-top:16px; background-color:#f5f5f5; padding:10px 20px; font-size:12px; color:#585856}
+.cart_list .prd_info + .btn-flex{margin-top:25px}
+.cart_list .price_info{padding:25px 0 20px 0}
+.cart_list .price_info li{display:flex}
+.cart_list .price_info li + li{margin-top:15px}
+.cart_list .price_info li .tit, .cart_list .price_info li .txt{flex:1}
+.cart_list .price_info li.price .tit{font-weight:500}
+.cart_list .price_info li.price .txt{font-weight:700; font-size:18px}
+.cart_list .price_info li.price .txt .won{font-size:15px}
+.cart_list .price_info li.point .tit{font-size:14px}
+.cart_list .price_info li .txt{text-align:right}
+.cart_list > ul > li.soldout .btn-flex{display:block; text-align:center}
+.cart_list > ul > li.soldout .btn-flex button{width:155px}
+@media all and (max-width: 320px){
+    .cart_list .prd_info .img{margin-right:5px}
+    .cart_list .count_wrap .num{width:auto}
+}
+
+/* 주문리스트 */
+.order_list{margin:0 -25px}
+.order_list > ul > li{position:relative; padding:25px; border-bottom:1px solid #d5d6d3}
+.order_list > ul > li:after{display:block; content:''; clear:both}
+.order_list .img{float:left; position:relative; width:80px; height:80px; margin-right:15px;}
+.order_list .img img{width:100%;}
+.order_list .info{float:left; width: calc(100% - 95px); padding-top:5px}
+.order_list .info .category{font-size:12px; color:#585856}
+.order_list .info .name{margin-top:10px; font-weight:500}
+.order_list .info .price{margin-top:20px; font-weight:700; font-size:18px}
+.order_list .info .price .count{font-weight:500; font-size:15px}
+.order_list .info .price .count .won{font-size:13px}
+.order_list .info .desc{margin-top:20px; font-weight:500; font-size:14px; }
+.order_list .info .desc span{vertical-align:middle;}
+.order_list .info .gift_name{position:relative; margin-top:15px; padding-left:8px; font-size:14px; color:#585856}
+.order_list .info .gift_name + .gift_name{margin-top:10px}
+.order_list .info .gift_name:before{content:''; display:inline-block; position:absolute; left:0; top:6px; width:2px; height:2px; background-color:#585856; border-radius:100%}
+.order_list .info .option_box{margin-top:16px; background-color:#f5f5f5; padding:10px 20px; font-size:12px; color:#585856}
+.order_list .notice_list{margin-top:15px}
+.tooltip_wrap .tooltip_box{display:none; position:absolute; left:50%; width:315px; margin-left:-157px; padding:25px 20px; border:2px solid #312f2d; background-color:#fff; z-index:10; box-sizing:border-box;}
+.tooltip_wrap.on .tooltip_box{display:block}
+.tooltip_wrap .tooltip_box .tit_03{margin-bottom:20px}
+.tooltip_wrap .btn-close{display:inline-block; position:absolute; top:10px; right:10px; width:16px; height:16px; background:url(../../images/common/ico_zip.png) no-repeat -382px 0; background-size:500px}
 /* 검색결과없음 */
 .search_nodata{padding-top:50px; text-align:center}
 .search_nodata .txt1{font-size:15px; font-weight:500}

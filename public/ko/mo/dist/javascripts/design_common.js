@@ -111,6 +111,16 @@ $window.load(function () {
     $('.btn-top').on('click', function(){
         $('html, body').animate({scrollTop:0}, '500');
     })
+    $(document).on('click', '.tooltip', function(){
+        if(!($(this).parents('.tooltip_wrap').hasClass('on'))){
+            $(this).parents('.tooltip_wrap').addClass('on');
+            $('.tooltip_wrap .btn-close').on('click', function(){
+                $(this).parents('.tooltip_wrap').removeClass('on');
+            });
+        }else{
+            $(this).parents('.tooltip_wrap').removeClass('on');
+        }
+    });
     uiAcodian();
 });
 if($('.datepicker_input').length > 0){
