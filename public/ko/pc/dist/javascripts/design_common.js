@@ -88,11 +88,17 @@ $window.load(function () {
                     $(this).closest('.hidden').prev().append(thisText);
                     $(this).parents('.hidden').find('li').removeClass('on');
                     $(this).parent().addClass('on');
+					if($('#select_month > a').hasClass('selected')){
+					
+						$('.price_area').hide();
+						$('.price_area.price_area_02').show();
+					}
                 });
             } else {
                 $(this).removeClass('on');
             }
         }
+		
     });
     $(document).on('click', '.btn-top', function(e){
         e.preventDefault();
@@ -399,6 +405,10 @@ function layerPopOpen(obj){// 레이어팝업 열기, obj : 해당팝업 id
 	//dimOn();
     if($('#'+obj).length >= 1){
 		$('#'+obj).addClass('open');
+		if( $('#rentalProductAgain').hasClass('open') ){
+
+			popup_slick();
+		}
 
         //thisPop.css("top", ((winH - thisPop.outerHeight()) / 2) + $(window).scrollTop());
         //thisPop.css("left", ((winW - thisPop.outerWidth()) / 2) + $(window).scrollLeft());
@@ -490,3 +500,24 @@ function loadingOpen(){ //로딩열기
 function loadingClose(){ //로딩닫기
 	$('#layer_pop_loading').remove();
 }
+// 레이어팝업 슬릭작동
+function popup_slick(){
+	$('.gallery_wrap .slider-for').slick({
+		slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.gallery_wrap .slider-nav',
+	});
+    $('.gallery_wrap .slider-nav').slick({
+		slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.gallery_wrap .slider-for',
+        centerMode: true,
+        focusOnSelect: true,
+        vertical:true,
+	});
+    $('.photo_review').slick({
+		dots: true
+    });
+};

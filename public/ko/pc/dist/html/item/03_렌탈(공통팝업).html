@@ -478,47 +478,175 @@
     <!-- //footer -->
     <!-- 기간별 월 렌탈료 -->
     <div id="rentalPrice" class="wrap_layer_pop">
-        <div class="layer_pop w500">
+        <div class="layer_pop w830">
             <div class="container_pop">
                 <div class="header_pop">
                     <h2 class="tit_03">기간별 월 렌탈료</h2>
-                    <div class="txt">기본 렌탈료는 의무 사용기간 60개월 입니다.</div>
+                    <div class="txt">이용하실 원 렌탈료를 선택해주세요.<br>
+					의무기간 후에는 아래 요금에서 추가 할인이 적용됩니다. (제품별 상이)</div>
                 </div>
                 <div class="tbl_wrap">
-                    <div class="tbl type_data">
+                    <div class="tbl type_data type_data_02">
                         <table>
-                            <caption>휴대폰 본인인증안내</caption>
+                            <caption>기간별 월 렌탈료</caption>
                             <colgroup>
-                                <col style="width:50%">
-                                <col style="width:auto">
+                                <col style="">
+                                <col style="">
+								<col style="">
+								<col style="">
+								<col style="">
+								<col style="">
+								<col style="">
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="col">기간</th>
-                                    <th scope="col">월 렌탈료</th>
+                                    <th scope="col">선택</th>
+                                    <th scope="col">기본 렌탈료</th>
+									<th scope="col">할인 렌탈료</th>
+									<th scope="col">관리형태</th>
+									<th scope="col">의무기간</th>
+									<th scope="col">계약기간</th>
+									<th scope="col">총 요금</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1-36개월</td>
+                                    <td>
+										<span>
+											<input type="radio" class="radio_s" name="radio01" id="radio01_01">
+											<label for="radio01_01"><span></span></label>
+										</span>
+									</td>
+                                    <td>40,900원</td>
+									<td class="discount_type01">36,900원</td>
+									<td>관리형</td>
+									<td>36개월</td>
+									<td>60개월</td>
+									<td>1,328,400원</td>
+                                </tr>
+								<tr>
+                                    <td>
+										<span>
+											<input type="radio" class="radio_s" name="radio01" id="radio01_02">
+											<label for="radio01_02"><span></span></label>
+										</span>
+									</td>
+                                    <td>38,900원</td>
+									<td class="discount_type01">34,900원</td>
+									<td>관리형</td>
+									<td>48개월</td>
+									<td>60개월</td>
+									<td>1,675,200원</td>
+                                </tr>
+								<tr>
+                                    <td>
+										<span>
+											<input type="radio" class="radio_s" name="radio01" id="radio01_03">
+											<label for="radio01_03"><span></span></label>
+										</span>
+									</td>
                                     <td>36,900원</td>
+									<td class="discount_type01">29,900원</td>
+									<td>관리형</td>
+									<td>60개월</td>
+									<td>60개월</td>
+									<td>1,794,400원</td>
                                 </tr>
-                                <tr>
-                                    <td>37-48개월</td>
-                                    <td>28,900원</td>
+								<tr>
+                                    <td>
+										<span>
+											<input type="radio" class="radio_s" name="radio01" id="radio01_04">
+											<label for="radio01_04"><span></span></label>
+										</span>
+									</td>
+                                    <td>37,900원</td>
+									<td class="discount_type01">33,900원</td>
+									<td>셀프형</td>
+									<td>36개월</td>
+									<td>60개월</td>
+									<td>1,220,400원</td>
                                 </tr>
-                                <tr>
-                                    <td>49-60개월</td>
-                                    <td>24,900원</td>
+								<tr>
+                                    <td>
+										<span>
+											<input type="radio" class="radio_s" name="radio01" id="radio01_05">
+											<label for="radio01_05"><span></span></label>
+										</span>
+									</td>
+                                    <td>36,900원</td>
+									<td class="discount_type01">32,900원</td>
+									<td>셀프형</td>
+									<td>48개월</td>
+									<td>60개월</td>
+									<td>1,579,200원</td>
                                 </tr>
+								<tr>
+                                    <td>
+										<span>
+											<input type="radio" class="radio_s" name="radio01" id="radio01_06">
+											<label for="radio01_06"><span></span></label>
+										</span>
+									</td>
+                                    <td>34,900원</td>
+									<td class="discount_type01">27,900원</td>
+									<td>셀프형</td>
+									<td>60개월</td>
+									<td>60개월</td>
+									<td>1,674,000원</td>
+                                </tr>
+                               
                             </tbody>
                         </table>
                     </div>
+					<div class="gray_box rental_type tac">
+						<div class="top_area">
+							<h2 class="tit_03">쿠쿠 가족이 가장 많이 선택한 렌탈유형</h2>
+							<p class="mt20">렌탈료 선택 시 참고용으로만 확인 해주세요.(전 제품 기준)</p>
+						</div>
+						<div class="bottom_area">
+							<ul>
+								<li>
+									<span class="tit">관리형/ 60개월 계약기간/ 36개월 의무사용기간</span>
+									<span class="graph">
+										<span class="percent_20"><span class="real_num">20%</span></span>
+									</span>
+								</li>
+								<li>
+									<span class="tit">관리형/ 60개월 계약기간/ 48개월 의무사용기간</span>
+									<span class="graph">
+										<span class="percent_5"><span class="real_num">5%</span></span>
+									</span>
+								</li>
+								<li>
+									<span class="tit">관리형/ 60개월 계약기간/ 60개월 의무사용기간</span>
+									<span class="graph">
+										<span class="percent_20"><span class="real_num">20%</span></span>
+									</span>
+								</li>
+								<li>
+									<span class="tit">셀프형/ 60개월 계약기간/ 36개월 의무사용기간</span>
+									<span class="graph">
+										<span class="percent_5"><span class="real_num">5%</span></span>
+									</span>
+								</li>
+								<li>
+									<span class="tit">셀프형/ 60개월 계약기간/ 48개월 의무사용기간</span>
+									<span class="graph">
+										<span class="percent_10"><span class="real_num">10%</span></span>
+									</span>
+								</li>
+								<li>
+									<span class="tit">셀프형/ 60개월 계약기간/ 60개월 의무사용기간</span>
+									<span class="graph">
+										<span class="percent_40"><span class="real_num">40%</span></span>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
                 </div>
             </div>
-            <div class="btn-wrap">
-                <button type="button" class="btn_l radius common">확인</button>
-            </div>
+           
             <button type="button" class="btn-close-pop" onclick="layerPopClose('rentalPrice')"><span class="blind">팝업닫기</span></button>
         </div>
     </div>
@@ -591,8 +719,9 @@
             <div class="container_pop">
                 <div class="header_pop">
                     <h2 class="tit_03">제휴할인 정보</h2>
+					<div class="mt30">전월 실적에 따라 월 렌탈료가 청구할인 됩니다.</div>
                 </div>
-                <div class="section type_borderNone">
+                <div class="section type_borderNone mt40">
                     <h3 class="tit_04">렌탈 제휴카드</h3>
                     <div class="cardInfo_wrap">
                         <div class="top_area">
