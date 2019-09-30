@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>Cuckoo 관리자</title>
+	<style type="text/css">
+
+		body{width:100%; height:100%;  font-family:vernada; margin:20px auto;}
+		#secretWrapper{width :98%; margin:0 auto;}
+		#secretWrapper h1{font-size:30px; text-align:center; margin:0 0 119px;}
+		#secretWrapper h2{font-size:20px; margin:30px 0 20px;}
+		#secretWrapper table{width:100%; border-top:1px solid #99948e; border-left:1px solid #99948e; border-collapse:collapse;}
+		#secretWrapper table .title1{background-color:#e6002d; color:#fff; padding:7px 0 5px; text-align:center;}
+		#secretWrapper table .title2{background-color:#f7f7f7; color:#707070; padding:7px 0 5px; text-align:center;}
+		#secretWrapper table .title3{background-color:#dfdfdf; color:#707070; padding:7px 0 5px; text-align:center;}
+		#secretWrapper table th{border-right:1px solid #99948e; border-bottom:1px solid #99948e; padding:5px 0;}
+		#secretWrapper table td{border-right:1px solid #99948e; border-bottom:1px solid #99948e;}
+		#secretWrapper table tbody td{padding:8px 20px; font-size:12px;}
+		#secretWrapper table tbody tr td a {color:#333; text-decoration:underline;}
+
+		#secretWrapper table tbody tr.ok th,
+		#secretWrapper table tbody tr.ok td{background:#9f9f95; color:#fff;}
+		#secretWrapper table tbody tr.ok td.dev{background:#9f9f95; color:#fff;}
+		#secretWrapper table tbody tr.ok td a{color:#fff;}
+
+		#secretWrapper table tbody tr.ok2 td{background:#c62b4a; color:#fff;}
+		#secretWrapper table tbody tr.ok2 td.dev {background:#c62b4a; color:#fff;}
+		#secretWrapper table tbody tr.ok2 td a{color:#fff;}
+
+		#secretWrapper table tbody tr.ok3 td{background:#6e58c6; color:#fff;}
+		#secretWrapper table tbody tr.ok3 td.dev {background:#a07fff; color:#333}
+		#secretWrapper table tbody tr.ok3 td a{color:#fff;}
+		#secretWrapper table tbody tr.del td{background:#999; color:#333;}
+
+		.caution {background-color:lightblue;}
+
+		body *{margin:0; padding:0;}
+		#secretWrapper .depth_info { width:98%; position:absolute; top:83px;}
+		#secretWrapper .depth_info.fix { position:fixed; top:0;}
+
+	</style>
+	<script src="javascripts/jquery-1.8.2.min.js"></script>
+	<script>
+        $(function () {
+			var $table = $("table");
+			var $tbody = $("table tbody");
+            $table.each(function () {
+				var _this = $(this);
+				var divisionDepth = _this.find("tbody > tr");
+                var divisionLength = divisionDepth.length;
+
+                divisionDepth.eq(0).find("td").eq(0).attr("rowspan", divisionLength);
+            });
+
+            var $depthInfo = $(".depth_info");
+            $(window).scroll(function () {
+				var st = $(this).scrollTop();
+				if(st > 83){
+                    $depthInfo.addClass("fix");
+				} else {
+                    $depthInfo.removeClass("fix");
+				}
+            });
+        });
+	</script>
+</head>
+<body>
+<div id="secretWrapper">
+	<table class="depth_info">
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="20%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<thead>
+		<tr class="title1">
+			<th colspan="4">DEPTH</th>
+			<th colspan="2">코딩현황</th>
+			<th>개발현황</th>
+		</tr>
+		<tr class="title2">
+			<th></th>
+			<th>1depth</th>
+			<th>2depth</th>
+			<th>3depth</th>
+			<th colspan="2">마크업 파일명</th>
+			<th>작업처리</th>
+		</tr>
+		<tr class="title3">
+			<th>구분</th>
+			<th>Label</th>
+			<th>Label</th>
+			<th>Label</th>
+			<th>Folder</th>
+			<th>File</th>
+			<th>상태</th>
+		</tr>
+		</thead>
+	</table>
+	<h1>Cuckoo / MO</h1>
+	<!-- 메인 -->
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="20%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr>
+			<td>Main</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>main</td>
+			<td><a href="./html/main/01_메인.html" target="_blank">메인</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>검색결과</td>
+			<td></td>
+			<td></td>
+			<td>main</td>
+			<td><a href="./html/main/01_메인_검색결과.html" target="_blank">01_메인_검색결과</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+	<!-- //메인 -->
+
+	<!-- 가이드 -->
+	<h2>Guide</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="20%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr>
+			<td>가이드</td>
+			<td>공통(헤더,푸터)</td>
+			<td></td>
+			<td></td>
+			<td>guide</td>
+			<td><a href="./html/guide/00_공통(헤더,푸터).html" target="_blank">00_공통(헤더,푸터)</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>폼요소</td>
+			<td></td>
+			<td></td>
+			<td>guide</td>
+			<td><a href="./html/guide/01_폼요소.html" target="_blank">01_폼요소</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>버튼</td>
+			<td></td>
+			<td></td>
+			<td>guide</td>
+			<td><a href="./html/guide/02_버튼.html" target="_blank">02_버튼</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>탭</td>
+			<td></td>
+			<td></td>
+			<td>guide</td>
+			<td><a href="./html/guide/03_탭.html" target="_blank">03_탭</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>팝업</td>
+			<td></td>
+			<td></td>
+			<td>guide</td>
+			<td><a href="./html/guide/04_팝업.html" target="_blank">04_팝업</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>테이블</td>
+			<td></td>
+			<td></td>
+			<td>guide</td>
+			<td><a href="./html/guide/05_테이블.html" target="_blank">05_테이블</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>리스트</td>
+			<td></td>
+			<td></td>
+			<td>guide</td>
+			<td><a href="./html/guide/06_리스트.html" target="_blank">06_리스트</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>기타</td>
+			<td></td>
+			<td></td>
+			<td>guide</td>
+			<td><a href="./html/guide/07_기타.html" target="_blank">07_기타</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+	<!-- //가이드 -->
+</div>
+</body>
+</html>
