@@ -1,0 +1,132 @@
+       <div class="header_logo_wrap">
+            <h1 class="header_logo"><a href="#"><span class="blind">CUCKOO</span></a></h1>
+            <div class="util">
+                <button type="button" class="btn-share"><span class="blind">공유하기</span></button>
+                <button type="button" onclick="layerPopOpen('searchPop')" class="btn-search"><span class="blind">검색</span></button>
+                <span class="cart_wrap">
+                    <button type="button" onclick="layerPopOpen('cartPop')" class="btn-cart"><span class="blind">장바구니</span></button>
+                    <span class="num">33</span><!-- [D] 1개이상일경우만 노출, 0개일시 비노출 -->
+                </span>
+                <button type="button" class="btn-menu"><span class="blind">메뉴</span></button>
+            </div>
+        </div>
+        <div class="header_title_wrap">
+            <div class="header_title">
+                <h2 class="page_tit">타이틀</h2>
+                <button type="button" class="btn-back"><span class="blind">뒤로가기</span></button>
+				<div class="depth_sub">
+					<button type="button" class="nine_dot"><span class="blind">버튼</span></button>
+					<button type="button" class="close_btn"><span class="blind">버튼</span></button>
+				</div>
+				<div class="nine_dot_view customer_icon">
+					<div>
+						<a href="#">고객센터 홈</a>
+					</div>
+					<div>
+						<a href="#">스스로제품점검</a>
+					</div>
+					<div>
+						<a href="#">렌탈상담신청</a>
+					</div>
+					<div>
+						<a href="#">1:1문의</a>
+					</div>
+					<div>
+						<a href="#">출장A/S신청</a>
+					</div>
+					<div>
+						<a href="#">서비스신청</a>
+					</div>
+					<div>
+						<a href="#">제품등록</a>
+					</div>
+					<div>
+						<a href="#">제품설명서다운</a>
+					</div>
+					<div>
+						<a href="#">쿠쿠매장</a>
+					</div>
+					<div>
+						<a href="#">해외서비스안내</a>
+					</div>
+					<div>
+						<a href="#">FAQ</a>
+					</div>
+					<div>
+						<a href="#">공지사항</a>
+					</div>
+				</div>
+			
+            </div>
+			
+			
+        </div>
+		<script>
+			$('.depth_sub').click(function(){
+				if($(this).hasClass('on')){
+					$('html, body').css('overflow','auto');
+					$('.nine_dot_view').hide();
+					$('.dimmed').css('z-index' ,'151').hide();
+					$(this).removeClass('on');
+					$('.btn-float').css('z-index','150');
+				}else{
+					$(this).addClass('on');
+					$('.btn-float').css('z-index','9');
+					$('.nine_dot_view').show();
+					$('.dimmed').css('z-index' ,'10').show();
+					$('html, body').css('overflow','hidden');
+				}
+			});
+		</script>
+        <!-- 전체메뉴 -->
+        <div id="gnb" class="all_menu">
+            <span class="blind">전체메뉴</span>
+            <div class="top_area">
+                <div class="util_menu">
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                </div>
+                <div class="point_wrap">
+                    <div>
+                        <p class="tit">쿠폰</p>
+                        <a href="#" class="txt">10<span class="won">장</span></a>
+                    </div>
+                    <div>
+                        <p class="tit">포인트</p>
+                        <a href="#" class="txt">999,999P</a>
+                    </div>
+                </div>
+            </div>
+            <ul class="depth01">
+                <li class="ui_acodian on">
+                    <a href="#" class="tit btn-view">쿠쿠몰</a>
+                    <ul class="hidden_area">
+                        <li><a href="#">밥솥</a></li>
+                        <li><a href="#">전기레인지</a></li>
+                        <li><a href="#">식기세척기</a></li>
+                        <li><a href="#">펫용품</a></li>
+                        <li><a href="#">부속품</a></li>
+                        <li><a href="#">기타제품</a></li>
+                    </ul>
+                </li>
+                <li class="ui_acodian on">
+                    <a href="#" class="tit btn-view">쿠쿠렌탈</a>
+                    <ul class="hidden_area">
+                        <li><a href="#">정수기</a></li>
+                        <li><a href="#">공기청정기</a></li>
+                        <li><a href="#">비데</a></li>
+                        <li><a href="#">매트리스/프레임</a></li>
+                        <li><a href="#">부속품</a></li>
+                        <li><a href="#">기타제품</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="tit">이벤트</a></li>
+                <li><a href="#" class="tit">고객센터</a></li>
+            </ul>
+            <div class="bottom_area">
+                <a href="#">쿠쿠소개</a>
+                <a href="#">채용정보</a>
+            </div>
+            <button type="button" class="btn-menu-close"><span class="blind">전체메뉴닫기</span></button>
+        </div>
+        <!-- //전체메뉴 -->

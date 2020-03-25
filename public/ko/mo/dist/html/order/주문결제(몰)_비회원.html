@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko" class="sub">
+
+<head>
+  <title>CUCKOO</title>
+  <!-- 공통적용헤더정보 -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <!-- //공통적용헤더정보 -->
+  <meta name="Description" content="CUCKOO">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CUCKOO">
+  <meta property="og:description" content="CUCKOO">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="CUCKOO">
+  <meta name="Keywords" content="CUCKOO">
+  <meta name="Author" content="CUCKOO">
+  <meta name="robots" content="ALL">
+  <link rel="stylesheet" href="../../stylesheets/css/common.css">
+  <link rel="stylesheet" href="../../stylesheets/css/content.css">
+  <script src="../../javascripts/jquery-1.8.2.min.js"></script>
+  <script src="../../javascripts/jquery-ui.min.js"></script>
+  <script src="../../javascripts/plugin.js"></script>
+</head>
+
+<body>
+    <!-- skipNavigation-->
+    <div id="skipNavigation">
+      <ul>
+          <li><a href="#gnb">Main menu</a></li>
+          <li><a href="#container">Contents</a></li>
+      </ul>
+    </div>
+    <!-- //skipNavigation-->
+
+    <!-- header-->
+    <header id="header">
+      <script>
+		$('#header').load('../include/header.html');
+	  </script>
+    </header>
+    <!-- //header-->
+
+    <!--container-->
+    <div id="container">
+
+        <div class="content">
+			<div class="order_sec">
+				<div class="order_tit"><span class="circle">01</span>비회원 개인정보 수집 및 이용 동의</div>
+				<div class="order_desc_area mt30 pb50">
+					<div class="pay_agree_box">
+						<p class="bold">1. 개인정보 수집 항목</p>
+						<p class="txt">이름, 주소, 전화번호, 휴대폰번호, 이메일주소</p>
+
+						<p class="bold">2. 수집 목적</p>
+						<p class="txt">회원 가입 유무 확인 및 구매 내용에 대한 정확한 회신</p>
+
+						<p class="bold">3. 개인정보 보유 이용 기간</p>
+						<p class="txt">전자상거래 등에서의 소비자보호에 관한 법률 등에서 정한 보존기간 동안 고객님의 개인 정보를 보유합니다.</p>
+						<ul class="dash_list">
+							<li>계약 또는 청약철회 등에 관한 기록 : 5년</li>
+							<li>대금결제 및 재화 등의 공급에 관한 기록 : 5년</li>
+							<li>소비자의 불만 또는 분쟁처리에 관한 기록 : 3년</li>
+						</ul>
+					</div>
+					<p class="input_list mt20">
+						<input type="checkbox" id="check01_01" name="check01">
+						<label for="check01_01"><span class="">주문을 위한 개인정보수집에 동의합니다.</span></label>
+					</p>
+				</div>
+			</div>
+			<div class="order_sec">
+				<div class="order_tit"><span class="circle">02</span>주문자 정보/배송지 정보 입력</div>
+				<div class="order_desc_area mt30 pb50">
+					<div class="tit_type_border">주문자 정보</div>
+					<div class="form_wrap type_box mt30">
+						<ul>
+							<li>
+								<label class="tit" for="input01_01">주문자</label><!-- essential 필수값 클래스 -->
+								<div class="input">
+									<input type="text" id="input01_input01" placeholder="이름을 입력해주세요.">
+								</div>
+							</li>
+							<li>
+								<label class="tit" for="input01_input02">이메일주소</label><!-- essential 필수값 클래스 -->
+								<div class="input">
+									<input type="text" id="input01_input02" class="error" placeholder="정확한 이메일주소를 입력 해주세요"><!-- error 에러값 클래스 -->
+								</div>
+								<p class="error_txt">이메일주소를 입력해주세요.</p>
+							</li>
+							<li>
+								<label class="tit " for="input01_input03">휴대폰번호</label>
+								<div class="input">
+									<input type="text" id="input01_input03" placeholder="숫자만 입력해주세요. (ex. 01012345678)">
+								</div>
+							</li>
+						
+						</ul>
+					</div>
+					<div class="tit_type_border mt50">배송지 정보 				
+						<p class="input_list">
+							<input type="checkbox" id="check01_09" name="check01">
+							<label for="check01_09"><span class="">주문자 정보와 동일</span></label>
+						</p>
+					</div>
+					<div class="form_wrap type_box mt30">
+						<ul>
+							<li>
+								<label class="tit" for="input01_01">받는사람</label><!-- essential 필수값 클래스 -->
+								<div class="input">
+									<input type="text" id="input01_input01" placeholder="이름을 입력해주세요.">
+								</div>
+							</li>
+						
+							<li>
+								<label class="tit " for="input01_input03">휴대폰번호</label>
+								<div class="input">
+									<input type="text" id="input01_input03" placeholder="숫자만 입력해주세요. (ex. 01012345678)">
+								</div>
+							</li>
+							<li>
+								<label class="tit " for="input01_input04">주소</label>
+								<div class="input">
+									<input type="text" id="input01_input04" placeholder="">
+									<button type="button" class="btn_m">주소찾기</button>
+								</div>
+								<div class="mt10">
+									<input type="text" id="" placeholder="">
+								</div>
+								<div class="mt10">
+									<input type="text" id="" placeholder="">
+								</div>
+							</li>
+							<li>
+								<label class="tit " for="input01_input05">배송요청사항</label>
+								<div class="wrap_select">
+									<select>
+										<option>배송메모를 선택해 주세요.</option>
+										<option>선택완료</option>
+									</select>
+									
+								</div>
+								<div class="mt10">
+									<input type="text" id="" placeholder="">
+								</div>
+							</li>
+						
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="order_sec on">
+				<div class="order_tit"><span class="circle">03</span>주문 제품 확인<span class="ar_btn" id="order_anchor"></span></div>
+				<div class="order_desc_area">
+					<div class="order_list">
+						<ul>
+							<li>
+								<div class="img"><img src="../../images/order/temp_prd_160x160.png" alt=""></div>
+								<div class="info">
+									<p class="category">IH전기압력밥솥</p>
+									<p class="name">CRP-KHT1020FD</p>
+									<p class="price">1,599,900<span class="won">원</span> / <span class="count">2<span class="won">개</span></span></p>
+									<div class="desc tooltip_wrap">
+										<span>사은품 정보</span><i class="ico tooltip"></i>
+										<p class="gift_name">레이코 에어프라이어 3.5L</p>
+										<div class="tooltip_box">
+											<h3 class="tit_03">사은품 안내사항</h3>
+											<ul class="bul_list type_s">
+												<li>사은품은 배송/설치 완료 후, 약 3주 뒤 별도 배송 됩니다.</li>
+												<li>사은품 품절 시 행사가 조기종료 되거나 사은품이 변경될 수 있습니다.</li>
+												<li>주문 상품의 품절 시 배송이 지연될 수 있습니다.</li>
+												<li>해당 행사는 5월 31일 결제 완료 건까지 유효합니다.</li>
+											</ul>
+											<button type="button" class="btn-close"><span class="blind">닫기</span></button>
+										</div>
+									</div>
+								</div>
+								<script>
+									$('#order_anchor').click(function(){
+										$(this).parents('.order_tit').parents('.order_sec').toggleClass('on');
+										$(this).parents('.order_tit').next('.order_desc_area').children('.order_list').toggle();
+									});
+								</script>
+							</li>
+							<li>
+								<div class="img"><img src="../../images/order/temp_prd_160x160.png" alt=""></div>
+								<div class="info">
+									<p class="category">IH전기압력밥솥</p>
+									<p class="name">CRP-KHT1020FD</p>
+									<p class="price">1,599,900<span class="won">원</span> / <span class="count">2<span class="won">개</span></span></p>
+								</div>
+							</li>
+							<li>
+								<div class="img"><img src="../../images/order/temp_prd_160x160.png" alt=""></div>
+								<div class="info">
+									<p class="category">IH전기압력밥솥</p>
+									<p class="name">CRP-KHT1020FD</p>
+									<p class="price">1,599,900<span class="won">원</span> / <span class="count">2<span class="won">개</span></span></p>
+									<p class="option_box">옵션 : CPR-D105SX</p>
+									<ul class="notice_list">
+										<li class="type_point">쿠폰 적용불가 제품</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="order_desc_area bottom_price">
+					<div class="pb50 total_price">
+						<ul class="price_info">
+							<li class="price">
+								<span class="tit">총 제품금액</span>
+								<span class="txt">2,298,000<span class="won">원</span></span>
+							</li>
+							<li class="point">
+								<span class="tit">총 할인 금액</span>
+								<span class="txt">19,000P</span>
+							</li>
+							<li class="prd_dis">
+								<span class="tit">제품할인</span>
+								<span class="txt">- 1,000<span class="won">원</span></span>
+							</li>
+						
+						</ul>
+						<div class="pay_info pdlr25">
+							<div class="top_area">
+								<div class="tit">결제예정금액</div>
+								<div class="txt">1,981,000<span class="won">원</span></div>
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+		
+			<div class="order_sec">
+				<div class="order_tit"><span class="circle">04</span>결제수단 선택</div>
+				<div class="order_desc_area mt30">
+					<ul class="tab_pay">
+                        <li class="pay01"><div><span class="img"></span>신용카드</div></li>
+                        <li class="pay02"><div><span class="img"></span>실시간 계좌이체</div></li>
+                        <li class="pay03"><div><span class="img"></span>가상계좌</div></li>
+                        <li class="pay04"><div><span class="img"></span>에스크로</div></li>
+                        <li class="pay05"><div><span class="img"></span>휴대폰 소액결제</div></li>
+                        <li class="pay06"><div><span class="img"></span>카카오페이</div></li>
+                    </ul>
+
+					<ul class="tab_pay_txt">
+						<li>
+							<div class="top">신용카드</div>
+							<div class="bottom">
+								<ul class="bul_list type_s">
+									<li>신용/체크카드는 결제금액은 <span class="bold">최소 1,000원 이상</span> 가능합니다.</li>
+									<li>국내외 모든 신용카드로 결제가 가능합니다.</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="top">실시간 계좌이체</div>
+							<div class="bottom">
+								<ul class="bul_list type_s">
+									<li>실시간계좌이체는 결제금액 <span class="bold">최소 160원 이상</span> 가능합니다.</li>
+									<li>계좌이체는 결제금액이 회원님의 계좌에서 자동으로 이체되는 서비스 입니다.</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="top">가상계좌</div>
+							<div class="bottom">
+								<ul class="bul_list type_s">
+									<li>무통장입금은 결제금액 <span class="bold">최소 1원 이상</span> 가능합니다.</li>
+									<li>은행별 가상(개인전용) 계좌가 부여 됩니다.</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="top">에스크로</div>
+							<div class="bottom">
+								<ul class="bul_list type_s">
+									<li>무통장입금은 결제금액 <span class="bold">최소 1원 이상</span> 가능합니다.</li>
+									<li>결제금액이 5만원이상일 경우 결제 대금예치(에스크로)를 통해 안전하게 구매하실 수 있습니다.</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="top">휴대폰 소액결제</div>
+							<div class="bottom">
+								<ul class="bul_list type_s">
+									<li>휴대폰 소액결제는 <span class="bold">최소 10원 이상</span> 가능합니다.</li>
+									<li>휴대폰 인증을 통해 결제하며, 결제 금액은 휴대폰 요금 청구서에 합산되어 청구됩니다.</li>
+									<li>결제 취소는 결제한 해당월 말일까지 가능합니다. ex) 7월 29일 결제 시, 7월 31일까지 취소 가능</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div class="top">카카오페이</div>
+							<div class="bottom">
+								<ul class="bul_list type_s">
+									<li>추후추가될예정</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<script>
+						$('.tab_pay_txt > li').hide();
+						$('.tab_pay > li').click(function(){
+							var tab_pay_id = $(this).index();
+							$('.tab_pay > li.on').removeClass('on');
+							$(this).addClass('on');
+							$('.tab_pay_txt > li').hide();
+							$('.tab_pay_txt > li').eq(tab_pay_id).show();
+						});	
+					</script>
+				</div>
+				<div class="last_pay_agree">
+					<p class="input_list">
+						<input type="checkbox" id="check01_01" name="check01">
+						<label for="check01_01"><span class="bold">구매조건 및 결제진행 동의</span></label>
+					</p>
+					<div class="pay_agree_box">
+						주문할 제품, 가격, 배송정보, 할인내역 등을 최종 확인하였으며, 구매 진행에 동의하시겠습니까? (전자상거래법 제 8조 2항)
+					</div>
+					<div class="btn_area">
+						<button type="button" class="btn_l common radius w100p bold">1,999,900원 결제하기</button>
+						<button type="button" class="btn_l radius w100p mt15">장바구니 돌아가기</button>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="btn-float">
+            <button type="button" class="btn-kakao"><span class="blind">kakao</span></button>
+            <button type="button" class="btn-top"><span class="blind">TOP</span></button>
+        </div>
+
+    </div>
+    <!--//container-->
+    <div id="gnbDimmed" class="dimmed"></div>
+    <!-- footer -->
+    <footer id="footer">
+        <script>
+		$('#footer').load('../include/footer.html');
+	  </script>
+    </footer>
+    <!-- //footer -->
+    <!-- 장바구니 팝업 -->
+    <div id="cartPop" class="wrap_layer_pop type_header">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <h2 class="tit">장바구니</h2>
+                <button class="btn-pop-close" onclick="layerPopClose('cartPop')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+                <p class="top_txt">몰 상품과 렌탈 상품은 동시에 결제 할 수 없습니다.<br>각각의 장바구니를 확인 해주세요.</p>
+                <div class="col_box">
+                    <div>
+                        <p class="tit">쿠쿠몰</p>
+                        <div class="img"><span class="num">2</span><!-- [D] 1개이상일경우만 노출, 0개일시 비노출 --></div>
+                        <p class="txt">현재 쿠쿠몰 장바구니에 <span class="point01">2</span>개의 상품이 있습니다.</p>
+                        <a href="#" class="btn_m radius">결제하러 가기</a>
+                    </div>
+                    <div>
+                        <p class="tit">쿠쿠렌탈</p>
+                        <div class="img"><span class="num">2</span><!-- [D] 1개이상일경우만 노출, 0개일시 비노출 --></div>
+                        <p class="txt">장바구니에 상품을 담아주세요.</p>
+                        <a href="#" class="btn_m radius">상품보러 가기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //장바구니 팝업 -->
+    <!-- 검색어 팝업 -->
+    <div id="searchPop" class="wrap_layer_pop type_header">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <button class="btn-pop-close" onclick="layerPopClose('searchPop')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+                <div class="search_input">
+                    <input type="text" placeholder="검색어를 입력해 주세요.">
+                    <button type="button" class="btn-del"><span class="blind">삭제</span></button>
+                    <button type="button" class="btn-search"><span class="blind">검색</span></button>
+                </div>
+                <div class="recent_box">
+                    <p class="tit">최근검색어</p>
+                    <ul>
+                        <li><a href="#" class="txt">밥솥</a> <a href="#"><i class="ico del"></i></a></li>
+                        <li><a href="#" class="txt">정수기</a> <a href="#"><i class="ico del"></i></a></li>
+                        <li><a href="#" class="txt">전자레인지</a> <a href="#"><i class="ico del"></i></a></li>
+                        <li><a href="#" class="txt">내솥</a> <a href="#"><i class="ico del"></i></a></li>
+                        <li><a href="#" class="txt">안마의자</a> <a href="#"><i class="ico del"></i></a></li>
+                    </ul>
+                    <p class="no_txt">최근 검색어가 없습니다.</p>
+                </div>
+                <div class="best_box">
+                    <p class="tit">인기검색어</p>
+                    <ol>
+                        <li><a href="#"><span class="num">1</span>다니엘헤니 정수기</a></li>
+                        <li><a href="#"><span class="num">2</span>강식당 밥솥</a></li>
+                        <li><a href="#"><span class="num">3</span>마시멜로 미니 식기세척기</a></li>
+                        <li><a href="#"><span class="num">4</span>냉장고를 부탁해 전기레인지</a></li>
+                        <li><a href="#"><span class="num">5</span>초고압과 무압의 트윈프레셔</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //검색어 팝업 -->
+    <script src="../../javascripts/plugin.js"></script>
+    <script src="../../javascripts/design_common.js"></script>
+</body>
+
+</html>

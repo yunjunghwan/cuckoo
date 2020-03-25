@@ -1,0 +1,268 @@
+
+  <div class="header_wrap">
+    <div class="header_top">
+      <h1 id="logo"><a href="../main/main.html" title="main page">CUCKOO</a></h1>
+      <!--이벤트 출력-->
+      <ul class="header_news">
+        <li><a href="">직수의 마스터피스 인스퓨어 직수정수기 TV광고 런칭1!</a></li>
+        <li><a href="">직수의 마스터피스 인스퓨어 직수정수기 TV광고 런칭2!직수의 마스터피스 인스퓨어 직수정수기 TV광고 런칭2!직수의 마스터피스 인스퓨어 직수정수기 TV광고 런칭2!</a></li>
+        <li><a href="">직수의 마스터피스 인스퓨어 3</a></li>
+        <li><a href="">직수의 마스터피스 인스퓨어 직수정수기 TV광고 런칭4!</a></li>
+        <li><a href="">직수의 마스터피스 인스퓨어 직수정수기 TV광고 런칭5!</a></li>
+      </ul>
+      <!--//이벤트 출력-->
+      <!--로그인/아웃 및 유틸 메뉴-->
+      <div class="header_util">
+        <ol>
+          <li><a href="../login/02_01_로그인.html">로그인</a></li>
+          <li><a href="../member/02_07_회원가입_01_회원선택_01_메인.html">회원가입</a></li>
+          <li><a href="../event/이벤트리스트.html">이벤트</a></li>
+          <li><a href="../cs/index.html">고객센터</a></li>
+        </ol>
+      </div>
+      <!--//로그인/아웃 및 유틸 메뉴-->
+    </div>
+    <div class="header_bottom">
+      <!-- gnb-->
+      <div id="gnb">
+        <a href="../main/main.html" class="logo_s"><span class="blind">CUCKOO</span></a>
+        <nav class="open_depth">
+          <h2 class="hidden-txt">제품 대메뉴</h2>
+          <ul>
+            <li><a href="../item/03_shop_상품리스트(몰).html">밥솥</a></li>
+            <li><a href="../item/03_shop_상품리스트(몰).html">전기레인지</a></li>
+            <li><a href="../item/03_shop_상품리스트(몰).html">정수기</a></li>
+            <li><a href="../item/03_shop_상품리스트(몰).html">공기청정기</a></li>
+            <li><a href="../item/03_shop_상품리스트(몰).html">비데</a></li>
+            <li><a href="../item/03_shop_상품리스트(몰).html">기타제품</a></li>
+			<li><a href="http://www.nelloshop.co.kr" target="blank">펫 가전</a></li>
+            
+          </ul>
+        </nav>
+   
+      </div>
+      <!-- //gnb-->
+      <button type="button" id="headerAllBtn"><span class="hidden-txt">전체 메뉴 오픈</span></button>
+      <button type="button" class="all_menu_close"><span class="hidden-txt">전체메뉴닫기</span></button>
+      <ol class="header_my_menu">
+        <li>
+          <button type="button" class="mycuckoo_btn" onclick="location.href='../mycuckoo/05_마이쿠쿠.html'">마이페이지 버튼</button>
+        </li>
+        <li>
+          <button type="button" class="cart_btn">장바구니 버튼</button>
+          <div id="headerCartPopup" class="header_popup">
+            <div class="cart_wrap">
+              <div class="tit_wrap">
+                <strong>장바구니</strong>
+                <p>
+                  몰 상품과 렌탈 상품은 동시에 결제 할 수 없습니다. <br>
+                  각각의 장바구니를 확인 해주세요.
+                </p>
+              </div>
+              <div class="amount_wrap">
+                <div class="cart_box">
+                  <strong>쿠쿠몰</strong>
+                  <!--상품이 담겨 있을때-->
+                  <div class="amount_box">
+                    <!--담긴 상품갯수-->
+                    <span class="num">99+</span>
+                    <!--//담긴 상품갯수-->
+                  </div>
+                  <p>
+                    현재 쿠쿠몰 장바구니에 <br>
+                    <em>99+</em>개의 상품이 담겨 있습니다.
+                  </p>
+                  <!--//상품이 담겨 있을때-->
+                  <a href="">결제하러 가기</a>
+                </div>
+
+                <div class="rental_box">
+                  <strong>쿠쿠렌탈</strong>
+                  <!--상품이 0개 일때-->
+                  <div class="amount_box">
+                      <!--담긴 상품갯수 1개이상일경우 노출-->
+                      <span class="num" style="display:none">0</span>
+                      <!--//담긴 상품갯수 1개이상일경우 노출-->
+                  </div>
+                  <p>
+                    장바구니에 <br>
+                    상품을 담아주세요.
+                  </p>
+                  <!--//상품이 0개 일때-->
+                  <a href="">상품보러 가기</a>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="header_popup_close">장바구니 팝업 닫기</button>
+          </div>
+        </li>
+        <li>
+          <button type="button" class="search_btn">검색 버튼</button>
+          <div id="headerSearchPopup" class="header_popup">
+            <div class="search_wrap">
+              <div class="search_input">
+                <input type="text" placeholder="검색어를 입력해 주세요.">
+                <button type="button" class="search_del"><i class="ico del"></i><span class="hidden-txt">삭제</span></button>
+                <button type="button" class="search_result"><i class="ico search"></i><span class="hidden-txt">검색</span></button>
+              </div>
+              <div class="result_wrap">
+                  <div class="left">
+                      <p class="tit">최근 검색어</p>
+                      <ul>
+                          <li>밥솥 <a href="#" class="btn-del"><i class="ico del2"></i></a></li>
+                          <li>정수기 <a href="#" class="btn-del"><i class="ico del2"></i></a></li>
+                          <li>전기레인지 <a href="#" class="btn-del"><i class="ico del2"></i></a></li>
+                          <li>내솥 <a href="#" class="btn-del"><i class="ico del2"></i></a></li>
+                          <li>안마의자 <a href="#" class="btn-del"><i class="ico del2"></i></a></li>
+                      </ul>
+                      <!-- [D] 최근 검색어 없을경우 노출 -->
+                      <div class="no_result">최근 검색어가<br>없습니다.</div>
+                      <!-- //[D] 최근 검색어 없을경우 노출 -->
+                  </div>
+                  <div class="right">
+                      <p class="tit">인기 검색어</p>
+                      <ul>
+                          <li><a href="#">다니엘헤니 정수기</a></li>
+                          <li><a href="#">강식당 밥솥</a></li>
+                          <li><a href="#">마시멜로 미니 식기세척기</a></li>
+                          <li><a href="#">냉장고를 부탁해 전기레인지</a></li>
+                          <li><a href="#">초고압과 무압의 트윈프레셔</a></li>
+                      </ul>
+                  </div>
+              </div>
+            </div>
+            <button type="button" class="header_popup_close">검색 팝업 닫기</button>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div class="all_menu">
+      <h2 class="hidden-txt">전체메뉴</h2>
+      <div class="inner">
+          <h3 class="menu_tit">쿠쿠몰</h3>
+          <ul class="menu_deth01">
+              <li>
+                  <span class="sub_tit">밥솥</span>
+                  <ul>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">트윈프레셔밥솥</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">IH전기압력밥솥</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">전기압력밥솥</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">전기보온밥솥</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <span class="sub_tit">전기레인지</span>
+                  <ul>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">하이브리드</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">인덕션</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">하이라이트</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <span class="sub_tit">식기세척기</span>
+                  <ul>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">3인용</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">6인용</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">12인용</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <span class="sub_tit">펫용품</span>
+                  <ul>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">펫드라이룸</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">기타용품</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <span class="sub_tit">부속품</span>
+                  <ul>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">내솥</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">패킹</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">필터</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">찜판</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">요구르트컵</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">나누미</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <span class="sub_tit">기타제품</span>
+                  <ul>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">블렌더</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">생선구이</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">전기그릴</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">식기건조기</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">전기보온포트</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">전기주전자</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <span class="sub_tit"><span class="hidden-txt">기타제품</span></span>
+                  <ul>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">압력중탕기</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">가습기</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">냄비</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">프라이팬/웍</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">텀블러</a></li>
+                      <li><a href="../item/03_shop_상품리스트(몰).html">전기레인지 세정제</a></li>
+                  </ul>
+              </li>
+          </ul>
+          <h3 class="menu_tit">쿠쿠렌탈</h3>
+          <ul class="menu_deth01">
+              <li>
+                  <span class="sub_tit">정수기</span>
+                  <ul>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">냉수</a></li>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">온수</a></li>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">정수</a></li>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">얼음</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <span class="sub_tit">공기청정기</span>
+                  <ul>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">10~20평형</a></li>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">21~30평형</a></li>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">31~40평형</a></li>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">41~50평형</a></li>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">51평형 이상</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <span class="sub_tit">비데</span>
+                  <ul>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">직수</a></li>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">일반</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <span class="sub_tit">매트리스/프레임</span>
+                  <ul>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">SS</a></li>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">Q</a></li>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">K</a></li>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">LK</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <span class="sub_tit">부속품</span>
+                  <ul>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">정수기필터</a></li>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">공기청정기필터</a></li>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">클렌저필터</a></li>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">건조키트</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <span class="sub_tit">기타제품</span>
+                  <ul>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">안마의자</a></li>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">제습기</a></li>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">클렌저</a></li>
+                      <li><a href="../item/03_shop_상품리스트(렌탈).html">의류건조기</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+  </div><!-- //all_menu -->

@@ -1,0 +1,18 @@
+@media(max-width:320px){
+body{font-size:14px;}
+.year_indesc > .fl:first-child{float:none;}
+.year_indesc > .fl:nth-child(2){float:none; margin-left:0px; margin-top:15px;}
+.layer_pop{min-width:290px;}
+.prd_list a .img{width:140px; height:140px;}
+.prd_list a .img img{width:140px; height:140px;}
+.tit_type01{font-size:21px;}
+.tit_bg:before{width:171px;}
+#cartPop .top_txt{font-size:14px;}
+.invest table tr td{font-size:13px;}
+.review_mid_area{font-size:14px;}
+.wrap_layer_pop.type_confirm .layer_pop .btn_wrap > *{width:110px; font-size:13px;}
+.photo_review_pop .prd_tit .prd_info .ui_star_02 + span{margin-left:0px; margin-top:10px;}
+.layer_pop{min-width:290px;}
+#leaveMemcom .container_pop .tit{font-size:16px;}
+.flex_left{flex:1; min-width:150px;}
+}

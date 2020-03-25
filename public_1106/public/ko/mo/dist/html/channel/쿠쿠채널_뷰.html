@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko" class="sub">
+
+<head>
+  <title>CUCKOO</title>
+  <!-- 공통적용헤더정보 -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <!-- //공통적용헤더정보 -->
+  <meta name="Description" content="CUCKOO">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CUCKOO">
+  <meta property="og:description" content="CUCKOO">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="CUCKOO">
+  <meta name="Keywords" content="CUCKOO">
+  <meta name="Author" content="CUCKOO">
+  <meta name="robots" content="ALL">
+  <link rel="stylesheet" href="../../stylesheets/css/common.css">
+  <link rel="stylesheet" href="../../stylesheets/css/content.css">
+  <script src="../../javascripts/jquery-1.8.2.min.js"></script>
+  <script src="../../javascripts/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <!-- skipNavigation-->
+    <div id="skipNavigation">
+      <ul>
+          <li><a href="#gnb">Main menu</a></li>
+          <li><a href="#container">Contents</a></li>
+      </ul>
+    </div>
+    <!-- //skipNavigation-->
+
+    <!-- header-->
+    <header id="header">
+      <script>
+		$('#header').load('../include/header_type_footer.html');
+	  </script>
+    </header>
+    <!-- //header-->
+
+    <!--container-->
+    <div id="container">
+
+        <div class="content board_view">
+			<div class="top_area">
+				<div class="board_tit">'환경가전' 앞세운 쿠쿠, 생활가전시장서 성장세 '뚜렷'</div>
+				<div class="board_date">브랜드</div>
+				<div class="board_share">
+					<span></span>
+				</div>
+			</div>
+			<div class="bottom_area view_area">
+				컨텐츠
+			</div>
+
+			<ul class="next_prev_list">
+				<li>
+					<a href="#" class="clear"><span class="fl">Prev</span><span class="fl">쿠쿠 요리교실 당첨자 안내</span></a>
+				</li>	
+				<li>
+					<a href="#" class="clear"><span class="fl">Next</span><span class="fl">인앤아웃 정수기 출시 기념 이벤트를 맞이하...</span></a>
+				</li>
+			</ul>
+
+			<div class="btn-wrap">
+                <button type="button" class="btn_l common radius">목록</button>
+            </div>
+           
+        </div>
+        <div class="btn-float">
+            <button type="button" class="btn-kakao"><span class="blind">kakao</span></button>
+            <button type="button" class="btn-top"><span class="blind">TOP</span></button>
+        </div>
+
+    </div>
+    <!--//container-->
+    <div id="gnbDimmed" class="dimmed"></div>
+    <!-- footer -->
+    <footer id="footer">
+        <script>
+		$('#footer').load('../include/footer.html');
+	  </script>
+    </footer>
+    <!-- //footer -->
+    <!-- 장바구니 팝업 -->
+    <div id="cartPop" class="wrap_layer_pop type_header">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <h2 class="tit">장바구니</h2>
+                <button class="btn-pop-close" onclick="layerPopClose('cartPop')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+                <p class="top_txt">몰 상품과 렌탈 상품은 동시에 결제 할 수 없습니다.<br>각각의 장바구니를 확인 해주세요.</p>
+                <div class="col_box">
+                    <div>
+                        <p class="tit">쿠쿠몰</p>
+                        <div class="img"><span class="num">2</span><!-- [D] 1개이상일경우만 노출, 0개일시 비노출 --></div>
+                        <p class="txt">현재 쿠쿠몰 장바구니에 <span class="point01">2</span>개의 상품이 있습니다.</p>
+                        <a href="#" class="btn_m radius">결제하러 가기</a>
+                    </div>
+                    <div>
+                        <p class="tit">쿠쿠렌탈</p>
+                        <div class="img"><span class="num">2</span><!-- [D] 1개이상일경우만 노출, 0개일시 비노출 --></div>
+                        <p class="txt">장바구니에 상품을 담아주세요.</p>
+                        <a href="#" class="btn_m radius">상품보러 가기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //장바구니 팝업 -->
+    <!-- 검색어 팝업 -->
+    <div id="searchPop" class="wrap_layer_pop type_header">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <button class="btn-pop-close" onclick="layerPopClose('searchPop')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+                <div class="search_input">
+                    <input type="text" placeholder="검색어를 입력해 주세요.">
+                    <button type="button" class="btn-del"><span class="blind">삭제</span></button>
+                    <button type="button" class="btn-search"><span class="blind">검색</span></button>
+                </div>
+                <div class="recent_box">
+                    <p class="tit">최근검색어</p>
+                    <ul>
+                        <li><a href="#" class="txt">밥솥</a> <a href="#"><i class="ico del"></i></a></li>
+                        <li><a href="#" class="txt">정수기</a> <a href="#"><i class="ico del"></i></a></li>
+                        <li><a href="#" class="txt">전자레인지</a> <a href="#"><i class="ico del"></i></a></li>
+                        <li><a href="#" class="txt">내솥</a> <a href="#"><i class="ico del"></i></a></li>
+                        <li><a href="#" class="txt">안마의자</a> <a href="#"><i class="ico del"></i></a></li>
+                    </ul>
+                    <p class="no_txt">최근 검색어가 없습니다.</p>
+                </div>
+                <div class="best_box">
+                    <p class="tit">인기검색어</p>
+                    <ol>
+                        <li><a href="#"><span class="num">1</span>다니엘헤니 정수기</a></li>
+                        <li><a href="#"><span class="num">2</span>강식당 밥솥</a></li>
+                        <li><a href="#"><span class="num">3</span>마시멜로 미니 식기세척기</a></li>
+                        <li><a href="#"><span class="num">4</span>냉장고를 부탁해 전기레인지</a></li>
+                        <li><a href="#"><span class="num">5</span>초고압과 무압의 트윈프레셔</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //검색어 팝업 -->
+    <script src="../../javascripts/plugin.js"></script>
+    <script src="../../javascripts/design_common.js"></script>
+</body>
+
+</html>

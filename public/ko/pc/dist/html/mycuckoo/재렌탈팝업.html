@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>CUCKOO</title>
+  <!-- 공통적용헤더정보 -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- //공통적용헤더정보 -->
+  <meta name="Description" content="CUCKOO">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CUCKOO">
+  <meta property="og:description" content="CUCKOO">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="CUCKOO">
+  <meta name="Keywords" content="CUCKOO">
+  <meta name="Author" content="CUCKOO">
+  <meta name="robots" content="ALL">
+  <link rel="stylesheet" href="../../stylesheets/css/common.css">
+  <link rel="stylesheet" href="../../stylesheets/css/content.css">
+  <link rel="stylesheet" href="../../stylesheets/css/content_02.css">
+  <script src="../../javascripts/jquery-1.8.2.min.js"></script>
+  <script src="../../javascripts/jquery-ui.min.js"></script>
+  <script src="../../javascripts/plugin.js"></script>
+  <script src="../../javascripts/design_common.js"></script>
+  <script>
+       
+  </script>
+</head>
+<body>
+<button type="button" onclick="layerPopOpen('rentalRe')" class="btn_m radius">재렌탈</button>
+<button type="button" onclick="layerPopOpen('rentalAgain')" class="btn_m radius">재렌탈 가능 제품 리스트</button>
+<button type="button" onclick="layerPopOpen('rentalProductAgain')" class="btn_m radius">재렌탈 제품 상세</button>
+<!-- 재렌탈 -->
+	<div id="rentalRe" class="wrap_layer_pop type_confirm">
+        <div class="layer_pop w550">
+            <div class="container_pop">
+                <div class="inner_txt">
+                    <p class="tit">선택하신 <span class="bold">CP-TS011DS(S)</span> 제품을 철거 후<br>재렌탈을 신청하시겠습니까?</p>
+                    <p class="txt1">재렌탈은 동일한 제품군 내에서 원하시는 제품을<br>할인된 가격으로 신청할 수 있습니다.</p>
+					<p class="txt1 mt20">기존 제품 철거는 재렌탈 제품 설치 시 진행됩니다.</p>
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <button type="button" class="btn_l radius">철거없이 재렌탈</button>
+                <button type="button" class="btn_l radius common">철거신청 및 재렌탈</button>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('rentalRe')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+	 <!-- //재렌탈>
+	 <!-- 재렌탈 리스트-->
+	<div id="rentalAgain" class="wrap_layer_pop">
+        <div class="layer_pop w100p">
+            <div class="container_pop">
+                <div class="header_pop">
+                    <h2 class="tit_03">재렌탈 가능 제품</h2>
+					<div><button type="button" class="btn-close-pop" onclick="layerPopClose('rentalAgain')"><span class="blind">팝업닫기</span></button></div>
+                </div>
+				<div class="prd_list_wrap">
+            <div class="top_area">
+              <span class="total">총<span class="point01">24</span>개</span>
+              <div class="tab type_s">
+                <ul class="tab_btn">
+                  <li class="on"><a href="#">인기순</a></li>
+                  <li><a href="#">신상품</a></li>
+                  <li><a href="#">가격낮은순</a></li>
+                  <li><a href="#">가격높은순</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="prd_list">
+              <ul>
+                <!-- [D] 상품리스트 반복 -->
+                <li>
+                  <a href="03_shop_상품상세(몰).html">
+                    <span class="img_area">
+                      <img src="../../images/rental_product/temp_prd_340x340.png" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag new">NEW</span>
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="rental_info_area">
+						<span class="top_area">
+							<span class="category">IH전기압력밥솥</span>
+							<span class="code_no">CRP-KHT1020FD</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">렌탈가</span>
+								<div class="fr">
+									<span class="discount">월 41,900<span class="won">원</span></span>
+									<span class="price">월 39,900<span class="won">원</span></span>
+								</div>
+							</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">일시불</span>
+								<div class="fr">
+									<span class="discount">1,950,000<span class="won">원</span></span>
+									<span class="price">1,850,000<span class="won">원</span></span>
+								</div>
+							</span>
+						</span>
+						<span class="bottom_area">
+							<span class="hash_tag">#6개월 렌탈료 면제  #4WAY 무빙코크  #히든터치</span>
+							<span class="btn_area">
+								<span class="bottom_btn">냉수</span>
+								<span class="bottom_btn">온수</span>
+								<span class="bottom_btn">정수</span>
+								<span class="bottom_btn">직수</span>
+								<span class="bottom_btn">살균</span>
+
+							</span>
+						
+						</span>
+						
+                   
+                    </span>
+                  </a>
+                  <span class="input_right">
+                      <input type="checkbox" id="check06_01" class="check_l" disabled=""><label for="check06_01">비교하기</label><!-- [D] 3개제품비교시 disabed속성추가-->
+                  </span>
+                </li>
+                <!-- //[D] 상품리스트 반복 -->
+				<!-- [D] 상품리스트 반복 -->
+                <li>
+                  <a href="03_shop_상품상세(몰).html">
+                    <span class="img_area">
+                      <img src="../../images/rental_product/temp_prd_340x340.png" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag new">NEW</span>
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="rental_info_area">
+						<span class="top_area">
+							<span class="category">IH전기압력밥솥</span>
+							<span class="code_no">CRP-KHT1020FD</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">렌탈가</span>
+								<div class="fr">
+									<span class="discount">월 41,900<span class="won">원</span></span>
+									<span class="price">월 39,900<span class="won">원</span></span>
+								</div>
+							</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">일시불</span>
+								<div class="fr">
+									<span class="discount">1,950,000<span class="won">원</span></span>
+									<span class="price">1,850,000<span class="won">원</span></span>
+								</div>
+							</span>
+						</span>
+						<span class="bottom_area">
+							<span class="hash_tag">#6개월 렌탈료 면제  #4WAY 무빙코크  #히든터치</span>
+							<span class="btn_area">
+								<span class="bottom_btn">냉수</span>
+								<span class="bottom_btn">온수</span>
+								<span class="bottom_btn">정수</span>
+								<span class="bottom_btn">직수</span>
+								<span class="bottom_btn">살균</span>
+
+							</span>
+						
+						</span>
+						
+                   
+                    </span>
+                  </a>
+                  <span class="input_right">
+                      <input type="checkbox" id="check06_01" class="check_l" disabled=""><label for="check06_01">비교하기</label><!-- [D] 3개제품비교시 disabed속성추가-->
+                  </span>
+                </li>
+                <!-- //[D] 상품리스트 반복 -->
+				<!-- [D] 상품리스트 반복 -->
+                <li>
+                  <a href="03_shop_상품상세(몰).html">
+                    <span class="img_area">
+                      <img src="../../images/rental_product/temp_prd_340x340.png" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag new">NEW</span>
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="rental_info_area">
+						<span class="top_area">
+							<span class="category">IH전기압력밥솥</span>
+							<span class="code_no">CRP-KHT1020FD</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">렌탈가</span>
+								<div class="fr">
+									<span class="discount">월 41,900<span class="won">원</span></span>
+									<span class="price">월 39,900<span class="won">원</span></span>
+								</div>
+							</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">일시불</span>
+								<div class="fr">
+									<span class="discount">1,950,000<span class="won">원</span></span>
+									<span class="price">1,850,000<span class="won">원</span></span>
+								</div>
+							</span>
+						</span>
+						<span class="bottom_area">
+							<span class="hash_tag">#6개월 렌탈료 면제  #4WAY 무빙코크  #히든터치</span>
+							<span class="btn_area">
+								<span class="bottom_btn">냉수</span>
+								<span class="bottom_btn">온수</span>
+								<span class="bottom_btn">정수</span>
+								<span class="bottom_btn">직수</span>
+								<span class="bottom_btn">살균</span>
+
+							</span>
+						
+						</span>
+						
+                   
+                    </span>
+                  </a>
+                  <span class="input_right">
+                      <input type="checkbox" id="check06_01" class="check_l" disabled=""><label for="check06_01">비교하기</label><!-- [D] 3개제품비교시 disabed속성추가-->
+                  </span>
+                </li>
+                <!-- //[D] 상품리스트 반복 -->
+				<!-- [D] 상품리스트 반복 -->
+                <li>
+                  <a href="03_shop_상품상세(몰).html">
+                    <span class="img_area">
+                      <img src="../../images/rental_product/temp_prd_340x340.png" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag new">NEW</span>
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="rental_info_area">
+						<span class="top_area">
+							<span class="category">IH전기압력밥솥</span>
+							<span class="code_no">CRP-KHT1020FD</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">렌탈가</span>
+								<div class="fr">
+									<span class="discount">월 41,900<span class="won">원</span></span>
+									<span class="price">월 39,900<span class="won">원</span></span>
+								</div>
+							</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">일시불</span>
+								<div class="fr">
+									<span class="discount">1,950,000<span class="won">원</span></span>
+									<span class="price">1,850,000<span class="won">원</span></span>
+								</div>
+							</span>
+						</span>
+						<span class="bottom_area">
+							<span class="hash_tag">#6개월 렌탈료 면제  #4WAY 무빙코크  #히든터치</span>
+							<span class="btn_area">
+								<span class="bottom_btn">냉수</span>
+								<span class="bottom_btn">온수</span>
+								<span class="bottom_btn">정수</span>
+								<span class="bottom_btn">직수</span>
+								<span class="bottom_btn">살균</span>
+
+							</span>
+						
+						</span>
+						
+                   
+                    </span>
+                  </a>
+                  <span class="input_right">
+                      <input type="checkbox" id="check06_01" class="check_l" disabled=""><label for="check06_01">비교하기</label><!-- [D] 3개제품비교시 disabed속성추가-->
+                  </span>
+                </li>
+                <!-- //[D] 상품리스트 반복 -->
+				<!-- [D] 상품리스트 반복 -->
+                <li>
+                  <a href="03_shop_상품상세(몰).html">
+                    <span class="img_area">
+                      <img src="../../images/rental_product/temp_prd_340x340.png" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag new">NEW</span>
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="rental_info_area">
+						<span class="top_area">
+							<span class="category">IH전기압력밥솥</span>
+							<span class="code_no">CRP-KHT1020FD</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">렌탈가</span>
+								<div class="fr">
+									<span class="discount">월 41,900<span class="won">원</span></span>
+									<span class="price">월 39,900<span class="won">원</span></span>
+								</div>
+							</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">일시불</span>
+								<div class="fr">
+									<span class="discount">1,950,000<span class="won">원</span></span>
+									<span class="price">1,850,000<span class="won">원</span></span>
+								</div>
+							</span>
+						</span>
+						<span class="bottom_area">
+							<span class="hash_tag">#6개월 렌탈료 면제  #4WAY 무빙코크  #히든터치</span>
+							<span class="btn_area">
+								<span class="bottom_btn">냉수</span>
+								<span class="bottom_btn">온수</span>
+								<span class="bottom_btn">정수</span>
+								<span class="bottom_btn">직수</span>
+								<span class="bottom_btn">살균</span>
+
+							</span>
+						
+						</span>
+						
+                   
+                    </span>
+                  </a>
+                  <span class="input_right">
+                      <input type="checkbox" id="check06_01" class="check_l" disabled=""><label for="check06_01">비교하기</label><!-- [D] 3개제품비교시 disabed속성추가-->
+                  </span>
+                </li>
+                <!-- //[D] 상품리스트 반복 -->
+				<!-- [D] 상품리스트 반복 -->
+                <li>
+                  <a href="03_shop_상품상세(몰).html">
+                    <span class="img_area">
+                      <img src="../../images/rental_product/temp_prd_340x340.png" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag new">NEW</span>
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="rental_info_area">
+						<span class="top_area">
+							<span class="category">IH전기압력밥솥</span>
+							<span class="code_no">CRP-KHT1020FD</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">렌탈가</span>
+								<div class="fr">
+									<span class="discount">월 41,900<span class="won">원</span></span>
+									<span class="price">월 39,900<span class="won">원</span></span>
+								</div>
+							</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">일시불</span>
+								<div class="fr">
+									<span class="discount">1,950,000<span class="won">원</span></span>
+									<span class="price">1,850,000<span class="won">원</span></span>
+								</div>
+							</span>
+						</span>
+						<span class="bottom_area">
+							<span class="hash_tag">#6개월 렌탈료 면제  #4WAY 무빙코크  #히든터치</span>
+							<span class="btn_area">
+								<span class="bottom_btn">냉수</span>
+								<span class="bottom_btn">온수</span>
+								<span class="bottom_btn">정수</span>
+								<span class="bottom_btn">직수</span>
+								<span class="bottom_btn">살균</span>
+
+							</span>
+						
+						</span>
+						
+                   
+                    </span>
+                  </a>
+                  <span class="input_right">
+                      <input type="checkbox" id="check06_01" class="check_l" disabled=""><label for="check06_01">비교하기</label><!-- [D] 3개제품비교시 disabed속성추가-->
+                  </span>
+                </li>
+                <!-- //[D] 상품리스트 반복 -->
+				<!-- [D] 상품리스트 반복 -->
+                <li>
+                  <a href="03_shop_상품상세(몰).html">
+                    <span class="img_area">
+                      <img src="../../images/rental_product/temp_prd_340x340.png" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag new">NEW</span>
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="rental_info_area">
+						<span class="top_area">
+							<span class="category">IH전기압력밥솥</span>
+							<span class="code_no">CRP-KHT1020FD</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">렌탈가</span>
+								<div class="fr">
+									<span class="discount">월 41,900<span class="won">원</span></span>
+									<span class="price">월 39,900<span class="won">원</span></span>
+								</div>
+							</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">일시불</span>
+								<div class="fr">
+									<span class="discount">1,950,000<span class="won">원</span></span>
+									<span class="price">1,850,000<span class="won">원</span></span>
+								</div>
+							</span>
+						</span>
+						<span class="bottom_area">
+							<span class="hash_tag">#6개월 렌탈료 면제  #4WAY 무빙코크  #히든터치</span>
+							<span class="btn_area">
+								<span class="bottom_btn">냉수</span>
+								<span class="bottom_btn">온수</span>
+								<span class="bottom_btn">정수</span>
+								<span class="bottom_btn">직수</span>
+								<span class="bottom_btn">살균</span>
+
+							</span>
+						
+						</span>
+						
+                   
+                    </span>
+                  </a>
+                  <span class="input_right">
+                      <input type="checkbox" id="check06_01" class="check_l" disabled=""><label for="check06_01">비교하기</label><!-- [D] 3개제품비교시 disabed속성추가-->
+                  </span>
+                </li>
+                <!-- //[D] 상품리스트 반복 -->
+				<!-- [D] 상품리스트 반복 -->
+                <li>
+                  <a href="03_shop_상품상세(몰).html">
+                    <span class="img_area">
+                      <img src="../../images/rental_product/temp_prd_340x340.png" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag new">NEW</span>
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="rental_info_area">
+						<span class="top_area">
+							<span class="category">IH전기압력밥솥</span>
+							<span class="code_no">CRP-KHT1020FD</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">렌탈가</span>
+								<div class="fr">
+									<span class="discount">월 41,900<span class="won">원</span></span>
+									<span class="price">월 39,900<span class="won">원</span></span>
+								</div>
+							</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">일시불</span>
+								<div class="fr">
+									<span class="discount">1,950,000<span class="won">원</span></span>
+									<span class="price">1,850,000<span class="won">원</span></span>
+								</div>
+							</span>
+						</span>
+						<span class="bottom_area">
+							<span class="hash_tag">#6개월 렌탈료 면제  #4WAY 무빙코크  #히든터치</span>
+							<span class="btn_area">
+								<span class="bottom_btn">냉수</span>
+								<span class="bottom_btn">온수</span>
+								<span class="bottom_btn">정수</span>
+								<span class="bottom_btn">직수</span>
+								<span class="bottom_btn">살균</span>
+
+							</span>
+						
+						</span>
+						
+                   
+                    </span>
+                  </a>
+                  <span class="input_right">
+                      <input type="checkbox" id="check06_01" class="check_l" disabled=""><label for="check06_01">비교하기</label><!-- [D] 3개제품비교시 disabed속성추가-->
+                  </span>
+                </li>
+                <!-- //[D] 상품리스트 반복 -->
+				<!-- [D] 상품리스트 반복 -->
+                <li>
+                  <a href="03_shop_상품상세(몰).html">
+                    <span class="img_area">
+                      <img src="../../images/rental_product/temp_prd_340x340.png" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag new">NEW</span>
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="rental_info_area">
+						<span class="top_area">
+							<span class="category">IH전기압력밥솥</span>
+							<span class="code_no">CRP-KHT1020FD</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">렌탈가</span>
+								<div class="fr">
+									<span class="discount">월 41,900<span class="won">원</span></span>
+									<span class="price">월 39,900<span class="won">원</span></span>
+								</div>
+							</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">일시불</span>
+								<div class="fr">
+									<span class="discount">1,950,000<span class="won">원</span></span>
+									<span class="price">1,850,000<span class="won">원</span></span>
+								</div>
+							</span>
+						</span>
+						<span class="bottom_area">
+							<span class="hash_tag">#6개월 렌탈료 면제  #4WAY 무빙코크  #히든터치</span>
+							<span class="btn_area">
+								<span class="bottom_btn">냉수</span>
+								<span class="bottom_btn">온수</span>
+								<span class="bottom_btn">정수</span>
+								<span class="bottom_btn">직수</span>
+								<span class="bottom_btn">살균</span>
+
+							</span>
+						
+						</span>
+						
+                   
+                    </span>
+                  </a>
+                  <span class="input_right">
+                      <input type="checkbox" id="check06_01" class="check_l" disabled=""><label for="check06_01">비교하기</label><!-- [D] 3개제품비교시 disabed속성추가-->
+                  </span>
+                </li>
+                <!-- //[D] 상품리스트 반복 -->
+				<!-- [D] 상품리스트 반복 -->
+                <li>
+                  <a href="03_shop_상품상세(몰).html">
+                    <span class="img_area">
+                      <img src="../../images/rental_product/temp_prd_340x340.png" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag new">NEW</span>
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="rental_info_area">
+						<span class="top_area">
+							<span class="category">IH전기압력밥솥</span>
+							<span class="code_no">CRP-KHT1020FD</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">렌탈가</span>
+								<div class="fr">
+									<span class="discount">월 41,900<span class="won">원</span></span>
+									<span class="price">월 39,900<span class="won">원</span></span>
+								</div>
+							</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">일시불</span>
+								<div class="fr">
+									<span class="discount">1,950,000<span class="won">원</span></span>
+									<span class="price">1,850,000<span class="won">원</span></span>
+								</div>
+							</span>
+						</span>
+						<span class="bottom_area">
+							<span class="hash_tag">#6개월 렌탈료 면제  #4WAY 무빙코크  #히든터치</span>
+							<span class="btn_area">
+								<span class="bottom_btn">냉수</span>
+								<span class="bottom_btn">온수</span>
+								<span class="bottom_btn">정수</span>
+								<span class="bottom_btn">직수</span>
+								<span class="bottom_btn">살균</span>
+
+							</span>
+						
+						</span>
+						
+                   
+                    </span>
+                  </a>
+                  <span class="input_right">
+                      <input type="checkbox" id="check06_01" class="check_l" disabled=""><label for="check06_01">비교하기</label><!-- [D] 3개제품비교시 disabed속성추가-->
+                  </span>
+                </li>
+                <!-- //[D] 상품리스트 반복 -->
+				<!-- [D] 상품리스트 반복 -->
+                <li>
+                  <a href="03_shop_상품상세(몰).html">
+                    <span class="img_area">
+                      <img src="../../images/rental_product/temp_prd_340x340.png" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag new">NEW</span>
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="rental_info_area">
+						<span class="top_area">
+							<span class="category">IH전기압력밥솥</span>
+							<span class="code_no">CRP-KHT1020FD</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">렌탈가</span>
+								<div class="fr">
+									<span class="discount">월 41,900<span class="won">원</span></span>
+									<span class="price">월 39,900<span class="won">원</span></span>
+								</div>
+							</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">일시불</span>
+								<div class="fr">
+									<span class="discount">1,950,000<span class="won">원</span></span>
+									<span class="price">1,850,000<span class="won">원</span></span>
+								</div>
+							</span>
+						</span>
+						<span class="bottom_area">
+							<span class="hash_tag">#6개월 렌탈료 면제  #4WAY 무빙코크  #히든터치</span>
+							<span class="btn_area">
+								<span class="bottom_btn">냉수</span>
+								<span class="bottom_btn">온수</span>
+								<span class="bottom_btn">정수</span>
+								<span class="bottom_btn">직수</span>
+								<span class="bottom_btn">살균</span>
+
+							</span>
+						
+						</span>
+						
+                   
+                    </span>
+                  </a>
+                  <span class="input_right">
+                      <input type="checkbox" id="check06_01" class="check_l" disabled=""><label for="check06_01">비교하기</label><!-- [D] 3개제품비교시 disabed속성추가-->
+                  </span>
+                </li>
+                <!-- //[D] 상품리스트 반복 -->
+				<!-- [D] 상품리스트 반복 -->
+                <li>
+                  <a href="03_shop_상품상세(몰).html">
+                    <span class="img_area">
+                      <img src="../../images/rental_product/temp_prd_340x340.png" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag new">NEW</span>
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="rental_info_area">
+						<span class="top_area">
+							<span class="category">IH전기압력밥솥</span>
+							<span class="code_no">CRP-KHT1020FD</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">렌탈가</span>
+								<div class="fr">
+									<span class="discount">월 41,900<span class="won">원</span></span>
+									<span class="price">월 39,900<span class="won">원</span></span>
+								</div>
+							</span>
+							<span class="price_wrap clear">
+								<span class="price_tit fl">일시불</span>
+								<div class="fr">
+									<span class="discount">1,950,000<span class="won">원</span></span>
+									<span class="price">1,850,000<span class="won">원</span></span>
+								</div>
+							</span>
+						</span>
+						<span class="bottom_area">
+							<span class="hash_tag">#6개월 렌탈료 면제  #4WAY 무빙코크  #히든터치</span>
+							<span class="btn_area">
+								<span class="bottom_btn">냉수</span>
+								<span class="bottom_btn">온수</span>
+								<span class="bottom_btn">정수</span>
+								<span class="bottom_btn">직수</span>
+								<span class="bottom_btn">살균</span>
+
+							</span>
+						
+						</span>
+						
+                   
+                    </span>
+                  </a>
+                  <span class="input_right">
+                      <input type="checkbox" id="check06_01" class="check_l" disabled=""><label for="check06_01">비교하기</label><!-- [D] 3개제품비교시 disabed속성추가-->
+                  </span>
+                </li>
+                <!-- //[D] 상품리스트 반복 -->
+              
+              </ul>
+            </div><!-- //prd_list-->
+          </div>
+           
+        </div>
+		</div>
+	</div>
+	<!-- //재렌탈 리스트-->
+	<!-- 재렌탈 상세 -->
+	<div id="rentalProductAgain" class="wrap_layer_pop">
+		<div class="prd_bottom_fixed">
+			<div class="inner">
+				<div class="left_area">
+					<p class="txt_notice"><i class="ico notice5"></i><span>월 렌탈료를 선택해주세요.</span></p>
+				</div>
+				<div class="btn-wrap">
+				
+					<a href="#" class="btn_l radius action">제렌탈 주문하기</a>
+				</div>
+			</div>
+		</div>
+        <div class="layer_pop w100p">
+            <div class="container_pop prd_view prd_rental rental_product_view">
+                <div class="header_pop">
+                    <h2 class="tit_03">재렌탈 가능 제품</h2>
+					<div><button type="button" class="btn-close-pop" onclick="layerPopClose('rentalProductAgain')"><span class="blind">팝업닫기</span></button></div>
+                </div>
+				<div class="content">
+					<div class="prd_view_top">
+						<div class="gallery_wrap">
+							<div class="slider slider-for">
+								<div><img src="../../images/item/temp_prd02_580x580.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_580x580.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_580x580.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_580x580.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_580x580.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_580x580.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_580x580.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_580x580.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_580x580.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_580x580.png" alt=""></div>
+							</div>
+							<div class="slider slider-nav">
+								<div><img src="../../images/item/temp_prd02_01_80x80.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_02_80x80.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_03_80x80.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_04_80x80.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_01_80x80.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_02_80x80.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_03_80x80.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_04_80x80.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_01_80x80.png" alt=""></div>
+								<div><img src="../../images/item/temp_prd02_02_80x80.png" alt=""></div>
+							</div>
+							<div class="select_color">
+								<ul>
+									<li>
+										<a href="#">
+											<span class="out_circle">
+												<span class="in_circle on" style="background:#bcbec0"></span>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="out_circle">
+												<span class="in_circle" style="background:#585856"></span>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						
+						</div><!-- //gallery_wrap -->
+						<div class="prd_info">
+							<div class="top_area">
+								<p class="category">인스퓨어(셀프관리형)</p>
+								<p class="prd_name">CP-TS011S</p>
+								<p class="desc">#6개월 렌탈료 면제  #4WAY 무빙코크  #히든터치</p>
+								
+								<span class="flag_wrap">
+									<span class="flag new">NEW</span>
+									<span class="flag best">BEST</span>
+								</span>
+							</div><!-- //top_area -->
+							<div class="body_area">
+								<div class="tab type_box">
+									<div class="tab_cont_wrap payment_choice_cont">
+										<div class="cont">
+											<ul class="price_info">
+												<li>
+													<span class="tit vt">기본혜택</span>
+													<span class="txt">
+														<ul>
+															<li>6개월 렌탈료 면제</li>
+															<li>조리수 밸브 무상설치</li>
+															<li>프리미엄 사은품</li>
+															<li>포인트 2% 추가적립 / 할인쿠폰 적용 가능</li>
+														</ul>
+													</span>
+												</li>
+											</ul>
+											<ul class="price_info">
+												<li>
+													<span class="tit vt">기본렌탈료</span>
+													<span class="txt">
+														<ul class="rental_price">
+															<li><span class="base_rental_price">월 36,900원</span></li>
+															<li>
+																<ul class="notice_list">
+																	<li>의무사용기간 36개월 / 총기간 60개월 기준</li>		
+																</ul>
+															</li>
+														</ul>
+													</span>
+												</li>
+												<li>
+													<span class="tit">할인렌탈료</span>
+													<span class="txt">
+														<span class="dis_rental_price">월 32,900원</span>
+													</span>
+												</li>
+											</ul>
+										  
+											<ul class="option_info">
+												
+												<li class="ui_acodian">
+													<div class="view_area">
+														<span class="tit">월 렌탈료</span>
+														<div class="select_box right chioce_rental_price" >
+														   
+															<button>[필수]월 렌탈료를 선택해주세요.</button>
+														  
+														</div>
+													</div>
+												   
+												</li>
+												<li>
+													<div class="view_area">
+														<span class="tit">추가옵션</span>
+														<div class="select_box right">
+															<a href="#" class="tit">[선택]옵션선택</a>
+															<ul class="hidden">
+																<li class="on">
+																	<span class="link_wrap">
+																		<input type="checkbox" class="check_m" id="check01_01">
+																		<label for="check01_01"><span>조리수밸브 렌탈 + 월 1,000원</span></label>
+																	</span>
+																</li>
+																<li>
+																	<span class="link_wrap">
+																		<input type="checkbox" class="check_m" id="check01_02">
+																		<label for="check01_02"><span>폐가전 무료 수거 서비스</span></label>
+																	</span>
+																</li>
+															</ul>
+															<ul class="notice_list mt15">
+																<li>옵션 비용은 계약완료 시 월 렌탈료에 최종 청구됩니다.</li>		
+															</ul>
+
+														</div>
+														
+													</div>
+												</li>
+												
+											</ul>
+										</div><!-- //렌탈 -->
+
+										
+									</div>
+								</div>
+
+							</div><!-- //body_area -->
+
+						</div><!-- //prd-info -->
+					
+
+					</div>
+					<div class="prd_tbl_info mt150">
+                        <h3 class="tit_03">렌탈 가격정보</h3>
+                        <div class="tbl_wrap clear mt30" >
+                            <div class="tbl type_border fl w570px">
+                                <table>
+                                    <caption>상세 정보</caption>
+                                    <colgroup>
+                                        <col style="width:110px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">렌탈료</th>
+                                            <td>1~36개월 36,900원 / 37~48개월 28,900원 / 49~60개월 24,900원</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">설치비용</th>
+                                            <td>30,000원</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">의무사용</th>
+                                            <td>36개월</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">점검주기</th>
+                                            <td>4개월</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tbl type_border fr w570px">
+                                <table>
+                                    <caption>상세 정보</caption>
+                                    <colgroup>
+                                        <col style="width:155px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">멤버십</th>
+                                            <td>쿠쿠홈시스(주)</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">소유권이전</th>
+                                            <td>60개월</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">등록비/소모품비</th>
+                                            <td>100,000원 / 100,000원</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">소비자가격</th>
+                                            <td>1,1850.000원</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="gray_box">
+                            <ul class="dash_list">
+                                <li>일부제품의 경우 할인가 적용된 가격입니다.(단, 등록비 및 설치비는 가입시 면제)</li>
+                                <li>의무사용기간이내에 고객귀책으로 해지하는 경우 약관에 명시된 위약금 청구기준에 따라 위약금이 청구됩니다.&nbsp;</li>
+                                <li>면제받은 금액(등록비, 설치비) 및 할인 받은 렌탈료도 위약금과 같이 청구됩니다.</li>
+                                <li>의무사용기간이후 해지고객에 대해서는 면제받은 등록비, 설치비는 청구하지 않으나 철거비는 청구됩니다. (철거비는 제품별 비용이 다릅니다.)</li>
+                                <li>14일 이내 고객 단순변심에 의해 해지될 경우 소모품비가 청구됩니다. 소모품비는 제품별 비용이 다릅니다.</li>
+                                <li>기재된 가격은 회사 내부사정에 따라서 변경될 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+					<div class="img mt100"><img src="../../images/item/temp_prd02_detail.png" alt=""></div>
+					<div class="prd_tbl_info mt110 pb150">
+                        <h3 class="tit_03">상세 정보</h3>
+                        <div class="btn-right">
+                            <button type="button" class="btn_guide radius common"><i class="ico guide"></i><span>제품설명서</span></button>
+                        </div>
+                        <div class="tbl_wrap clear mt30">
+                            <div class="tbl type_border fl w570px">
+                                <table>
+                                    <caption>상세 정보</caption>
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">제품명</th>
+                                            <td>정수기</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">모델명</th>
+                                            <td>CP-TSO11S</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">용량</th>
+                                            <td>직수</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">중량</th>
+                                            <td>약11kg</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">크기</th>
+                                            <td>166mm x 514mm x 399mm</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">색상</th>
+                                            <td>화이트, 실버</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">출시년월</th>
+                                            <td>2019년4월</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">구성품</th>
+                                            <td>사용설명서, 관리카드, 살균컵</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">품질보증기준</th>
+                                            <td>공정윈회 고시(소비자분쟁해결준)에 의거하여 보상해드립니다.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tbl type_border fr w570px">
+                                <table>
+                                    <caption>상세 정보</caption>
+                                    <colgroup>
+                                        <col style="width:140px">
+                                        <col style="width:auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">제조국</th>
+                                            <td>대한민국</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">제조사</th>
+                                            <td>쿠쿠홈시스(주)</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">KC 인증</th>
+                                            <td>유</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">안전인증번호</th>
+                                            <td>JH07891-19001</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">전자파적함등록번호</th>
+                                            <td>R-R-ckh-CP-TS011</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">정격전압</th>
+                                            <td>220V, 60Hz</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">소비전력</th>
+                                            <td>2600W</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">에너지</th>
+                                            <td>1등급</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">A/S</th>
+                                            <td>1599-8899(AS), 1577-0010(렌탈)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <ul class="notice_list mt20">
+                            <li>본 제품의 외관 디자인 및 규격은 제품의 품질향상을 위해 예고 없이 변경될 수 있습니다.</li>
+                        </ul>
+                    </div>
+
+				</div>
+				
+    </div>
+	<!-- //재렌탈 상세 -->
+</body>

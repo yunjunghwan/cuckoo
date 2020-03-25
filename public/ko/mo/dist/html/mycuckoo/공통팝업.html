@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="ko" class="sub">
+
+<head>
+  <title>CUCKOO</title>
+  <!-- 공통적용헤더정보 -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <!-- //공통적용헤더정보 -->
+  <meta name="Description" content="CUCKOO">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CUCKOO">
+  <meta property="og:description" content="CUCKOO">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="CUCKOO">
+  <meta name="Keywords" content="CUCKOO">
+  <meta name="Author" content="CUCKOO">
+  <meta name="robots" content="ALL">
+  <link rel="stylesheet" href="../../stylesheets/css/common.css">
+  <link rel="stylesheet" href="../../stylesheets/css/content.css">
+  <link rel="stylesheet" href="../../stylesheets/css/media.css">
+  <script src="../../javascripts/jquery-1.8.2.min.js"></script>
+  <script src="../../javascripts/jquery-ui.min.js"></script>
+  <script src="../../javascripts/plugin.js"></script>
+</head>
+
+<body>
+    <!-- skipNavigation-->
+    <div id="skipNavigation">
+      <ul>
+          <li><a href="#gnb">Main menu</a></li>
+          <li><a href="#container">Contents</a></li>
+      </ul>
+    </div>
+    <!-- //skipNavigation-->
+
+    <!-- header-->
+    <header id="header">
+      <script>
+		$('#header').load('../include/header.html');
+	  </script>
+    </header>
+    <!-- //header-->
+
+    <!--container-->
+    <div id="container">
+
+        <div class="content">
+			<button type="button" class="btn_l" onclick="layerPopOpen('leaveMem')">회원탈퇴</button><br><br>
+			<button type="button" class="btn_l" onclick="layerPopOpen('leaveMemcom')">회원탈퇴완료</button><br><br>
+			<button type="button" class="btn_l" onclick="layerPopOpen('leaveMemno')">회원탈퇴불가</button><br><br>
+			<button type="button" class="btn_l" onclick="layerPopOpen('addprdDel')">제품등록내역삭제</button><br><br>
+			<button type="button" class="btn_l" onclick="layerPopOpen('cartChoice')">장바구니버튼선택시</button><br><br>
+			<button type="button" class="btn_l" onclick="layerPopOpen('returnProcess')">반품절차</button><br><br>
+			<button type="button" class="btn_l" onclick="layerPopOpen('changeProcess')">교환절차</button><br><br>
+			<button type="button" class="btn_l" onclick="layerPopOpen('cancelProcess')">취소절차</button><br><br>
+			<button type="button" class="btn_l" onclick="layerPopOpen('changeCheckday')">점검일변경</button><br><br>
+			<button type="button" class="btn_l" onclick="layerPopOpen('prdTransfer')">제품이전설치요청</button><br><br>
+			<button type="button" class="btn_l" onclick="layerPopOpen('taxBill')">세금계산서 신청</button><br><br>
+			<button type="button" class="btn_l" onclick="layerPopOpen('changeTax01')">납부 정보 변경01</button><br><br>
+			<button type="button" class="btn_l" onclick="layerPopOpen('changeTax02')">납부 정보 변경02</button><br><br>
+			<button type="button" class="btn_l" onclick="layerPopOpen('billingnPay')">청구 및 납입내역서</button><br><br>
+			<button type="button" class="btn_l" onclick="layerPopOpen('virtualAccount')">가상계좌 발급 확인증</button><br><br>
+			<button type="button" class="btn_l" onclick="layerPopOpen('receiptConfirm')">영수증</button><br><br>
+
+			
+
+
+			
+			
+
+			
+
+
+
+        </div>
+        <div class="btn-float">
+            <button type="button" class="btn-kakao"><span class="blind">kakao</span></button>
+            <button type="button" class="btn-top"><span class="blind">TOP</span></button>
+        </div>
+
+    </div>
+    <!--//container-->
+    <div id="gnbDimmed" class="dimmed"></div>
+    <!-- footer -->
+    <footer id="footer">
+        <script>
+		$('#footer').load('../include/footer.html');
+	  </script>
+    </footer>
+    <!-- //footer -->
+    <!-- 장바구니 팝업 -->
+    <div id="cartPop" class="wrap_layer_pop type_header">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <h2 class="tit">장바구니</h2>
+                <button class="btn-pop-close" onclick="layerPopClose('cartPop')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+                <p class="top_txt">몰 상품과 렌탈 상품은 동시에 결제 할 수 없습니다.<br>각각의 장바구니를 확인 해주세요.</p>
+                <div class="col_box">
+                    <div>
+                        <p class="tit">쿠쿠몰</p>
+                        <div class="img"><span class="num">2</span><!-- [D] 1개이상일경우만 노출, 0개일시 비노출 --></div>
+                        <p class="txt">현재 쿠쿠몰 장바구니에 <span class="point01">2</span>개의 상품이 있습니다.</p>
+                        <a href="#" class="btn_m radius">결제하러 가기</a>
+                    </div>
+                    <div>
+                        <p class="tit">쿠쿠렌탈</p>
+                        <div class="img"><span class="num">2</span><!-- [D] 1개이상일경우만 노출, 0개일시 비노출 --></div>
+                        <p class="txt">장바구니에 상품을 담아주세요.</p>
+                        <a href="#" class="btn_m radius">상품보러 가기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //장바구니 팝업 -->
+    <!-- 검색어 팝업 -->
+    <div id="searchPop" class="wrap_layer_pop type_header">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <button class="btn-pop-close" onclick="layerPopClose('searchPop')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+                <div class="search_input">
+                    <input type="text" placeholder="검색어를 입력해 주세요.">
+                    <button type="button" class="btn-del"><span class="blind">삭제</span></button>
+                    <button type="button" class="btn-search"><span class="blind">검색</span></button>
+                </div>
+                <div class="recent_box">
+                    <p class="tit">최근검색어</p>
+                    <ul>
+                        <li><a href="#" class="txt">밥솥</a> <a href="#"><i class="ico del"></i></a></li>
+                        <li><a href="#" class="txt">정수기</a> <a href="#"><i class="ico del"></i></a></li>
+                        <li><a href="#" class="txt">전자레인지</a> <a href="#"><i class="ico del"></i></a></li>
+                        <li><a href="#" class="txt">내솥</a> <a href="#"><i class="ico del"></i></a></li>
+                        <li><a href="#" class="txt">안마의자</a> <a href="#"><i class="ico del"></i></a></li>
+                    </ul>
+                    <p class="no_txt">최근 검색어가 없습니다.</p>
+                </div>
+                <div class="best_box">
+                    <p class="tit">인기검색어</p>
+                    <ol>
+                        <li><a href="#"><span class="num">1</span>다니엘헤니 정수기</a></li>
+                        <li><a href="#"><span class="num">2</span>강식당 밥솥</a></li>
+                        <li><a href="#"><span class="num">3</span>마시멜로 미니 식기세척기</a></li>
+                        <li><a href="#"><span class="num">4</span>냉장고를 부탁해 전기레인지</a></li>
+                        <li><a href="#"><span class="num">5</span>초고압과 무압의 트윈프레셔</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //검색어 팝업 -->
+
+	<!-- 장바구니버튼선택시 -->
+	<div id="cartChoice" class="wrap_layer_pop type_confirm">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <button class="btn-pop-close" onclick="layerPopClose('cartChoice')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+                <div class="txt">해당 제품이 장바구니에 담겼습니다.<br>바로 호가인하시겠습니까?</div>
+                <div class="btn_wrap">
+                    <button type="button" class="btn_l radius">쇼핑 계속하기</button>
+                    <button type="button" class="btn_l radius common">장바구니 확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- //장바구니버튼선택시 -->
+
+	<!-- 제품등록내역삭제 -->
+	<div id="addprdDel" class="wrap_layer_pop type_confirm">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <button class="btn-pop-close" onclick="layerPopClose('addprdDel')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+                <div class="txt">등록 하신 제품 내역을 삭제하시겠습니까?<br>삭제한 내용은 복구가 불가능하며 제품 등록으로 받으신 혜택은 모두 사라집니다.</div>
+                <div class="btn_wrap">
+                    <button type="button" class="btn_l radius">취소</button>
+                    <button type="button" class="btn_l radius common">삭제</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- //제품등록내역삭제 -->
+
+	<!-- 회원탈퇴 -->
+	<div id="leaveMem" class="wrap_layer_pop type_confirm">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <button class="btn-pop-close" onclick="layerPopClose('leaveMem')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+                <div class="txt">회원탈퇴를 진행하시겠습니까?</div>
+                <div class="btn_wrap">
+                    <button type="button" class="btn_l radius">취소</button>
+                    <button type="button" class="btn_l radius common">확인</button>
+                </div>
+	
+            </div>
+        </div>
+    </div>
+	<!-- //회원탈퇴 -->
+
+	<!-- 회원탈퇴불가 -->
+	<div id="leaveMemno" class="wrap_layer_pop type_confirm">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <button class="btn-pop-close" onclick="layerPopClose('leaveMemno')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+                <div class="txt">현재 진행중인 주문건이 있어<br>회원탈퇴가 불가능합니다.</div>
+                <div class="btn_wrap">
+                   
+                    <button type="button" class="btn_l radius common">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- //회원탈퇴불가 -->
+
+	<!-- 회원탈퇴완료 -->
+	<div id="leaveMemcom" class="wrap_layer_pop type_confirm">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <button class="btn-pop-close" onclick="layerPopClose('leaveMemcom')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+				<div class="tit tac">쿠쿠 통합회원 탈퇴가 완료되었습니다.</div>
+                <div class="txt tac">그 동안 보내주신 사랑에 다시 한 번 감사드리며, 고객님께서 다시 찾을 수 있는 서비스를 만들기 위해 더 노력하겠습니다.</div>
+                <div class="btn_wrap">
+                   
+                    <button type="button" class="btn_l radius common">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- //회원탈퇴완료 -->
+
+	<!-- 무이자에러 -->
+	<div id="interestFree" class="wrap_layer_pop type_confirm">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <button class="btn-pop-close" onclick="layerPopClose('interestFree')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+                <div class="txt">무이자 개월 수가 다른 제품을<br>동시 구매 할 수 없습니다.<br>무이자 적용을 위해 각각 주문 해주세요.</div>
+                <div class="btn_wrap">
+                   
+                    <button type="button" class="btn_l radius common">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- //무이자에러 -->
+
+	<!-- 반품절차 -->
+	<div id="returnProcess" class="wrap_layer_pop full">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <h2 class="tit">반품절차</h2>
+                <button class="btn-pop-close" onclick="layerPopClose('returnProcess')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+				<div class="img"><img src="../../images/mycuckoo/returnProcess.png"></div>
+				<ul class="bul_list type_s mt40">
+					<li>제품회수 후 제품 상태에 따라 환불이 불가할 수 있습니다.</li>
+					<li>반품 시에는 적용 되었던 할인금액 및 배송비가 추가 청구될 수 있습니다.</li>
+					<li>배송 시 받으셨던 증정품 또는 사은품을 같이 배송해주셔야 합니다.</li>
+					<li class="point01">반품불가 : 제품 수거 후 고객님 사유로 판단 시</li>
+					<li class="point01">환불요청 : 무통장입금으로 결제 시</li>
+					<li class="point01">환불불가 : 고객님 사유로 환불 불가의 경우</li>
+				</ul>
+
+			
+                <div class="btn_wrap mt40">
+					<button type="button" class="btn_l common radius w100p">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- //반품절차 -->
+
+	<!-- 교환절차 -->
+	<div id="changeProcess" class="wrap_layer_pop full">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <h2 class="tit">교환절차</h2>
+                <button class="btn-pop-close" onclick="layerPopClose('changeProcess')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+				<div class="img"><img src="../../images/mycuckoo/changeProcess.png"></div>
+				<ul class="bul_list type_s mt40">
+					<li>제품회수 후 제품 상태에 따라 교환이 불가할 수 있습니다.</li>
+					<li>교환 시 고객사유일 경우 배송비가 추가 청구될 수 있습니다.</li>
+					<li class="point01">교환불가 : 제품 수거 후 고객님 사유로 판단 시</li>
+				</ul>
+                <div class="btn_wrap mt40">
+					<button type="button" class="btn_l common radius w100p">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- //교환절차 -->
+
+	<!-- 취소절차 -->
+	<div id="cancelProcess" class="wrap_layer_pop full">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <h2 class="tit">취소절차</h2>
+                <button class="btn-pop-close" onclick="layerPopClose('cancelProcess')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+				<div class="img"><img src="../../images/mycuckoo/cancelProcess.png"></div>
+				<ul class="bul_list type_s mt40">
+					<li>취소 완료 후에는 취소 철회가 불가합니다. </li>
+					<li>주문 취소는 결제하신 결제수단으로만 가능합니다.</li>
+					<li>취소 시에는 수량 선택을 하실 수 없습니다.</li>
+				</ul>
+                <div class="btn_wrap mt40">
+					<button type="button" class="btn_l common radius w100p">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- //취소절차 -->
+
+	<!-- 점검일변경 -->
+	<div id="changeCheckday" class="wrap_layer_pop full">
+        <div class="layer_pop">
+            <div class="header_pop">
+				<h2 class="tit">점검일 변경</h2>
+                <button class="btn-pop-close" onclick="layerPopClose('changeCheckday')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+				<div class="date">
+					<div class="tit">기존 점검 예정일</div>
+					<div class="date_box mt15">2019-09-29</div>
+				</div>
+				<div class="date">
+					<div class="tit">점검 변경 요청일</div>
+					<div class="datepicker w100p mt15">
+						<input type="text" class="datepicker_input " readonly placeholder="날짜를 선택해주세요.">
+					</div>
+				</div>
+				<div class="btn-flex mt40">
+					<button type="button" class="btn_l common radius">취소</button>
+					<button type="button" class="btn_l radius">확인</button>
+				</div>
+            </div>
+        </div>
+    </div>
+	<!-- //점검일변경 -->
+
+	<!-- 제품이전설치요청 -->
+	<div id="prdTransfer" class="wrap_layer_pop full">
+        <div class="layer_pop">
+            <div class="header_pop">
+				<h2 class="tit">제품 이전설치 요청</h2>
+                <button class="btn-pop-close" onclick="layerPopClose('prdTransfer')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+				<div class="top_area">
+					<div class="form_wrap type_box">
+						<ul>
+							<li>
+								<label class="tit" for="input01_01">고객명</label><!-- essential 필수값 클래스 -->
+								<div class="input">
+									<input type="text" id="input01_input01" value="김쿠쿠">
+								</div>
+							</li>
+						
+							<li>
+								<label class="tit" for="input01_02">이전 설치 주소</label><!-- essential 필수값 클래스 -->
+								<div class="input">
+									<input type="text" id="input01_input02" placeholder="">
+									<button type="button" class="btn_m">주소찾기</button>
+								</div>
+								<div class="input mt10">
+									<input type="text" id="input01_input01" placeholder="">
+								</div>
+								<div class="input mt10">
+									<input type="text" id="input01_input01" placeholder="나머지 주소를 입력해주세요.">
+								</div>
+							</li>
+							<li>
+								<label class="tit" for="input01_01">해당 지점명</label><!-- essential 필수값 클래스 -->
+								<div class="input">
+									<input type="text" id="input01_input01" value="">
+								</div>
+							</li>
+							<li>
+								<label class="tit" for="">설치 희망일</label><!-- essential 필수값 클래스 -->
+								<div class="datepicker w100p">
+									<input type="text" class="datepicker_input" readonly placeholder="날짜를 선택해주세요.">
+								</div>
+							</li>
+							<li>
+								<label class="tit" for="input01_01">특이사항</label><!-- essential 필수값 클래스 -->
+								<div class="input">
+									<input type="text" id="input01_input01" value="" placeholder="특이사항을 입력해 주세요.">
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+				<div class="bottom_area">
+					<div class="tit">비용안내</div>
+					<div class="gray_box">
+						<ul>
+							<li><span class="bold">고객번호</span> 12345678901234567</li>
+							<li><span class="bold">이전설치비</span> 10,000원</li>
+							<li><span class="bold">이전철거비</span> 10,000원</li>
+						</ul>
+					</div>
+				</div>
+				<div class="btn_wrap">
+                    <div class="btn-flex">
+						<button type="button" class="btn_l radius">취소</button>
+						<button type="button" class="btn_l common radius">변경</button>
+					</div>
+                </div>
+			
+            </div>
+        </div>
+    </div>
+	<!-- //제품이전설치요청 -->
+
+	<!-- 세금계산서 신청 -->
+	<div id="taxBill" class="wrap_layer_pop full">
+        <div class="layer_pop">
+            <div class="header_pop">
+				<h2 class="tit">세금계산서 신청</h2>
+                <button class="btn-pop-close" onclick="layerPopClose('taxBill')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+				<div class="top_area">
+					<div class="form_wrap type_box">
+						<ul>
+							<li>
+								<label class="tit essential" for="input01_01">신청 종류 및 사유</label><!-- essential 필수값 클래스 -->
+								<div class="wrap_select">
+									<select>
+										<option>선택해주세요.</option>
+										<option>선택완료</option>
+									</select>
+								</div>
+							</li>
+							<li>
+								<label class="tit essential" for="input01_02">발행일</label><!-- essential 필수값 클래스 -->
+								<div class="wrap_select">
+									<select>
+										<option>선택해주세요.</option>
+										<option>선택완료</option>
+									</select>
+								</div>
+							</li>
+						
+							<li>
+								<label class="tit " for="input01_02">세부요청사항</label><!-- essential 필수값 클래스 -->
+								<div><textarea placeholder="내용을 입력해주세요. (최소 30자 이상)"></textarea></div>
+							</li>
+							<li>
+								<label class="tit essential" for="input01_input04">회사명</label>
+								<div class="input">
+									<input type="text" id="input01_input04" placeholder="" value="쿠쿠전자" >
+									<button type="button" class="btn_m">변경</button>
+								</div>
+							</li>
+							<li>
+								<label class="tit" for="">사업자등록번호</label><!-- essential 필수값 클래스 -->
+								<div class="input">
+									<input type="text" id="input01_input01" value="123-45-67890" readonly placeholder="">
+								</div>
+							</li>
+							<li>
+								<label class="tit essential" for="input01_input04">담당자명</label>
+								<div class="input">
+									<input type="text" id="input01_input04" placeholder="" value="김쿠쿠" >
+									<button type="button" class="btn_m">변경</button>
+								</div>
+							</li>
+							<li>
+								<label class="tit" for="">이메일 주소</label><!-- essential 필수값 클래스 -->
+								<div class="input">
+									<input type="text" id="input01_input01" value="cukcoo123@gmail.com" readonly placeholder="">
+								</div>
+							</li>
+							<li>
+								<label class="tit" for="">휴대폰 번호</label><!-- essential 필수값 클래스 -->
+								<div class="input">
+									<input type="text" id="input01_input01" value="010-1234-5678" readonly placeholder="">
+								</div>
+							</li>
+						
+
+						</ul>
+					</div>
+				</div>
+				<div class="bottom_area">
+					<ul class="notice_list">
+						<li>세금 계산서 발행은 다음달부터 변경된 정보로 발행됩니다.</li>
+						<li>기재된 이메일 주소로 세금계산서가 발행됩니다. 이메일 주소와 연락처 정보를 다시 한 번 확인해 주시기 바랍니다.</li>
+			
+					</ul>
+				</div>
+				<div class="btn_wrap">
+                    <div class="btn-flex">
+				
+						<button type="button" class="btn_l common radius w100p">신청</button>
+					</div>
+                </div>
+			
+            </div>
+        </div>
+    </div>
+	<!-- //세금계산서 신청 -->
+
+	<!-- 납부 정보 변경01 -->
+	<div id="changeTax01" class="wrap_layer_pop full">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <h2 class="tit">납부 정보 변경</h2>
+                <button class="btn-pop-close" onclick="layerPopClose('changeTax01')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+				<div class="desc">
+					기존 카드 납부에서 계좌 납부 수단으로의 변경은 불가 합니다. 변경을 원하실 경우 고객센터(1577-0100)로 문의해 주세요.
+				</div>
+				<div class="top_area">
+					<div class="form_wrap type_box mt40">
+						<ul>
+							<li>
+								<label class="tit " for="">납부수단</label>
+								<div class="input">
+									카드자동이체 (수정반영일자 : 2019-10-01)
+								</div>
+							</li>
+							<li>
+								<label class="tit " for="input01_input02">카드사</label><!-- essential 필수값 클래스 -->
+								<div class="wrap_select">
+									<select>
+										<option>선택해주세요.</option>
+										<option>선택완료</option>
+									</select>
+								</div>
+								
+							</li>
+							<li>
+								<label class="tit" for="input01_input03">카드번호</label>
+								<div class="input">
+									<input type="text" id="input01_input03" value="1234567890123456">
+								</div>
+							</li>
+							<li>
+								<label class="tit" for="input01_input04">유효기간</label>
+								<div class="input">
+									<div class="">
+										<input type="text" class="" id="" value="09">
+									</div><span class="dash">/</span>
+									<div class="">
+										<input type="text" class="" id="" value="24">
+									</div>
+								</div>
+							</li>
+							<li>
+								<label class="tit " for="input01_input05">생년월일/사업자등록번호</label>
+								<div class="input">
+									<input type="text" id="input01_input05" placeholder="숫자만 입력해주세요. (ex. 19920924)">
+								</div>
+							</li>
+							<li>
+								<label class="tit " for="input01_input06">카드 소유주</label>
+								<div class="input">
+									<input type="text" id="input01_input06" value="김쿠쿠">
+								</div>
+							</li>
+							<li>
+								<label class="tit" for="input01_input07">결제일</label>
+								<div class="input">
+									<div class="wrap_select flex_left">
+										<select>
+											<option>선택해주세요.</option>
+											<option>선택완료</option>
+										</select>
+										
+									</div>
+									<div class="flex_right">
+										<button type="button" class="btn_l common radius">카드인증</button>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="bottom_area">
+						<p class="input_list">
+							<input type="checkbox" id="check01_01" name="check01">
+							<label for="check01_01"><span>위 납부방법으로 지정된 이체일에 납부되는 것에 동의합니다.</span></label>
+
+						</p>
+					</div>
+					<div class="btn-flex mt40">
+						<button type="button" class="btn_l radius">취소</button>
+						<button type="button" class="btn_l common radius">변경</button>
+						
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+	<!-- //납부 정보 변경01 -->
+	<!-- 납부 정보 변경02 -->
+	<div id="changeTax02" class="wrap_layer_pop full">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <h2 class="tit">납부 정보 변경</h2>
+                <button class="btn-pop-close" onclick="layerPopClose('changeTax02')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+				<div class="desc">
+					기존 카드 납부에서 계좌 납부 수단으로의 변경은 불가 합니다. 변경을 원하실 경우 고객센터(1577-0100)로 문의해 주세요.
+				</div>
+				<div class="top_area">
+					<div class="form_wrap type_box mt40">
+						<ul>
+							<li>
+								<label class="tit " for="">납부수단</label>
+								<div class="input">
+									카드자동이체 (수정반영일자 : 2019-10-01)
+								</div>
+							</li>
+							<li>
+								<label class="tit " for="">납부수단</label>
+								<div class="input">
+									<p class="input_list" id="select_tax_type">
+										<span>
+											<input type="radio" id="radio01_01" name="radio01" checked="">
+											<label for="radio01_01"><span>계좌 자동이체</span></label>
+										</span>
+										<span>
+											<input type="radio" id="radio01_02" name="radio01">
+											<label for="radio01_02"><span>카드 자동이체</span></label>
+										</span>
+									</p>
+								</div>
+							</li>
+						</ul>
+						<div class="mt30">
+							
+						</div>
+						
+						<script>
+							$('.card_change').hide();
+							$('#select_tax_type span input').click(function(){
+								var styiddx = $(this).parents('span').index();
+								if(styiddx == 0){
+									$('.account_change').show();
+									$('.card_change').hide();
+								}else{
+									$('.account_change').hide();
+									$('.card_change').show();
+								}
+			
+							});	
+						</script>
+						<ul class="account_change">
+							
+							<li>
+								<label class="tit " for="input01_input02">은행선택</label><!-- essential 필수값 클래스 -->
+								<div class="wrap_select">
+									<select>
+										<option>국민은행</option>
+										<option>선택완료</option>
+									</select>
+								</div>
+								
+							</li>
+							<li>
+								<label class="tit" for="input01_input03">계좌번호</label>
+								<div class="input">
+									<input type="text" id="input01_input03" value="1234567890123456">
+								</div>
+							</li>
+							
+							<li>
+								<label class="tit " for="input01_input05">생년월일/사업자등록번호</label>
+								<div class="input">
+									<input type="text" id="input01_input05" placeholder="숫자만 입력해주세요. (ex. 19920924)">
+								</div>
+							</li>
+							<li>
+								<label class="tit " for="input01_input06">예금주명</label>
+								<div class="input">
+									<input type="text" id="input01_input06" value="김쿠쿠">
+								</div>
+							</li>
+							<li>
+								<label class="tit" for="input01_input07">결제일</label>
+								<div class="input">
+									<div class="wrap_select flex_left">
+										<select>
+											<option>선택해주세요.</option>
+											<option>선택완료</option>
+										</select>
+										
+									</div>
+									<div class="flex_right">
+										<button type="button" class="btn_l common radius">계좌인증</button>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="card_change">
+						
+							<li>
+								<label class="tit " for="input01_input02">카드사</label><!-- essential 필수값 클래스 -->
+								<div class="wrap_select">
+									<select>
+										<option>선택해주세요.</option>
+										<option>선택완료</option>
+									</select>
+								</div>
+								
+							</li>
+							<li>
+								<label class="tit" for="input01_input03">카드번호</label>
+								<div class="input">
+									<input type="text" id="input01_input03" value="1234567890123456">
+								</div>
+							</li>
+							<li>
+								<label class="tit" for="input01_input04">유효기간</label>
+								<div class="input">
+									<div class="">
+										<input type="text" class="" id="" value="09">
+									</div><span class="dash">/</span>
+									<div class="">
+										<input type="text" class="" id="" value="24">
+									</div>
+								</div>
+							</li>
+							<li>
+								<label class="tit " for="input01_input05">생년월일/사업자등록번호</label>
+								<div class="input">
+									<input type="text" id="input01_input05" placeholder="숫자만 입력해주세요. (ex. 19920924)">
+								</div>
+							</li>
+							<li>
+								<label class="tit " for="input01_input06">카드 소유주</label>
+								<div class="input">
+									<input type="text" id="input01_input06" value="김쿠쿠">
+								</div>
+							</li>
+							<li>
+								<label class="tit" for="input01_input07">결제일</label>
+								<div class="input">
+									<div class="wrap_select flex_left">
+										<select>
+											<option>선택해주세요.</option>
+											<option>선택완료</option>
+										</select>
+										
+									</div>
+									<div class="flex_right">
+										<button type="button" class="btn_l common radius">카드인증</button>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="bottom_area">
+						<p class="input_list">
+							<input type="checkbox" id="check01_01" name="check01">
+							<label for="check01_01"><span>위 납부방법으로 지정된 이체일에 납부되는 것에 동의합니다.</span></label>
+
+						</p>
+					</div>
+					<div class="btn-flex mt40">
+						<button type="button" class="btn_l radius">취소</button>
+						<button type="button" class="btn_l common radius">변경</button>
+						
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+	<!-- //납부 정보 변경02 -->
+
+	<!-- 청구 및 납입내역서 -->
+	<div id="billingnPay" class="wrap_layer_pop full">
+        <div class="layer_pop">
+            <div class="header_pop">
+				<h2 class="tit">청구 및 납입내역서</h2>
+                <button class="btn-pop-close" onclick="layerPopClose('billingnPay')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+				<div class="top_area">
+					<ul class="bul_list">
+						<li><span class="bold">고객번호</span> 1-02-123123-1234</li>
+						<li><span class="bold">고객명</span> 김쿠쿠</li>
+						<li><span class="bold">청구금액</span> 25,900원</li>
+					</ul>
+				</div>
+				<div class="bottom_area mt35">
+					<div class="tbl_wrap type_basic">
+						<table>
+							<caption>테이블제목</caption>
+							<colgroup>
+								<col style="width:16.6%">
+								<col style="width:16.6%">
+								<col style="width:16.6%">
+								<col style="width:16.6%">
+								<col style="width:16.6%">
+								<col style="width:16.6%">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">청구월</th>
+									<th scope="row">과금구분</th>
+									<th scope="row">매출</th>
+									<th scope="row">입금</th>
+									<th scope="row">미납</th>
+									<th scope="row">결제구분</th>   
+								</tr>
+								<tr>
+									<td>2019.09</td>
+									<td>렌탈료</td>
+									<td>25,900원</td>
+									<td>-</td>
+									<td>25,900원</td>
+									<td>CMS</td>
+								</tr>
+								<tr>
+									<td>2019.09</td>
+									<td>렌탈료</td>
+									<td>25,900원</td>
+									<td>-</td>
+									<td>25,900원</td>
+									<td>CMS</td>
+								</tr>
+								<tr>
+									<td colspan="2">합계</td>
+									<td>53,800원</td>
+									<td>25,900원</td>
+									<td>25,900원</td>
+									<td>-</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="btn_wrap tal">
+					<p class="bold">위와 같이 발급사실을 확인 함(직인생략)</p>
+					
+					<p class="mt20">본 확인증은 쿠쿠홈시스㈜가 고객 편의 제공을 위하여 고객 요청이 있을 경우에만 발행하는 확인증입니다.<br>
+					청구 및 납입내역서는 타 용도로 사용하실 수 없습니다.<br>
+					</p>
+					<div class="tac img">
+						<img src="../../images/mycuckoo/cuckoo_logo.png">
+					</div>
+					<div class="btn-wrap">
+						<button type="button" class="btn_l common radius mw157">확인</button>
+					</div>
+                </div>
+			
+            </div>
+        </div>
+    </div>
+	<!-- //청구 및 납입내역서 -->
+
+	<!-- 가상계좌발급증 -->
+	<div id="virtualAccount" class="wrap_layer_pop full">
+        <div class="layer_pop">
+            <div class="header_pop">
+				<h2 class="tit">가상계좌 발급 확인증</h2>
+                <button class="btn-pop-close" onclick="layerPopClose('virtualAccount')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+				<div class="top_area">
+					<ul class="bul_list">
+						<li><span class="bold">고객번호</span> 1-02-123123-1234</li>
+						<li><span class="bold">고객명</span> 김쿠쿠</li>
+						<li><span class="bold">청구금액</span> 25,900원</li>
+					</ul>
+				</div>
+				<div class="bottom_area mt35">
+					<div class="tbl_wrap type_basic">
+						<table>
+							<caption>테이블제목</caption>
+							<colgroup>
+								<col style="width:80px">
+								<col style="width:auto">
+								
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">고객명</th>
+									<td>김쿠쿠</td>
+								</tr>
+								<tr>
+									<th scope="row">고객번호</th>
+									<td>1-01-123123-1234</td>
+								</tr>
+								<tr>
+									<th scope="row">수납전용<br>가상계좌</th>
+									<td>123456-78-912345</td>
+								</tr>
+								<tr>
+									<th scope="row">은행명</th>
+									<td>기업은행</td>
+								</tr>
+								<tr>
+									<th scope="row">예금주</th>
+									<td>쿠쿠홈시스</td>
+								</tr>
+								<tr>
+									<th scope="row">사업자<br>등록번호</th>
+									<td>590-87-00933</td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="btn_wrap tal">
+					<p class="bold">위와 같이 발급사실을 확인 함(직인생략)</p>
+					
+					<p class="mt20">본 확인증은 쿠쿠홈시스㈜가 고객 요청이 있을 경우에만 발행하는 확인증입니다.<br>
+					가상계좌 발급확인증은 타 용도로 사용하실 수 없습니다.<br>
+					</p>
+					<div class="tac img">
+						<img src="../../images/mycuckoo/cuckoo_logo.png">
+					</div>
+					<div class="btn-wrap">
+						<button type="button" class="btn_l common radius mw157">확인</button>
+					</div>
+                </div>
+			
+            </div>
+        </div>
+    </div>
+	<!-- //가상계좌발급증 -->
+
+	<!-- 영수증(입금확인증) -->
+	<div id="receiptConfirm" class="wrap_layer_pop full">
+        <div class="layer_pop">
+            <div class="header_pop">
+				<h2 class="tit">가상계좌 발급 확인증</h2>
+                <button class="btn-pop-close" onclick="layerPopClose('receiptConfirm')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+			
+				<div class="bottom_area">
+					<div class="tbl_wrap type_basic">
+						<table>
+							<caption>테이블제목</caption>
+							<colgroup>
+								<col style="width:80px">
+								<col style="width:auto">
+								
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">사업자<br>등록번호</th>
+									<td>590-87-00993</td>
+								</tr>
+								<tr>
+									<th scope="row">상호</th>
+									<td>쿠쿠홈시스㈜</td>
+								</tr>
+								<tr>
+									<th scope="row">사업장<br>소재지</th>
+									<td>경남 양산시 교동 91번지</td>
+								</tr>
+								<tr>
+									<th scope="row">업태/종목</th>
+									<td>제조업부동산/전자기기 임대</td>
+								</tr>
+								<tr>
+									<th scope="row">예금주</th>
+									<td>쿠쿠홈시스</td>
+								</tr>
+								<tr>
+									<th scope="row">금액/세액</th>
+									<td>-</td>
+								</tr>
+								<tr>
+									<th scope="row">합계금액</th>
+									<td>27,900원</td>
+								</tr>
+								<tr>
+									<th scope="row">내용</th>
+									<td>렌탈료 (2019-09-06)</td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="btn_wrap tal">
+					<p class="bold">위와 같이 발급사실을 확인 함(직인생략)</p>
+
+					<div class="tac img">
+						<img src="../../images/mycuckoo/cuckoo_logo.png">
+					</div>
+					<div class="btn-wrap">
+						<button type="button" class="btn_l common radius mw157">확인</button>
+					</div>
+                </div>
+			
+            </div>
+        </div>
+    </div>
+	<!-- //영수증(입금확인증) -->
+	
+    <script src="../../javascripts/plugin.js"></script>
+    <script src="../../javascripts/design_common.js"></script>
+</body>
+
+</html>

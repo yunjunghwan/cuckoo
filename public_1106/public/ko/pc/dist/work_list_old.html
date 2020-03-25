@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>Cuckoo 관리자</title>
+	<style type="text/css">
+
+		body{width:100%; height:100%;  font-family:vernada; margin:20px auto;}
+		#secretWrapper{width :98%; margin:0 auto;}
+		#secretWrapper h1{font-size:30px; text-align:center; margin:0 0 119px;}
+		#secretWrapper h2{font-size:20px; margin:30px 0 20px;}
+		#secretWrapper table{width:100%; border-top:1px solid #99948e; border-left:1px solid #99948e; border-collapse:collapse;}
+		#secretWrapper table .title1{background-color:#e6002d; color:#fff; padding:7px 0 5px; text-align:center;}
+		#secretWrapper table .title2{background-color:#f7f7f7; color:#707070; padding:7px 0 5px; text-align:center;}
+		#secretWrapper table .title3{background-color:#dfdfdf; color:#707070; padding:7px 0 5px; text-align:center;}
+		#secretWrapper table th{border-right:1px solid #99948e; border-bottom:1px solid #99948e; padding:5px 0;}
+		#secretWrapper table td{border-right:1px solid #99948e; border-bottom:1px solid #99948e;}
+		#secretWrapper table tbody td{padding:8px 20px; font-size:12px;}
+		#secretWrapper table tbody tr td a {color:#333; text-decoration:underline;}
+
+		#secretWrapper table tbody tr.ok th,
+		#secretWrapper table tbody tr.ok td{background:#9f9f95; color:#fff;}
+		#secretWrapper table tbody tr.ok td.dev{background:#9f9f95; color:#fff;}
+		#secretWrapper table tbody tr.ok td a{color:#fff;}
+
+		#secretWrapper table tbody tr.ok2 td{background:#c62b4a; color:#fff;}
+		#secretWrapper table tbody tr.ok2 td.dev {background:#c62b4a; color:#fff;}
+		#secretWrapper table tbody tr.ok2 td a{color:#fff;}
+
+		#secretWrapper table tbody tr.ok3 td{background:#6e58c6; color:#fff;}
+		#secretWrapper table tbody tr.ok3 td.dev {background:#a07fff; color:#333}
+		#secretWrapper table tbody tr.ok3 td a{color:#fff;}
+		#secretWrapper table tbody tr.del td{background:#999; color:#333;}
+
+		.caution {background-color:lightblue;}
+
+		body *{margin:0; padding:0;}
+		#secretWrapper .depth_info { width:98%; position:absolute; top:83px;}
+		#secretWrapper .depth_info.fix { position:fixed; top:0;}
+
+	</style>
+	<script src="javascripts/jquery-1.8.2.min.js"></script>
+	<script>
+        $(function () {
+			var $table = $("table");
+			var $tbody = $("table tbody");
+            $table.each(function () {
+				var _this = $(this);
+				var divisionDepth = _this.find("tbody > tr");
+                var divisionLength = divisionDepth.length;
+
+                divisionDepth.eq(0).find("td").eq(0).attr("rowspan", divisionLength);
+            });
+
+            var $depthInfo = $(".depth_info");
+            $(window).scroll(function () {
+				var st = $(this).scrollTop();
+				if(st > 83){
+                    $depthInfo.addClass("fix");
+				} else {
+                    $depthInfo.removeClass("fix");
+				}
+            });
+        });
+	</script>
+</head>
+<body>
+<div id="secretWrapper">
+	<table class="depth_info">
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="20%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<thead>
+		<tr class="title1">
+			<th colspan="4">DEPTH</th>
+			<th colspan="2">코딩현황</th>
+			<th>화면아이디</th>
+		</tr>
+		<tr class="title2">
+			<th></th>
+			<th>1depth</th>
+			<th>2depth</th>
+			<th>3depth</th>
+			<th colspan="2">마크업 파일명</th>
+			<th></th>
+		</tr>
+		<tr class="title3">
+			<th>구분</th>
+			<th>Label</th>
+			<th>Label</th>
+			<th>Label</th>
+			<th>Folder</th>
+			<th>File</th>
+			<th></th>
+		</tr>
+		</thead>
+	</table>
+	<h1>Cuckoo / PC</h1>
+	<!-- 가이드 -->
+	<h2>Guide</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="20%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr>
+			<td>가이드</td>
+			<td>공통(헤더,푸터)</td>
+			<td></td>
+			<td></td>
+			<td>guide</td>
+			<td><a href="./html/guide/00_공통(헤더,푸터).html" target="_blank">00_공통(헤더,푸터)</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>폼요소</td>
+			<td></td>
+			<td></td>
+			<td>guide</td>
+			<td><a href="./html/guide/01_폼요소.html" target="_blank">01_폼요소</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>버튼</td>
+			<td></td>
+			<td></td>
+			<td>guide</td>
+			<td><a href="./html/guide/02_버튼.html" target="_blank">02_버튼</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>탭</td>
+			<td></td>
+			<td></td>
+			<td>guide</td>
+			<td><a href="./html/guide/03_탭.html" target="_blank">03_탭</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>타이틀</td>
+			<td></td>
+			<td></td>
+			<td>guide</td>
+			<td><a href="./html/guide/04_타이틀.html" target="_blank">04_타이틀</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>테이블</td>
+			<td></td>
+			<td></td>
+			<td>guide</td>
+			<td><a href="./html/guide/05_테이블.html" target="_blank">05_테이블</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>리스트</td>
+			<td></td>
+			<td></td>
+			<td>guide</td>
+			<td><a href="./html/guide/06_리스트.html" target="_blank">06_리스트</a></td>
+			<td class=""></td>
+		</tr>
+		<tr>
+			<td>기타</td>
+			<td></td>
+			<td></td>
+			<td>guide</td>
+			<td><a href="./html/guide/07_기타.html" target="_blank">07_기타</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+	<!-- //가이드 -->
+	<!-- 메인 -->
+	<h2>Main</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="20%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="ok">
+			<td>Main</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>main</td>
+			<td><a href="./html/main/main.html" target="_blank">main</a></td>
+			<td class="">PC.A110, PC.A120, PC.A210, PC.A230, PC.A30, PC.A410, PC.A421, PC.A422, PC.A431, PC.A432, PC.A500</td>
+		</tr>
+		<tr class="ok">
+			<td>홈시스gnb</td>
+			<td></td>
+			<td></td>
+			<td>main</td>
+			<td><a href="./html/main/홈시스gnb.html" target="_blank">홈시스gnb</a></td>
+			<td class="">PC.A220</td>
+		</tr>
+		<tr class="ok">
+			<td>검색결과</td>
+			<td></td>
+			<td></td>
+			<td>main</td>
+			<td><a href="./html/main/검색결과.html" target="_blank">검색결과</a></td>
+			<td class="">PC.B100, PC.B200</td>
+		</tr>
+		<tr class="ok">
+			<td>검색결과없음</td>
+			<td></td>
+			<td></td>
+			<td>main</td>
+			<td><a href="./html/main/검색결과_결과없음.html" target="_blank">검색결과_결과없음</a></td>
+			<td class="">PC.B300</td>
+		</tr>
+		</tbody>
+	</table>
+	<!-- //메인 -->
+
+	<h2>Footer</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="20%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+
+		<!--회사안내-->
+		<tr class="ok">
+			<td>FOOTER</td>
+			<td rowspan="3">회사안내</td>
+			<td>쿠쿠소개</td>
+			<td></td>
+			<td rowspan="3">company</td>
+			<td><a href="./html/company/쿠쿠안내_쿠쿠소개.html" target="_blank">쿠쿠소개</a></td>
+			<td class="">PC.C110</td>
+		</tr>
+		<tr class="ok">
+			<td>CI소개</td>
+			<td></td>
+			<td><a href="./html/company/쿠쿠안내_ci소개.html" target="_blank">ci소개</a></td>
+			<td class="">PC.C120</td>
+		</tr>
+		<tr class="ok">
+			<td>연혁</td>
+			<td></td>
+			<td><a href="./html/company/쿠쿠안내_연혁.html" target="_blank">연혁</a></td>
+			<td class="">PC.C130</td>
+		</tr>
+
+		<!--쿠쿠채널-->
+		<tr class="ok">
+			<td rowspan="4">쿠쿠채널</td>
+			<td>리스트</td>
+			<td></td>
+			<td rowspan="4">channel</td>
+			<td><a href="./html/channel/쿠쿠채널_리스트.html" target="_blank">쿠쿠채널_리스트</a></td>
+			<td class="">PC.C211</td>
+		</tr>
+		<tr class="ok">
+			<td>검색결과</td>
+			<td></td>
+			<td><a href="./html/channel/쿠쿠채널_검색결과.html" target="_blank">쿠쿠채널_검색결과</a></td>
+			<td class="">PC.C212</td>
+		</tr>
+		<tr class="ok">
+			<td>검색결과없음</td>
+			<td></td>
+			<td><a href="./html/channel/쿠쿠채널_검색결과없음.html" target="_blank">쿠쿠채널_검색결과없음</a></td>
+			<td class="">PC.C213</td>
+		</tr>
+		<tr class="ok">
+			<td>상세</td>
+			<td></td>
+			<td><a href="./html/channel/쿠쿠채널_상세보기.html" target="_blank">쿠쿠채널_상세보기</a></td>
+			<td class="">PC.C220</td>
+		</tr>
+
+		<!--쿠쿠채널-->
+		<tr class="ok">
+			<td rowspan="6">투자정보</td>
+			<td rowspan="2">쿠쿠홀딩스</td>
+			<td>전자공고, 재무정보, 공시정보</td>
+			<td rowspan="6">invest</td>
+			<td><a href="./html/invest/투자정보_쿠쿠홀딩스_리스트.html" target="_blank">쿠쿠홀딩스</a></td>
+			<td class="">PC.C411, PC.C412, PC.C413_a</td>
+		</tr>
+		<tr class="ok">
+			<td>전자공고_상세</td>
+			<td><a href="./html/invest/투자정보_쿠쿠홀딩스_뷰.html" target="_blank">쿠쿠홀딩스_전자공고_상세</a></td>
+			<td>PC.C413_b</td>
+		</tr>
+
+		<tr class="ok">
+			<td rowspan="2">쿠쿠전자</td>
+			<td>전자공고, 재무정보, 공시정보</td>
+			<td><a href="./html/invest/투자정보_쿠쿠전자_리스트.html" target="_blank">쿠쿠전자</a></td>
+			<td class="">PC.C421_a</td>
+		</tr>
+		<tr class="ok">
+
+			<td>전자공고_상세</td>
+			<td><a href="./html/invest/투자정보_쿠쿠전자_뷰.html" target="_blank">쿠쿠전자_전자공고_상세</a></td>
+			<td class="">PC.C421_b</td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="2">쿠쿠홈시스</td>
+			<td>전자공고, 재무정보, 공시정보</td>
+			<td><a href="./html/invest/투자정보_쿠쿠홈시스_리스트.html" target="_blank">쿠쿠홈시스</a></td>
+			<td class="">PC.C431, PC.C432, PC.C433_a</td>
+		</tr>
+		<tr class="ok">
+
+			<td>전자공고_상세</td>
+			<td><a href="./html/invest/투자정보_쿠쿠홈시스_뷰.html" target="_blank">쿠쿠전자_쿠쿠홈시스_상세</a></td>
+			<td class="">PC.C433_b</td>
+		</tr>
+
+
+		<!--약관-->
+		<tr class="ok">
+			<td>이용약관</td>
+			<td></td>
+			<td></td>
+			<td rowspan="2">terms</td>
+			<td><a href="./html/terms/이용약관.html" target="_blank">이용약관</a></td>
+			<td class="">PC.D100</td>
+		</tr>
+		<tr class="ok">
+			<td>개인정보취급방침</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/terms/개인정보취급방침.html" target="_blank">개인정보취급방침</a></td>
+			<td class="">PC.D200</td>
+		</tr>
+		</tbody>
+	</table>
+
+
+
+	<h2>회원</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="20%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="ok">
+			<td>회원</td>
+			<td>가입구분 선택</td>
+			<td></td>
+			<td></td>
+			<td rowspan="6">member</td>
+			<td><a href="./html/member/02_07_회원가입_01_회원선택_01_메인.html" target="_blank">02_07_회원가입_01_회원선택_01_메인</a></td>
+
+			<td class="">PC.E110</td>
+		</tr>
+		<tr>
+			<td>가입여부확인</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/member/.html" target="_blank"></a></td>
+			<td class="">PC.E121_a</td>
+		</tr>
+		<tr class="ok">
+			<td>정보입력 (개인)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/member/02_07_회원가입_02_개인회원_01_정보입력.html" target="_blank">02_07_회원가입_02_개인회원_01_정보입력</a></td>
+			<td class="">PC.E122_a</td>
+		</tr>
+		<tr class="ok">
+			<td>정보입력 (사업자)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/member/02_07_회원가입_03_사업자회원_01_정보입력.html" target="_blank">02_07_회원가입_03_사업자회원_01_정보입력</a></td>
+			<td class="">PC.E132_a</td>
+		</tr>
+		<tr class="ok">
+			<td>가입완료 (개인)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/member/02_07_회원가입_02_개인회원_02_가입완료.html" target="_blank">02_07_회원가입_02_개인회원_02_가입완료</a></td>
+			<td class="">PC.E122_b</td>
+		</tr>
+		<tr class="ok">
+			<td>가입완료 (사업자)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/member/02_07_회원가입_03_사업자회원_02_가입완료.html" target="_blank">02_07_회원가입_03_사업자회원_02_가입완료</a></td>
+			<td class="">PC.E132_b</td>
+		</tr>
+		<tr class="ok">
+			<td>회원공통팝업</td>
+			<td></td>
+			<td></td>
+			<td>popup</td>
+			<td><a href="./html/member/02_07_회원가입_00_팝업공통.html" target="_blank">02_07_회원가입_00_팝업공통</a></td>
+			<td class="caution" rowspan="3">PC.E121_b, PC.E121_c, PC.E131_b, PC.J421, PC.E220, PC.E610, PC.E620, PC.E630, PC.H1023_a, PC.H1033_a, PC.H1033_b, PC.J1133</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<h2>로그인 / 로그아웃</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="20%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="ok">
+			<td>로그인 / 로그아웃</td>
+			<td>로그인</td>
+			<td></td>
+			<td></td>
+			<td rowspan="12">login</td>
+			<td><a href="./html/login/02_01_로그인.html" target="_blank">로그인</a></td>
+			<td class="">PC.E210</td>
+		</tr>
+		<tr class="ok">
+			<td>쿠쿠통합회원약관동의</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/login/02_01_로그인_02_기존회원약관동의.html" target="_blank">02_01_로그인_02_기존회원약관동의</a></td>
+			<td class="">PC.E220</td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="3">아이디찾기</td>
+			<td rowspan="2">입력</td>
+			<td></td>
+			<td><a href="./html/login/02_03_아이디,비밀번호찾기_01_아이디찾기_개인회원.html" target="_blank">아이디찾기_개인회원</a></td>
+			<td>PC.E311</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td class=""><a href="./html/login/02_03_아이디,비밀번호찾기_02_아이디찾기_사업자회원.html" target="_blank">아이디찾기_기업회원</a></td>
+			<td class="">PC.E312</td>
+		</tr>
+		<tr class="ok">
+			<td>완료</td>
+			<td></td>
+			<td><a href="./html/login/02_03_아이디,비밀번호찾기_03_아이디찾기_찾기완료.html" target="_blank">아이디찾기_찾기완료</a></td>
+			<td class="">PC.E313</td>
+
+		</tr>
+		<tr class="ok">
+			<td rowspan="2">비밀번호찾기</td>
+			<td>입력</td>
+			<td></td>
+			<td><a href="./html/login/02_04_아이디,비밀번호찾기_01_비밀번호찾기.html" target="_blank">비밀번호찾기</a></td>
+			<td class="">PC.E321</td>
+		</tr>
+		<tr class="ok">
+			<td>새 비밀번호 설정</td>
+			<td></td>
+			<td><a href="./html/login/비밀번호찾기_비밀번호재설정.html" target="_blank">새 비밀번호 설정</a></td>
+			<td class="">PC.E322</td>
+		</tr>
+		<tr>
+			<td>간편로그인</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/login/.html" target="_blank"></a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="ok">
+			<td>비회원주문조회</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/login/02_02_비회원주문조회.html" target="_blank">비회원주문조회</a></td>
+			<td class="">PC.E230</td>
+		</tr>
+		<tr class="ok">
+			<td>휴면회원해제</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/login/02_05_휴면회원해제안내.html" target="_blank">휴면회원해제안내</a></td>
+
+			<td class="">PC.E400</td>
+		</tr>
+		<tr class="ok">
+			<td>비밀번호정기변경</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/login/02_06_정기비밀번호변경안내.html" target="_blank">정기비밀번호변경안내</a></td>
+
+			<td class="">PC.E500</td>
+		</tr>
+		<tr class="ok">
+			<td>로그인공통팝업</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/login/로그인_팝업공통.html" target="_blank">로그인공통팝업</a></td>
+			<td class="">PC.E610, PC.E620, PC.E630</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<h2>SHOP</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="20%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="ok">
+			<td>SHOP</td>
+			<td>상품리스트(몰)</td>
+			<td></td>
+			<td></td>
+			<td rowspan="11">item</td>
+			<td><a href="./html/item/03_shop_상품리스트(몰).html" target="_blank">03_shop_상품리스트(몰)</a></td>
+			<td class="">PC.F110, PC.F121, PC.F122, PC.F123</td>
+		</tr>
+		<tr class="ok">
+			<td>상품상세(몰)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/item/03_shop_상품상세(몰).html" target="_blank">03_shop_상품상세(몰)</a></td>
+			<td class="">PC.F210, PC.F221, PC.F222, PC.F223, PC.F230, PC.F241, PC.F242, PC.F243, PC.F250, PC.F261, PC.F262, PC.F263, PC.F264(첫번째글), PC.F265(두번째글), PC.F271, PC.F272, PC.F273, PC.F274, PC.F280, PC.F290</td>
+		</tr>
+		<tr class="ok">
+			<td>상품리스트(렌탈)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/item/03_shop_상품리스트(렌탈).html" target="_blank">03_shop_상품리스트(렌탈)</a></td>
+			<td class="">PC.RA110, PC.RA121, PC.RA122, PC.RA123</td>
+		</tr>
+		<tr class="ok">
+			<td>상품상세(렌탈)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/item/03_shop_상품상세(렌탈).html" target="_blank">03_shop_상품상세(렌탈)</a></td>
+			<td class="">PC.RA210, PC.RA221, PC.RA610, PC.RA710, PC.RA720, PC.RA730, PC.RA740, PC.RA810, PC.RA821, PC.RA830, PC.RA910, PC.RA1010, PC.RA510</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>기간유형선택후_로그인당월</td>
+			<td></td>
+			<td><a href="./html/item/03_shop_상품상세(렌탈)_기간유형선택후_로그인당월.html" target="_blank">03_shop_상품상세(렌탈)_기간유형선택후_로그인당월</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>기간유형선택후_로그인신규</td>
+			<td></td>
+			<td><a href="./html/item/03_shop_상품상세(렌탈)_기간유형선택후_로그인신규.html" target="_blank">03_shop_상품상세(렌탈)_기간유형선택후_로그인신규</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>기간유형선택후_미로그인</td>
+			<td></td>
+			<td><a href="./html/item/03_shop_상품상세(렌탈)_기간유형선택후_미로그인.html" target="_blank">03_shop_상품상세(렌탈)_기간유형선택후_미로그인</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>기간유형선택후_일시품절</td>
+			<td></td>
+			<td><a href="./html/item/03_shop_상품상세(렌탈)_기간유형선택후_일시품절.html" target="_blank">03_shop_상품상세(렌탈)_기간유형선택후_일시품절</a></td>
+			<td class=""></td>
+		</tr>
+
+		<tr class="ok">
+			<td></td>
+			<td>일시불구매</td>
+			<td></td>
+			<td><a href="./html/item/03_shop_상품상세(렌탈)_일시불구매.html" target="_blank">03_shop_상품상세(렌탈)_일시불구매</a></td>
+			<td class="">PC.RA310, PC.RA320, PC.RA330, PC.RA330_a</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>기간유형선택후_일시불구매_일시품절</td>
+			<td></td>
+			<td><a href="./html/item/03_shop_상품상세(렌탈)_일시불구매_일시품절.html" target="_blank">03_shop_상품상세(렌탈)_일시불구매_일시품절</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>렌탈팝업모음</td>
+			<td></td>
+			<td><a href="./html/item/03_렌탈(공통팝업).html" target="_blank">03_렌탈(공통팝업)</a></td>
+			<td class="">PC.RA231, PC.RA232, PC.RA233, PC.RA234</td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="2">제품비교하기</td>
+			<td>　</td>
+			<td></td>
+			<td>LAYER</td>
+			<td><a href="./html/item/03_shop_상품리스트(몰).html" target="_blank">03_shop_상품리스트(몰)</a></td>
+			<td>하단 제품비교하기버튼</td>
+		</tr>
+		<tr class="ok">
+			<td>비교하기 팝업</td>
+			<td></td>
+			<td rowspan="5">popup</td>
+			<td><a href="./html/item/03_shop_상품리스트(몰).html" target="_blank">03_shop_상품리스트(몰)</a></td>
+			<td>비교하기버튼</td>
+		</tr>
+		<tr class="ok">
+			<td>장바구니담기_팝업</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/item/03_shop_상품상세(몰).html" target="_blank">03_shop_상품상세(몰)</a></td>
+			<td>상단 장바구니버튼</td>
+		</tr>
+		<tr class="ok">
+			<td>바로구매_팝업</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/item/03_shop_상품상세(몰).html" target="_blank">03_shop_상품상세(몰)</a></td>
+			<td>상단 바로구매버튼</td>
+		</tr>
+		<tr class="ok">
+			<td>상품상세</td>
+			<td>제품리뷰(텍스트)_팝업</td>
+			<td></td>
+			<td><a href="./html/item/03_shop_상품상세(몰).html" target="_blank">03_shop_상품상세(몰)</a></td>
+			<td>제품리뷰 첫번째글</td>
+		</tr>
+		<tr class="ok">
+			<td>상품상세</td>
+			<td>제품리뷰(이미지)_팝업</td>
+			<td></td>
+			<td><a href="./html/item/03_shop_상품상세(몰).html" target="_blank">03_shop_상품상세(몰)</a></td>
+			<td>제품리뷰 두번째글</td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="2">리퍼브렌탈</td>
+			<td>기본</td>
+			<td></td>
+			<td>item</td>
+			<td><a href="./html/item/03_04_렌탈_02_제품상세_06_리퍼브렌탈_01_기본.html" target="_blank">리퍼브렌탈_기본</a></td>
+			<td class="">PC.RA410</td>
+		</tr>
+		<tr class="ok">
+			<td>일시불</td>
+			<td></td>
+			<td>item</td>
+			<td><a href="./html/item/03_04_렌탈_02_제품상세_06_리퍼브렌탈_02_일시불.html" target="_blank">리퍼브렌탈_일시불</a></td>
+			<td class="">PC.RA410</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<h2>EVENT</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="20%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="ok">
+			<td>EVENT</td>
+			<td>리스트</td>
+			<td></td>
+			<td></td>
+			<td rowspan="3">event</td>
+			<td><a href="./html/event/이벤트리스트.html" target="_blank">리스트</a></td>
+			<td class="">PC.I120, PC.I220, PC.I320</td>
+		</tr>
+		<tr class="ok">
+			<td>상세</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/event/이벤트상세.html" target="_blank">상세</a></td>
+			<td class="">PC.I131, PC.I132, PC.I231, PC.I232, PC.I331, PC.I332, PC.I410, PC.I420, PC.I430</td>
+		</tr>
+		<tr class="ok">
+			<td>이벤트없음</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/event/이벤트리스트_이벤트없음.html" target="_blank">리스트없음</a></td>
+			<td class="">PC.I110, PC.I210, PC.I310</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<h2>주문/결제</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="20%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="ok">
+			<td>주문/결제</td>
+			<td>장바구니 (몰_회원)</td>
+			<td>공통팝업</td>
+			<td></td>
+			<td rowspan="11">order</td>
+			<td><a href="./html/order/04_장바구니(공통팝업).html" target="_blank">04_장바구니(공통팝업)</a></td>
+			<td class="">PC.G151, PC.G152, PC.G153, PC.G210, PC.G350, PC.RB110, PC.RB120, PC.RB130, PC.RB631_a, PC.RB631_b, PC.RB631_c,PC.RB710</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>장바구니 (몰_회원)</td>
+			<td></td>
+			<td><a href="./html/order/04_장바구니(몰_회원).html" target="_blank">04_장바구니(몰_회원)</a></td>
+			<td class="">PC.G120, PC.G130</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>장바구니 (몰_회원_무이자결제)</td>
+			<td></td>
+			<td><a href="./html/order/04_장바구니(몰_회원_무이자결제).html" target="_blank">04_장바구니(몰_회원_무이자결제)</a></td>
+			<td class="">PC.G140</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>장바구니 (몰_회원_제품없음)</td>
+			<td></td>
+			<td><a href="./html/order/04_장바구니(몰_회원_제품없음).html" target="_blank">04_장바구니(몰_회원_제품없음)</a></td>
+			<td class="">PC.G110</td>
+		</tr>
+		<tr class="ok">
+			<td>주문결제 (몰_회원)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/order/04_주문결제(몰_회원).html" target="_blank">04_주문결제(몰_회원)</a></td>
+			<td class="">PC.G220</td>
+		</tr>
+		<tr class="ok">
+			<td>주문완료 (몰_회원)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/order/04_주문결제(몰_회원_주문완료).html" target="_blank">04_주문결제(몰_회원_주문완료</a></td>
+			<td class="">PC.G231, PC.G232</td>
+		</tr>
+		<tr class="ok">
+			<td>장바구니 (몰_비회원)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/order/04_장바구니(몰_비회원).html" target="_blank">04_장바구니(몰_비회원)</a></td>
+			<td class="">PC.G320, PC.G330</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>장바구니 (몰_비회원_무이자결제)</td>
+			<td></td>
+			<td><a href="./html/order/04_장바구니(몰_비회원_무이자결제).html" target="_blank">04_장바구니(몰_비회원_무이자결제)</a></td>
+			<td class="">PC.G340</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>장바구니 (몰_비회원_제품없음)</td>
+			<td></td>
+			<td><a href="./html/order/04_장바구니(몰_비회원_제품없음).html" target="_blank">04_장바구니(몰_비회원_제품없음)</a></td>
+			<td class="">PC.G310</td>
+		</tr>
+		<tr class="ok">
+			<td>주문결제 (몰_비회원)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/order/04_주문결제(몰_비회원).html" target="_blank">04_주문결제(몰_비회원)</a></td>
+			<td class="">PC.G410</td>
+		</tr>
+		<tr class="ok">
+			<td>주문완료 (몰_비회원)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/order/04_주문결제(몰_비회원_주문완료).html" target="_blank">04_주문결제(몰_비회원_주문완료)</a></td>
+			<td class="">PC.G421, PC.G422</td>
+		</tr>
+		<tr class="ok">
+			<td>장바구니 (렌탈)</td>
+			<td></td>
+			<td></td>
+			<td rowspan="22">rental_order</td>
+			<td><a href="./html/rental_order/렌탈_회원_장바구니(렌탈)_신규렌탈.html" target="_blank">렌탈회원 장바구니(신규렌탈)</a></td>
+			<td class="">PC.RB231_a, PC.RB241_a, PC.RB241_b</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>신규패키지_동일제품2개 선택시</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_장바구니(렌탈)_신규패키지_동일제품2개선택시.html" target="_blank">렌탈회원 장바구니(렌탈) 신규패키지동일제품2개선택시</a></td>
+			<td class="">PC.RB231_b</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>신규패키지_다른제품2개 선택시</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_장바구니(렌탈)_신규패키지_다른제품2개선택시.html" target="_blank">렌탈회원 장바구니(렌탈) 신규패키지다른제품2개선택시</a></td>
+			<td class="">PC.RB231_c</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>당월패키지</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_장바구니(렌탈)_당월패키지.html" target="_blank">렌탈_회원_장바구니(렌탈)_당월패키지</a></td>
+			<td class="">PC.RB231_d</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>플러스패키지</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_장바구니(렌탈)_플러스패키지.html" target="_blank">렌탈_회원_장바구니(렌탈)_플러스패키지</a></td>
+			<td class="">PC.RB231_e</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>장바구니(렌탈) 제품없음</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_장바구니(렌탈)_제품없음.html" target="_blank">렌탈회원 장바구니(렌탈) 제품없음</a></td>
+			<td class="">PC.RB221_a</td>
+		</tr>
+			<tr class="ok">
+			<td></td>
+			<td>장바구니(일시불)</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_장바구니(일시불).html" target="_blank">렌탈회원 장바구니(일시불)</a></td>
+			<td class="">PC.RB221_b</td>
+		</tr>
+		</tr>
+			<tr class="ok">
+			<td></td>
+			<td>장바구니(일시불) 일시품절</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_장바구니(일시불)_일시품절.html" target="_blank">렌탈_회원_장바구니(일시불)_일시품절</a></td>
+			<td class="">PC.RB620</td>
+		</tr>
+		</tr>
+			<tr class="ok">
+			<td></td>
+			<td>장바구니(일시불) 제품잇음</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_장바구니(일시불).html" target="_blank">렌탈회원 장바구니(일시불)</a></td>
+			<td class="">PC.RB211_b</td>
+		</tr>
+
+		</tr>
+			<tr class="ok">
+			<td></td>
+			<td>장바구니(일시불) 제품없음</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_장바구니(일시불)_제품없음.html" target="_blank">렌탈회원 장바구니(일시불) 제품없음</a></td>
+			<td class="">PC.RB211_a</td>
+		</tr>
+		<tr class="ok">
+			<td>주문결제 (렌탈)</td>
+			<td>렌탈_회원_주문결제(단품주문시)</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_주문결제(단품주문시).html" target="_blank">렌탈_회원_주문결제(단품주문시)</a></td>
+			<td class="">PC.RB311, PC.RB321_a, PC.RB321_b, PC.RB340</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>렌탈_회원_주문결제(복수제품주문시)</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_주문결제(복수제품주문시).html" target="_blank">렌탈_회원_주문결제(복수제품주문시)</a></td>
+			<td class="">PC.RB510</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>렌탈_회원_주문결제(일시불)</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_주문결제(일시불).html" target="_blank">렌탈_회원_주문결제(일시불)</a></td>
+			<td class="">PC.RB610, PC.RB720</td>
+		</tr>
+
+		<tr class="ok">
+			<td>주문완료 (렌탈)</td>
+			<td>렌탈_회원_주문완료(단일제품주문시)</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_주문완료(단일제품주문시).html" target="_blank">렌탈_회원_주문완료(단일제품주문시)</a></td>
+			<td class="">PC.RB410, </td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>렌탈_회원_주문완료(복수제품주문시)</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_주문완료(복수제품주문시).html" target="_blank">렌탈_회원_주문완료(복수제품주문시)</a></td>
+			<td class="">PC.RB520</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>렌탈_회원_주문완료(택배단품발송시)</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_주문완료(택배단품발송시).html" target="_blank">렌탈_회원_주문완료(택배단품발송시)</a></td>
+			<td class=""></td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>렌탈_회원_주문완료(당월패키지)</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_주문완료(단품)_당월패키지.html" target="_blank">렌탈_회원_주문완료(단품)_당월패키지</a></td>
+			<td class="">PC.RB420</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>렌탈_회원_주문안료 일시불 무통장</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_주문완료(일시불무통장입금).html" target="_blank">렌탈_회원_주문안료 일시불 무통장</a></td>
+			<td class="">PC.RB731_a, PC.RB731_c</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>렌탈_회원_주문안료 일시불신용카드</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_주문완료(일시불신용카드).html" target="_blank">렌탈_회원_주문안료 일시불신용카드</a></td>
+			<td class="">PC.RB731_b</td>
+		</tr>
+		<tr class="ok">
+			<td></td>
+			<td>렌탈_회원_주문결제(할부)</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_주문결제(할부).html" target="_blank">렌탈_회원_주문결제(할부)</a></td>
+			<td class="">PC.RB810</td>
+		</tr>
+
+		<tr class="ok">
+			<td></td>
+			<td>렌탈_회원_주문완료(당월패키지)</td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_주문완료(단품)_당월패키지.html" target="_blank">렌탈_회원_주문완료(단품)_당월패키지</a></td>
+			<td class="">PC.RB420</td>
+		</tr>
+
+
+		<tr class="ok">
+			<td>렌탈팝업</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/rental_order/렌탈_회원_공통팝업.html" target="_blank">렌탈팝업</a></td>
+			<td class="">PC.RB331, PC.RB332</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<h2>마이페이지 (마이쿠쿠)</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="20%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="ok">
+			<td>마이페이지 (마이쿠쿠)</td>
+			<td rowspan="2">메인</td>
+			<td></td>
+			<td></td>
+			<td rowspan="31">mycuckoo</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠.html" target="_blank">05_마이쿠쿠</a></td>
+			<td class="">PC.H110</td>
+			<td class=""></td>
+		</tr>
+		<tr class="ok">
+			<td>사업자회원</td>
+			<td></td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_사업자회원.html" target="_blank">05_마이쿠쿠_사업자회원</a></td>
+			<td class="">PC.H120</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>마이쿠쿠팝업모음</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠(팝업).html" target="_blank">05_마이쿠쿠(팝업)</a></td>
+			<td class="">PC.H522_a, PC.H522_b(인쇄_시스템팝업), PC.H533_a, PC.H533_b, PC.H632, PC.H634_a, PC.H634_b, PC.H635, PC.H713_a, PC.H713_b, PC.H723, PC.H1121, PC.H1122, PC.H1123, PC.RC272_b, PC.RC262_a, PC.RC243_a, PC.RC243_b, PC.RC221, PC.RC222</td>
+			<td></td>
+		</tr>
+		<!--나의쇼핑-->
+		<tr class="ok">
+			<td rowspan="34">나의쇼핑</td>
+			<td rowspan="16">주문내역</td>
+			<td>리스트</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_주문내역.html" target="_blank">05_마이쿠쿠_나의쇼핑_주문내역</a></td>
+			<td class="">PC.H210, PC.H220</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>상세</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_주문내역_상세.html" target="_blank">05_마이쿠쿠_나의쇼핑_주문내역_상세</a></td>
+			<td class="">PC.H231</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>상세-배송지변경</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_주문내역_상세_배송지변경.html" target="_blank">05_마이쿠쿠_나의쇼핑_주문내역_상세_배송지변경</a></td>
+			<td class="">PC.H232</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="2">취소요청</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_주문내역_주문취소_선택.html" target="_blank">05_마이쿠쿠_나의쇼핑_주문내역_주문취소_선택</a></td>
+			<td class="">PC.H240</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_주문내역_주문취소_완료.html" target="_blank">05_마이쿠쿠_나의쇼핑_주문내역_주문취소_완료</a></td>
+			<td class="">PC.H330</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="6">반품요청</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_주문내역_반품요청_선택.html" target="_blank">05_마이쿠쿠_나의쇼핑_주문내역_반품요청_선택</a></td>
+			<td class="">PC.H250</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_주문내역_반품요청_요청.html" target="_blank">05_마이쿠쿠_나의쇼핑_주문내역_반품요청_요청</a></td>
+			<td class="">PC.H341</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_주문내역_반품요청_요청승인.html" target="_blank">05_마이쿠쿠_나의쇼핑_주문내역_반품요청_요청승인</a></td>
+			<td class="">PC.H342</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_주문내역_반품요청_처리중.html" target="_blank">05_마이쿠쿠_나의쇼핑_주문내역_반품요청_처리중</a></td>
+			<td class="">PC.H343</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_주문내역_반품요청_반품완료.html" target="_blank">05_마이쿠쿠_나의쇼핑_주문내역_반품요청_반품완료</a></td>
+			<td class="">PC.H344</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_주문내역_반품요청_환불완료.html" target="_blank">05_마이쿠쿠_나의쇼핑_주문내역_반품요청_환불완료</a></td>
+			<td class="">PC.H345</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="5">교환요청</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_주문내역_교환요청_선택.html" target="_blank">05_마이쿠쿠_나의쇼핑_주문내역_교환요청_선택</a></td>
+			<td class="">PC.H260</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_주문내역_교환요청_요청.html" target="_blank">05_마이쿠쿠_나의쇼핑_주문내역_교환요청_요청</a></td>
+			<td class="">PC.H351</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_주문내역_교환요청_요청승인.html" target="_blank">05_마이쿠쿠_나의쇼핑_주문내역_교환요청_요청승인</a></td>
+			<td class="">PC.H352</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_주문내역_교환요청_처리중.html" target="_blank">05_마이쿠쿠_나의쇼핑_주문내역_교환요청_처리중</a></td>
+			<td class="">PC.H353</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_주문내역_교환요청_교환완료.html" target="_blank">05_마이쿠쿠_나의쇼핑_주문내역_교환요청_교환완료</a></td>
+			<td class="">PC.H354</td>
+			<td></td>
+		</tr>
+
+		<tr class="ok">
+			<td rowspan="10">비회원 주문내역</td>
+			<td>상세</td>
+			<td><a href="./html/mycuckoo/05_비회원_나의쇼핑_주문내역_상세.html" target="_blank">05_비회원_나의쇼핑_주문내역_상세</a></td>
+			<td class="">PC.H411</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>상세_배송지변경</td>
+			<td><a href="./html/mycuckoo/05_비회원_나의쇼핑_주문내역_상세_배송지변경.html" target="_blank">05_비회원_나의쇼핑_주문내역_상세_배송지변경</a></td>
+			<td class="">PC.H412</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="2">취소요청(선택, 완료)</td>
+			<td><a href="./html/mycuckoo/05_비회원_나의쇼핑_주문내역_주문취소_선택.html" target="_blank">05_비회원_나의쇼핑_주문내역_주문취소_선택</a></td>
+			<td class="">PC.H420</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_비회원_나의쇼핑_주문내역_주문취소_완료.html" target="_blank">05_비회원_나의쇼핑_주문내역_주문취소_완료</a></td>
+			<td class=""></td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="3">반품요청(선택, 요청, 처리중)</td>
+			<td><a href="./html/mycuckoo/05_비회원_나의쇼핑_주문내역_반품요청_선택.html" target="_blank">05_비회원_나의쇼핑_주문내역_반품요청_선택</a></td>
+			<td class="">PC.H430</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_비회원_나의쇼핑_주문내역_반품요청_요청.html" target="_blank">05_비회원_나의쇼핑_주문내역_반품요청_요청</a></td>
+			<td class=""></td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_비회원_나의쇼핑_주문내역_반품요청_처리중.html" target="_blank">05_비회원_나의쇼핑_주문내역_반품요청_처리중</a></td>
+			<td class=""></td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="3">교환요청(선택, 요청, 처리중)</td>
+			<td><a href="./html/mycuckoo/05_비회원_나의쇼핑_주문내역_교환요청_선택.html" target="_blank">05_비회원_나의쇼핑_주문내역_교환요청_선택</a></td>
+			<td class="">PC.H440</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_비회원_나의쇼핑_주문내역_교환요청_요청.html" target="_blank">05_비회원_나의쇼핑_주문내역_교환요청_요청</a></td>
+			<td class=""></td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_비회원_나의쇼핑_주문내역_교환요청_처리중.html" target="_blank">05_비회원_나의쇼핑_주문내역_교환요청_처리중</a></td>
+			<td class=""></td>
+			<td></td>
+		</tr>
+
+		<tr class="ok">
+			<td rowspan="2">취소/반품/교환 내역</td>
+			<td>리스트</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_취소반품교환내역.html" target="_blank">05_마이쿠쿠_나의쇼핑_취소반품교환내역</a></td>
+			<td class="">PC.H310, PC.H320</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>비회원</td>
+			<td><a href="./html/mycuckoo/05_비회원_나의쇼핑_취소반품교환내역.html" target="_blank">05_비회원_나의쇼핑_취소반품교환내역</a></td>
+			<td class=""></td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="6">제품등록내역</td>
+			<td>리스트</td>
+			<td></td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_제품등록내역_리스트.html" target="_blank">05_마이쿠쿠_나의쇼핑_제품등록내역_리스트</a></td>
+			<td class="">PC.H510, PC.H521</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>제품등록</td>
+			<td></td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_제품등록내역_제품등록.html" target="_blank">05_마이쿠쿠_나의쇼핑_제품등록내역_제품등록</a></td>
+			<td class="">PC.H531</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>무상A/S연장_팝업</td>
+			<td>popup</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_제품등록내역_제품등록.html" target="_blank">05_마이쿠쿠_나의쇼핑_제품등록내역_제품등록</a></td>
+			<td>PC.H534(무상 A/S 기간 연장 안내 버튼)</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>제품등록완료</td>
+			<td>mycuckoo</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의쇼핑_제품등록내역_완료.html" target="_blank">05_마이쿠쿠_나의쇼핑_제품등록내역_완료</a></td>
+			<td></td>
+			<td class=""></td>
+		</tr>
+		<tr class="del">
+			<td>인쇄-팝업</td>
+			<td rowspan="2">popup</td>
+			<td><a href="./html/mycuckoo/.html" target="_blank">시스템처리</a></td>
+			<td class="caution">포함 시킬 페이지 미정</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>삭제-팝업</td>
+
+			<td><a href="./html/mycuckoo/05_마이쿠쿠(팝업).html" target="_blank">05_마이쿠쿠(팝업)</a></td>
+			<td>''제품등록리스트(삭제)' 버튼</td>
+			<td></td>
+		</tr>
+
+		<!--나의렌탈-->
+		<tr class="ok">
+			<td rowspan="14">나의렌탈</td>
+			<td rowspan="2">렌탈이용내역(탭처리)</td>
+			<td>리스트</td>
+			<td rowspan="17">mycuckoo</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의렌탈_렌탈이용내역.html" target="_blank">05_마이쿠쿠_나의렌탈_렌탈이용내역</a></td>
+			<td class="">PC.RC210, PC.RC220, PC.RC241</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>계약정보, 점검내역, 납부내역(탭처리)</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의렌탈_렌탈이용내역_계약정보.html" target="_blank">05_마이쿠쿠_나의렌탈_렌탈이용내역_계약정보</a></td>
+			<td class="">PC.RC251, PC.RC261, PC.RC271</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>사은품배송조회</td>
+			<td>리스트</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의렌탈_렌탈이용내역_사은품배송조회.html" target="_blank">05_마이쿠쿠_나의렌탈_렌탈이용내역_사은품배송조회</a></td>
+			<td class="">PC.RC311</td>
+			<td></td>
+		</tr>
+
+		<tr class="ok">
+			<td rowspan="2">일시불구매내역</td>
+			<td>리스트</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의렌탈_일시불구매내역.html" target="_blank">05_마이쿠쿠_나의렌탈_일시불구매내역</a></td>
+			<td class="">PC.RC412, PC.RC413</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>상세</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의렌탈_일시불구매내역_상세.html" target="_blank">05_마이쿠쿠_나의렌탈_일시불구매내역_상세</a></td>
+			<td class="">PC.RC411</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="9">취소/반품/교환 내역</td>
+			<td>리스트</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의렌탈_취소반품교환내역.html" target="_blank">05_마이쿠쿠_나의렌탈_취소반품교환내역</a></td>
+			<td class="">PC.RC422</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="2">취소요청(선택, 완료)</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의렌탈_주문내역_주문취소_선택.html" target="_blank">05_마이쿠쿠_나의렌탈주문내역_주문취소_선택</a></td>
+			<td class="">PC.RC423</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의렌탈_주문내역_주문취소_완료.html" target="_blank">05_마이쿠쿠_나의렌탈_주문내역_주문취소_완료</a></td>
+			<td class=""></td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="3">반품요청(선택, 요청, 처리중)</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의렌탈_주문내역_반품요청_선택.html" target="_blank">05_마이쿠쿠_나의렌탈_주문내역_반품요청_선택</a></td>
+			<td class=""></td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의렌탈_주문내역_반품요청_요청.html" target="_blank">05_마이쿠쿠_나의렌탈_주문내역_반품요청_요청</a></td>
+			<td class=""></td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의렌탈_주문내역_반품요청_처리중.html" target="_blank">05_마이쿠쿠_나의렌탈_주문내역_반품요청_처리중</a></td>
+			<td class=""></td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="3">교환요청(선택, 요청, 처리중)</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의렌탈_주문내역_교환요청_선택.html" target="_blank">05_마이쿠쿠_나의렌탈_주문내역_교환요청_선택</a></td>
+			<td class=""></td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의렌탈_주문내역_교환요청_요청.html" target="_blank">05_마이쿠쿠_나의렌탈_주문내역_교환요청_요청</a></td>
+			<td class=""></td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_나의렌탈_주문내역_교환요청_처리중.html" target="_blank">05_마이쿠쿠_나의렌탈_주문내역_교환요청_처리중</a></td>
+			<td class=""></td>
+			<td></td>
+		</tr>
+
+		<!--A/S 내역-->
+		<tr class="ok">
+			<td rowspan="6">A/S 내역</td>
+			<td>리스트</td>
+			<td></td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_as내역_리스트.html" target="_blank">05_마이쿠쿠_as내역_리스트</a></td>
+			<td class="">PC.H610, PC.H620</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>상세</td>
+			<td></td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_as내역_상세내역.html" target="_blank">05_마이쿠쿠_as내역_상세내역</a></td>
+			<td class="">PC.H641</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>신청정보입력</td>
+			<td></td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_as신청.html" target="_blank">05_마이쿠쿠_as신청</a></td>
+			<td class="">PC.H631</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>접수내용확인</td>
+			<td></td>
+			<td>popup</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠(팝업).html" target="_blank">05_마이쿠쿠(팝업)</a></td>
+			<td class="">'출장as신청확인'버튼</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>신청접수완료</td>
+			<td></td>
+			<td>mycuckoo</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_as내역_상세내역_접수완료.html" target="_blank">05_마이쿠쿠_as내역_상세내역_접수완료</a></td>
+			<td class="">PC.H633</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>서비스완료</td>
+			<td></td>
+			<td>mycuckoo</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_as내역_상세내역_서비스완료.html" target="_blank">05_마이쿠쿠_as내역_상세내역_서비스완료</a></td>
+			<td class="">PC.H642</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>서비스요금기준안내</td>
+			<td></td>
+			<td></td>
+			<td>popup</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠(팝업).html" target="_blank">05_마이쿠쿠(팝업)</a></td>
+			<td class="">'서비스요금안내'버튼</td>
+			<td></td>
+		</tr>
+
+		<!--찜내역-->
+		<tr class="ok">
+			<td rowspan="2">찜내역</td>
+			<td>쿠쿠몰, 쿠쿠렌탈(탭처리)</td>
+			<td></td>
+			<td rowspan="12">mycuckoo</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_관심제품_쿠쿠몰_리스트.html" target="_blank">05_마이쿠쿠_관심제품_쿠쿠몰_리스트</a></td>
+			<td class="">PC.H711, PC.H712</td>
+			<td class=""></td>
+		</tr>
+		<tr class="ok">
+			<td>쿠쿠렌탈</td>
+			<td></td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_관심제품_쿠쿠몰_리스트.html" target="_blank">05_마이쿠쿠_관심제품_쿠쿠몰_리스트</a></td>
+			<td class="">PC.H721, PC.H722</td>
+			<td class=""></td>
+		</tr>
+
+		<!--1:1 문의하기 내역-->
+		<tr class="ok">
+			<td rowspan="2">1:1 문의하기 내역</td>
+			<td>리스트/상세</td>
+			<td class=""></td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_문의내역_리스트.html" target="_blank">05_마이쿠쿠_문의내역_리스트</a></td>
+			<td>PC.H810, PC.H820, PC.H830</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>문의하기 작성</td>
+			<td class=""></td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_문의내역_문의하기.html" target="_blank">05_마이쿠쿠_문의내역_문의하기</a></td>
+			<td>PC.H841, PC.H842</td>
+			<td></td>
+		</tr>
+
+		<!--쿠폰/포인트-->
+		<tr class="ok">
+			<td rowspan="2">쿠폰/포인트</td>
+			<td>쿠폰내역</td>
+			<td class=""></td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_쿠폰포인트_쿠폰_리스트.html" target="_blank">05_마이쿠쿠_쿠폰포인트_쿠폰_리스트</a></td>
+			<td>PC.H911, PC.H912</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>포인트내역</td>
+			<td class=""></td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_쿠폰포인트_포인트_리스트.html" target="_blank">05_마이쿠쿠_쿠폰포인트_포인트_리스트</a></td>
+			<td>PC.H921, PC.H922</td>
+			<td></td>
+		</tr>
+
+		<!--회원정보수정-->
+		<tr class="ok">
+			<td rowspan="8">회원정보수정</td>
+			<td>비밀번호확인</td>
+			<td></td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_회원정보수정_비밀번호입력.html" target="_blank">05_마이쿠쿠_회원정보수정_비밀번호입력</a></td>
+			<td class="">PC.H1010</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>정보수정</td>
+			<td></td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_회원정보수정_개인회원_일반회원.html" target="_blank">05_마이쿠쿠_회원정보수정_개인회원_일반회원</a></td>
+			<td class="">PC.H1022</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>정보수정_sns</td>
+			<td></td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_회원정보수정_개인회원_sns.html" target="_blank">05_마이쿠쿠_회원정보수정_개인회원_sns</a></td>
+			<td class="">PC.H1021</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>정보수정_사업자</td>
+			<td></td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_회원정보수정_개인회원_사업자회원.html" target="_blank">05_마이쿠쿠_회원정보수정_개인회원_사업자회원</a></td>
+			<td class="">PC.H1031</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>사업자회원_관리자승인</td>
+			<td></td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_회원정보수정_사업자회원안내.html" target="_blank">05_마이쿠쿠_회원정보수정_사업자회원안내</a></td>
+			<td class="">PC.H1032</td>
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="3">회원탈퇴</td>
+			<td>안내</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠_회원탈퇴_탈퇴확인.html" target="_blank">05_마이쿠쿠_회원탈퇴_탈퇴확인</a></td>
+			<td>PC.H1110</td>
+			<td class=""></td>
+		</tr>
+		<tr class="ok">
+			<td>탈퇴 확인</td>
+			<td rowspan="2">popup</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠(팝업).html" target="_blank">05_마이쿠쿠(팝업)</a></td>
+			<td>PC.H1121</td>
+
+			<td></td>
+		</tr>
+		<tr class="ok">
+			<td>완료</td>
+			<td><a href="./html/mycuckoo/05_마이쿠쿠(팝업).html" target="_blank">05_마이쿠쿠(팝업)</a></td>
+			<td>PC.H1123</td>
+			<td></td>
+		</tr>
+		</tbody>
+	</table>
+
+	<h2>고객센터</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="20%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="ok">
+			<td>고객센터</td>
+			<td rowspan="35">고객센터</td>
+			<td>고객센터메인</td>
+			<td></td>
+			<td rowspan="11">cs</td>
+			<td><a href="./html/cs/index.html" target="_blank">고객센터 메인</a></td>
+			<td class="">PC.J110, PC.J120</td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="3">공지사항</td>
+			<td>리스트</td>
+			<td><a href="./html/cs/고객센터_공지사항_리스트.html" target="_blank">리스트</a></td>
+			<td class="">PC.J1310, PC.J1320</td>
+		</tr>
+		<tr CLASS="ok">
+			<td>상세</td>
+			<td><a href="./html/cs/고객센터_공지사항_뷰.html" target="_blank">뷰</a></td>
+			<td class="">PC.J1340</td>
+		</tr>
+		<tr CLASS="ok">
+			<td>검색결과없음</td>
+			<td><a href="./html/cs/고객센터_공지사항_결과없음.html" target="_blank">검색 결과없음</a></td>
+			<td class="">PC.J1330</td>
+		</tr>
+		<tr class="ok">
+			<td>FAQ</td>
+			<td></td>
+			<td><a href="./html/cs/고객센터_FAQ.html" target="_blank">FAQ</a></td>
+			<td class="">PC.J1210, PC.J1220</td>
+		</tr>
+		<tr class="ok">
+			<td>1:1문의하기</td>
+			<td></td>
+			<td><a href="./html/cs/고객센터_11문의.html" target="_blank">1:1문의하기</a></td>
+			<td class="">PC.J511, PC.J512</td>
+		</tr>
+		<tr class="ok">
+			<td>렌탈상담신청</td>
+			<td></td>
+			<td><a href="./html/cs/고객센터_렌탈상담신청.html" target="_blank">렌탈상담신청</a></td>
+			<td class="">PC.J410</td>
+		</tr>
+		<tr class="ok">
+			<td>서비스센터찾기</td>
+			<td></td>
+			<td><a href="./html/cs/고객센터_서비스센터찾기.html" target="_blank">고객센터_서비스센터찾기</a></td>
+			<td class="">PC.J710, PC.J720</td>
+		</tr>
+		<tr class="ok">
+			<td rowspan="2">쿠쿠전문매장찾기</td>
+			<td></td>
+			<td><a href="./html/cs/고객센터_쿠쿠매장찾기.html" target="_blank">고객센터_쿠쿠매장찾기</a></td>
+			<td class="">PC.J1010</td>
+		</tr>
+		<tr class="ok">
+			<td>매장찾기_결과없음</td>
+			<td><a href="./html/cs/고객센터_쿠쿠매장찾기_검색전.html" target="_blank">고객센터_쿠쿠매장찾기_결과없음</a></td>
+			<td class="caution">PC.J1020</td>
+		</tr>
+		<!--출장 A/S 신청-->
+		<tr class="ok">
+			<td rowspan="4">출장 A/S 신청</td>
+			<td>신청정보입력</td>
+			<td><a href="./html/cs/고객센터_출장AS신청.html" target="_blank">출장AS신청</a></td>
+			<td class="">PC.J610</td>
+		</tr>
+		<tr class="ok">
+			<td>접수내용확인</td>
+			<td>popup</td>
+			<td><a href="./html/cs/고객센터_팝업공통.html" target="_blank">접수내용확인</a></td>
+			<td class="caution">PC.J620</td>
+		</tr>
+		<tr class="ok">
+			<td>신청접수완료</td>
+			<td>cs</td>
+			<td><a href="./html/cs/고객센터_출장AS신청_접수완료.html" target="_blank">출장AS 접수완료</a></td>
+			<td class="">PC.J630</td>
+		</tr>
+		<tr class="ok">
+			<td>서비스요금기준안내</td>
+			<td>popup</td>
+			<td><a href="./html/cs/고객센터_팝업공통.html" target="_blank">서비스요금기준안내</a></td>
+			<td class="caution">PC.J641, PC.J642, PC.J650</td>
+		</tr>
+
+		<!--제품등록-->
+		<tr class="ok">
+			<td rowspan="3">제품등록</td>
+			<td>정보입력</td>
+			<td rowspan="2">cs</td>
+			<td><a href="./html/cs/고객센터_제품등록.html" target="_blank">제품등록</a></td>
+			<td class="">PC.J810</td>
+		</tr>
+		<tr class="ok">
+			<td>등록완료</td>
+			<td><a href="./html/cs/고객센터_제품등록_완료.html" target="_blank">제품등록 완료</a></td>
+			<td class="">PC.J820</td>
+		</tr>
+		<tr class="ok">
+			<td>무상A/S기간연장안내</td>
+			<td>popup</td>
+			<td><a href="./html/cs/고객센터_팝업공통.html" target="_blank">무상a/s기간연장안내</a></td>
+			<td class="caution">PC.J831, PC.J832, PC.J840, PC.J1112, PC.J1132_a, PC.J1132_b</td>
+		</tr>
+
+		<!--제품관리가이드-->
+
+		<!--해외서비스안내-->
+		<tr class="ok">
+			<td rowspan="">해외서비스안내</td>
+			<td>해외서비스안내</td>
+			<td rowspan="">cs</td>
+			<td><a href="./html/cs/고객센터_해외서비스안내.html" target="_blank">해외서비스안내</a></td>
+			<td class="">PC.J1111, PC.J1121, PC.J1122, PC.J1123, PC.J1131, PC.J1140</td>
+		</tr>
+
+		<!-- 스스로제품점검 -->
+		<tr class="ok">
+			<td rowspan="6">스스로제품 점검</td>
+			<td>스스로제품점검메인</td>
+			<td rowspan="6">cs</td>
+			<td><a href="./html/cs/고객센터_스스로제품점검.html" target="_blank">스스로제품점검메인</a></td>
+			<td>PC.J210</td>
+		</tr>
+		<tr class="ok">
+			<td>키워드검색결과</td>
+			<td><a href="./html/cs/고객센터_스스로제품점검_검색결과1.html" target="_blank">스스로제품점검_검색결과1</a></td>
+			<td>PC.J221, PC.J222</td>
+		</tr>
+		<tr class="ok">
+			<td>고장자가진단검색결과</td>
+			<td><a href="./html/cs/고객센터_스스로제품점검_검색결과2.html" target="_blank">스스로제품점검_검색결과2</a></td>
+			<td>PC.J231, PC.J232</td>
+		</tr>
+		<tr class="ok">
+			<td>제품관리선택결과</td>
+			<td><a href="./html/cs/고객센터_스스로제품점검_검색결과3.html" target="_blank">스스로제품점검_검색결과3</a></td>
+			<td>PC.J241, PC.J242</td>
+		</tr>
+		<tr class="ok">
+			<td>스스로제품점검검색결과1_상세</td>
+			<td><a href="./html/cs/고객센터_스스로제품점검_검색결과1_상세.html" target="_blank">스스로제품점검_검색결과1_상세</a></td>
+			<td>PC.J251</td>
+		</tr>
+		<tr class="ok">
+			<td>스스로제품점검검색결과없음</td>
+			<td><a href="./html/cs/고객센터_스스로제품점검_결과없음.html" target="_blank">스스로제품점검_검색결과없음</a></td>
+			<td></td>
+		</tr>
+		<!-- 제품설명서다운로드 -->
+		<tr class="ok">
+			<td rowspan="5">제품설명서 다운로드</td>
+			<td>제품설명서 다운로드_모델명찾기</td>
+			<td rowspan="5">cs</td>
+			<td><a href="./html/cs/고객센터_제품설명서다운로드_모델명찾기.html" target="_blank">제품설명서 다운로드_모델명찾기</a></td>
+			<td>PC.J913</td>
+		</tr>
+		<tr class="ok">
+			<td>제품설명서 다운로드_모델명찾기_검색결과</td>
+			<td><a href="./html/cs/고객센터_제품설명서다운로드_모델명찾기_검색결과.html" target="_blank">고객센터_제품설명서다운로드_모델명찾기_검색결과</a></td>
+			<td>PC.J911, PC.J912</td>
+		</tr>
+		<tr class="ok">
+			<td>제품설명서 다운로드_제품군찾기</td>
+			<td><a href="./html/cs/고객센터_제품설명서다운로드_제품군찾기.html" target="_blank">고객센터_제품설명서다운로드_제품군찾기</a></td>
+			<td>PC.J921</td>
+		</tr>
+		<tr class="ok">
+			<td>제품설명서 다운로드_제품군찾기_검색결과</td>
+			<td><a href="./html/cs/고객센터_제품설명서다운로드_제품군찾기_검색결과.html" target="_blank">고객센터_제품설명서다운로드_제품군찾기_검색결과</a></td>
+			<td>PC.J922, PC.J923</td>
+		</tr>
+		<tr class="ok">
+			<td>제품설명서 다운로드_제품군찾기_검색결과 업음</td>
+			<td><a href="./html/cs/고객센터_제품설명서다운로드_제품군찾기_검색결과없음.html" target="_blank">고객센터_제품설명서다운로드_제품군찾기_검색결과 없음</a></td>
+			<td>PC.J924</td>
+		</tr>
+		</tbody>
+	</table>
+	<h2>기타</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="20%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="ok">
+			<td rowspan="2">기타</td>
+			<td>에러페이지</td>
+			<td></td>
+			<td></td>
+			<td rowspan="3">etc</td>
+			<td><a href="./html/etc/에러.html" target="_blank">에러페이지</a></td>
+			<td class="">PC.L100</td>
+		</tr>
+		<tr class="ok">
+			<td>서버점검페이지</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/etc/서버점검.html" target="_blank">서버점검페이지</a></td>
+			<td class="">PC.L200</td>
+		</tr>
+		<tr class="ok">
+			<td>로딩</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/etc/로딩.html" target="_blank">로딩</a></td>
+			<td class=""></td>
+		</tr>
+		</tbody>
+	</table>
+
+	<h2>메일폼</h2>
+	<table>
+		<colgroup>
+			<col width="10%">
+			<col width="15%">
+			<col width="15%">
+			<col width="20%">
+			<col width="10%">
+			<col width="10%">
+			<col>
+		</colgroup>
+		<tbody>
+		<tr class="ok">
+			<td>메일폼</td>
+			<td>회원가입완료(일반)</td>
+			<td></td>
+			<td></td>
+			<td rowspan="22">mailform</td>
+			<td><a href="./html/mailform/신규회원가입01.html" target="_blank">일반회원가입</a></td>
+			<td class="">PC.K111</td>
+		</tr>
+		<tr class="ok">
+			<td>회원가입완료(SNS)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/신규회원가입02.html" target="_blank">회원가입(SNS)</a></td>
+			<td class="">PC.K112</td>
+		</tr>
+		<tr class="ok">
+			<td>회원탈퇴완료</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/회원탈퇴.html" target="_blank">회원탈퇴</a></td>
+			<td class="">PC.K120</td>
+		</tr>
+		<tr class="ok">
+			<td>휴면회원전환</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/휴면회원전환.html" target="_blank">휴면회원전환</a></td>
+			<td class="">PC.K130</td>
+		</tr>
+		<tr class="ok">
+			<td>휴면회원해제안내</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/휴면회원해제.html" target="_blank">휴면회원해제</a></td>
+			<td class="">PC.K140</td>
+		</tr>
+		<tr class="ok">
+			<td>주문완료 (몰)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/주문완료(쿠쿠몰).html" target="_blank">주문완료(쿠쿠몰)</a></td>
+			<td class="">PC.K200</td>
+		</tr>
+		<tr class="ok">
+			<td>주문취소 (몰)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/취소요청(쿠쿠몰).html" target="_blank">취소요청(쿠쿠몰)</a></td>
+			<td class="">PC.K310</td>
+		</tr>
+		<tr class="ok">
+			<td>주문취소완료 (몰)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/취소완료(쿠쿠몰).html" target="_blank">취소완료(쿠쿠몰)</a></td>
+			<td class="">PC.K320</td>
+		</tr>
+		<tr class="ok">
+			<td>주문완료 (렌탈)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/렌탈_주문완료_개인회원.html" target="_blank">렌탈_주문완료_개인회원</a></td>
+			<td class="">PC.RC110</td>
+		</tr>
+		<tr class="ok">
+			<td>주문완료 (렌탈) 사업자회원</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/렌탈_주문완료_사업자회원.html" target="_blank">렌탈_주문완료_사업자회원</a></td>
+			<td class="">PC.RC110</td>
+		</tr>
+		<tr class="ok">
+			<td>주문완료 (렌탈)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/렌탈_주문완료_개인회원.html" target="_blank">렌탈_주문완료_개인회원</a></td>
+			<td class="">PC.RD210</td>
+		</tr>
+		<tr class="ok">
+			<td>주문취소 (렌탈)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/취소요청(렌탈).html" target="_blank">취소요청(렌탈)</a></td>
+			<td class="">PC.RD310</td>
+		</tr>
+		<tr class="ok">
+			<td>반품요청 (몰)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/교환요청(쿠쿠몰).html" target="_blank">교환요청(쿠쿠몰)</a></td>
+			<td class="">PC.K330</td>
+		</tr>
+		<tr class="ok">
+			<td>교환요청 (몰)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/교환요청(렌탈).html" target="_blank">교환요청(렌탈)</a></td>
+			<td class="">PC.K340</td>
+		</tr>
+		<tr class="ok">
+			<td>제품발송안내</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/제품발송완료(쿠쿠몰).html" target="_blank">제품발송완료(쿠쿠몰)</a></td>
+			<td class="">PC.K400</td>
+		</tr>
+		<tr class="ok">
+			<td>구매확정안내 (몰)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/구매확정안내(쿠쿠몰).html" target="_blank">구매확정안내(쿠쿠몰)</a></td>
+			<td class="">PC.K500</td>
+		</tr>
+		<tr class="ok">
+			<td>구매확정안내 (렌탈일시불)</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/렌탈_구매확정안내.html" target="_blank">렌탈_구매확정안내</a></td>
+			<td class="">PC.RD510</td>
+		</tr>
+		<tr class="ok">
+			<td>1:1문의답변</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/.html" target="_blank">문의답변완료</a></td>
+			<td class="">PC.K600</td>
+		</tr>
+		<tr class="ok">
+			<td>출장 A/S 접수 안내</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/출장AS접수안내.html" target="_blank">출장AS접수안내</a></td>
+			<td class="">PC.K700</td>
+		</tr>
+		<tr class="ok">
+			<td>수신동의</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/수신동의안내.html" target="_blank">수신동의안내</a></td>
+			<td class="">PC.K800</td>
+		</tr>
+		<tr class="ok">
+			<td>공지/이벤트</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/공지,이벤트.html" target="_blank">공지,이벤트</a></td>
+			<td class="">PC.K900</td>
+		</tr>
+		<tr class="ok">
+			<td>개인정보이용내역</td>
+			<td></td>
+			<td></td>
+			<td><a href="./html/mailform/개인정보이용내역.html" target="_blank">개인정보이용내역</a></td>
+			<td class="">PC.K1000</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

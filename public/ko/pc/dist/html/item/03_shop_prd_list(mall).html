@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>CUCKOO</title>
+  <!-- 공통적용헤더정보 -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- //공통적용헤더정보 -->
+  <meta name="Description" content="CUCKOO">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CUCKOO">
+  <meta property="og:description" content="CUCKOO">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="CUCKOO">
+  <meta name="Keywords" content="CUCKOO">
+  <meta name="Author" content="CUCKOO">
+  <meta name="robots" content="ALL">
+  <link rel="stylesheet" href="../../stylesheets/css/common.css">
+  <link rel="stylesheet" href="../../stylesheets/css/content.css">
+  <script src="../../javascripts/jquery-1.8.2.min.js"></script>
+  <script src="../../javascripts/jquery-ui.min.js"></script>
+</head>
+
+<body>
+  <!-- skipNavigation-->
+  <div id="skipNavigation">
+    <ul>
+      <li><a href="#gnb">Main menu</a></li>
+      <li><a href="#container">Contents</a></li>
+    </ul>
+  </div>
+  <!-- //skipNavigation-->
+
+  <!-- header-->
+  <header id="header" class="shop">
+    
+  </header>
+  <!-- //header-->
+
+  <script>
+    $(document).ready(function (){
+
+
+      var $searchBox = $(".search-box")
+      var $searchBoxArray = $(".search-box li")
+      var $searchBoxArrayBtn = $(".search-box input")
+      var $prdListWrap = $(".prd_list_wrap");
+
+      $searchBoxArrayBtn.click(function () {
+        $prdListWrap.css({"opacity":"0", "transition":".3s ease all"});
+
+
+        setTimeout(function() {
+          loadingOpen();
+        },250);
+
+        setTimeout(function() {
+          loadingClose();
+          $prdListWrap.css({"opacity":"1", "transition":".3s ease all"});
+
+        },2000);
+
+
+
+      });
+
+
+
+    });
+
+  </script>
+
+
+  <!--container-->
+    <div id="container">
+        <div class="top_content">
+            <div class="location">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>밥솥</li>
+                </ul>
+            </div>
+        </div>
+        <div class="visual_area">
+          <img src="../../images/item/temp_visual.png" alt="">
+        </div>
+        <div class="content">
+          <div class="prd-search">
+            <h2 class="tit_03">맞춤검색</h2>
+            <button type="button" class="btn_s radius btn_reset"><i class="ico reset"></i><span>초기화</span></button>
+            <div class="search-box">
+              <!-- [D]검색조건이 5개가되면 col5클래스 추가 -->
+              <div class="inner-box">
+                <p class="tit">품목</p>
+                <ul>
+                  <li><input type="checkbox" class="check_s" id="check01_01"><label for="check01_01">전체</label></li>
+                  <li><input type="checkbox" class="check_s" id="check01_02"><label for="check01_02">전기압력밥솥</label></li>
+                  <li><input type="checkbox" class="check_s" id="check01_03"><label for="check01_03">트윈프레셔밥솥</label></li>
+                  <li><input type="checkbox" class="check_s" id="check01_04"><label for="check01_04">전기보온밥솥</label></li>
+                  <li><input type="checkbox" class="check_s" id="check01_05"><label for="check01_05">IG전기압력밥솥</label></li>
+                </ul>
+              </div>
+              <div class="inner-box">
+                <p class="tit">용량</p>
+                <ul>
+                  <li><input type="checkbox" class="check_s" id="check02_01"><label for="check02_01">전체</label></li>
+                  <li><input type="checkbox" class="check_s" id="check02_02"><label for="check02_02">8인용</label></li>
+                  <li><input type="checkbox" class="check_s" id="check02_03"><label for="check02_03">3인용</label></li>
+                  <li><input type="checkbox" class="check_s" id="check02_04"><label for="check02_04">10인용</label></li>
+                  <li><input type="checkbox" class="check_s" id="check02_05"><label for="check02_05">6인용</label></li>
+                  <li><input type="checkbox" class="check_s" id="check02_06"><label for="check02_06">10인용</label></li>
+                </ul>
+              </div>
+              <div class="inner-box">
+                <p class="tit">라이프스타일</p>
+                <ul>
+                  <li><input type="checkbox" class="check_s" id="check03_01"><label for="check03_01">전체</label></li>
+                  <li><input type="checkbox" class="check_s" id="check03_02"><label for="check03_02">대가족용</label></li>
+                  <li><input type="checkbox" class="check_s" id="check03_03"><label for="check03_03">싱글</label></li>
+                  <li><input type="checkbox" class="check_s" id="check03_04"><label for="check03_04">업소용</label></li>
+                  <li><input type="checkbox" class="check_s" id="check03_05"><label for="check03_05">신혼부부용</label></li>
+                </ul>
+              </div>
+              <div class="inner-box">
+                <p class="tit">색상</p>
+                <ul>
+                  <li><input type="checkbox" class="check_s" id="check04_01"><label for="check04_01">전체</label></li>
+                  <li><input type="checkbox" class="check_s" id="check04_02"><label for="check04_02">블랙</label></li>
+                  <li><input type="checkbox" class="check_s" id="check04_03"><label for="check04_03">화이트</label></li>
+                  <li><input type="checkbox" class="check_s" id="check04_04"><label for="check04_04">실버</label></li>
+                  <li><input type="checkbox" class="check_s" id="check04_05"><label for="check04_05">레드</label></li>
+                  <li><input type="checkbox" class="check_s" id="check04_06"><label for="check04_06">브라운</label></li>
+                  <li><input type="checkbox" class="check_s" id="check04_06"><label for="check04_06">브라운</label></li>
+                </ul>
+              </div>
+              <!-- <div class="inner-box">
+              <p class="tit">품목</p>
+              <ul>
+                <li><input type="checkbox" class="check_s" id="check05_01"><label for="check05_01">전체</label></li>
+                <li><input type="checkbox" class="check_s" id="check05_02"><label for="check05_02">8인용</label></li>
+                <li><input type="checkbox" class="check_s" id="check05_03"><label for="check05_03">3인용</label></li>
+                <li><input type="checkbox" class="check_s" id="check05_04"><label for="check05_04">10인용</label></li>
+                <li><input type="checkbox" class="check_s" id="check05_05"><label for="check05_05">6인용</label></li>
+                <li><input type="checkbox" class="check_s" id="check05_06"><label for="check05_06">10인용</label></li>
+              </ul>
+            </div> -->
+            </div>
+          </div><!-- //prd-search -->
+          <div class="prd_list_wrap">
+            <div class="top_area">
+              <span class="total">총<span class="point01">24</span>개</span>
+              <div class="tab type_s">
+                <ul class="tab_btn">
+                  <li class="on"><a href="#">인기순</a></li>
+                  <li><a href="#">신상품</a></li>
+                  <li><a href="#">가격낮은순</a></li>
+                  <li><a href="#">가격높은순</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="prd_list">
+              <ul>
+                <!-- [D] 상품리스트 반복 -->
+                <li>
+                  <a href="03_shop_상품상세(몰).html">
+                    <span class="img_area">
+                      <img src="../../images/item/img_01.jpg" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag new">NEW</span>
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="info_area">
+                      <span class="top_area">
+                        <span class="category">IH전기압력밥솥</span>
+                        <span class="etc"><span class="point01">쿠폰가능</span></span>
+                      </span>
+                      <span class="bottom_area">
+                        <span class="code_no">CRP-KHT1020FD</span>
+                        <span class="price_wrap">
+                          <!--<span class="discount">608,000<span class="won">원</span></span>-->
+                          <span class="price">578,000<span class="won">원</span></span>
+                          
+                        </span>
+                        <span class="desc">새로운 디자인으로 기존 트윈트레셔 업그레이드</span>
+                      </span>
+                    </span>
+                  </a>
+                  <span class="input_right">
+                      <input type="checkbox" id="check06_01" class="check_l" disabled><label for="check06_01">비교하기</label><!-- [D] 3개제품비교시 disabed속성추가-->
+                  </span>
+                </li>
+                <!-- //[D] 상품리스트 반복 -->
+                <li>
+                  <a href="#">
+                    <span class="img_area">
+                      <img src="../../images/item/img_02.jpg" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="info_area">
+                      <span class="top_area">
+                        <span class="category">IH전기압력밥솥</span>
+                        <span class="etc"><span class="point01">무이자 6</span></span>
+                      </span>
+                      <span class="bottom_area">
+                        <span class="code_no">CRP-KHT1010FB</span>
+                        <span class="price_wrap">
+                          <!--<span class="discount">608,000<span class="won">원</span></span>-->
+                          <span class="price">578,000<span class="won">원</span></span>
+                        </span>
+                        <span class="desc">새로운 디자인으로 기존 트윈트레셔 업그레이드</span>
+                      </span>
+                    </span>
+                  </a>
+                  <span class="input_right"><input type="checkbox" id="check06_02" class="check_l"><label for="check06_02">비교하기</label></span>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="img_area">
+                      <img src="../../images/item/img_03.jpg" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="info_area">
+                      <span class="top_area">
+                        <span class="category">IH전기압력밥솥</span>
+                        <span class="etc"><span class="point01">무이자 10</span></span>
+                      </span>
+                      <span class="bottom_area">
+                        <span class="code_no">CRP-JHTR0610FD</span>
+                        <span class="price_wrap">
+                          <span class="discount">568,000<span class="won">원</span></span>
+                          <span class="price">478,400<span class="won">원</span></span>
+						  <span class="sale point01">10%</span>
+                        </span>
+                        <span class="desc">새로운 디자인으로 기존 트윈트레셔 업그레이드 새로운 디자인으로 기존 트윈트레셔 업그레이드</span>
+                      </span>
+                    </span>
+                  </a>
+                  <span class="input_right"><input type="checkbox" id="check06_03" class="check_l"><label for="check06_03">비교하기</label></span>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="img_area">
+                      <img src="../../images/item/img_04.jpg" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="info_area">
+                      <span class="top_area">
+                        <span class="category">IH전기압력밥솥</span>
+                        <span class="etc"><span class="point01">무이자10</span></span>
+                      </span>
+                      <span class="bottom_area">
+                        <span class="code_no">CRP-EHS0310FW</span>
+                        <span class="price_wrap">
+                         
+                          <span class="price">398,000<span class="won">원</span></span>
+                        </span>
+                        <span class="desc">프리미엄 신기술을 모두 압축한 작지만 강한 미니밥솥</span>
+                      </span>
+                    </span>
+                  </a>
+                  <span class="input_right"><input type="checkbox" id="check06_04" class="check_l"><label for="check06_04">비교하기</label></span>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="img_area">
+                      <img src="../../images/item/img_05.jpg" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="info_area">
+                      <span class="top_area">
+                        <span class="category">IH전기압력밥솥</span>
+                        <span class="etc"><span class="point01">무이자 6</span></span>
+                      </span>
+                      <span class="bottom_area">
+                        <span class="code_no">CRP-FHTR0610FS</span>
+                        <span class="price_wrap">
+                          
+                          <span class="price">528,600<span class="won">원</span></span>
+                        </span>
+                        <span class="desc">찰지고 쫀득한맛, 촉촉하고 고슬한식감 모두 가능</span>
+                      </span>
+                    </span>
+                  </a>
+                  <span class="input_right"><input type="checkbox" id="check06_05" class="check_l"><label for="check06_05">비교하기</label></span>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="img_area">
+                      <img src="../../images/item/img_06.jpg" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="info_area">
+                      <span class="top_area">
+                        <span class="category">IH전기압력밥솥</span>
+                        <span class="etc"><span class="point01">쿠폰가능</span></span>
+                      </span>
+                      <span class="bottom_area">
+                        <span class="code_no">CRP-RT0610FD</span>
+                        <span class="price_wrap">
+                      
+                          <span class="price">298,000<span class="won">원</span></span>
+                        </span>
+                        <span class="desc">초고압, 무압 두가지 기능으로  다양한 요리 가능</span>
+                      </span>
+                    </span>
+                  </a>
+                  <span class="input_right"><input type="checkbox" id="check06_06" class="check_l"><label for="check06_06">비교하기</label></span>
+                </li>
+              </ul>
+            </div><!-- //prd_list-->
+            <div class="prd_list type_banner">
+                <div class="banner_area"><img src="../../images/item/temp_banner_740x554.png" alt=""></div>
+                <ul>
+                    <li>
+                      <a href="#">
+                        <span class="img_area">
+                          <img src="../../images/item/img_07.jpg" alt="">
+                          <span class="flag_wrap">
+                            <span class="flag best">BEST</span>
+                          </span>
+                        </span>
+                        <span class="info_area">
+                          <span class="top_area">
+                            <span class="category">IH전기압력밥솥</span>
+                            <span class="etc"><span>쿠폰불가</span><span class="point01">무이자6</span></span>
+                          </span>
+                          <span class="bottom_area">
+                            <span class="code_no">CRP-JHT1010FS</span>
+                            <span class="price_wrap">
+                           
+                              <span class="price">678,000<span class="won">원</span></span>
+                            </span>
+                            <span class="desc">찰지고 쫀득한맛, 촉촉하고 고슬한식감 모두 가능! </span>
+                          </span>
+                        </span>
+                      </a>
+                      <span class="input_right"><input type="checkbox" id="check06_07" class="check_l"><label for="check06_07">비교하기</label></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="prd_list">
+              <ul>
+                <!-- [D] 상품리스트 반복 -->
+                <li>
+                  <a href="#">
+                    <span class="img_area">
+                      <img src="../../images/item/img_08.jpg" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag new">NEW</span>
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="info_area">
+                      <span class="top_area">
+                        <span class="category">IH전기압력밥솥</span>
+                        <span class="etc"><span class="point01">쿠폰가능</span></span>
+                      </span>
+                      <span class="bottom_area">
+                        <span class="code_no">CRP-P0620FDM</span>
+                        <span class="price_wrap">
+                          <span class="discount">208,000<span class="won">원</span></span>
+                          <span class="price">187,200<span class="won">원</span></span>
+                          <span class="sale point01">10%</span>
+                        </span>
+                        <span class="desc">감각적이고 기능적인 프리미엄 스타일</span>
+                      </span>
+                    </span>
+                  </a>
+                  <span class="input_right"><input type="checkbox" id="check06_08" class="check_l"><label for="check06_08">비교하기</label></span>
+                </li>
+                <!-- //[D] 상품리스트 반복 -->
+                <li>
+                  <a href="#">
+                    <span class="img_area">
+                      <img src="../../images/item/img_09.jpg" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="info_area">
+                      <span class="top_area">
+                        <span class="category">IH전기압력밥솥</span>
+                        <span class="etc"><span>쿠폰불가</span></span>
+                      </span>
+                      <span class="bottom_area">
+                        <span class="code_no">CRP-R109FS</span>
+                        <span class="price_wrap">     
+                          <span class="price">278,000<span class="won">원</span></span>
+                        </span>
+                        <span class="desc">가마솥과 같은 묵직함과 견고함, 고급스러운 해머링 디자인</span>
+                      </span>
+                    </span>
+                  </a>
+                  <span class="input_right"><input type="checkbox" id="check06_09" class="check_l"><label for="check06_09">비교하기</label></span>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="img_area">
+                      <img src="../../images/item/img_10.jpg" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="info_area">
+                      <span class="top_area">
+                        <span class="category">IH전기압력밥솥</span>
+                        <span class="etc"><span class="point01">쿠폰가능</span></span>
+                      </span>
+                      <span class="bottom_area">
+                        <span class="code_no">CRP-R109FS</span>
+                        <span class="price_wrap">
+                        
+                          <span class="price">278,000<span class="won">원</span></span>
+                        </span>
+                        <span class="desc">가마솥과 같은 묵직함과 견고함, 고급스러운 해머링 디자인</span>
+                      </span>
+                    </span>
+                  </a>
+                  <span class="input_right"><input type="checkbox" id="check06_10" class="check_l"><label for="check06_10">비교하기</label></span>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="img_area">
+                      <img src="../../images/item/img_11.jpg" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="info_area">
+                      <span class="top_area">
+                        <span class="category">IH전기압력밥솥</span>
+                        <span class="etc"><span class="point01">무이자6</span></span>
+                      </span>
+                      <span class="bottom_area">
+                        <span class="code_no">CRP-RT1010FD</span>
+                        <span class="price_wrap">
+                          <span class="price">328,000<span class="won">원</span></span>
+                        </span>
+                        <span class="desc">가마솥과 같은 묵직함과 견고함, 고급스러운 해머링 디자인</span>
+                      </span>
+                    </span>
+                  </a>
+                  <span class="input_right"><input type="checkbox" id="check06_11" class="check_l"><label for="check06_11">비교하기</label></span>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="img_area">
+                      <img src="../../images/item/img_12.jpg" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="info_area">
+                      <span class="top_area">
+                        <span class="category">IH전기압력밥솥</span>
+                        <span class="etc"><span class="point01">쿠폰가능</span></span>
+                      </span>
+                      <span class="bottom_area">
+                        <span class="code_no">CRP-FHV1010FD</span>
+                        <span class="price_wrap">
+                          <span class="discount">708,000<span class="won">원</span></span>
+                          <span class="price">531,600<span class="won">원</span></span>
+                        </span>
+                        <span class="desc">밥맛과 에너지 효율을 한번에 잡은 에코 풀스테인리스</span>
+                      </span>
+                    </span>
+                  </a>
+                  <span class="input_right"><input type="checkbox" id="check06_12" class="check_l"><label for="check06_12">비교하기</label></span>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="img_area">
+                      <img src="../../images/item/temp_prd_340x340.png" alt="">
+                      <span class="flag_wrap">
+                        <span class="flag best">BEST</span>
+                      </span>
+                    </span>
+                    <span class="info_area">
+                      <span class="top_area">
+                        <span class="category">IH전기압력밥솥</span>
+                        <span class="etc"><span class="point01">쿠폰가능</span></span>
+                      </span>
+                      <span class="bottom_area">
+                        <span class="code_no">CRP-KHT1020FD</span>
+                        <span class="price_wrap">
+                          <span class="discount">608,000<span class="won">원</span></span>
+                          <span class="price">577,600<span class="won">원</span></span>
+                        </span>
+                        <span class="desc">새로운 디자인으로 기존 트윈트레셔 업그레이드 새로운 디자인으로 기존 트윈트레셔 업그레이드</span>
+                      </span>
+                    </span>
+                  </a>
+                  <span class="input_right"><input type="checkbox" id="check06_13" class="check_l"><label for="check06_13">비교하기</label></span>
+                </li>
+              </ul>
+            </div><!-- //prd_list-->
+          </div><!-- //prd_list_wrap-->
+          <a href="#" class="btn list_more">더보기 <span><strong>1</strong> / 3</span></a>
+        </div>
+        <div class="comparison_wrap">
+            <button type="button" class="btn-layer"><span>제품 비교하기</span><i class="ico arrow"></i></button>
+            <div class="comparison_body">
+                <div class="inner">
+                    <div class="txt_area">
+                        <p class="tit">제품비교</p>
+                        <p class="txt"><strong>최대 3개 제품</strong>에 대한 상세 내용을<br>비교하여 확인 하실 수 있습니다.</p>
+                    </div>
+                    <div class="prd_area">
+                        <ul>
+                            <li class="on"><!-- [D] 이미지가 들어올경우 on클래스 추가 -->
+                                <span class="img">
+                                    <img src="../../images/common/temp_comparsion_100x100.png" alt="">
+                                    <button type="button" class="btn-del"><i class="ico del"></i></button>
+                                </span>
+                                <p class="name">CRP-JHTR1010FD</p>
+                            </li>
+                            <li>
+                                <span class="img"></span>
+                                <p class="name">제품을 선택해주세요</p>
+                            </li>
+                            <li>
+                                <span class="img"></span>
+                                <p class="name">제품을 선택해주세요</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn_area">
+                        <button type="button" class="btn_l radius action" onclick="layerPopOpen('prdComparison')">비교하기</button>
+                        <button type="button" class="btn_l radius">다시선택</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//centent-->
+
+        <button type="button" class="btn-top"><span class="blind">TOP</span></button>
+    </div>
+    <!--//container-->
+    <div id="gnbDimmed" class="dimmed"></div>
+    <!-- footer -->
+    <footer id="footer">
+       
+    </footer>
+    <!-- //footer -->
+    <!-- 제품비교 레이어팝업 -->
+    <div id="prdComparison" class="wrap_layer_pop">
+        <div class="layer_pop w830">
+            <div class="header_pop">
+                <h2 class="tit_03">제품비교</h2>
+            </div>
+            <div class="container_pop">
+                <div class="tbl type_border">
+                    <table>
+                        <caption>제품비교</caption>
+                        <colgroup>
+                            <col width="128px">
+                            <col width="auto">
+                            <col width="auto">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><span class="blind">비교상품</span></th>
+                                <td class="container_prd">
+                                    <img src="../../images/common/temp_prd01_200x200.png" alt="">
+                                    <div>
+                                        <a href="#" class="btn_s radius">상세보기</a>
+                                        <a href="#" class="btn_s radius common">바로구매</a>
+                                    </div>
+                                </td>
+                                <td class="container_prd">
+                                    <img src="../../images/common/temp_prd01_200x200.png" alt="">
+                                    <div>
+                                        <a href="#" class="btn_s radius">상세보기</a>
+                                        <a href="#" class="btn_s radius common">바로구매</a>
+                                    </div>
+                                </td>
+                                <td class="container_prd">
+                                    <img src="../../images/common/temp_prd01_200x200.png" alt="">
+                                    <div>
+                                        <a href="#" class="btn_s radius">상세보기</a>
+                                        <a href="#" class="btn_s radius common">바로구매</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">모델명</th>
+                                <td>CRP-JHTR1010FD</td>
+                                <td>CRP-JHT1010FS</td>
+                                <td>CRP-JHT1010FS</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">제품명</th>
+                                <td>트윈프레셔밥솥</td>
+                                <td>트윈프레셔밥솥</td>
+                                <td>트윈프레셔밥솥</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">용량</th>
+                                <td>6인용</td>
+                                <td>10인용</td>
+                                <td>10인용</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">중량(kg)</th>
+                                <td>6.8</td>
+                                <td>8.7</td>
+                                <td>8.7</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">색상</th>
+                                <td>블랙</td>
+                                <td>플레티넘실버</td>
+                                <td>플레티넘실버</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">에너지효율등급</th>
+                                <td>1등급</td>
+                                <td>1등급</td>
+                                <td>1등급</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">무이자</th>
+                                <td>3개월</td>
+                                <td>10개월</td>
+                                <td>10개월</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">쿠폰</th>
+                                <td>사용가능</td>
+                                <td>사용가능</td>
+                                <td>사용가능</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">가격</th>
+                                <td>568,000원</td>
+                                <td>678,000원</td>
+                                <td>678,000원</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <button type="button" class="btn-close-pop" onclick="layerPopClose('prdComparison')"><span class="blind">팝업닫기</span></button>
+        </div>
+    </div>
+    <!-- //제품비교 레이어팝업 -->
+    <script src="../../javascripts/plugin.js"></script>
+    <script src="../../javascripts/design_common.js"></script>
+</body>
+
+</html>

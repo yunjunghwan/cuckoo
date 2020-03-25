@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko" class="sub">
+
+<head>
+  <title>CUCKOO</title>
+  <!-- 공통적용헤더정보 -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <!-- //공통적용헤더정보 -->
+  <meta name="Description" content="CUCKOO">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CUCKOO">
+  <meta property="og:description" content="CUCKOO">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="CUCKOO">
+  <meta name="Keywords" content="CUCKOO">
+  <meta name="Author" content="CUCKOO">
+  <meta name="robots" content="ALL">
+  <link rel="stylesheet" href="../../stylesheets/css/common.css">
+  <link rel="stylesheet" href="../../stylesheets/css/content.css">
+  <script src="../../javascripts/jquery-1.8.2.min.js"></script>
+  <script src="../../javascripts/jquery-ui.min.js"></script>
+  <style>
+  .content{padding:25px}
+  h2{font-size:35px; margin:50px 0 20px 0}
+  h2:first-child{margin-top:0}
+  </style>
+</head>
+
+<body>
+    <!-- skipNavigation-->
+    <div id="skipNavigation">
+      <ul>
+          <li><a href="#gnb">Main menu</a></li>
+          <li><a href="#container">Contents</a></li>
+      </ul>
+    </div>
+    <!-- //skipNavigation-->
+
+    <!-- header-->
+    <header id="header">
+        <div class="header_logo_wrap">
+            <h1 class="header_logo"><a href="#"><span class="blind">CUCKOO</span></a></h1>
+            <div class="util">
+                <button type="button" class="btn-share"><span class="blind">공유하기</span></button>
+                <button type="button" onclick="layerPopOpen('searchPop')" class="btn-search"><span class="blind">검색</span></button>
+                <span class="cart_wrap">
+                    <button type="button" onclick="layerPopOpen('cartPop')" class="btn-cart"><span class="blind">장바구니</span></button>
+                    <span class="num">33</span>
+                </span>
+                <button type="button" class="btn-menu"><span class="blind">메뉴</span></button>
+            </div>
+        </div>
+        <div class="header_title_wrap">
+            <div class="header_title">
+                <h2 class="page_tit">리스트</h2>
+                <button type="button" class="btn-back"><span class="blind">뒤로가기</span></button>
+            </div>
+        </div>
+        <!-- 전체메뉴 -->
+        <div id="gnb" class="all_menu">
+            <span class="blind">전체메뉴</span>
+            <div class="top_area">
+                <div class="util_menu">
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                </div>
+                <div class="point_wrap">
+                    <div>
+                        <p class="tit">쿠폰</p>
+                        <a href="#" class="txt">10<span class="won">장</span></a>
+                    </div>
+                    <div>
+                        <p class="tit">포인트</p>
+                        <a href="#" class="txt">999,999P</a>
+                    </div>
+                </div>
+            </div>
+            <ul class="depth01">
+                <li class="ui_acodian on">
+                    <a href="#" class="tit btn-view">쿠쿠몰</a>
+                    <ul class="hidden_area">
+                        <li><a href="#">밥솥</a></li>
+                        <li><a href="#">전기레인지</a></li>
+                        <li><a href="#">식기세척기</a></li>
+                        <li><a href="#">펫용품</a></li>
+                        <li><a href="#">부속품</a></li>
+                        <li><a href="#">기타제품</a></li>
+                    </ul>
+                </li>
+                <li class="ui_acodian on">
+                    <a href="#" class="tit btn-view">쿠쿠렌탈</a>
+                    <ul class="hidden_area">
+                        <li><a href="#">정수기</a></li>
+                        <li><a href="#">공기청정기</a></li>
+                        <li><a href="#">비데</a></li>
+                        <li><a href="#">매트리스/프레임</a></li>
+                        <li><a href="#">부속품</a></li>
+                        <li><a href="#">기타제품</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="tit">이벤트</a></li>
+                <li><a href="#" class="tit">고객센터</a></li>
+            </ul>
+            <div class="bottom_area">
+                <a href="#">쿠쿠소개</a>
+                <a href="#">채용정보</a>
+            </div>
+            <button type="button" class="btn-menu-close"><span class="blind">전체메뉴닫기</span></button>
+        </div>
+        <!-- //전체메뉴 -->
+    </header>
+    <!-- //header-->
+
+    <!--container-->
+    <div id="container">
+        <div class="content">
+            <h2>점불릿</h2>
+            <ul class="bul_list">
+                <li>배송/반품/교환 등 진행중인 주문 건이 있을 경우에는 탈퇴가 되지 않습니다.</li>
+                <li>모든 쿠폰, 포인트 및 개인정보가 삭제됩니다. <br>(재가입 시 환불되지 않습니다.)</li>
+                <li>소비자보호에 관한 법률 및 동법 시행령에 의거 아래의 기간동안 보유됩니다. (개인정보는 법률에 의한 경우를 제외, 보유 이외의 다른 목적으로 이용되지 않습니다.)</li>
+            </ul>
+            <h2>점불릿(작은타입)</h2>
+            <ul class="bul_list type_s">
+                <li>취소 완료 후에는 취소 철회가 불가합니다. </li>
+                <li>주문 취소는 결제하신 결제수단으로만 가능합니다.</li>
+                <li>취소 시에는 수량 선택을 하실 수 없습니다.</li>
+            </ul>
+            <h2>대쉬불릿</h2>
+            <ul class="dash_list">
+                <li>계약 또는 청약철회 등의 관한 기록은 5년</li>
+                <li>대금결제 및 재화 등의 공급에 관한 기록은 5년</li>
+                <li>소비자의 불만 또는 분쟁처리에 관한 기록은 3년</li>
+            </ul>
+            <h2>경고문리스트</h2>
+            <ul class="notice_list">
+                <li class="type_point">취소 완료 후에는 취소 철회가 불가합니다. </li>
+                <li>주문 취소는 결제하신 결제수단으로만 가능합니다.</li>
+                <li>취소 시에는 수량 선택을 하실 수 없습니다.</li>
+            </ul>
+            <h2>상품리스트(몰)</h2>
+            <div class="prd_list">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="img"><img src="../../images/item/temp_prd_314x314.png" alt=""></span>
+                            <span class="category">IH전기압력밥솥</span>
+                            <span class="name">CRP-KHT1020FD</span>
+                            <span class="discount">208,000원</span>
+                            <span class="price">578,000<span class="won">원</span></span>
+                            <span class="txt_info">새로운 디자인으로 기존 제품을 한 단계 더 업그레이드</span>
+                            <span class="desc"><span>쿠폰가능</span></span>
+                            <span class="txt_label_wrap">
+                                <span class="txt_label best">BEST</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="img"><img src="../../images/item/temp_prd_314x314.png" alt=""></span>
+                            <span class="category">IH전기압력밥솥</span>
+                            <span class="name">CRP-KHT1020FD</span>
+                            <span class="discount"><!-- [D] 값이 없어도 빈값유지 --></span>
+                            <span class="price">578,000<span class="won">원</span></span>
+                            <span class="txt_info">새로운 디자인으로 기존 제품을 한 단계 더 업그레이드</span>
+                            <span class="desc"><span>무이자 6</span></span>
+                            <span class="txt_label_wrap">
+                                <span class="txt_label best">BEST</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="img"><img src="../../images/item/temp_prd_314x314.png" alt=""></span>
+                            <span class="category">IH전기압력밥솥</span>
+                            <span class="name">CRP-KHT1020FD</span>
+                            <span class="discount"<!-- [D] 값이 없어도 빈값유지 --></span>
+                            <span class="price">578,000<span class="won">원</span></span>
+                            <span class="txt_info">새로운 디자인으로 기존 제품을 한 단계 더 업그레이드</span>
+                            <span class="desc"><span>쿠폰가능</span><span>무이자 10</span></span>
+                            <span class="txt_label_wrap">
+                                <span class="txt_label new">NEW</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="img"><img src="../../images/item/temp_prd_314x314.png" alt=""></span>
+                            <span class="category">IH전기압력밥솥</span>
+                            <span class="name">CRP-KHT1020FD</span>
+                            <span class="discount"><!-- [D] 값이 없어도 빈값유지 --></span>
+                            <span class="price">578,000<span class="won">원</span></span>
+                            <span class="txt_info">새로운 디자인으로 기존 제품을 한 단계 더 업그레이드</span>
+                            <span class="desc"><span>무이자 6</span></span>
+                            <span class="txt_label_wrap">
+                                <span class="txt_label new">NEW</span>
+                                <span class="txt_label best">BEST</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <h2>상품리스트(렌탈)</h2>
+            <div class="prd_list type_rental">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="img"><img src="../../images/item/temp_prd01_314x314.png" alt=""></span>
+                            <span class="category">의류건조기</span>
+                            <span class="name">DHP24412MG</span>
+                            <dl class="rental_price">
+                                <dt class="tit">렌탈가</dt>
+                                <dd><span class="won">월</span> 40,900<span class="won">원</span></dd>
+                                <dt class="tit">일시불</dt>
+                                <dd>700,000<spcn class="won">원</spcn></dd>
+                            </dl>
+                            <span class="txt_tag">#저소음모드 #안심 2중필터, #양방향도어, #타임딜레이</span>
+                            <span class="txt_label_wrap">
+                                <span class="txt_label best">BEST</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="img"><img src="../../images/item/temp_prd01_314x314.png" alt=""></span>
+                            <span class="category">냉온정수기</span>
+                            <span class="name">CP-TSO11DS</span>
+                            <dl class="rental_price">
+                                <dt class="tit">렌탈가</dt>
+                                <dd><span class="won">월</span> 30,900<span class="won">원</span></dd>
+                                <dt class="tit">일시불</dt>
+                                <dd>300,000<spcn class="won">원</spcn></dd>
+                            </dl>
+                            <span class="txt_tag">#저소음모드 #안심 2중필터, #양방향도어, #타임딜레이</span>
+                            <span class="txt_label_wrap">
+                                <span class="txt_label best">BEST</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <h2>주문 리스트</h2>
+            <div class="order_list">
+                <ul>
+                    <li>
+                        <div class="img"><img src="../../images/order/temp_prd_160x160.png" alt=""></div>
+                        <div class="info">
+                            <p class="category">IH전기압력밥솥</p>
+                            <p class="name">CRP-KHT1020FD</p>
+                            <p class="price">1,599,900<span class="won">원</span> / <span class="count">2<span class="won">개</span></span></p>
+                            <div class="desc tooltip_wrap">
+                                <span>사은품 정보</span><i class="ico tooltip"></i>
+                                <p class="gift_name">레이코 에어프라이어 3.5L</p>
+                                <div class="tooltip_box">
+                                    <h3 class="tit_03">사은품 안내사항</h3>
+                                    <ul class="bul_list type_s">
+                                        <li>사은품은 배송/설치 완료 후, 약 3주 뒤 별도 배송 됩니다.</li>
+                                        <li>사은품 품절 시 행사가 조기종료 되거나 사은품이 변경될 수 있습니다.</li>
+                                        <li>주문 상품의 품절 시 배송이 지연될 수 있습니다.</li>
+                                        <li>해당 행사는 5월 31일 결제 완료 건까지 유효합니다.</li>
+                                    </ul>
+                                    <button type="button" class="btn-close"><span class="blind">닫기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img"><img src="../../images/order/temp_prd_160x160.png" alt=""></div>
+                        <div class="info">
+                            <p class="category">IH전기압력밥솥</p>
+                            <p class="name">CRP-KHT1020FD</p>
+                            <p class="price">1,599,900<span class="won">원</span> / <span class="count">2<span class="won">개</span></span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img"><img src="../../images/order/temp_prd_160x160.png" alt=""></div>
+                        <div class="info">
+                            <p class="category">IH전기압력밥솥</p>
+                            <p class="name">CRP-KHT1020FD</p>
+                            <p class="price">1,599,900<span class="won">원</span> / <span class="count">2<span class="won">개</span></span></p>
+                            <p class="option_box">옵션 : CPR-D105SX</p>
+                            <ul class="notice_list">
+                                <li class="type_point">쿠폰 적용불가 제품</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <h2>장바구니 리스트</h2>
+            <div class="cart_list">
+                <ul>
+                    <li>
+                        <input type="checkbox" id="check01_01" name="check01">
+                        <label for="check01_01"></label>
+                        <div class="prd_info">
+                            <div class="img"><img src="../../images/order/temp_prd_160x160.png" alt=""></div>
+                            <div class="info">
+                                <p class="category">IH전기압력밥솥</p>
+                                <p class="name">CRP-KHT1020FD</p>
+                                <p class="discount"></p><!-- [D] 값이없어도 빈태그값유지 -->
+                                <p class="price">1,599,900<span class="won">원</span></p>
+                                <div class="count_wrap">
+                                    <button type="button" class="ico minus" disabled=""><span class="blind">수량감소</span></button><!-- [D]비활성화시 disabled속성추가 -->
+                                    <span class="num">1</span>
+                                    <button type="button" class="ico plus"><span class="blind">수량증가</span></button><!-- [D]비활성화시 disabled속성추가 -->
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="price_info">
+                            <li class="price">
+                                <span class="tit">결제예정금액</span>
+                                <span class="txt">298,000<span class="won">원</span></span>
+                            </li>
+                            <li class="point">
+                                <span class="tit">예상적립포인트</span>
+                                <span class="txt">5,960P</span>
+                            </li>
+                        </ul>
+                        <div class="btn-flex">
+                            <button type="button" class="btn_m">삭제</button>
+                            <button type="button" class="btn_m common">바로구매</button>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check01_02" name="check02">
+                        <label for="check01_02"></label>
+                        <div class="prd_info">
+                            <div class="img"><img src="../../images/order/temp_prd_160x160.png" alt=""></div>
+                            <div class="info">
+                                <p class="category">IH전기압력밥솥</p>
+                                <p class="name">CRP-KHT1020FD</p>
+                                <p class="discount">300,000원</p><!-- [D] 값이없어도 빈태그값유지 -->
+                                <p class="price">1,599,900<span class="won">원</span></p>
+                                <div class="count_wrap">
+                                    <button type="button" class="ico minus" disabled=""><span class="blind">수량감소</span></button><!-- [D]비활성화시 disabled속성추가 -->
+                                    <span class="num">1</span>
+                                    <button type="button" class="ico plus"><span class="blind">수량증가</span></button><!-- [D]비활성화시 disabled속성추가 -->
+                                </div>
+                                <div class="option_box">
+                                    옵션 : CRP-D15SX
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="price_info">
+                            <li class="price">
+                                <span class="tit">결제예정금액</span>
+                                <span class="txt">298,000<span class="won">원</span></span>
+                            </li>
+                            <li class="point">
+                                <span class="tit">예상적립포인트</span>
+                                <span class="txt">5,960P</span>
+                            </li>
+                        </ul>
+                        <div class="btn-flex">
+                            <button type="button" class="btn_m">삭제</button>
+                            <button type="button" class="btn_m common">바로구매</button>
+                        </div>
+                    </li>
+                    <li class="soldout"><!-- [D] 일시품절일경우 soldout클래스 추가 -->
+                        <input type="checkbox" id="check01_03" name="check03">
+                        <label for="check01_03"></label>
+                        <div class="prd_info">
+                            <div class="img">
+                                <img src="../../images/order/temp_prd_160x160.png" alt="">
+                                <p class="soldout_txt">일시품절</p>
+                            </div>
+                            <div class="info">
+                                <p class="category">압력패킹</p>
+                                <p class="name">CCP-10 6인용</p>
+                                <p class="discount"></p><!-- [D] 값이없어도 빈태그값유지 -->
+                                <p class="price">8,000<span class="won">원</span></p>
+                            </div>
+                        </div>
+                        <div class="btn-flex">
+                            <button type="button" class="btn_m">삭제</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--//container-->
+    <div id="gnbDimmed" class="dimmed"></div>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="top_area">
+            <p class="tit">고객센터</p>
+            <p class="txt">평일 AM09~PM06, 토요일 AM09~PM01(일요일, 공휴일 휴무)<br>제품 전화주문은 쿠쿠몰로 문의해주세요.</p>
+            <div class="tel_box">
+                <a href="tel:080-720-9999">쿠쿠몰문의<br>080-720-9999</a>
+                <a href="tel:1588-8899">서비스문의<br>1588-8899</a>
+                <a href="tel:1577-0010">렌탈문의<br>1577-0010</a>
+            </div>
+            <div class="desc">
+                <a href="#">이용약관</a>
+                <a href="#"><span class="point">개인정보취급방침</span></a>
+            </div>
+            <div class="select_family">
+                <select>
+                    <option>패밀리사이트</option>
+                </select>
+            </div>
+        </div>
+        <div class="bottom_area">
+            <div class="ui_acodian">
+                <a href="#" class="tit btn-view">사업자정보확인</a>
+                <div class="hidden_area">
+                    <div class="address_wrap">
+                        <p class="tit tit01"><span class="blind">쿠쿠홀딩스</span></p>
+                        <p class="txt">대표이사 : 구자신 &nbsp; 본사 : 경상남도 양산시 유산공단2길14 <br>사업자등록번호 : 621-81-02895 <a href="#" class="goto"></a> <br>이메일 : webmaster@cuckoo.co.kr</p>
+                        <copyright>COPYRIGHT&copy;CUCKOO HOLDINGS ALL RIGHTS RESERVED</copyright>
+                    </div>
+                    <div class="address_wrap">
+                        <p class="tit tit02"><span class="blind">쿠쿠전자</span></p>
+                        <p class="txt">대표이사 : 구본학 &nbsp; 본사 : 경상남도 양산시 유산공단2길14<br>사업자등록번호 : 337-87-00918 <a href="#" class="goto"></a><br>통신판매신고 : 제2017-경남양산-00367호<br>개인정보관리책임자 : 온라인유통팀 임현석<br>이메일 : cuckoomall@cuckoo.co.kr<br>구매안전서비스 : 에스크로가입정보 <a href="#" class="goto"></a></p>
+                        <copyright>COPYRIGHT&copy;CUCKOO ELECTRONICS ALL RIGHTS RESERVED</copyright>
+                    </div>
+                    <div class="address_wrap">
+                        <p class="tit tit03"><span class="blind">쿠쿠홈시스</span></p>
+                        <p class="txt">대표이사 : 구본학 &nbsp; 본사 : 경기도 시흥시 엠티브이북로 349<br>사업자등록번호 : 590-87-00993<a href="#" class="goto"></a><br>통신판매신고 : 제2017-경기시흥-0894호<br>개인정보관리책임자 : 마케팅팀 천승국<br>이메일 : rentalcuckoo@cuckoo.co.kr<br>B2B문의상담 : jnahn@cuckoo.co.kr</p>
+                        <copyright>COPYRIGHT&copy;CUCKOO HOMESYS ALL RIGHTS RESERVED</copyright>
+                    </div>
+                </div>
+            </div>
+            <p class="desc">쿠쿠홀딩스/전자/홈시스 사이트의 콘텐츠는 저작권법의 보호를 <br>받는 바 무단 전재, 복사, 배포를 금합니다.</p>
+        </div>
+    </footer>
+    <!-- //footer -->
+    <!-- 장바구니 팝업 -->
+    <div id="cartPop" class="wrap_layer_pop type_header">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <h2 class="tit">장바구니</h2>
+                <button class="btn-pop-close" onclick="layerPopClose('cartPop')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+                <p class="top_txt">몰 상품과 렌탈 상품은 동시에 결제 할 수 없습니다.<br>각각의 장바구니를 확인 해주세요.</p>
+                <div class="col_box">
+                    <div>
+                        <p class="tit">쿠쿠몰</p>
+                        <div class="img"><span class="num">2</span></div>
+                        <p class="txt">현재 쿠쿠몰 장바구니에 <span class="point01">2</span>개의 상품이 있습니다.</p>
+                        <a href="#" class="btn_m radius">결제하러 가기</a>
+                    </div>
+                    <div>
+                        <p class="tit">쿠쿠렌탈</p>
+                        <div class="img"><span class="num">2</span></div>
+                        <p class="txt">장바구니에 상품을 담아주세요.</p>
+                        <a href="#" class="btn_m radius">상품보러 가기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //장바구니 팝업 -->
+    <!-- 검색어 팝업 -->
+    <div id="searchPop" class="wrap_layer_pop type_header">
+        <div class="layer_pop">
+            <div class="header_pop">
+                <button class="btn-pop-close" onclick="layerPopClose('searchPop')"><span class="blind">팝업닫기</span></button>
+            </div>
+            <div class="container_pop">
+                <div class="search_input">
+                    <input type="text" placeholder="검색어를 입력해 주세요.">
+                    <button type="button" class="btn-del"><span class="blind">삭제</span></button>
+                    <button type="button" class="btn-search"><span class="blind">검색</span></button>
+                </div>
+                <div class="recent_box">
+                    <p class="tit">최근검색어</p>
+                    <ul>
+                        <li><a href="#" class="txt">밥솥</a> <a href="#"><i class="ico del"></i></a></li>
+                        <li><a href="#" class="txt">정수기</a> <a href="#"><i class="ico del"></i></a></li>
+                        <li><a href="#" class="txt">전자레인지</a> <a href="#"><i class="ico del"></i></a></li>
+                        <li><a href="#" class="txt">내솥</a> <a href="#"><i class="ico del"></i></a></li>
+                        <li><a href="#" class="txt">안마의자</a> <a href="#"><i class="ico del"></i></a></li>
+                    </ul>
+                    <p class="no_txt">최근 검색어가 없습니다.</p>
+                </div>
+                <div class="best_box">
+                    <p class="tit">인기검색어</p>
+                    <ol>
+                        <li><a href="#"><span class="num">1</span>다니엘헤니 정수기</a></li>
+                        <li><a href="#"><span class="num">2</span>강식당 밥솥</a></li>
+                        <li><a href="#"><span class="num">3</span>마시멜로 미니 식기세척기</a></li>
+                        <li><a href="#"><span class="num">4</span>냉장고를 부탁해 전기레인지</a></li>
+                        <li><a href="#"><span class="num">5</span>초고압과 무압의 트윈프레셔</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //검색어 팝업 -->
+    <script src="../../javascripts/plugin.js"></script>
+    <script src="../../javascripts/design_common.js"></script>
+</body>
+
+</html>
